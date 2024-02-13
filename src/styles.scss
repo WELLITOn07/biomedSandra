@@ -1,4 +1,4 @@
-@use '_reset';
+@use '_reset' as *;
 @use '_imports';
-@use '_colors' as colors;
-@use '_typography' as typography;
+@use '_colors' ;
+@use '_typography' ;

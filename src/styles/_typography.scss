@@ -1,5 +1,18 @@
-$font-montserrat-regular: 'montserrat-regular', sans-serif;
-$font-montserrat-bold: 'montserrat-bold', sans-serif;
-$font-inter-regular: 'inter-regular', sans-serif;
-$font-inter-bold: 'inter-bold', sans-serif;
+@font-face {
+  font-family: 'Inter';
+  src: url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Open Sans';
+  src: url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+  font-weight: 400;
+  font-style: normal;
+}
+
+
+$font-inter: 'Inter', sans-serif;
+$font-montserrat: 'Open Sans', sans-serif;
 

@@ -1,3 +1,50 @@
+@use 'colors' as *;
+@use 'typography' as *;
+
 :host {
   display: block;
+}
+
+.container {
+  height: 100vh;
+  background-color: $color-semiDark;
+
+  &__backgound-image {
+
+    &-container {
+      width: 50%;
+      height: 100vh;
+      overflow: hidden;
+      position: relative;
+      background-color:  #828282;
+    }
+  }
+
+  &__header {
+    width: 50%;
+
+    &-actions {
+
+      &-title {
+        color: $color-light;
+        font-family: $font-inter;
+        font-weight: bold;
+      }
+
+      &-icons {
+        cursor: pointer;
+
+        &:hover {
+          color: $color-secondary;
+        }
+      }
+    }
+
+    &-divider {
+      width: auto;
+      height: 1px;
+      margin: 0 20px;
+      background-color: $color-light;
+    }
+  }
 }

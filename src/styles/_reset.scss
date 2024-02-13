@@ -1,7 +1,10 @@
+@use 'colors' as *;
+
 body {
   width: 100vw;
   height: 100vh;
 	line-height: 1;
+  background-image: linear-gradient(180deg, #506786, $color-semiDark);
   overflow-y: hidden;
 }
 ol, ul {
