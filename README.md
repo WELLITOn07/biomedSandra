@@ -11,6 +11,6 @@ A página "BiomedSandra" foi cuidadosamente projetada para proporcionar uma expe
 Para a construção desta página, foram utilizadas tecnologias modernas e eficientes no desenvolvimento web, incluindo:
 
 - **Tailwind CSS**: Uma poderosa biblioteca de CSS para design rápido e responsivo, que nos ajudou a criar um layout elegante e adaptável com facilidade.
-- **Spartan**: Um framework robusto (disponível em [Spartan Framework](https://www.spartan.ng/documentation/installation)) que foi utilizado para estruturar e otimizar o back-end da aplicação, garantindo desempenho e segurança.
+- **Spartan**: Um framework robusto (disponível em [Spartan Framework](https://www.spartan.ng/documentation/installation)) que foi utilizado para estruturar e otimizar o front-end da aplicação, garantindo desempenho e segurança.
 
 Essas tecnologias foram escolhidas para garantir que a página não só tenha um aspecto visual atraente, mas também seja funcional e acessível em diferentes plataformas e dispositivos.
