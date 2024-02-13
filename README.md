@@ -11,5 +11,6 @@ A página "BiomedSandra" foi cuidadosamente projetada para proporcionar uma expe
 Para a construção desta página, foram utilizadas tecnologias modernas e eficientes no desenvolvimento web, incluindo:
 
 - **Tailwind CSS**: Uma poderosa biblioteca de CSS para design rápido e responsivo, que nos ajudou a criar um layout elegante e adaptável com facilidade.
+- **Taiga UI**: Uma biblioteca de componentes Angular versátil e modular, que proporcionou uma interface de usuário rica e interativa, melhorando significativamente a experiência do usuário.
 
 Essas tecnologias foram escolhidas para garantir que a página não só tenha um aspecto visual atraente, mas também seja funcional e acessível em diferentes plataformas e dispositivos.
