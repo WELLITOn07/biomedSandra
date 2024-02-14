@@ -21,8 +21,6 @@
   }
 
   &__header {
-    width: 50%;
-
     &-actions {
 
       &-title {
@@ -45,6 +43,32 @@
       height: 1px;
       margin: 0 20px;
       background-color: $color-light;
+    }
+  }
+
+  &__main {
+    width: 50%;
+  }
+
+  &-section {
+    width: 50%;
+
+    &-apresentation {
+
+    }
+
+    &-cta {
+
+    }
+
+    &-actions {
+
+    }
+  }
+
+  &__footer {
+    &-logo {
+
     }
   }
 }
