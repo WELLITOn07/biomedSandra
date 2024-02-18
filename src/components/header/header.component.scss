@@ -1,0 +1,35 @@
+@use 'colors' as *;
+@use 'typography' as *;
+
+:host {
+  display: block;
+}
+
+.header {
+  &__container {
+    flex-direction: column;
+  }
+  
+  &__actions {
+    &__title {
+      color: $color-light;
+      font-family: $font-inter;
+      font-weight: bold;
+    }
+
+    &__icons {
+      cursor: pointer;
+
+      &:hover {
+        color: $color-secondary;
+      }
+    }
+  }
+
+  &__divider {
+    width: auto;
+    height: 1px;
+    margin: 0 20px;
+    background-color: $color-light;
+  }
+}

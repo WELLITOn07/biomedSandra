@@ -1,0 +1,27 @@
+@use "colors" as *;
+@use 'typography' as *;
+
+:host {
+  display: block;
+}
+
+.footer {
+  &__pineTech {
+    &__container {
+      background: $color-semiDark;
+    }
+
+    &__logo {
+      background-image: url("../../assets/logo-pineTech\ 2.png");
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: contain;
+      width: 4.5rem;
+      height: 4.5rem;
+
+      &:hover {
+        cursor: pointer;
+      }
+    }
+  }
+}

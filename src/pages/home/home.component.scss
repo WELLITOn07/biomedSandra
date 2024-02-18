@@ -1,74 +1,66 @@
-@use 'colors' as *;
-@use 'typography' as *;
+@use "colors" as *;
+@use "typography" as *;
 
 :host {
   display: block;
 }
 
-.container {
-  height: 100vh;
-  background-color: $color-semiDark;
+.section {
+  width: 50%;
+  flex-direction: column;
 
-  &__backgound-image {
+  &__container {
+    background-color: $color-semiDark;
+  }
 
-    &-container {
-      width: 50%;
-      height: 100vh;
-      overflow: hidden;
-      position: relative;
-      background-color:  #828282;
+  &__backgound__container {
+    width: 50%;
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+  }
+
+  &__backgound__image {
+    background: $color-semiDark;
+    background-image: url("../../assets/sandra.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+  }
+
+  &__apresentation {
+    height: 80%;
+
+    &__text {
+      margin-top: 20%;
+      padding: 0 15px;
+      text-align: center;
+      font-family: $font-inter;
+      font-size: 2.5rem;
+      color: $color-light;
     }
   }
 
-  &__header {
-    &-actions {
+  &__cta {
+    &__container {
+      flex-direction: column;
+      margin-top: 20%;
+    }
 
-      &-title {
-        color: $color-light;
-        font-family: $font-inter;
-        font-weight: bold;
-      }
+    &__button {
+      width: 350px;
+    }
 
-      &-icons {
-        cursor: pointer;
-
+    &__actions {
+      &__icons {
         &:hover {
+          cursor: pointer;
           color: $color-secondary;
         }
       }
-    }
-
-    &-divider {
-      width: auto;
-      height: 1px;
-      margin: 0 20px;
-      background-color: $color-light;
-    }
-  }
-
-  &__main {
-    width: 50%;
-  }
-
-  &-section {
-    width: 50%;
-
-    &-apresentation {
-
-    }
-
-    &-cta {
-
-    }
-
-    &-actions {
-
-    }
-  }
-
-  &__footer {
-    &-logo {
-
     }
   }
 }
