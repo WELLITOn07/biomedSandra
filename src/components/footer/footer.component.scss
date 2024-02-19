@@ -26,3 +26,15 @@
     }
   }
 }
+
+
+@media screen and (max-width: 1024px) {
+  .footer {
+    &__pineTech {
+      &__logo {
+        width: 3.5rem;
+        height: 3.5rem;
+      }
+    }
+  }
+}
