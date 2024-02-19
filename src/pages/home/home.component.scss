@@ -1,21 +1,21 @@
 @use "colors" as *;
 @use "typography" as *;
+@use 'tailwind' as *;
 
 :host {
   display: block;
 }
 
-.section {
-  width: 50%;
-  flex-direction: column;
+.main {
+  overflow-x: hidden;
+}
 
+.section {
   &__container {
     background-color: $color-semiDark;
   }
 
   &__backgound__container {
-    width: 50%;
-    height: 100vh;
     position: relative;
     overflow: hidden;
   }
@@ -32,10 +32,11 @@
   }
 
   &__apresentation {
-    height: 80%;
+    &__container {
+      height: inherit;
+    }
 
     &__text {
-      margin-top: 20%;
       padding: 0 15px;
       text-align: center;
       font-family: $font-inter;
@@ -46,8 +47,7 @@
 
   &__cta {
     &__container {
-      flex-direction: column;
-      margin-top: 20%;
+      margin-top: 50px;
     }
 
     &__button {
@@ -61,6 +61,29 @@
           color: $color-secondary;
         }
       }
+    }
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .section {
+    background-image: url("../../assets/sandra.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+
+    &__backgound__container {
+      display: none;
+    }
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .section__cta__actions {
+    &__icons {
+      font-size: 25px;
     }
   }
 }

@@ -1,53 +1,56 @@
-<main class="flex justify-center">
-  <section class="container flex flex-row section__container w-full">
-    <div class="section__backgound__container">
+<main class="w-full flex justify-center main">
+  <section class="container grid lg:grid-cols-2 section__container">
+    <div class="min-h-screen section__backgound__container">
       <div class="section__backgound__image"></div>
     </div>
 
-    <div class="flex section">
-      <header>
-        <app-header></app-header>
-      </header>
-
-      <div class="flex section__apresentation__container">
-        <p
-          class="w-full flex justify-center items-center section__apresentation__text"
-        >
-          Explore o mundo biomédico comigo, Sandra Kotovicz. Descubra e-books
-          que oferecem conhecimentos práticos e experiências reais. Clique
-          abaixo para embarcar nessa jornada.
-        </p>
-      </div>
-
-      <div
-        class="w-full flex justify-center items-center gap-10 section__cta__container"
-      >
-        <button
-          tuiButton
-          type="button"
-          class="section__cta__button tui-space_right-3 tui-space_bottom-3"
-        >
-          SAIBA MAIS
-        </button>
-
+    <div class="section flex flex-col min-h-screen">
+      <div class="flex-1 flex-col" style="height: calc(100vh - 200px)">
+        <header>
+          <app-header></app-header>
+        </header>
         <div
-          class="section__cta__actions flex gap-5 justify-center items-center"
+          class="flex flex-col justify-center items-center section__apresentation__container"
         >
-          <tui-svg
-            src="tuiIconMoonLarge"
-            class="text-cyan-50 section__cta__actions__icons"
-          ></tui-svg>
-          <tui-svg
-            src="tuiIconSunLarge"
-            class="text-cyan-50 section__cta__actions__icons"
-          ></tui-svg>
+          <div class="flex section__apresentation">
+            <p
+              class="w-full flex justify-center items-center section__apresentation__text"
+            >
+              Explore o mundo biomédico comigo, Sandra Kotovicz. Descubra
+              e-books que oferecem conhecimentos práticos e experiências reais.
+              Clique abaixo para embarcar nessa jornada.
+            </p>
+          </div>
+          <div
+            class="w-full flex flex-col justify-center items-center gap-10 section__cta__container"
+          >
+            <button
+              tuiButton
+              type="button"
+              class="section__cta__button tui-space_right-3 tui-space_bottom-3"
+            >
+              SAIBA MAIS
+            </button>
+            <div
+              class="section__cta__actions flex gap-5 justify-center items-center"
+            >
+              <tui-svg
+                src="tuiIconInstagramLarge"
+                class="text-cyan-50 section__cta__actions__icons"
+              ></tui-svg>
+              <tui-svg
+                src="tuiIconFacebookLarge"
+                class="text-cyan-50 section__cta__actions__icons"
+              ></tui-svg>
+            </div>
+            <div
+              class="footer__pineTech__container flex justify-end items-center"
+            ></div>
+          </div>
         </div>
-        <div
-          class="footer__pineTech__container flex justify-end items-center"
-        ></div>
       </div>
 
-      <footer>
+      <footer class="h-[200px]">
         <app-footer></app-footer>
       </footer>
     </div>
