@@ -52,6 +52,8 @@
 
     &__actions {
       &__icons {
+        font-size: 2rem;
+
         &:hover {
           cursor: pointer;
           color: $color-secondary;
@@ -75,6 +77,16 @@
     }
 
     &__cta {
+      &__actions {
+        &__icons {
+          color: $color-secondary;
+
+          &:hover {
+            color: $color-semiDark;
+          }
+        }
+      }
+
       &__container {
         gap: 1.5rem;
       }
@@ -84,12 +96,22 @@
         width: 320px;
       }
     }
+
+    &__apresentation {
+      &__text {
+        text-shadow: 0px 7px 10px rgba(0, 0, 0, 0.599);
+      }
+    }
   }
 }
 
 @media (min-width: 768px) and (max-width: 1024px) {
   .section {
     &__apresentation {
+      &__container {
+        height: 90%;
+      }
+
       &__text {
         padding: 0 85px;
       }
@@ -116,6 +138,10 @@
 }
 
 @media screen and (min-width: 414px) and (max-width: 736px) {
+  .section__apresentation__container {
+    height: 85%;
+  }
+
   .section__apresentation__text {
     font-size: 1.3rem;
   }
@@ -126,15 +152,26 @@
 }
 
 @media screen and (min-width: 375px) and (max-width: 413px) {
-  .section__apresentation__text {
-    font-size: 1.1rem;
+  .section__apresentation {
+    &__container {
+      height: 85%;
+    }
+    &__text {
+      font-size: 1.1rem;
+    }
   }
 }
 
 @media screen and (max-width: 320px) {
   .section {
-    &__apresentation__text {
-      font-size: 0.8rem;
+    &__apresentation {
+      &__container {
+        height: 80%;
+      }
+
+      &__text {
+        font-size: 0.8rem;
+      }
     }
 
     &__cta {
