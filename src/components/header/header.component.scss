@@ -1,0 +1,38 @@
+@use 'colors' as *;
+@use 'typography' as *;
+@use 'tailwind' as *;
+
+:host {
+  display: block;
+}
+
+.header {
+  &__actions {
+    &__title {
+      color: $color-light;
+      font-family: $font-inter;
+      font-weight: bold;
+    }
+
+    &__ebooks {
+      &:hover {
+        cursor: pointer;
+        color: $color-secondary;
+      }
+    }
+
+    &__icons {
+      cursor: pointer;
+
+      &:hover {
+        color: $color-secondary;
+      }
+    }
+  }
+
+  &__divider {
+    height: 1px;
+    margin-top: 15px;
+    background-color: $color-light;
+  }
+}

@@ -1,0 +1,56 @@
+<main class="w-full flex justify-center main">
+  <section class="container grid lg:grid-cols-2 section__container">
+    <div class="min-h-screen section__backgound__container">
+      <div class="section__backgound__image"></div>
+    </div>
+
+    <div class="section flex flex-col flex-grow min-h-screen">
+      <div class="flex-1 flex-col">
+        <header>
+          <app-header></app-header>
+        </header>
+        <div
+          class="flex flex-col justify-between lg:justify-center items-center section__apresentation__container xl:gap-10"
+        >
+          <div class="flex section__apresentation">
+            <p
+              class="w-full flex justify-center items-center section__apresentation__text"
+            >
+              {{ apresentationText }}
+            </p>
+          </div>
+          <div
+            class="w-full flex flex-col justify-center items-center section__cta__container lg:gap-10"
+          >
+            <button
+              tuiButton
+              type="button"
+              class="section__cta__button tui-space_right-3"
+            >
+              SAIBA MAIS
+            </button>
+            <div
+              class="section__cta__actions flex gap-5 justify-center items-center"
+            >
+              <tui-svg
+                src="tuiIconInstagramLarge"
+                class="text-cyan-50 section__cta__actions__icons"
+              ></tui-svg>
+              <tui-svg
+                src="tuiIconFacebookLarge"
+                class="text-cyan-50 section__cta__actions__icons"
+              ></tui-svg>
+            </div>
+            <div
+              class="footer__pineTech__container flex justify-end items-center"
+            ></div>
+          </div>
+        </div>
+      </div>
+
+      <footer class="h-[auto]">
+        <app-footer></app-footer>
+      </footer>
+    </div>
+  </section>
+</main>
