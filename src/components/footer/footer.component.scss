@@ -1,0 +1,40 @@
+@use "colors" as *;
+@use 'typography' as *;
+@use 'tailwind' as *;
+
+:host {
+  display: block;
+}
+
+.footer {
+  &__pineTech {
+    &__container {
+      background: $color-semiDark;
+    }
+
+    &__logo {
+      background-image: url("../../assets/logo-pineTech\ 2.png");
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: contain;
+      width: 4.5rem;
+      height: 4.5rem;
+
+      &:hover {
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+
+@media screen and (max-width: 1024px) {
+  .footer {
+    &__pineTech {
+      &__logo {
+        width: 3.5rem;
+        height: 3.5rem;
+      }
+    }
+  }
+}
