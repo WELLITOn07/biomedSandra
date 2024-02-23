@@ -53,6 +53,9 @@
 
 @media screen and (max-width: 1024px) {
   .header {
+    &__container {
+      padding-bottom: 5px;
+    }
     &__actions {
       &__icons {
         &__theme {
@@ -61,10 +64,14 @@
 
         &__pineTech {
           display: block;
-          width: 3.5rem;
-          height: 3.5rem;
+          width: 3rem;
+          height: 3rem;
         }
       }
+    }
+
+    &__divider {
+      margin-top: 10px;
     }
   }
 }
