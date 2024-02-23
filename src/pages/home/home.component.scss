@@ -8,10 +8,13 @@
 }
 
 .main {
+  height: 99vh;
   overflow: hidden;
 }
 
 .section {
+  height: 90%;
+
   &__container {
     background-color: $color-semiDark;
   }
@@ -35,40 +38,6 @@
       text-align: center;
       font-family: $font-inter;
       color: $color-light;
-    }
-  }
-
-  &__cta {
-    &__button {
-      width: 350px;
-    }
-
-    &__actions {
-      &__icons {
-        font-size: 2rem;
-
-        &:hover {
-          cursor: pointer;
-          color: $color-secondary;
-        }
-      }
-    }
-  }
-}
-
-/* Até 320px */
-@media screen and (max-width: 320px) {
-  .section {
-    &__apresentation {
-      &__text {
-        font-size: 0.8rem;
-      }
-    }
-    &__cta {
-      &__button {
-        width: 280px;
-        margin-bottom: 35px;
-      }
     }
   }
 }

@@ -27,20 +27,6 @@
       &:hover {
         color: $color-secondary;
       }
-
-      &__pineTech {
-        display: none;
-        background-image: url("../../assets/logo-pineTech.webp");
-        background-repeat: no-repeat;
-        background-position: center;
-        background-size: contain;
-        width: 4.5rem;
-        height: 4.5rem;
-
-        &:hover {
-          cursor: pointer;
-        }
-      }
     }
   }
 
@@ -48,30 +34,5 @@
     height: 1px;
     margin-top: 15px;
     background-color: $color-light;
-  }
-}
-
-@media screen and (max-width: 1024px) {
-  .header {
-    &__container {
-      padding-bottom: 5px;
-    }
-    &__actions {
-      &__icons {
-        &__theme {
-          display: none;
-        }
-
-        &__pineTech {
-          display: block;
-          width: 3rem;
-          height: 3rem;
-        }
-      }
-    }
-
-    &__divider {
-      margin-top: 10px;
-    }
   }
 }

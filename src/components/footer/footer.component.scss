@@ -8,32 +8,38 @@
 
 .footer {
   &__pineTech {
-    &__container {
-      background: $color-semiDark;
-    }
-
     &__logo {
       background-image: url("../../assets/logo-pineTech.webp");
       background-repeat: no-repeat;
       background-position: center;
       background-size: contain;
-      width: 4.5rem;
-      height: 4.5rem;
+      width: 3.5rem;
+      height: 3.5rem;
 
       &:hover {
         cursor: pointer;
       }
     }
   }
-}
 
+  &__cta {
+    &__container {
+      background: $color-semiDark;
+    }
 
-@media screen and (max-width: 1024px) {
-  .footer {
-    &__pineTech {
-      &__logo {
-        width: 3.5rem;
-        height: 3.5rem;
+    &__button {
+      width: 80%;
+      margin-bottom: 20%;
+    }
+
+    &__actions {
+      &__icons {
+        font-size: 1.3rem;
+
+        &:hover {
+          cursor: pointer;
+          color: $color-secondary;
+        }
       }
     }
   }
