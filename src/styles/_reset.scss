@@ -1,5 +1,9 @@
 @use 'colors' as *;
 
+* {
+  font-display: swap;
+}
+
 body {
   width: auto;
   height: auto;

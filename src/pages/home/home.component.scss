@@ -22,7 +22,7 @@
 
   &__backgound__image {
     background: $color-semiDark;
-    background-image: url("../../assets/sandra.png");
+    background-image: url("../../assets/sandra.webp");
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -113,7 +113,7 @@
 /* Até 1024px */
 @media screen and (max-width: 1024px) {
   .section {
-    background-image: url("../../assets/sandra.png");
+    background-image: url("../../assets/sandra.webp");
     background-repeat: no-repeat;
     background-position: center;
     background-size: contain;
