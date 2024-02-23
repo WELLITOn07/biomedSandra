@@ -1,0 +1,90 @@
+@use "colors" as *;
+@use "background-image" as *;
+
+/* De 321px a 413px */
+@media screen and (min-width: 321px) and (max-width: 413px) {
+  .section {
+    &__apresentation {
+      &__text {
+        font-size: 0.9rem;
+      }
+    }
+  }
+}
+
+/* De 414px */
+@media screen and (min-width: 400px) {
+  .section__apresentation {
+    &__text {
+      font-size: 1.1rem;
+    }
+  }
+}
+
+
+/* De 414px */
+@media screen and (min-width: 600px) {
+  .section__apresentation {
+    &__text {
+      font-size: 1.5rem;
+    }
+  }
+}
+
+/* Até 1024px */
+@media screen and (max-width: 1024px) {
+  .section {
+    @include image-cover("sandra.webp");
+
+    &__backgound__container {
+      display: none;
+    }
+    &__cta {
+      &__actions {
+        &__icons {
+          color: $color-secondary;
+          font-size: 1.6rem;
+          &:hover {
+            color: $color-semiDark;
+          }
+        }
+      }
+      &__container {
+        gap: 1.5rem;
+      }
+      &__button {
+        margin-bottom: 10px;
+        width: 320px;
+      }
+    }
+    &__apresentation {
+      &__container {
+        height: 70%;
+      }
+      &__text {
+        text-shadow: 0px 7px 10px rgba(0, 0, 0, 0.599);
+      }
+    }
+  }
+  .footer {
+    display: none;
+  }
+}
+
+/* Acima de 1024px */
+@media screen and (min-width: 1024px) {
+  .section {
+    &__cta {
+      &__button {
+        width: 350px;
+      }
+      &____actions__icons {
+        font-size: 25px;
+      }
+    }
+    &__apresentation__text {
+      font-size: 2rem;
+      padding-bottom: 50px;
+    }
+  }
+}
