@@ -4,10 +4,11 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build": "ng build",
+    "build": "ng build ng build --configuration production --optimization",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "serve:ssr:biomedSandra": "node dist/biomed-sandra/server/server.mjs"
+    "serve:ssr:biomedSandra": "node dist/biomed-sandra/server/server.mjs",
+    "deploy": "firebase deploy --only hosting"
   },
   "private": true,
   "dependencies": {
