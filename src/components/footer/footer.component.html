@@ -1,5 +1,7 @@
 <div class="footer__container w-full flex-col">
-  <div class="w-full flex justify-center items-center footer__cta__button__container">
+  <div
+    class="w-full flex justify-center items-center footer__cta__button__container"
+  >
     <button tuiButton type="button" class="footer__cta__button">
       SAIBA MAIS
     </button>
@@ -7,9 +9,24 @@
 
   <div class="flex justify-between items-center footer__cta__container p-5">
     <div class="footer__cta__actions flex gap-5 justify-center items-center">
-      <tui-svg src="tuiIconInstagramLarge" class="text-cyan-50 footer__cta__actions__icons" (click)="toBrowse('instagram')"></tui-svg>
-      <tui-svg src="tuiIconFacebookLarge" class="text-cyan-50 footer__cta__actions__icons" (click)="toBrowse('facebook')"></tui-svg>
-      <tui-svg src="tuiIconLinkedinLarge" class="text-cyan-50 footer__cta__actions__icons" (click)="toBrowse('linkedin')"></tui-svg>
+      <tui-svg
+        src="tuiIconInstagramLarge"
+        [ngClass]="{ light__theme__font: isLightTheme }"
+        class="text-cyan-50 footer__cta__actions__icons"
+        (click)="toBrowse('instagram')"
+      ></tui-svg>
+      <tui-svg
+        src="tuiIconFacebookLarge"
+        [ngClass]="{ light__theme__font: isLightTheme }"
+        class="text-cyan-50 footer__cta__actions__icons"
+        (click)="toBrowse('facebook')"
+      ></tui-svg>
+      <tui-svg
+        src="tuiIconLinkedinLarge"
+        [ngClass]="{ light__theme__font: isLightTheme }"
+        class="text-cyan-50 footer__cta__actions__icons"
+        (click)="toBrowse('linkedin')"
+      ></tui-svg>
     </div>
 
     <div class="footer__pineTech__container flex justify-center items-center">
@@ -17,4 +34,3 @@
     </div>
   </div>
 </div>
-

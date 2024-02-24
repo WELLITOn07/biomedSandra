@@ -1,0 +1,11 @@
+@use "colors" as *;
+
+.light__theme {
+  &__font {
+    color: $color-semiDark !important;
+  }
+
+  &__background {
+    background-color: $color-light !important;
+  }
+}
