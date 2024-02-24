@@ -32,6 +32,8 @@ export class HomeComponent implements OnInit, OnDestroy {
   ) {}
 
   ngOnInit(): void {
+    this.updateTheme();
+    
     this.changeThemeService.isLightTheme$
       .pipe(takeUntil(this.unsubscribe))
       .subscribe({
@@ -44,6 +46,12 @@ export class HomeComponent implements OnInit, OnDestroy {
         },
       });
   }
+
+  private updateTheme(): void {
+    this.changeThemeService.ensureDefaultTheme();
+    this.cdr.detectChanges();
+  }
+
 
   ngOnDestroy(): void {
     this.unsubscribe.next();

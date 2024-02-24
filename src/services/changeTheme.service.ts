@@ -34,8 +34,9 @@ export class ChangeThemeService {
 
   sharedTheme(): void {
     if (isPlatformBrowser(this.platformId)) {
-      const isLightTheme = localStorage.getItem(this.themeKey);
-      return this.isLightTheme.next(isLightTheme === 'light-theme');
+      const theme = localStorage.getItem(this.themeKey);
+      const isLightTheme = Boolean(theme === 'light-theme')
+      return this.isLightTheme.next(isLightTheme);
     }
     return this.isLightTheme.next(false);
   }

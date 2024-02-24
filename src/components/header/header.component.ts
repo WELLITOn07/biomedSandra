@@ -26,27 +26,22 @@ export class HeaderComponent implements OnInit, OnDestroy {
     private cdr: ChangeDetectorRef
   ) {}
 
+
   ngOnInit(): void {
-    this.updateTheme();
-
     this.changeThemeService.isLightTheme$
-      .pipe(takeUntil(this.unsubscribe))
-      .subscribe({
-        next: (isLightTheme: boolean) => {
-          this.isLightTheme = isLightTheme;
-          this.cdr.detectChanges();
-        },
-        error: (err: Error) => {
-          console.log(err);
-        },
-      });
-  }
+    .pipe(takeUntil(this.unsubscribe))
+    .subscribe({
+      next: (isLightTheme: boolean) => {
+        this.isLightTheme = isLightTheme;
+        this.cdr.detectChanges();
+      },
+      error: (err: Error) => {
+        console.log(err);
+      },
+    });
 
-  private updateTheme(): void {
-    this.changeThemeService.ensureDefaultTheme();
-    this.cdr.detectChanges();
   }
-
+  
   changeTheme(themeName: string): void {
     this.changeThemeService.setTheme(themeName);
     this.cdr.detectChanges();
