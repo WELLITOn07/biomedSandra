@@ -26,14 +26,16 @@ export class ChangeThemeService {
       if (!currentTheme) {
         this.setTheme(this.defaultTheme);
         this.sharedTheme();
+      } else {
+        this.sharedTheme();
       }
     }
   }
 
   sharedTheme(): void {
     if (isPlatformBrowser(this.platformId)) {
-      const isDarkTheme = localStorage.getItem(this.themeKey);
-      return this.isLightTheme.next(isDarkTheme === 'light-theme');
+      const isLightTheme = localStorage.getItem(this.themeKey);
+      return this.isLightTheme.next(isLightTheme === 'light-theme');
     }
     return this.isLightTheme.next(false);
   }

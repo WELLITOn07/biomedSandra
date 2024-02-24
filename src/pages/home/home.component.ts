@@ -1,6 +1,7 @@
 import { CommonModule } from '@angular/common';
 import {
   ChangeDetectionStrategy,
+  ChangeDetectorRef,
   Component,
   OnDestroy,
   OnInit,
@@ -20,19 +21,23 @@ import { ChangeThemeService } from '../../services/changeTheme.service';
 })
 export class HomeComponent implements OnInit, OnDestroy {
   isLightTheme: boolean = false;
-  private unsubscribe$: Subject<void> = new Subject<void>();
+  private unsubscribe: Subject<void> = new Subject<void>();
 
   apresentationText: string =
-  'Explore o mundo biomédico comigo, Sandra Kotovicz. Descubra e-books que oferecem conhecimentos práticos e experiências reais. Clique abaixo para embarcar nessa jornada.';
+    'Explore o mundo biomédico comigo, Sandra Kotovicz. Descubra e-books que oferecem conhecimentos práticos e experiências reais. Clique abaixo para embarcar nessa jornada.';
 
-  constructor(private changeThemeService: ChangeThemeService) {}
+  constructor(
+    private changeThemeService: ChangeThemeService,
+    private cdr: ChangeDetectorRef
+  ) {}
 
   ngOnInit(): void {
     this.changeThemeService.isLightTheme$
-      .pipe(takeUntil(this.unsubscribe$))
+      .pipe(takeUntil(this.unsubscribe))
       .subscribe({
         next: (isLightTheme: boolean) => {
           this.isLightTheme = isLightTheme;
+          this.cdr.detectChanges();
         },
         error: (err: Error) => {
           console.log(err);
@@ -41,7 +46,7 @@ export class HomeComponent implements OnInit, OnDestroy {
   }
 
   ngOnDestroy(): void {
-    this.unsubscribe$.next();
-    this.unsubscribe$.complete();
+    this.unsubscribe.next();
+    this.unsubscribe.complete();
   }
 }

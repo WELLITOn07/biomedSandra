@@ -1,4 +1,4 @@
-import { Component, OnDestroy, OnInit } from '@angular/core';
+import { ChangeDetectorRef, Component, OnDestroy, OnInit } from '@angular/core';
 import { TaigaUiModule } from '../../shared/taiga-ui/taiga-ui.module';
 import { RedirectionService } from '../../services/redirection.service';
 import { ChangeThemeService } from '../../services/changeTheme.service';
@@ -13,19 +13,21 @@ import { Subject, takeUntil } from 'rxjs';
 })
 export class FooterComponent implements OnInit, OnDestroy {
   isLightTheme: boolean = false;
-  private unsubscribe$: Subject<void> = new Subject<void>();
+  private unsubscribe: Subject<void> = new Subject<void>();
 
   constructor(
     private redirectionService: RedirectionService,
-    private changeThemeService: ChangeThemeService
+    private changeThemeService: ChangeThemeService,
+    private cdr: ChangeDetectorRef
   ) {}
 
   ngOnInit(): void {
     this.changeThemeService.isLightTheme$
-      .pipe(takeUntil(this.unsubscribe$))
+      .pipe(takeUntil(this.unsubscribe))
       .subscribe({
         next: (isLightTheme: boolean) => {
           this.isLightTheme = isLightTheme;
+          this.cdr.detectChanges();
         },
         error: (err: Error) => {
           console.log(err);
@@ -38,7 +40,7 @@ export class FooterComponent implements OnInit, OnDestroy {
   }
 
   ngOnDestroy(): void {
-    this.unsubscribe$.next();
-    this.unsubscribe$.complete();
+    this.unsubscribe.next();
+    this.unsubscribe.complete();
   }
 }

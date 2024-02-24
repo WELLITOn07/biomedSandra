@@ -19,7 +19,7 @@ import { Subject, takeUntil } from 'rxjs';
 })
 export class HeaderComponent implements OnInit, OnDestroy {
   isLightTheme: boolean = false;
-  private unsubscribe$: Subject<void> = new Subject<void>();
+  private unsubscribe: Subject<void> = new Subject<void>();
 
   constructor(
     private changeThemeService: ChangeThemeService,
@@ -27,18 +27,19 @@ export class HeaderComponent implements OnInit, OnDestroy {
   ) {}
 
   ngOnInit(): void {
-    this.changeThemeService.isLightTheme$
-    .pipe(takeUntil(this.unsubscribe$))
-    .subscribe({
-      next: (isLightTheme: boolean) => {
-        this.isLightTheme = isLightTheme;
-      },
-      error: (err: Error) => {
-        console.log(err);
-      },
-    });
-
     this.updateTheme();
+
+    this.changeThemeService.isLightTheme$
+      .pipe(takeUntil(this.unsubscribe))
+      .subscribe({
+        next: (isLightTheme: boolean) => {
+          this.isLightTheme = isLightTheme;
+          this.cdr.detectChanges();
+        },
+        error: (err: Error) => {
+          console.log(err);
+        },
+      });
   }
 
   private updateTheme(): void {
@@ -52,7 +53,7 @@ export class HeaderComponent implements OnInit, OnDestroy {
   }
 
   ngOnDestroy(): void {
-    this.unsubscribe$.next();
-    this.unsubscribe$.complete();
+    this.unsubscribe.next();
+    this.unsubscribe.complete();
   }
 }
