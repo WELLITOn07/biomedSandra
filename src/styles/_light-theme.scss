@@ -1,11 +1,19 @@
 @use "colors" as *;
 
 .light__theme {
-  &__font {
-    color: $color-semiDark !important;
+  &__background {
+    background-color: $color-secondary !important;
   }
 
-  &__background {
-    background-color: $color-light !important;
+  &__image {
+    background-image: linear-gradient(180deg, $color-secondary, $color-dark) !important;
+  }
+
+  &__font {
+    color:  $color-dark !important;
+
+    &--not {
+      color: $color-secondary !important;
+    }
   }
 }

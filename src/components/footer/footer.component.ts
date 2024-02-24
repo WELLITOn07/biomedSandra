@@ -13,7 +13,7 @@ import { Subject, takeUntil } from 'rxjs';
 })
 export class FooterComponent implements OnInit, OnDestroy {
   isLightTheme: boolean = false;
-  unsubscribe$: Subject<void> = new Subject<void>();
+  private unsubscribe$: Subject<void> = new Subject<void>();
 
   constructor(
     private redirectionService: RedirectionService,

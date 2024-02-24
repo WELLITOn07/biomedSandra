@@ -8,13 +8,13 @@
 }
 
 .main {
-  height: 99vh;
+  width: 100%;
+  height: 100vh;
   overflow: hidden;
+  background-image: linear-gradient(180deg, #506786, $color-semiDark);
 }
 
 .section {
-  height: 90%;
-
   &__container {
     background-color: $color-semiDark;
   }
@@ -25,7 +25,8 @@
   }
 
   &__backgound__image {
-    @include image-cover("sandra.webp");
+    @include image("sandra.webp");
+    background-size: auto;
   }
 
   &__apresentation {
