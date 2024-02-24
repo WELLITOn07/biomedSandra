@@ -44,6 +44,11 @@
 /* Até 1024px */
 @media screen and (max-width: 1024px) {
   .header {
+    &__container {
+      margin-bottom: 10px;
+      border-radius: 0 0 10px 10px;
+    }
+
     &__actions {
       &__icons {
         &__theme {
@@ -58,7 +63,8 @@
   }
 
   .section {
-    @include image-cover("sandra.webp");
+    @include image("sandra.webp");
+    background-size: cover;
 
     &__backgound__container {
       display: none;

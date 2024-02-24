@@ -2,13 +2,14 @@
 
 * {
   font-display: swap;
+  margin: 0;
+  padding: 0;
 }
 
 body {
   width: auto;
   height: auto;
 	line-height: 1;
-  background-image: linear-gradient(180deg, #506786, $color-semiDark);
   overflow-y: hidden;
 }
 ol, ul {
