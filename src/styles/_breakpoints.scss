@@ -6,7 +6,7 @@
   .section {
     &__apresentation {
       &__text {
-        font-size: 0.8rem;
+        font-size: 0.9rem;
       }
     }
   }
@@ -17,7 +17,7 @@
   .section {
     &__apresentation {
       &__text {
-        font-size: 0.9rem;
+        font-size: 1rem;
       }
     }
   }
@@ -27,7 +27,7 @@
 @media screen and (min-width: 400px) {
   .section__apresentation {
     &__text {
-      font-size: 1.1rem;
+      font-size: 1.2rem;
     }
   }
 }
@@ -36,7 +36,7 @@
 @media screen and (min-width: 600px) {
   .section__apresentation {
     &__text {
-      font-size: 1.5rem;
+      font-size: 1.6rem;
     }
   }
 }
@@ -63,8 +63,6 @@
   }
 
   .section {
-    height: 93% !important;
-
     @include image("sandra.webp");
     background-size: cover;
 
@@ -82,6 +80,10 @@
   }
 
   .footer {
+    width: 100vw;
+    position: absolute;
+    bottom: 0;
+
     &__cta {
       &__actions {
         &__icons {
