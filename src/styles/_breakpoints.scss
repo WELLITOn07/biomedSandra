@@ -63,6 +63,8 @@
   }
 
   .section {
+    height: 93% !important;
+
     @include image("sandra.webp");
     background-size: cover;
 
