@@ -43,6 +43,10 @@
 
 /* Até 1024px */
 @media screen and (max-width: 1024px) {
+  .main {
+    height: 93vh !important;
+  }
+
   .header {
     &__container {
       margin-bottom: 10px;
