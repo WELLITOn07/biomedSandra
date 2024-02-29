@@ -5,12 +5,15 @@ import {
   Component,
   OnDestroy,
   OnInit,
+  Inject,
+  PLATFORM_ID,
 } from '@angular/core';
 import { TaigaUiModule } from '../../shared/taiga-ui/taiga-ui.module';
 import { HeaderComponent } from '../../components/header/header.component';
 import { FooterComponent } from '../../components/footer/footer.component';
 import { Subject, takeUntil } from 'rxjs';
 import { ChangeThemeService } from '../../services/changeTheme.service';
+import { isPlatformBrowser } from '@angular/common';
 
 @Component({
   standalone: true,
@@ -21,6 +24,8 @@ import { ChangeThemeService } from '../../services/changeTheme.service';
 })
 export class HomeComponent implements OnInit, OnDestroy {
   isLightTheme: boolean = false;
+  isSafari: boolean = false;
+
   private unsubscribe: Subject<void> = new Subject<void>();
 
   apresentationText: string =
@@ -28,12 +33,14 @@ export class HomeComponent implements OnInit, OnDestroy {
 
   constructor(
     private changeThemeService: ChangeThemeService,
-    private cdr: ChangeDetectorRef
+    private cdr: ChangeDetectorRef,
+    @Inject(PLATFORM_ID) private platformId: Object
   ) {}
 
   ngOnInit(): void {
     this.updateTheme();
-    
+    this.checkIsSafari();
+
     this.changeThemeService.isLightTheme$
       .pipe(takeUntil(this.unsubscribe))
       .subscribe({
@@ -52,9 +59,19 @@ export class HomeComponent implements OnInit, OnDestroy {
     this.cdr.detectChanges();
   }
 
-
   ngOnDestroy(): void {
     this.unsubscribe.next();
     this.unsubscribe.complete();
+  }
+
+  private checkIsSafari(): void {
+    if (isPlatformBrowser(this.platformId)) {
+      const userAgent = navigator.userAgent;
+      const isSafari = /^((?!chrome|android).)*safari/i.test(userAgent);
+      if (isSafari) {
+        this.isSafari = true;
+        this.cdr.detectChanges();
+      }
+    }
   }
 }
