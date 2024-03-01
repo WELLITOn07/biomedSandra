@@ -18,37 +18,29 @@ import { Subject, takeUntil } from 'rxjs';
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class HeaderComponent implements OnInit, OnDestroy {
-  isLightTheme: boolean = false;
-  private unsubscribe: Subject<void> = new Subject<void>();
+  isDarkTheme: boolean = false;
+  destroySubject = new Subject<void>();
 
   constructor(
     private changeThemeService: ChangeThemeService,
     private cdr: ChangeDetectorRef
   ) {}
 
-
   ngOnInit(): void {
-    this.changeThemeService.isLightTheme$
-    .pipe(takeUntil(this.unsubscribe))
-    .subscribe({
-      next: (isLightTheme: boolean) => {
-        this.isLightTheme = isLightTheme;
-        this.cdr.detectChanges();
-      },
-      error: (err: Error) => {
-        console.log(err);
-      },
-    });
-
+    this.changeThemeService.getTheme()
+      .pipe(takeUntil(this.destroySubject))
+      .subscribe((theme) => {
+        this.isDarkTheme = theme;
+      });
   }
-  
+
   changeTheme(themeName: string): void {
-    this.changeThemeService.setTheme(themeName);
+    this.changeThemeService.changeTheme(themeName);
     this.cdr.detectChanges();
   }
 
   ngOnDestroy(): void {
-    this.unsubscribe.next();
-    this.unsubscribe.complete();
+    this.destroySubject.next();
+    this.destroySubject.complete();
   }
 }

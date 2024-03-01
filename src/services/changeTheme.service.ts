@@ -1,43 +1,33 @@
-import { isPlatformBrowser } from '@angular/common';
 import { Inject, Injectable, PLATFORM_ID } from '@angular/core';
-import { BehaviorSubject } from 'rxjs';
+import { BehaviorSubject, Observable } from 'rxjs';
+import { isPlatformBrowser } from '@angular/common';
 
 @Injectable({
   providedIn: 'root',
 })
 export class ChangeThemeService {
   private readonly themeKey = 'user-theme';
-  private defaultTheme = 'dark-theme';
-  private isLightTheme = new BehaviorSubject<boolean>(false);
-  public isLightTheme$ = this.isLightTheme.asObservable();
+  public isDarkTheme = new BehaviorSubject<boolean>(false);
 
   constructor(@Inject(PLATFORM_ID) private platformId: Object) {}
 
-  setTheme(themeName: string): void {
+  public changeTheme(themeName: string): void {
     if (isPlatformBrowser(this.platformId)) {
+      document.body.classList.remove('light-theme', 'dark-theme');
+      document.body.classList.add(themeName);
+      const isDarkTheme = Boolean(themeName === 'dark-theme');
       localStorage.setItem(this.themeKey, themeName);
-      this.sharedTheme();
+
+      this.isDarkTheme.next(isDarkTheme);
     }
   }
 
-  ensureDefaultTheme(): void {
+  public getTheme(): Observable<boolean> {
     if (isPlatformBrowser(this.platformId)) {
-      const currentTheme = localStorage.getItem(this.themeKey);
-      if (!currentTheme) {
-        this.setTheme(this.defaultTheme);
-        this.sharedTheme();
-      } else {
-        this.sharedTheme();
-      }
+      const storedTheme = localStorage.getItem(this.themeKey);
+      const isDarkTheme = Boolean(storedTheme === 'dark-theme');
+      this.isDarkTheme.next(isDarkTheme);
     }
-  }
-
-  sharedTheme(): void {
-    if (isPlatformBrowser(this.platformId)) {
-      const theme = localStorage.getItem(this.themeKey);
-      const isLightTheme = Boolean(theme === 'light-theme')
-      return this.isLightTheme.next(isLightTheme);
-    }
-    return this.isLightTheme.next(false);
+    return this.isDarkTheme.asObservable();
   }
 }

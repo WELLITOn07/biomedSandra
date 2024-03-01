@@ -1,15 +1,16 @@
 @use "colors" as *;
 @use 'typography' as *;
 @use 'tailwind' as *;
+@use "background-image" as *;
 
 :host {
   display: block;
 }
 
 .footer {
-  &__pineTech {
+  &__w7 {
     &__logo {
-      background-image: url("../../assets/logo-pineTech.webp");
+      @include image("w7.webp");
       background-repeat: no-repeat;
       background-position: center;
       background-size: contain;
@@ -23,10 +24,6 @@
   }
 
   &__cta {
-    &__container {
-      background: $color-semiDark;
-    }
-
     &__button {
       width: 80%;
       margin-bottom: 20%;

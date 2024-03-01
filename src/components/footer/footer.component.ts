@@ -1,8 +1,6 @@
-import { ChangeDetectorRef, Component, OnDestroy, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { TaigaUiModule } from '../../shared/taiga-ui/taiga-ui.module';
 import { RedirectionService } from '../../services/redirection.service';
-import { ChangeThemeService } from '../../services/changeTheme.service';
-import { Subject, takeUntil } from 'rxjs';
 
 @Component({
   selector: 'app-footer',
@@ -11,36 +9,11 @@ import { Subject, takeUntil } from 'rxjs';
   templateUrl: './footer.component.html',
   styleUrl: './footer.component.scss',
 })
-export class FooterComponent implements OnInit, OnDestroy {
+export class FooterComponent {
   isLightTheme: boolean = false;
-  private unsubscribe: Subject<void> = new Subject<void>();
-
-  constructor(
-    private redirectionService: RedirectionService,
-    private changeThemeService: ChangeThemeService,
-    private cdr: ChangeDetectorRef
-  ) {}
-
-  ngOnInit(): void {
-    this.changeThemeService.isLightTheme$
-      .pipe(takeUntil(this.unsubscribe))
-      .subscribe({
-        next: (isLightTheme: boolean) => {
-          this.isLightTheme = isLightTheme;
-          this.cdr.detectChanges();
-        },
-        error: (err: Error) => {
-          console.log(err);
-        },
-      });
-  }
+  constructor(private redirectionService: RedirectionService) {}
 
   toBrowse(social: string) {
     this.redirectionService.goTo(social);
-  }
-
-  ngOnDestroy(): void {
-    this.unsubscribe.next();
-    this.unsubscribe.complete();
   }
 }

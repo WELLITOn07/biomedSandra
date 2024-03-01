@@ -9,15 +9,14 @@
 .header {
   &__actions {
     &__title {
-      color: $color-light;
       font-family: $font-inter;
       font-weight: bold;
+      color: $color-light;
     }
 
     &__ebooks {
       &:hover {
         cursor: pointer;
-        color: $color-dark;
       }
     }
 
@@ -26,6 +25,12 @@
 
       &:hover {
         color: $color-accent;
+      }
+
+      &__theme {
+        &--active {
+          color: $color-accent;
+        }
       }
     }
   }

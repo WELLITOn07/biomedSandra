@@ -1,0 +1,39 @@
+@use "colors" as *;
+
+body.light-theme {
+  .background {
+    background-color: $color-secondary !important;
+  }
+
+  .image {
+    background-image: linear-gradient(180deg, $color-secondary, $color-dark) !important;
+  }
+
+  .font {
+    color:  $color-dark !important;
+
+    &--not {
+      color: $color-secondary !important;
+    }
+  }
+}
+
+
+body.dark-theme {
+  .background {
+    background-color: $color-semiDark !important;
+  }
+
+  .image {
+    background-image: linear-gradient(180deg, #506786, $color-semiDark) !important;
+  }
+
+  .font {
+    color: $color-light !important;
+
+    &--not {
+      color: $color-secondary !important;
+    }
+  }
+}
+
