@@ -26,6 +26,12 @@
       &:hover {
         color: $color-accent;
       }
+
+      &__theme {
+        &--active {
+          color: $color-accent;
+        }
+      }
     }
   }
 
