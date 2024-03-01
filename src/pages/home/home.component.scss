@@ -11,7 +11,6 @@
   width: 100%;
   height: 100vh;
   overflow: hidden;
-  background-image: linear-gradient(180deg, #506786, $color-semiDark);
 
   &__webkit__fill {
     height: -webkit-fill-available !important;
@@ -19,10 +18,6 @@
 }
 
 .section {
-  &__container {
-    background-color: $color-semiDark;
-  }
-
   &__backgound__container {
     position: relative;
     overflow: hidden;

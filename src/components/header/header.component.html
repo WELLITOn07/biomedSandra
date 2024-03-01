@@ -1,4 +1,4 @@
-<div class="w-full flex-col p-5 header__container"  [ngClass]="{'light__theme__background': isLightTheme, 'dark__theme__font': !isLightTheme }">
+<div class="w-full flex-col p-5 header__container background">
   <div class="flex justify-between items-center header__actions">
     <div class="flex gap-3 items-center header__actions__ebooks">
       <tui-svg
@@ -11,14 +11,12 @@
     <div class="flex gap-3 items-center header__actions__theme">
       <tui-svg
         src="tuiIconMoonLarge"
-        [ngClass]="{'light__theme__font--not': !isLightTheme }"
         class="text-cyan-50 header__actions__icons header__actions__icons__theme"
         (click)="changeTheme('dark-theme')"
       ></tui-svg>
       <tui-svg
         src="tuiIconSunLarge"
-        [ngClass]="{'light__theme__font': isLightTheme }"
-        class="text-cyan-50 header__actions__icons header__actions__icons__theme"
+        class="text-cyan-50 header__actions__icons header__actions__icons__theme "
         (click)="changeTheme('light-theme')"
       ></tui-svg>
     </div>
