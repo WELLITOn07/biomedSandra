@@ -1,16 +1,16 @@
-<div class="w-full flex-col p-5 header__container background">
-  <div class="flex justify-between items-center header__actions">
-    <div class="flex gap-3 items-center header__actions__ebooks">
+<div class="header__container background-theme">
+  <div class="header__actions">
+    <div class="header__actions__ebooks">
       <tui-svg src="tuiIconBookOpenLarge" class="text-cyan-50 header__actions__icons"></tui-svg>
       <h1 class="header__actions__title">E-books - BiomedSandra</h1>
     </div>
 
-    <div class="flex gap-3 items-center header__actions__theme">
+    <div class="header__actions__theme">
       <tui-svg src="tuiIconMoonLarge" class="text-cyan-50 header__actions__icons header__actions__icons__theme"
         [ngClass]="{ 'header__actions__icons__theme--active': isDarkTheme }"
         (click)="changeTheme('dark-theme')"></tui-svg>
       <tui-svg src="tuiIconSunLarge" [ngClass]="{ 'header__actions__icons__theme--active': !isDarkTheme }"
-        class="text-cyan-50 header__actions__icons header__actions__icons__theme "
+        class="text-cyan-50 header__actions__icons header__actions__icons__theme"
         (click)="changeTheme('light-theme')"></tui-svg>
     </div>
   </div>

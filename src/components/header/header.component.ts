@@ -8,11 +8,12 @@ import {
 import { TaigaUiModule } from '../../shared/taiga-ui/taiga-ui.module';
 import { ChangeThemeService } from '../../services/changeTheme.service';
 import { Subject, takeUntil } from 'rxjs';
+import { FlexLayoutModule } from '@angular/flex-layout';
 
 @Component({
   selector: 'app-header',
   standalone: true,
-  imports: [TaigaUiModule],
+  imports: [TaigaUiModule, FlexLayoutModule],
   templateUrl: './header.component.html',
   styleUrl: './header.component.scss',
   changeDetection: ChangeDetectionStrategy.OnPush,
@@ -27,7 +28,8 @@ export class HeaderComponent implements OnInit, OnDestroy {
   ) {}
 
   ngOnInit(): void {
-    this.changeThemeService.getTheme()
+    this.changeThemeService
+      .getTheme()
       .pipe(takeUntil(this.destroySubject))
       .subscribe((theme) => {
         this.isDarkTheme = theme;

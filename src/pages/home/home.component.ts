@@ -10,10 +10,17 @@ import { TaigaUiModule } from '../../shared/taiga-ui/taiga-ui.module';
 import { HeaderComponent } from '../../components/header/header.component';
 import { FooterComponent } from '../../components/footer/footer.component';
 import { isPlatformBrowser } from '@angular/common';
+import { FlexLayoutModule } from '@angular/flex-layout';
 
 @Component({
   standalone: true,
-  imports: [CommonModule, TaigaUiModule, HeaderComponent, FooterComponent],
+  imports: [
+    CommonModule,
+    TaigaUiModule,
+    HeaderComponent,
+    FooterComponent,
+    FlexLayoutModule,
+  ],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss',
   changeDetection: ChangeDetectionStrategy.OnPush,

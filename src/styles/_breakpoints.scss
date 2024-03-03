@@ -108,6 +108,10 @@
 /* Acima de 1024px */
 @media screen and (min-width: 1024px) {
   .section {
+    &__container {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr))
+    }
     &__apresentation__text {
       font-size: 2rem;
       padding-bottom: 50px;
