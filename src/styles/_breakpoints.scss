@@ -43,10 +43,6 @@
 
 /* Até 1024px */
 @media screen and (max-width: 1024px) {
-  .main {
-    height: 93vh !important;
-  }
-
   .header {
     &__container {
       margin-bottom: 10px;
@@ -74,9 +70,6 @@
       display: none;
     }
     &__apresentation {
-      &__container {
-        height: 70%;
-      }
       &__text {
         text-shadow: 0px 7px 10px rgba(0, 0, 0, 0.599);
       }
@@ -84,15 +77,12 @@
   }
 
   .footer {
-    width: 100vw;
-    position: absolute;
-    bottom: 0;
-
     &__cta {
       &__actions {
         &__icons {
           color: $color-secondary;
           font-size: 1.6rem;
+
           &:hover {
             color: $color-semiDark;
           }
@@ -108,10 +98,6 @@
 /* Acima de 1024px */
 @media screen and (min-width: 1024px) {
   .section {
-    &__container {
-      display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr))
-    }
     &__apresentation__text {
       font-size: 2rem;
       padding-bottom: 50px;

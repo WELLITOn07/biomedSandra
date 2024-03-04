@@ -6,11 +6,9 @@
     </div>
 
     <div class="header__actions__theme">
-      <tui-svg src="tuiIconMoonLarge" class="text-cyan-50 header__actions__icons header__actions__icons__theme"
-        [ngClass]="{ 'header__actions__icons__theme--active': isDarkTheme }"
+      <tui-svg src="tuiIconMoonLarge" class="text-cyan-50 header__actions__icons font-theme font-theme--dark__active"
         (click)="changeTheme('dark-theme')"></tui-svg>
-      <tui-svg src="tuiIconSunLarge" [ngClass]="{ 'header__actions__icons__theme--active': !isDarkTheme }"
-        class="text-cyan-50 header__actions__icons header__actions__icons__theme"
+      <tui-svg src="tuiIconSunLarge" class="text-cyan-50 header__actions__icons font-theme font-theme--light__active"
         (click)="changeTheme('light-theme')"></tui-svg>
     </div>
   </div>

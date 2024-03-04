@@ -1,6 +1,5 @@
 @use 'colors' as *;
 @use 'typography' as *;
-@use 'tailwind' as *;
 
 :host {
   display: block;
@@ -25,12 +24,6 @@
 
       &:hover {
         color: $color-accent;
-      }
-
-      &__theme {
-        &--active {
-          color: $color-accent;
-        }
       }
     }
   }

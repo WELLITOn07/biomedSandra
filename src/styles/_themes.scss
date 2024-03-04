@@ -12,8 +12,8 @@ body.light-theme {
   .font-theme {
     color:  $color-dark !important;
 
-    &--not {
-      color: $color-secondary !important;
+    &--light__active {
+      color: $color-accent !important;
     }
   }
 }
@@ -31,7 +31,7 @@ body.dark-theme {
   .font-theme {
     color: $color-light !important;
 
-    &--not {
+    &--dark__active {
       color: $color-secondary !important;
     }
   }

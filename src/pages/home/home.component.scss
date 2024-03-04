@@ -1,6 +1,5 @@
 @use "colors" as *;
 @use "typography" as *;
-@use "tailwind" as *;
 @use "background-image" as *;
 
 :host {
@@ -18,7 +17,7 @@
 }
 
 .section {
-  &__backgound__container {
+    &__backgound__container {
     position: relative;
     overflow: hidden;
   }
