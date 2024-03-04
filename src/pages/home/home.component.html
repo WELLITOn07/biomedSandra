@@ -1,24 +1,22 @@
-<main class="main image-theme">
-  <section class="container section__container background-theme">
-    <div class="section__backgound__container">
+<main class="main image-theme" fxLayout="row">
+  <section class="container section__container background-theme" fxFlex.gt-md="80" fxLayout.gt-md="row">
+    <div class="section__backgound__container" fxFlex.gt-md="50">
       <div class="section__backgound__image"></div>
     </div>
 
-    <div class="section">
-      <div class="">
-        <header>
-          <app-header></app-header>
-        </header>
-        <div class="section__apresentation__container">
-          <div class="section__apresentation">
-            <p class="section__apresentation__text">
-              {{ apresentationText }}
-            </p>
-          </div>
+    <div class="section" fxFlex.gt-md="50" fxLayout="column">
+      <header fxFlex="10">
+        <app-header></app-header>
+      </header>
+      <div class="section__apresentation__container" fxFlex="1 1 auto" fxLayout="column" fxLayoutAlign.gt-md="center center">
+        <div class="section__apresentation">
+          <p class="section__apresentation__text">
+            {{ apresentationText }}
+          </p>
         </div>
       </div>
 
-      <footer class="footer">
+      <footer class="footer" fxFlex="10">
         <app-footer></app-footer>
       </footer>
     </div>
