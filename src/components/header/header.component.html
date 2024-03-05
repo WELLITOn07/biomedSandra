@@ -1,11 +1,11 @@
-<div class="header__container background-theme">
-  <div class="header__actions">
-    <div class="header__actions__ebooks">
+<div class="header__container background-theme" fxLayout="column">
+  <div class="header__actions" fxLayout="row" fxLayoutAlign="space-between center">
+    <div class="header__actions__ebooks" fxLayout="row" fxLayoutGap="15px">
       <tui-svg src="tuiIconBookOpenLarge" class="text-cyan-50 header__actions__icons"></tui-svg>
       <h1 class="header__actions__title">E-books - BiomedSandra</h1>
     </div>
 
-    <div class="header__actions__theme">
+    <div class="header__actions__theme" fxLayout="row" fxLayoutGap="8px">
       <tui-svg src="tuiIconMoonLarge" class="text-cyan-50 header__actions__icons font-theme font-theme--dark__active"
         (click)="changeTheme('dark-theme')"></tui-svg>
       <tui-svg src="tuiIconSunLarge" class="text-cyan-50 header__actions__icons font-theme font-theme--light__active"

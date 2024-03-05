@@ -1,5 +1,5 @@
 <main class="main image-theme" fxLayout="row">
-  <section class="container section__container background-theme" fxFlex.gt-md="80" fxLayout.gt-md="row">
+  <section class="container section__container background-theme" fxFlex.gt-md="85" fxLayout.gt-md="row">
     <div class="section__backgound__container" fxFlex.gt-md="50">
       <div class="section__backgound__image"></div>
     </div>
@@ -13,10 +13,16 @@
           <p class="section__apresentation__text">
             {{ apresentationText }}
           </p>
+
+          <div class="section__cta__button__container">
+            <button tuiButton type="button" class="section__cta__button" [appearance]="'accent'">
+              SAIBA MAIS
+            </button>
+          </div>
         </div>
       </div>
 
-      <footer class="footer" fxFlex="10">
+      <footer class="footer" fxFlex="5">
         <app-footer></app-footer>
       </footer>
     </div>

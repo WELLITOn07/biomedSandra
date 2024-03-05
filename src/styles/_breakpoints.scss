@@ -1,48 +1,30 @@
 @use "colors" as *;
 @use "background-image" as *;
 
-/* Até 320px */
-@media screen and (max-width: 320px) {
+/* xs: Até 599px */
+@media screen and (max-width: 599px) {
   .section {
     &__apresentation {
       &__text {
-        font-size: 0.9rem;
+        font-size: 0.9rem; /* Ajuste conforme necessário */
       }
     }
   }
 }
 
-/* De 321px a 413px */
-@media screen and (min-width: 321px) and (max-width: 413px) {
+/* sm: De 600px a 959px */
+@media screen and (min-width: 600px) and (max-width: 959px) {
   .section {
     &__apresentation {
       &__text {
-        font-size: 1rem;
+        font-size: 1.2rem; /* Ajuste conforme necessário */
       }
     }
   }
 }
 
-/* De 414px */
-@media screen and (min-width: 400px) {
-  .section__apresentation {
-    &__text {
-      font-size: 1.2rem;
-    }
-  }
-}
-
-/* De 414px */
-@media screen and (min-width: 600px) {
-  .section__apresentation {
-    &__text {
-      font-size: 1.6rem;
-    }
-  }
-}
-
-/* Até 1024px */
-@media screen and (max-width: 1024px) {
+/* md: De 960px a 1279px */
+@media screen and (min-width: 960px) and (max-width: 1279px) {
   .header {
     &__container {
       margin-bottom: 10px;
@@ -65,6 +47,7 @@
     &__apresentation {
       &__text {
         text-shadow: 0px 7px 10px rgba(0, 0, 0, 0.599);
+        font-size: 1.6rem; /* Ajuste conforme necessário */
       }
     }
   }
@@ -88,12 +71,13 @@
   }
 }
 
-/* Acima de 1024px */
-@media screen and (min-width: 1024px) {
+/* lg: De 1280px a 1919px */
+@media screen and (min-width: 1280px) and (max-width: 1919px) {
   .section {
     &__apresentation__text {
       font-size: 2rem;
       padding-bottom: 50px;
+      line-height: 40px;
     }
   }
 
@@ -106,4 +90,8 @@
       }
     }
   }
+}
+
+/* xl: Acima de 1920px */
+@media screen and (min-width: 1920px) {
 }
