@@ -17,6 +17,7 @@
 
 .section {
   width: 100%;
+  height: 100%;
   padding: 20px;
 
   &__container {
@@ -36,6 +37,9 @@
   }
 
   &__apresentation {
+    height: 100%;
+    padding-bottom: 15px;
+    
     &__container {
       height: 100%;
     }
