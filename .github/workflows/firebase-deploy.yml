@@ -19,7 +19,7 @@ jobs:
       - name: Build
         run: ng build --configuration production --optimization
       - name: Deploy to Firebase
-        uses: w9jds/firebase-action@v10 # Substitua 'v10' pela versão desejada
+        uses: w9jds/firebase-action@v13.4.1
         with:
           args: deploy --only hosting
         env:
