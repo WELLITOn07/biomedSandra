@@ -1,24 +1,28 @@
-<main class="w-full flex justify-center main image">
-  <section class="container grid lg:grid-cols-2 section__container background">
-    <div class="min-h-screen section__backgound__container">
+<main class="main image-theme" fxLayout="row">
+  <section class="container section__container background-theme" fxFlex.gt-md="85" fxLayout.gt-md="row">
+    <div class="section__backgound__container" fxFlex.gt-md="50">
       <div class="section__backgound__image"></div>
     </div>
 
-    <div class="section flex flex-col flex-grow">
-      <div class="flex-1 flex-col">
-        <header>
-          <app-header></app-header>
-        </header>
-        <div class="lg:flex lg:justify-center lg:items-center section__apresentation__container xl:gap-10">
-          <div class="flex section__apresentation">
-            <p class="w-full flex justify-center items-center section__apresentation__text">
-              {{ apresentationText }}
-            </p>
+    <div class="section" fxFlex.gt-md="50" fxLayout="column">
+      <header fxFlex="10">
+        <app-header></app-header>
+      </header>
+      <div class="section__apresentation__container" fxFlex="1 1 auto">
+        <div class="section__apresentation" fxLayout="column" fxLayoutAlign="space-between center" fxLayoutAlign.gt-sm="center center">
+          <p class="section__apresentation__text">
+            {{ apresentationText }}
+          </p>
+
+          <div class="section__cta__button__container">
+            <button tuiButton type="button" class="section__cta__button" [appearance]="'accent'">
+              SAIBA MAIS
+            </button>
           </div>
         </div>
       </div>
 
-      <footer class="h-[auto] footer">
+      <footer class="footer" fxFlex="5">
         <app-footer></app-footer>
       </footer>
     </div>

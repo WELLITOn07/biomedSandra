@@ -1,6 +1,5 @@
 @use "colors" as *;
 @use "typography" as *;
-@use "tailwind" as *;
 @use "background-image" as *;
 
 :host {
@@ -8,7 +7,6 @@
 }
 
 .main {
-  width: 100%;
   height: 100vh;
   overflow: hidden;
 
@@ -18,6 +16,16 @@
 }
 
 .section {
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+
+  &__container {
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+  }
+
   &__backgound__container {
     position: relative;
     overflow: hidden;
@@ -29,6 +37,9 @@
   }
 
   &__apresentation {
+    height: 100%;
+    padding-bottom: 15px;
+    
     &__container {
       height: 100%;
     }
@@ -40,5 +51,12 @@
       color: $color-light;
     }
   }
-}
 
+  &__cta__button {
+    width: 100%;
+
+    &__container {
+      width: 100%;
+    }
+  }
+}

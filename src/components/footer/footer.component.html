@@ -1,21 +1,15 @@
-<div class="footer__container w-full flex-col">
-  <div class="w-full flex justify-center items-center footer__cta__button__container">
-    <button tuiButton type="button" class="footer__cta__button" [appearance]="'accent'">
-      SAIBA MAIS
-    </button>
-  </div>
-
-  <div class="flex justify-between items-center footer__cta__container p-5">
-    <div class="footer__cta__actions flex gap-5 justify-center items-center">
-      <tui-svg src="tuiIconInstagramLarge" class="text-cyan-50 footer__cta__actions__icons"
+<div class="footer__container background-theme">
+  <div class="footer__actions__container" fxLayout="row" fxLayoutAlign="space-between center">
+    <div class="footer__actions" fxLayout="row" fxLayoutGap="8px">
+      <tui-svg src="tuiIconInstagramLarge" class="text-cyan-50 footer__actions__icons"
         (click)="toBrowse('instagram')"></tui-svg>
-      <tui-svg src="tuiIconFacebookLarge" class="text-cyan-50 footer__cta__actions__icons"
+      <tui-svg src="tuiIconFacebookLarge" class="text-cyan-50 footer__actions__icons"
         (click)="toBrowse('facebook')"></tui-svg>
-      <tui-svg src="tuiIconLinkedinLarge" class="text-cyan-50 footer__cta__actions__icons"
+      <tui-svg src="tuiIconLinkedinLarge" class="text-cyan-50 footer__actions__icons"
         (click)="toBrowse('linkedin')"></tui-svg>
     </div>
 
-    <div class="footer__w7__container flex justify-center items-center">
+    <div class="footer__w7__container">
       <div class="footer__w7__logo" (click)="toBrowse('github')"></div>
     </div>
   </div>

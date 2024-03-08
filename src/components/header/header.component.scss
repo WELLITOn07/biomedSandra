@@ -1,6 +1,5 @@
 @use 'colors' as *;
 @use 'typography' as *;
-@use 'tailwind' as *;
 
 :host {
   display: block;
@@ -21,16 +20,11 @@
     }
 
     &__icons {
+      color: $color-light;
       cursor: pointer;
 
       &:hover {
         color: $color-accent;
-      }
-
-      &__theme {
-        &--active {
-          color: $color-accent;
-        }
       }
     }
   }

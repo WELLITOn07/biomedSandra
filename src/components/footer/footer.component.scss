@@ -1,6 +1,5 @@
 @use "colors" as *;
 @use 'typography' as *;
-@use 'tailwind' as *;
 @use "background-image" as *;
 
 :host {
@@ -8,6 +7,8 @@
 }
 
 .footer {
+  width: 100%;
+
   &__w7 {
     &__logo {
       @include image("w7.webp");
@@ -23,20 +24,14 @@
     }
   }
 
-  &__cta {
-    &__button {
-      width: 80%;
-      margin-bottom: 20%;
-    }
+  &__actions {
+    &__icons {
+      color: $color-light;
+      font-size: 1.3rem;
 
-    &__actions {
-      &__icons {
-        font-size: 1.3rem;
-
-        &:hover {
-          cursor: pointer;
-          color: $color-accent;
-        }
+      &:hover {
+        cursor: pointer;
+        color: $color-accent;
       }
     }
   }
