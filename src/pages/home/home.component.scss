@@ -16,18 +16,16 @@
 }
 
 .section {
-  width: 100%;
   height: 100%;
-  padding: 20px;
 
   &__container {
+    max-width: 1600px;
     width: 100%;
     height: 100%;
     margin: 0 auto;
   }
 
   &__backgound__container {
-    position: relative;
     overflow: hidden;
   }
 
@@ -38,10 +36,10 @@
 
   &__apresentation {
     height: 100%;
-    padding-bottom: 15px;
-    
+
     &__container {
       height: 100%;
+      padding: 20px;
     }
 
     &__text {
