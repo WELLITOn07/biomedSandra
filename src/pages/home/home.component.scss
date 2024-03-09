@@ -33,6 +33,10 @@
   &__apresentation {
     height: 100%;
 
+    &__container {
+      padding: 20px 0;
+    }
+
     &__text {
       padding: 0 15px;
       text-align: center;
@@ -46,7 +50,6 @@
 
     &__container {
       width: 80%;
-      margin: 20px 0;
     }
   }
 }
