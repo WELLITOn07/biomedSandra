@@ -1,33 +1,37 @@
 @use "colors" as *;
 @use "background-image" as *;
 
-/* xs: Até 599px */
-@media screen and (max-width: 599px) {
+@media screen and (max-width: 400px) {
   .section {
     &__apresentation {
       &__text {
-        font-size: 0.9rem; /* Ajuste conforme necessário */
+        font-size: 0.9rem;
+      }
+    }
+  }
+
+  .header {
+    &__actions {
+      &__title {
+        font-size: 1rem;
       }
     }
   }
 }
 
-/* sm: De 600px a 959px */
-@media screen and (min-width: 600px) and (max-width: 959px) {
+@media screen and (min-width: 401px) and (max-width: 959px) {
   .section {
     &__apresentation {
       &__text {
-        font-size: 1.2rem; /* Ajuste conforme necessário */
+        font-size: 1.3rem;
       }
     }
   }
 }
 
-/* md: De 960px a 1279px */
-@media screen and (min-width: 960px) and (max-width: 1279px) {
+@media screen and (max-width: 960px) {
   .header {
     &__container {
-      margin-bottom: 10px;
       border-radius: 0 0 10px 10px;
     }
 
@@ -40,14 +44,17 @@
     @include image("sandra.webp");
     background-size: cover;
 
-    &__backgound__container {
-      display: none;
-    }
-
     &__apresentation {
       &__text {
         text-shadow: 0px 7px 10px rgba(0, 0, 0, 0.599);
-        font-size: 1.6rem; /* Ajuste conforme necessário */
+      }
+    }
+
+    .header {
+      &__actions {
+        &__title {
+          font-size: 1.2rem;
+        }
       }
     }
   }
@@ -64,20 +71,14 @@
           }
         }
       }
-      &__container {
-        gap: 1.5rem;
-      }
     }
   }
 }
 
-/* lg: De 1280px a 1919px */
-@media screen and (min-width: 1280px) and (max-width: 1919px) {
+@media screen and (min-width: 961px) {
   .section {
     &__apresentation__text {
-      font-size: 2rem;
-      padding-bottom: 50px;
-      line-height: 40px;
+      font-size: 2.5rem;
     }
   }
 
@@ -90,8 +91,4 @@
       }
     }
   }
-}
-
-/* xl: Acima de 1920px */
-@media screen and (min-width: 1920px) {
 }

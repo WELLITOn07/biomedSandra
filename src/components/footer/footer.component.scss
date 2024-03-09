@@ -8,10 +8,12 @@
 
 .footer {
   width: 100%;
+  height: 100%;
 
   &__w7 {
     &__logo {
       @include image("w7.webp");
+      padding-right: 30px;
       background-repeat: no-repeat;
       background-position: center;
       background-size: contain;
@@ -25,6 +27,8 @@
   }
 
   &__actions {
+    padding: 30px;
+
     &__icons {
       color: $color-light;
       font-size: 1.3rem;
