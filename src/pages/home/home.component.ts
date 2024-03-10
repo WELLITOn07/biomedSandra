@@ -1,4 +1,3 @@
-import { CommonModule } from '@angular/common';
 import {
   ChangeDetectionStrategy,
   ChangeDetectorRef,
@@ -15,7 +14,6 @@ import { FlexLayoutModule } from '@angular/flex-layout';
 @Component({
   standalone: true,
   imports: [
-    CommonModule,
     TaigaUiModule,
     HeaderComponent,
     FooterComponent,
