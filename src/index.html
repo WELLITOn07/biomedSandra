@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="utf-8">
-  <title>BiomedSandra</title>
+  <title>BiomedSandra - Site de Biomedicina</title>
   <base href="/">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" type="image/x-icon" href="assets/microscope_icon.ico">
@@ -12,7 +12,10 @@
 </head>
 
 <body>
-  <app-root></app-root>
+  <main>
+    <app-root></app-root>
+  </main>
+
   <script>
     (function () {
       const themeKey = 'user-theme';
@@ -21,7 +24,22 @@
       document.body.classList.add(storedTheme);
     })();
   </script>
-  <noscript>Please enable JavaScript to continue using this application.</noscript>
+  <noscript>
+    <style>
+      main {
+        display: none;
+      }
+
+      body::before {
+        content: "Por favor, habilite o JavaScript para continuar usando esta aplicação.";
+        display: block;
+        padding: 1rem;
+        background-color: #f44336;
+        color: white;
+        text-align: center;
+      }
+    </style>
+  </noscript>
 </body>
 
 </html>
