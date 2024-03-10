@@ -52,7 +52,7 @@
 
   .section {
     @include image("sandra.webp");
-    background-size: cover;
+    background-size: contain;
 
     &__apresentation {
       &__text {
@@ -70,7 +70,17 @@
   }
 
   .footer {
+    width: -webkit-fill-available;
+    position: fixed;
+    bottom: 0;
+
     &__cta {
+      &__button__container {
+        width: 100%;
+        position: relative;
+        bottom: 20px;
+      }
+
       &__actions {
         &__icons {
           color: $color-secondary;
