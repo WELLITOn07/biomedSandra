@@ -24,6 +24,5 @@
   ],
   "appData": {
     "version": "1.0.0"
-  },
-  "updateMode": "interval:7d"
+  }
 }
