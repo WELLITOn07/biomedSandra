@@ -1,6 +1,8 @@
-<main class="main image-theme" fxLayout="row">
-  <section class="container section__container background-theme" fxLayout.gt-md="row">
-    <div class="section__backgound__container" fxFlex.gt-md="50" fxShow.gt-md="true">
+<div class="main image-theme" role="main">
+  <section class="container section__container background-theme" fxLayout.gt-md="row" role="region"
+    aria-label="Conteúdo Principal">
+    <div class="section__backgound__container" fxFlex.gt-md="50" fxShow.gt-md="true" role="img"
+      aria-label="Imagem Ilustrativa">
       <div class="section__backgound__image"></div>
     </div>
 
@@ -8,14 +10,15 @@
       <app-header fxFlex="10%"></app-header>
 
       <div class="section__apresentation__container" fxFlex>
-        <div class="section__apresentation" fxLayout="column" fxLayoutAlign="space-between center" fxLayoutAlign.gt-sm="center center">
+        <div class="section__apresentation" fxLayout="column" fxLayoutAlign="space-between center"
+          fxLayoutAlign.gt-sm="center center">
           <p class="section__apresentation__text">
             {{ apresentationText }}
           </p>
         </div>
       </div>
 
-        <app-footer class="footer" fxFlex="150px"></app-footer>
+      <app-footer class="footer" fxFlex="150px"></app-footer>
     </div>
   </section>
-</main>
+</div>

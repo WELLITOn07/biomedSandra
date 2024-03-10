@@ -5,13 +5,9 @@
     {
       "name": "app",
       "installMode": "prefetch",
+      "updateMode": "prefetch",
       "resources": {
-        "files": [
-          "/index.html",
-          "/manifest.webmanifest",
-          "/*.css",
-          "/*.js"
-        ]
+        "files": ["/index.html", "/manifest.webmanifest", "/*.css", "/*.js"]
       }
     },
     {
@@ -25,5 +21,9 @@
         ]
       }
     }
-  ]
+  ],
+  "appData": {
+    "version": "1.0.0"
+  },
+  "updateMode": "interval:7d"
 }

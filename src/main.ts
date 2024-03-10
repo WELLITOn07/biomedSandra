@@ -1,4 +1,4 @@
-import { bootstrapApplication } from '@angular/platform-browser';
+import { bootstrapApplication, BrowserModule } from '@angular/platform-browser';
 import { AppComponent } from './app/app.component';
 import { TuiRootModule } from '@taiga-ui/core';
 import { provideAnimations } from '@angular/platform-browser/animations';
@@ -9,6 +9,7 @@ import { environment } from './environments/environments.prod';
 
 bootstrapApplication(AppComponent, {
   providers: [
+    BrowserModule,
     provideAnimations(),
     provideRouter(routes),
     importProvidersFrom(TuiRootModule),
