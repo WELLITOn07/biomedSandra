@@ -9,7 +9,6 @@ import { HeaderComponent } from '../../components/header/header.component';
 import { FooterComponent } from '../../components/footer/footer.component';
 import { isPlatformBrowser } from '@angular/common';
 import { FlexLayoutModule } from '@angular/flex-layout';
-import { TuiDialogModule, TuiDialogService } from '@taiga-ui/core';
 
 @Component({
   standalone: true,
@@ -17,7 +16,6 @@ import { TuiDialogModule, TuiDialogService } from '@taiga-ui/core';
     HeaderComponent,
     FooterComponent,
     FlexLayoutModule,
-    TuiDialogModule,
   ],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss',
@@ -32,13 +30,10 @@ export class HomeComponent {
   constructor(
     private cdr: ChangeDetectorRef,
     @Inject(PLATFORM_ID) private platformId: Object,
-    @Inject(TuiDialogService)
-    private dialogs: TuiDialogService,
   ) {}
 
   ngOnInit(): void {
     this.checkIsSafari();
-    this.open();
   }
 
   private checkIsSafari(): void {
@@ -50,9 +45,5 @@ export class HomeComponent {
         this.cdr.detectChanges();
       }
     }
-  }
-
-  private open(): void {
-    this.dialogs.open('Hello!').subscribe();
   }
 }

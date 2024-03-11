@@ -5,7 +5,6 @@ import {
   OnDestroy,
   OnInit,
 } from '@angular/core';
-import { TaigaUiModule } from '../../shared/taiga-ui/taiga-ui.module';
 import { ChangeThemeService } from '../../services/changeTheme.service';
 import { Subject, takeUntil } from 'rxjs';
 import { FlexLayoutModule } from '@angular/flex-layout';
@@ -13,7 +12,7 @@ import { FlexLayoutModule } from '@angular/flex-layout';
 @Component({
   selector: 'app-header',
   standalone: true,
-  imports: [TaigaUiModule, FlexLayoutModule],
+  imports: [FlexLayoutModule],
   templateUrl: './header.component.html',
   styleUrl: './header.component.scss',
   changeDetection: ChangeDetectionStrategy.OnPush,
