@@ -3,7 +3,6 @@ import { TuiButtonModule, TuiSvgModule } from '@taiga-ui/core';
 import { TuiMarkerIconModule } from '@taiga-ui/kit';
 
 @NgModule({
-  declarations: [],
   imports: [TuiButtonModule, TuiSvgModule, TuiMarkerIconModule],
   exports: [TuiButtonModule, TuiSvgModule, TuiMarkerIconModule],
 })
