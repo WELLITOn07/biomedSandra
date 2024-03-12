@@ -1,24 +1,31 @@
 <div class="main image-theme" role="main">
-  <section class="container section__container background-theme" fxLayout.gt-md="row" role="region"
-    aria-label="Conteúdo Principal">
-    <div class="section__backgound__container" fxFlex.gt-md="50" fxShow.gt-md="true" role="img"
-      aria-label="Imagem Ilustrativa">
+  <section class="container section__container background-theme row" role="region" aria-label="Conteúdo Principal">
+    <div class="section__backgound__container col-md-6" role="img" aria-label="Imagem Ilustrativa">
       <div class="section__backgound__image"></div>
     </div>
 
-    <div class="section" fxFlex.gt-md="50" fxLayout="column">
-      <app-header fxFlex="10%"></app-header>
-
-      <div class="section__apresentation__container" fxFlex>
-        <div class="section__apresentation" fxLayout="column" fxLayoutAlign="space-between center"
-          fxLayoutAlign.gt-sm="center center">
-          <p class="section__apresentation__text">
-            {{ apresentationText }}
-          </p>
+    <div class="main image-theme d-flex flex-column">
+      <section class="container section__container background-theme flex-grow-1" role="region"
+        aria-label="Conteúdo Principal">
+        <div class="section__backgound__container" role="img" aria-label="Imagem ilustrativa">
+          <div class="section__backgound__image"></div>
         </div>
-      </div>
 
-      <app-footer class="footer" fxFlex="150px"></app-footer>
+        <div class="section d-flex flex-column flex-grow-1">
+          <app-header class="header"></app-header>
+
+          <div class="section__apresentation__container flex-grow-1">
+            <div
+              class="section__apresentation d-flex flex-column justify-content-between align-items-center justify-content-sm-center flex-grow-1">
+              <p class="section__apresentation__text">
+                {{ apresentationText }}
+              </p>
+            </div>
+          </div>
+
+          <app-footer class="footer"></app-footer>
+        </div>
+      </section>
     </div>
   </section>
 </div>

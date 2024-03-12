@@ -1,11 +1,10 @@
 import { Component } from '@angular/core';
 import { RedirectionService } from '../../services/redirection.service';
-import { FlexLayoutModule } from '@angular/flex-layout';
 
 @Component({
   selector: 'app-footer',
   standalone: true,
-  imports: [FlexLayoutModule],
+  imports: [],
   templateUrl: './footer.component.html',
   styleUrl: './footer.component.scss',
 })

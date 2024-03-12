@@ -7,12 +7,11 @@ import {
 } from '@angular/core';
 import { ChangeThemeService } from '../../services/changeTheme.service';
 import { Subject, takeUntil } from 'rxjs';
-import { FlexLayoutModule } from '@angular/flex-layout';
 
 @Component({
   selector: 'app-header',
   standalone: true,
-  imports: [FlexLayoutModule],
+  imports: [],
   templateUrl: './header.component.html',
   styleUrl: './header.component.scss',
   changeDetection: ChangeDetectionStrategy.OnPush,
@@ -30,7 +29,7 @@ export class HeaderComponent implements OnInit, OnDestroy {
     this.changeThemeService
       .getTheme()
       .pipe(takeUntil(this.destroySubject))
-      .subscribe((theme) => {
+      .subscribe((theme: boolean) => {
         this.isDarkTheme = theme;
       });
   }

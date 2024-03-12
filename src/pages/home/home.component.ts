@@ -8,14 +8,12 @@ import {
 import { HeaderComponent } from '../../components/header/header.component';
 import { FooterComponent } from '../../components/footer/footer.component';
 import { isPlatformBrowser } from '@angular/common';
-import { FlexLayoutModule } from '@angular/flex-layout';
 
 @Component({
   standalone: true,
   imports: [
     HeaderComponent,
     FooterComponent,
-    FlexLayoutModule,
   ],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss',
