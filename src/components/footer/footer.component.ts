@@ -1,12 +1,10 @@
 import { Component } from '@angular/core';
-import { TaigaUiModule } from '../../shared/taiga-ui/taiga-ui.module';
 import { RedirectionService } from '../../services/redirection.service';
-import { FlexLayoutModule } from '@angular/flex-layout';
 
 @Component({
   selector: 'app-footer',
   standalone: true,
-  imports: [TaigaUiModule, FlexLayoutModule],
+  imports: [],
   templateUrl: './footer.component.html',
   styleUrl: './footer.component.scss',
 })

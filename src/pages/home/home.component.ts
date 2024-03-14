@@ -5,19 +5,15 @@ import {
   Inject,
   PLATFORM_ID,
 } from '@angular/core';
-import { TaigaUiModule } from '../../shared/taiga-ui/taiga-ui.module';
 import { HeaderComponent } from '../../components/header/header.component';
 import { FooterComponent } from '../../components/footer/footer.component';
 import { isPlatformBrowser } from '@angular/common';
-import { FlexLayoutModule } from '@angular/flex-layout';
 
 @Component({
   standalone: true,
   imports: [
-    TaigaUiModule,
     HeaderComponent,
     FooterComponent,
-    FlexLayoutModule,
   ],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss',
@@ -31,7 +27,7 @@ export class HomeComponent {
 
   constructor(
     private cdr: ChangeDetectorRef,
-    @Inject(PLATFORM_ID) private platformId: Object
+    @Inject(PLATFORM_ID) private platformId: Object,
   ) {}
 
   ngOnInit(): void {

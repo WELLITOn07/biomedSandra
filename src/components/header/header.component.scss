@@ -7,12 +7,14 @@
 
 .header {
   &__actions {
-    padding: 15px;
+    padding: 5px 0;
+    gap: 10px;
 
     &__title {
       font-family: $font-inter;
       font-weight: bold;
       color: $color-light;
+      font-size: 1rem;
     }
 
     &__ebooks {
@@ -33,7 +35,7 @@
 
   &__divider {
     height: 1px;
-    margin-top: 10px;
+    margin-top: 5px;
     background-color: $color-light;
   }
 }
