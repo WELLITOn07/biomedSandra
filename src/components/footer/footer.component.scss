@@ -8,13 +8,8 @@
 
 .footer {
   width: 100%;
-  height: 100px;
+  height: auto;
 
-  &__cta__button {
-    max-width: 800px;
-    width: 100%;
-    padding: 0 20px;
-  }
 
   &__w7 {
     &__logo {
@@ -25,6 +20,7 @@
       background-size: contain;
       width: 3.5rem;
       height: 3.5rem;
+      margin-right: 20px;
 
       &:hover {
         cursor: pointer;
@@ -33,11 +29,12 @@
   }
 
   &__actions {
-    padding: 30px;
+    padding: 20px;
 
     &__icons {
       color: $color-light;
       font-size: 1.3rem;
+      margin-right: 5px;
 
       &:hover {
         cursor: pointer;

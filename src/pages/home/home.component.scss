@@ -16,13 +16,17 @@
 }
 
 .section {
+  width: 100%;
   height: 100%;
 
+  &__cta__button {
+    width: 100%;
+    padding: 0 20px;
+  }
+
   &__container {
-    max-width: 1600px;
     width: 100%;
     height: 100%;
-    margin: 0 auto;
   }
 
   &__backgound__image {
@@ -32,9 +36,12 @@
 
   &__apresentation {
     height: 100%;
+    padding: 20px;
 
     &__container {
       padding: 20px 0;
+      height: 100%;
+      overflow: hidden;
     }
 
     &__text {

@@ -6,14 +6,12 @@ import {
   PLATFORM_ID,
 } from '@angular/core';
 import { HeaderComponent } from '../../components/header/header.component';
-import { FooterComponent } from '../../components/footer/footer.component';
 import { isPlatformBrowser } from '@angular/common';
 
 @Component({
   standalone: true,
   imports: [
     HeaderComponent,
-    FooterComponent,
   ],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss',
