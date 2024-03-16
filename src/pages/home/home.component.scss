@@ -8,11 +8,8 @@
 
 .main {
   height: 100vh;
+  height: calc(var(--vh, 1vh) * 100);
   overflow: hidden;
-
-  &__webkit__fill {
-    height: -webkit-fill-available !important;
-  }
 }
 
 .section {
@@ -36,11 +33,9 @@
 
   &__apresentation {
     height: 100%;
-    padding: 20px;
 
     &__container {
-      padding: 20px 0;
-      height: 100%;
+      padding: 10px;
       overflow: hidden;
     }
 
