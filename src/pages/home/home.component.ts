@@ -1,3 +1,4 @@
+import { RedirectionService } from './../../services/redirection.service';
 import {
   ChangeDetectionStrategy,
   ChangeDetectorRef,
@@ -26,6 +27,7 @@ export class HomeComponent {
   constructor(
     private cdr: ChangeDetectorRef,
     @Inject(PLATFORM_ID) private platformId: Object,
+    private redirectionService: RedirectionService
   ) {}
 
   ngOnInit(): void {
@@ -42,4 +44,9 @@ export class HomeComponent {
       }
     }
   }
+
+  toBrowse(social: string) {
+    this.redirectionService.goTo(social);
+  }
+
 }
