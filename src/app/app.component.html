@@ -1,1 +1,14 @@
+<div *ngIf="cookieConsent.getConsentStatus()" class="modal show d-block" role="dialog" tabindex="-1">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-body">
+        <p>Armazenamos cookies para melhorar a performance. Ao continuar a usar nosso site, você concorda com isso.</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary w-100" (click)="giveConsent()">OK</button>
+      </div>
+    </div>
+  </div>
+</div>
+
 <router-outlet></router-outlet>

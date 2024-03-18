@@ -1,0 +1,8 @@
+@use "colors" as *;
+
+.modal-content {
+  margin: 0 10px;
+  font-size: 1.2rem;
+  background-color: $color-secondary;
+  color: $color-light;
+}
