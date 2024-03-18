@@ -31,11 +31,27 @@
   }
 }
 
+@media (max-width: 767px) {
+  .section {
+    &__actions__container {
+      display: none !important;
+    }
+  }
+
+  .feather-book-open {
+    display: none;
+  }
+
+  .feather-align-left {
+    display: block;
+    margin-right: 10px;
+  }
+}
+
 @media (min-width: 768px) {
   .section {
     &__cta__button {
       margin-top: 20px;
-
     }
     &__apresentation {
       &__text {
@@ -47,9 +63,17 @@
   .header {
     &__actions {
       &__title {
-        font-size: 1.5rem
+        font-size: 1.5rem;
       }
     }
+  }
+
+  .feather-book-open {
+    display: block;
+  }
+
+  .feather-align-left {
+    display: none;
   }
 }
 
