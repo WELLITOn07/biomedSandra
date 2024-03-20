@@ -8,7 +8,7 @@
 
 .header {
   &__actions {
-    padding: 10px 0;
+    padding-top: 10px;
     gap: 10px;
 
     &__title {
@@ -16,6 +16,10 @@
       font-weight: bold;
       color: $color-light;
       font-size: 1rem;
+    }
+
+    &__navbar {
+      @include moveInButton();
     }
 
     &__icons {

@@ -18,7 +18,6 @@
 
   &__cta__button {
     width: 100%;
-    padding: 0 20px;
   }
 
   &__container {
@@ -36,15 +35,15 @@
 
     &__container {
       height: 100%;
-      padding: 10px;
+      padding: 15px;
       overflow: hidden;
     }
 
     &__text {
-      padding: 0 15px;
       text-align: center;
       font-family: $font-inter;
       color: $color-light;
+      padding-top: 10px;
     }
   }
 

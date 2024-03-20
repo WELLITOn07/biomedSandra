@@ -29,10 +29,6 @@
     transition: all 0.2s;
   }
 
-  &::after {
-    background-color: #fff;
-  }
-
   &:hover::after {
     transform: scaleX(1.4) scaleY(1.6);
     opacity: 0;
