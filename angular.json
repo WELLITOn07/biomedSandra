@@ -51,8 +51,8 @@
               "serviceWorker": "ngsw-config.json"
             },
             "development": {
-              "optimization": false,
-              "extractLicenses": false,
+              "optimization": true,
+              "extractLicenses": true,
               "sourceMap": true
             }
           },

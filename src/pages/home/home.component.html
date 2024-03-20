@@ -9,9 +9,10 @@
         <div class="section d-flex flex-column">
           <app-header class="header"></app-header>
 
-          <div class="section__apresentation__container d-flex flex-column  justify-content-center align-items-center">
+          <div class="section__apresentation__container d-flex flex-column  justify-content-center align-items-center"
+            *ngIf="consentAcquired">
             <div
-              class="section__apresentation d-flex flex-column justify-content-sm-center justify-content-between align-items-center animate__animated animate__fadeInDown animate__delay-1s">
+              class="section__apresentation d-flex flex-column justify-content-sm-center justify-content-between align-items-center animate__animated animate__fadeInDown ">
               <p class="section__apresentation__text">
                 {{ apresentationText }}
               </p>
