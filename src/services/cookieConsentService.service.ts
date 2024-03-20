@@ -1,37 +1,34 @@
 import { isPlatformBrowser } from '@angular/common';
 import { Inject, Injectable, PLATFORM_ID } from '@angular/core';
+import { BehaviorSubject, Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root',
 })
 export class CookieConsentServiceService {
-  private consentGiven = false;
+  private consentAcquired = new BehaviorSubject<boolean>(true);
 
-  constructor(@Inject(PLATFORM_ID) private platformId: Object) {
+  constructor(@Inject(PLATFORM_ID) private platformId: Object) {}
+
+  public getConsentStatus(): Observable<boolean> {
     if (isPlatformBrowser(this.platformId)) {
       const cookieConsent = localStorage.getItem('cookieConsent');
 
       if (!cookieConsent) {
-        this.consentGiven = true;
+        this.consentAcquired.next(false);
+      } else {
+        this.consentAcquired.next(true);
       }
     }
-  }
 
-  public getConsentStatus(): boolean {
-    return this.consentGiven;
+    return this.consentAcquired.asObservable();
   }
 
   public giveConsent(): void {
-    if (this.consentGiven) {
-      this.consentGiven = false;
+    this.consentAcquired.next(true);
 
-      if (isPlatformBrowser(this.platformId)) {
-        localStorage.setItem('cookieConsent', 'true');
-      }
+    if (isPlatformBrowser(this.platformId)) {
+      localStorage.setItem('cookieConsent', 'true');
     }
-  }
-
-  public hasConsent(): boolean {
-    return this.consentGiven;
   }
 }
