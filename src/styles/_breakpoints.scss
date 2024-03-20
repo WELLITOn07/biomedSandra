@@ -42,9 +42,12 @@
     display: none;
   }
 
-  .feather-align-left {
-    display: block;
-    margin-right: 10px;
+  .header {
+    &__actions {
+      &__navbar {
+        display: block;
+      }
+    }
   }
 }
 
@@ -72,8 +75,12 @@
     display: block;
   }
 
-  .feather-align-left {
-    display: none;
+  .header {
+    &__actions {
+      &__navbar {
+        display: none;
+      }
+    }
   }
 }
 

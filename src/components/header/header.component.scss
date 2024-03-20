@@ -1,5 +1,6 @@
 @use "colors" as *;
 @use "typography" as *;
+@use "moveInbutton" as *;
 
 :host {
   display: block;
@@ -7,7 +8,7 @@
 
 .header {
   &__actions {
-    padding: 10px 0;
+    padding-top: 10px;
     gap: 10px;
 
     &__title {
@@ -17,19 +18,18 @@
       font-size: 1rem;
     }
 
-    &__icons {
-      color: $color-light;
-      cursor: pointer;
-
-      &:hover {
-        color: $color-accent;
-      }
+    &__navbar {
+      @include moveInButton();
     }
-  }
 
-  &__divider {
-    height: 1px;
-    margin-top: 5px;
-    background-color: $color-light;
+    &__icons {
+      @include moveInButton();
+    }
+
+    &__divider {
+      height: 1px;
+      margin-top: 5px;
+      background-color: $color-light;
+    }
   }
 }

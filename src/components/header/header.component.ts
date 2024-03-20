@@ -7,11 +7,12 @@ import {
 } from '@angular/core';
 import { ChangeThemeService } from '../../services/changeTheme.service';
 import { Subject, takeUntil } from 'rxjs';
+import { NavbarComponent } from '../navbar/navbar/navbar.component';
 
 @Component({
   selector: 'app-header',
   standalone: true,
-  imports: [],
+  imports: [NavbarComponent],
   templateUrl: './header.component.html',
   styleUrl: './header.component.scss',
   changeDetection: ChangeDetectionStrategy.OnPush,
