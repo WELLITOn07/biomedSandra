@@ -1,5 +1,6 @@
 @use "colors" as *;
 @use "typography" as *;
+@use "moveInbutton" as *;
 
 :host {
   display: block;
@@ -18,18 +19,13 @@
     }
 
     &__icons {
-      color: $color-light;
-      cursor: pointer;
-
-      &:hover {
-        color: $color-accent;
-      }
+      @include moveInButton();
     }
-  }
 
-  &__divider {
-    height: 1px;
-    margin-top: 5px;
-    background-color: $color-light;
+    &__divider {
+      height: 1px;
+      margin-top: 5px;
+      background-color: $color-light;
+    }
   }
 }
