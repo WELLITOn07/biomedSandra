@@ -1,0 +1,10 @@
+@use "colors" as *;
+
+.feather {
+  margin-right: 10px;
+
+  &-facebook {
+    position: relative;
+    right: 5px;
+  }
+}

@@ -18,18 +18,23 @@
       font-size: 1rem;
     }
 
-    &__navbar {
-      @include moveInButton();
-    }
-
     &__icons {
-      @include moveInButton();
-    }
+      color: $color-light;
 
-    &__divider {
-      height: 1px;
-      margin-top: 5px;
-      background-color: $color-light;
+      &:hover {
+        color: $color-accent;
+        cursor: pointer;
+      }
+
+      &__animation {
+        @include moveInButton();
+      }
     }
+  }
+
+  &__divider {
+    height: 1px;
+    margin-top: 10px;
+    background-color: $color-light;
   }
 }

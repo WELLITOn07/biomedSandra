@@ -22,6 +22,19 @@
       }
     }
   ],
+  "dataGroups": [
+    {
+      "name": "json-data",
+      "urls": ["/assets/data/json/**"],
+      "version": 1,
+      "cacheConfig": {
+        "maxSize": 100,
+        "maxAge": "1d",
+        "timeout": "10s",
+        "strategy": "freshness"
+      }
+    }
+  ],
   "appData": {
     "version": "1.0.0"
   }
