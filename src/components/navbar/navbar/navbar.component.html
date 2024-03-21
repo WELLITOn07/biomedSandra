@@ -1,48 +1,56 @@
-<nav class="navbar" data-bs-theme="dark">
+<nav class="navbar navbar__mobile" data-bs-theme="dark">
   <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#navbarContact"
     aria-controls="navbarContact" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
   <div class="offcanvas offcanvas-end" tabindex="-1" id="navbarContact" aria-labelledby="navbarContactLabel">
     <div class="offcanvas-header">
-      <h5 class="offcanvas-title" id="navbarContactLabel">Contatos / Pesquisa</h5>
+      <h5 class="offcanvas-title" id="navbarContactLabel">Contatos / E-books</h5>
       <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
     </div>
     <div class="offcanvas-body">
       <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
-        <li class="nav-item d-flex align-items-center">
+        <li class="nav-item d-flex align-items-center" (click)="toBrowse('instagram')">
           <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
             stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-            class="feather feather-instagram section__actions__icons m-2">
+            class="feather feather-instagram section__actions__icons">
             <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
             <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
             <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
           </svg>
           <a class="nav-link" href="#">Instagram</a>
         </li>
-        <li class="nav-item d-flex align-items-center">
+        <li class="nav-item d-flex align-items-center" (click)="toBrowse('linkedin')">
           <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
             stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-            class="feather feather-linkedin section__actions__icons m-2">
+            class="feather feather-linkedin section__actions__icons">
             <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
             <rect x="2" y="9" width="4" height="12"></rect>
             <circle cx="4" cy="4" r="2"></circle>
           </svg>
           <a class="nav-link" href="#">Linkedin</a>
         </li>
-        <li class="nav-item d-flex align-items-center">
+        <li class="nav-item d-flex align-items-center" (click)="toBrowse('facebook')">
           <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
             stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-            class="feather feather-facebook section__actions__icons m-2">
+            class="feather feather-facebook section__actions__icons">
             <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
           </svg>
           <a class="nav-link" href="#">Facebook</a>
         </li>
+
+        <hr class="divider">
+
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            E-books
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#">Action</a></li>
+            <hr class="dropdown-divider">
+          </ul>
+        </li>
       </ul>
-      <form class="d-flex flex-column mt-3" role="search">
-        <input class="form-control" type="search" placeholder="Pesquisar" aria-label="Search">
-        <button class="btn btn-outline-success mt-2" type="submit">Buscar e-books</button>
-      </form>
     </div>
   </div>
 </nav>
