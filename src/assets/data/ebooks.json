@@ -56,7 +56,7 @@
     }
   },
   {
-    "title": " APOSTILA DE HEMATOLOGIA",
+    "title": "HEMATOLOGIA",
     "subjects": [
       "Confecção e Leitura de Lâminas",
       "Identificação de Células",
@@ -77,7 +77,7 @@
     }
   },
   {
-    "title": " APOSTILA DE BIOQUÍMICA",
+    "title": "BIOQUÍMICA",
     "subjects": [
       "Perfil Renal",
       "Perfil Hepático",
@@ -96,7 +96,7 @@
     }
   },
   {
-    "title": " APOSTILA DE URINÁLISE",
+    "title": "URINÁLISE",
     "subjects": [
       "Parcial de Urina – Exame Físico, Químico e Análise de Sedimento",
       "Atlas de Urinálise - Reúne os Principais Tipos de Cristais, Cilindros, e demais elementos que podem estar presentes na amostra de urina",
@@ -110,7 +110,7 @@
     }
   },
   {
-    "title": " APOSTILA DE PARASITOLOGIA",
+    "title": "PARASITOLOGIA",
     "subjects": [
       "Exame Parasitológico de Fezes – Execução pelo Método de Hoffman",
       "Atlas de Parasitologia – Identificando os Principais Helmintos e Protozoários",
@@ -122,7 +122,7 @@
     }
   },
   {
-    "title": "APOSTILA DE LÍQUIDO CEFALORRAQUIDIANO",
+    "title": "LÍQUIDO CEFALORRAQUIDIANO",
     "subjects": [
       "A importância e as funções do LCR",
       "Como é realizada a coleta",
