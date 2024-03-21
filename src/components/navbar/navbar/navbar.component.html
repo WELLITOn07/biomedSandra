@@ -42,14 +42,16 @@
         <hr class="divider">
 
         <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+          <a class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">
             E-books
           </a>
           <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="#">Action</a></li>
-            <hr class="dropdown-divider">
+            <li *ngFor="let ebook of ebookData">
+              <a class="dropdown-item" href="#">{{ebook.title}}</a>
+            </li>
           </ul>
         </li>
+
       </ul>
     </div>
   </div>
