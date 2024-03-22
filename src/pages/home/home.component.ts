@@ -12,7 +12,6 @@ import {
 import { HeaderComponent } from '../../components/header/header.component';
 import { CookieConsentServiceService } from '../../services/cookieConsentService.service';
 import { Observable, Subject, takeUntil } from 'rxjs';
-import { CarouselEbooksService } from '../../services/carouselEbooks.service';
 import { CarouselEbooksComponent } from '../../components/carousel-ebooks/carousel-ebooks.component';
 
 @Component({
@@ -36,7 +35,6 @@ export class HomeComponent implements OnInit, OnDestroy {
     public cookieConsent: CookieConsentServiceService,
     @Inject(PLATFORM_ID) private platformId: Object,
     private redirectionService: RedirectionService,
-    private carouselEbooksService: CarouselEbooksService
   ) {}
 
   ngOnInit(): void {
@@ -63,10 +61,6 @@ export class HomeComponent implements OnInit, OnDestroy {
 
   toBrowse(social: string) {
     this.redirectionService.goTo(social);
-  }
-
-  openEbooksModal() {
-    this.carouselEbooksService.openModal();
   }
 
   ngOnDestroy(): void {

@@ -1,6 +1,7 @@
 [
   {
-    "title": " MANUAL DO BIOMÉDICO",
+    "title": "MANUAL DO BIOMÉDICO",
+    "description": "manual do biomedico com exemplos de aplicação",
     "subjects": {
       "Hematologia": [
         "Leitura de Lâminas",
@@ -49,10 +50,11 @@
       "original": "R$ 147,00",
       "discounted": "R$ 87,90"
     },
-    "cover": "biomedico"
+    "cover": "manual_do_biomedico"
   },
   {
     "title": "HEMATOLOGIA",
+    "description": "manual da hematologia com exemplos de aplicação",
     "subjects": [
       "Confecção e Leitura de Lâminas",
       "Identificação de Células",
@@ -75,6 +77,7 @@
   },
   {
     "title": "BIOQUÍMICA",
+    "description": "manual da bioquimica com exemplos de aplicação",
     "subjects": [
       "Perfil Renal",
       "Perfil Hepático",
@@ -95,6 +98,7 @@
   },
   {
     "title": "URINÁLISE",
+    "description": "manual da urinálise com exemplos de aplicação",
     "subjects": [
       "Parcial de Urina – Exame Físico, Químico e Análise de Sedimento",
       "Atlas de Urinálise - Reúne os Principais Tipos de Cristais, Cilindros, e demais elementos que podem estar presentes na amostra de urina",
@@ -110,6 +114,7 @@
   },
   {
     "title": "LÍQUIDO CEFALORRAQUIDIANO",
+    "description": "manual do liquido cefalorraquidiano com exemplos de aplicação",
     "subjects": [
       "A importância e as funções do LCR",
       "Como é realizada a coleta",

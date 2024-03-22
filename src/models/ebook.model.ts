@@ -1,5 +1,6 @@
 export interface Ebook {
   title: string;
+  description: string;
   subjects: {
     [subject: string]: string[];
   };

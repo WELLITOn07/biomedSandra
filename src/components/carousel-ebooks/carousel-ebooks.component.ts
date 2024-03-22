@@ -5,7 +5,6 @@ import {
   OnDestroy,
   OnInit,
 } from '@angular/core';
-import { CarouselEbooksService } from '../../services/carouselEbooks.service';
 import { CommonModule } from '@angular/common';
 import { Observable, Subject, takeUntil } from 'rxjs';
 import { Ebook } from '../../models/ebook.model';
@@ -17,29 +16,19 @@ import { EbookDataServiceService } from '../../services/ebookDataService.service
   imports: [CommonModule],
   templateUrl: './carousel-ebooks.component.html',
   styleUrl: './carousel-ebooks.component.scss',
-  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class CarouselEbooksComponent implements OnInit, OnDestroy {
-  showModal = false;
-
-  private showModal$ = this.carouselEbooksService.getModalStatus();
   destroySubject: Subject<void> = new Subject<void>();
+  currentEbookIndex: number = 0;
 
   ebookData$: Observable<Ebook[]> = this.ebookDataServiceService.getAll();
   ebookData: Ebook[] | null = null;
   constructor(
-    private carouselEbooksService: CarouselEbooksService,
     private cdr: ChangeDetectorRef,
     private ebookDataServiceService: EbookDataServiceService
   ) {}
 
   ngOnInit(): void {
-    this.showModal$.pipe(takeUntil(this.destroySubject)).subscribe(() => {
-      debugger;
-      this.showModal = true;
-      this.cdr.detectChanges();
-    });
-
     this.ebookData$.pipe(takeUntil(this.destroySubject)).subscribe({
       next: (ebookData: Ebook[]) => {
         if (ebookData) {
@@ -51,6 +40,11 @@ export class CarouselEbooksComponent implements OnInit, OnDestroy {
         console.error('Erro ao buscar ebooks');
       },
     });
+  }
+
+  onSlideChange(ebook: number) {
+    this.currentEbookIndex = ebook;
+    this.cdr.detectChanges();
   }
 
   ngOnDestroy(): void {
