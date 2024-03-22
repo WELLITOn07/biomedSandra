@@ -7,4 +7,5 @@ export interface Ebook {
     original: string;
     discounted: string;
   };
+  cover: string;
 }

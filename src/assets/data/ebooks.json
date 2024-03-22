@@ -35,11 +35,6 @@
         "Urocultura",
         "Antibiograma"
       ],
-      "Parasitologia": [
-        "Exame Parasitológico de Fezes",
-        "Atlas de Parasitologia",
-        "Pesquisa de sangue oculto"
-      ],
       "IST´s": [
         "Execução do VDRL e Testes Rápidos (HBSAg, Anti-HBS, Anti-HCV)"
       ],
@@ -53,7 +48,8 @@
     "price": {
       "original": "R$ 147,00",
       "discounted": "R$ 87,90"
-    }
+    },
+    "cover": "biomedico"
   },
   {
     "title": "HEMATOLOGIA",
@@ -74,7 +70,8 @@
     "price": {
       "original": "R$ 59,90",
       "discounted": "R$ 34,99"
-    }
+    },
+    "cover": "hematologia"
   },
   {
     "title": "BIOQUÍMICA",
@@ -93,7 +90,8 @@
     "price": {
       "original": "R$ 59,90",
       "discounted": "R$ 27,90"
-    }
+    },
+    "cover": "bioquimica"
   },
   {
     "title": "URINÁLISE",
@@ -107,19 +105,8 @@
     "price": {
       "original": "R$ 49,90",
       "discounted": "R$ 24,90"
-    }
-  },
-  {
-    "title": "PARASITOLOGIA",
-    "subjects": [
-      "Exame Parasitológico de Fezes – Execução pelo Método de Hoffman",
-      "Atlas de Parasitologia – Identificando os Principais Helmintos e Protozoários",
-      "Pesquisa de sangue oculto – Execução e Significado Clínico"
-    ],
-    "price": {
-      "original": "R$ 49,90",
-      "discounted": "R$ 19,90"
-    }
+    },
+    "cover": "urinalise"
   },
   {
     "title": "LÍQUIDO CEFALORRAQUIDIANO",
@@ -136,6 +123,7 @@
     "price": {
       "original": "R$ 59,90",
       "discounted": "R$ 34,99"
-    }
+    },
+    "cover": "liquido_cefalorraquidiano"
   }
 ]
