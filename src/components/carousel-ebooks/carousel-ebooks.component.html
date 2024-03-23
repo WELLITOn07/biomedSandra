@@ -1,0 +1,29 @@
+<div class="modal fade" id="carouselEbooksInner" tabindex="-1" aria-labelledby="carouselEbooksLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="carouselEbooksLabel">{{ ebookData && ebookData.length > 0 ? ebookData[currentEbookIndex].title : '' }}</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <div id="carouselEbooks" class="carousel slide">
+          <div class="carousel-indicators">
+            <button *ngFor="let ebook of ebookData; let i = index" type="button"
+              (click)="onSlideChange(i)"
+              [attr.data-bs-target]="'#carouselEbooks'" [attr.data-bs-slide-to]="i" [class.active]="i === 0"
+              [attr.aria-current]="i === 0 ? 'true' : 'false'" [attr.aria-label]="'Slide ' + (i + 1)"></button>
+          </div>
+          <div class="carousel-inner">
+            <div *ngFor="let ebook of ebookData; let i = index" class="carousel-item" [class.active]="i === 0">
+              <img src="assets/{{ ebook.cover }}.webp" class="d-block w-100" alt="{{ ebook.title + ' image' }}">
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer w-100 d-flex justify-content-center align-items-center">
+        <p class="carousel-inner__description">{{ ebookData && ebookData.length > 0 ? ebookData[currentEbookIndex].description : '' }}</p>
+        <button type="button" class="btn btn-primary w-100 p-2">VER MAIS</button>
+      </div>
+    </div>
+  </div>
+</div>

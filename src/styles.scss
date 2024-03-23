@@ -2,3 +2,7 @@
 @use "breakpoints" as *;
 @use "themes" as *;
 @import 'animate.css';
+
+.carousel-indicators {
+  color: red !important;
+}

@@ -1,6 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { Observable, Subject, takeUntil } from 'rxjs';
-import { RedirectionService } from './../../../services/redirection.service';
+import { RedirectionService } from './../../services/redirection.service';
 import {
   ChangeDetectionStrategy,
   ChangeDetectorRef,
@@ -8,8 +8,8 @@ import {
   OnDestroy,
   OnInit,
 } from '@angular/core';
-import { EbookDataServiceService } from '../../../services/ebookDataService.service';
-import { Ebook } from '../../../models/ebook.model';
+import { EbookDataServiceService } from '../../services/ebookDataService.service';
+import { Ebook } from '../../models/ebook.model';
 
 @Component({
   selector: 'app-navbar',
@@ -21,8 +21,8 @@ import { Ebook } from '../../../models/ebook.model';
 })
 export class NavbarComponent implements OnInit, OnDestroy {
   ebookData$: Observable<Ebook[]> = this.ebookDataServiceService.getAll();
-  destroySubject: Subject<void> = new Subject<void>();
   ebookData: Ebook[] | null = null;
+  destroySubject: Subject<void> = new Subject<void>();
 
   constructor(
     private redirectionService: RedirectionService,

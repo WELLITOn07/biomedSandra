@@ -1,6 +1,7 @@
 [
   {
-    "title": " MANUAL DO BIOMÉDICO",
+    "title": "MANUAL DO BIOMÉDICO",
+    "description": "manual do biomedico com exemplos de aplicação",
     "subjects": {
       "Hematologia": [
         "Leitura de Lâminas",
@@ -35,11 +36,6 @@
         "Urocultura",
         "Antibiograma"
       ],
-      "Parasitologia": [
-        "Exame Parasitológico de Fezes",
-        "Atlas de Parasitologia",
-        "Pesquisa de sangue oculto"
-      ],
       "IST´s": [
         "Execução do VDRL e Testes Rápidos (HBSAg, Anti-HBS, Anti-HCV)"
       ],
@@ -53,10 +49,12 @@
     "price": {
       "original": "R$ 147,00",
       "discounted": "R$ 87,90"
-    }
+    },
+    "cover": "manual_do_biomedico"
   },
   {
     "title": "HEMATOLOGIA",
+    "description": "manual da hematologia com exemplos de aplicação",
     "subjects": [
       "Confecção e Leitura de Lâminas",
       "Identificação de Células",
@@ -74,10 +72,12 @@
     "price": {
       "original": "R$ 59,90",
       "discounted": "R$ 34,99"
-    }
+    },
+    "cover": "hematologia"
   },
   {
     "title": "BIOQUÍMICA",
+    "description": "manual da bioquimica com exemplos de aplicação",
     "subjects": [
       "Perfil Renal",
       "Perfil Hepático",
@@ -93,10 +93,12 @@
     "price": {
       "original": "R$ 59,90",
       "discounted": "R$ 27,90"
-    }
+    },
+    "cover": "bioquimica"
   },
   {
     "title": "URINÁLISE",
+    "description": "manual da urinálise com exemplos de aplicação",
     "subjects": [
       "Parcial de Urina – Exame Físico, Químico e Análise de Sedimento",
       "Atlas de Urinálise - Reúne os Principais Tipos de Cristais, Cilindros, e demais elementos que podem estar presentes na amostra de urina",
@@ -107,22 +109,12 @@
     "price": {
       "original": "R$ 49,90",
       "discounted": "R$ 24,90"
-    }
-  },
-  {
-    "title": "PARASITOLOGIA",
-    "subjects": [
-      "Exame Parasitológico de Fezes – Execução pelo Método de Hoffman",
-      "Atlas de Parasitologia – Identificando os Principais Helmintos e Protozoários",
-      "Pesquisa de sangue oculto – Execução e Significado Clínico"
-    ],
-    "price": {
-      "original": "R$ 49,90",
-      "discounted": "R$ 19,90"
-    }
+    },
+    "cover": "urinalise"
   },
   {
     "title": "LÍQUIDO CEFALORRAQUIDIANO",
+    "description": "manual do liquido cefalorraquidiano com exemplos de aplicação",
     "subjects": [
       "A importância e as funções do LCR",
       "Como é realizada a coleta",
@@ -136,6 +128,7 @@
     "price": {
       "original": "R$ 59,90",
       "discounted": "R$ 34,99"
-    }
+    },
+    "cover": "liquido_cefalorraquidiano"
   }
 ]

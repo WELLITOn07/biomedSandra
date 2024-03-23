@@ -7,7 +7,7 @@ import {
 } from '@angular/core';
 import { ChangeThemeService } from '../../services/changeTheme.service';
 import { Subject, takeUntil } from 'rxjs';
-import { NavbarComponent } from '../navbar/navbar/navbar.component';
+import { NavbarComponent } from '../navbar/navbar.component';
 
 @Component({
   selector: 'app-header',

@@ -1,3 +1,4 @@
+import { CommonModule, isPlatformBrowser } from '@angular/common';
 import { RedirectionService } from './../../services/redirection.service';
 import {
   ChangeDetectionStrategy,
@@ -9,13 +10,13 @@ import {
   PLATFORM_ID,
 } from '@angular/core';
 import { HeaderComponent } from '../../components/header/header.component';
-import { CommonModule, isPlatformBrowser } from '@angular/common';
 import { CookieConsentServiceService } from '../../services/cookieConsentService.service';
 import { Observable, Subject, takeUntil } from 'rxjs';
+import { CarouselEbooksComponent } from '../../components/carousel-ebooks/carousel-ebooks.component';
 
 @Component({
   standalone: true,
-  imports: [CommonModule, HeaderComponent],
+  imports: [CommonModule, HeaderComponent, CarouselEbooksComponent],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss',
   changeDetection: ChangeDetectionStrategy.OnPush,
@@ -33,7 +34,7 @@ export class HomeComponent implements OnInit, OnDestroy {
     private cdr: ChangeDetectorRef,
     public cookieConsent: CookieConsentServiceService,
     @Inject(PLATFORM_ID) private platformId: Object,
-    private redirectionService: RedirectionService
+    private redirectionService: RedirectionService,
   ) {}
 
   ngOnInit(): void {

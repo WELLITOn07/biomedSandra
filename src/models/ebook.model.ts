@@ -1,5 +1,6 @@
 export interface Ebook {
   title: string;
+  description: string;
   subjects: {
     [subject: string]: string[];
   };
@@ -7,4 +8,5 @@ export interface Ebook {
     original: string;
     discounted: string;
   };
+  cover: string;
 }
