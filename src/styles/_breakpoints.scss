@@ -38,14 +38,14 @@
     }
   }
 
-  .feather-book-open {
-    display: none;
-  }
-
   .header {
     &__actions {
       &__navbar {
         display: block;
+      }
+
+      &__icons__ebook {
+        display: none;
       }
     }
   }
@@ -71,14 +71,15 @@
     }
   }
 
-  .feather-book-open {
-    display: block;
-  }
 
   .header {
     &__actions {
       &__navbar {
         display: none;
+      }
+
+      &__icons__ebook {
+        display: block;
       }
     }
   }

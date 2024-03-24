@@ -1,7 +1,7 @@
 [
   {
     "title": "MANUAL DO BIOMÉDICO",
-    "description": "manual do biomedico com exemplos de aplicação",
+    "description": "Explore o universo biomédico! De hematologia a bioquímica, adquira conhecimento prático e dicas valiosas para excelência profissional.",
     "subjects": {
       "Hematologia": [
         "Leitura de Lâminas",
@@ -54,7 +54,7 @@
   },
   {
     "title": "HEMATOLOGIA",
-    "description": "manual da hematologia com exemplos de aplicação",
+    "description": "Aprofunde-se em hematologia com este guia completo. Da leitura de lâminas às doenças hematológicas, torne-se um especialista na área.",
     "subjects": [
       "Confecção e Leitura de Lâminas",
       "Identificação de Células",
@@ -77,7 +77,7 @@
   },
   {
     "title": "BIOQUÍMICA",
-    "description": "manual da bioquimica com exemplos de aplicação",
+    "description": "Domine a bioquímica clínica. Entenda tudo sobre perfis renal e hepático, enzimas, eletrólitos e mais para diagnósticos precisos.",
     "subjects": [
       "Perfil Renal",
       "Perfil Hepático",
@@ -98,7 +98,7 @@
   },
   {
     "title": "URINÁLISE",
-    "description": "manual da urinálise com exemplos de aplicação",
+    "description": "Seja expert em urinálise. Do exame físico à microbiologia, este manual é essencial para análises detalhadas e diagnósticos acurados.",
     "subjects": [
       "Parcial de Urina – Exame Físico, Químico e Análise de Sedimento",
       "Atlas de Urinálise - Reúne os Principais Tipos de Cristais, Cilindros, e demais elementos que podem estar presentes na amostra de urina",
@@ -114,7 +114,7 @@
   },
   {
     "title": "LÍQUIDO CEFALORRAQUIDIANO",
-    "description": "manual do liquido cefalorraquidiano com exemplos de aplicação",
+    "description": "Descubra os segredos do LCR. Da coleta à citologia, este guia é indispensável para análises precisas e entendimento profundo do LCR.",
     "subjects": [
       "A importância e as funções do LCR",
       "Como é realizada a coleta",

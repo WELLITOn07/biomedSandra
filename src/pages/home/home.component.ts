@@ -10,9 +10,10 @@ import {
   PLATFORM_ID,
 } from '@angular/core';
 import { HeaderComponent } from '../../components/header/header.component';
-import { CookieConsentServiceService } from '../../services/cookieConsentService.service';
+import { CookieConsentService } from '../../services/cookieConsent.service';
 import { Observable, Subject, takeUntil } from 'rxjs';
 import { CarouselEbooksComponent } from '../../components/carousel-ebooks/carousel-ebooks.component';
+import { CarouselEbooksService } from '../../services/carouselEbooks.service';
 
 @Component({
   standalone: true,
@@ -25,6 +26,9 @@ export class HomeComponent implements OnInit, OnDestroy {
   consentAcquired$: Observable<boolean> = this.cookieConsent.getConsentStatus();
   destroySubject: Subject<void> = new Subject<void>();
   consentAcquired: boolean = false;
+  modalCarouselEbooksIsClose$: Observable<boolean> =
+    this.carouselEbooksService.getModalStatus();
+  modalCarouselEbooksIsClose: boolean = false;
 
   isSafari: boolean = false;
   apresentationText: string =
@@ -32,9 +36,10 @@ export class HomeComponent implements OnInit, OnDestroy {
 
   constructor(
     private cdr: ChangeDetectorRef,
-    public cookieConsent: CookieConsentServiceService,
+    public cookieConsent: CookieConsentService,
     @Inject(PLATFORM_ID) private platformId: Object,
     private redirectionService: RedirectionService,
+    private carouselEbooksService: CarouselEbooksService
   ) {}
 
   ngOnInit(): void {
@@ -46,6 +51,18 @@ export class HomeComponent implements OnInit, OnDestroy {
         this.consentAcquired = consentAcquired;
         this.cdr.detectChanges();
       });
+
+    this.modalCarouselEbooksIsClose$.subscribe(
+      (modalCarouselEbooksIsClose: boolean) => {
+        if (modalCarouselEbooksIsClose) {
+          this.modalCarouselEbooksIsClose = false;
+        } else {
+          this.modalCarouselEbooksIsClose = true;
+        }
+
+        this.cdr.detectChanges();
+      }
+    );
   }
 
   private checkIsSafari(): void {

@@ -8,7 +8,7 @@ import {
   OnDestroy,
   OnInit,
 } from '@angular/core';
-import { EbookDataServiceService } from '../../services/ebookDataService.service';
+import { EbookDataServiceService } from '../../services/ebookData.service';
 import { Ebook } from '../../models/ebook.model';
 
 @Component({

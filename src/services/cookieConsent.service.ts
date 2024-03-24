@@ -5,7 +5,7 @@ import { BehaviorSubject, Observable } from 'rxjs';
 @Injectable({
   providedIn: 'root',
 })
-export class CookieConsentServiceService {
+export class CookieConsentService {
   private consentAcquired = new BehaviorSubject<boolean>(true);
 
   constructor(@Inject(PLATFORM_ID) private platformId: Object) {}
