@@ -1,6 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
-import { CookieConsentServiceService } from '../../services/cookieConsentService.service';
+import { CookieConsentService } from '../../services/cookieConsent.service';
 import { Observable, Subject, takeUntil } from 'rxjs';
 
 @Component({
@@ -16,7 +16,7 @@ export class ConsentComponent implements OnInit {
   destroySubject: Subject<void> = new Subject<void>();
   consentAcquired: boolean = false;
 
-  constructor(public cookieConsent: CookieConsentServiceService) {}
+  constructor(public cookieConsent: CookieConsentService) {}
   ngOnInit(): void {
     this.consentAcquired$
       .pipe(takeUntil(this.destroySubject))
