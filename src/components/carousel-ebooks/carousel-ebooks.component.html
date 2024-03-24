@@ -20,6 +20,11 @@
             <div *ngFor="let ebook of ebookData; let i = index" class="carousel-item" [class.active]="i === 0">
               <img src="assets/{{ ebook.cover }}.webp" class="d-block w-100" alt="{{ ebook.title + ' image' }}">
             </div>
+            <div class="carousel-indicators">
+              <button *ngFor="let ebook of ebookData; let i = index" type="button" (click)="onSlideChange(i)"
+                [attr.data-bs-target]="'#carouselEbooks'" [attr.data-bs-slide-to]="i" [class.active]="i === 0"
+                [attr.aria-current]="i === 0 ? 'true' : 'false'" [attr.aria-label]="'Slide ' + (i + 1)"></button>
+            </div>
           </div>
 
           <button class="carousel-control-prev" type="button" data-bs-target="#carouselEbooks" data-bs-slide="prev"

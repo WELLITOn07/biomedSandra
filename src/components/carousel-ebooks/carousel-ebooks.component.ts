@@ -70,6 +70,10 @@ export class CarouselEbooksComponent
     }
   }
 
+  onSlideChange(index: number): void {
+    this.currentEbookIndex = index;
+  }
+
   updateCurrentEbookIndex(direction: 'prev' | 'next'): void {
     if (this.ebookData) {
       this.currentEbookIndex =
