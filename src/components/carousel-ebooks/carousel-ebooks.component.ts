@@ -67,25 +67,20 @@ export class CarouselEbooksComponent
           this.carouselEbooksService.openModal();
         }
       );
+
+      this.renderer.listen(
+        this.modalElementRef.nativeElement.querySelector('#carouselEbooks'),
+        'slide.bs.carousel',
+        (event: any) => {
+          this.updateCurrentEbookIndexOnSlide(event.to);
+        }
+      );
     }
   }
 
-  onSlideChange(index: number): void {
-    this.currentEbookIndex = index;
-  }
-
-  updateCurrentEbookIndex(direction: 'prev' | 'next'): void {
-    if (this.ebookData) {
-      this.currentEbookIndex =
-        direction === 'next'
-          ? (this.currentEbookIndex + 1) % this.ebookData.length
-          : (this.currentEbookIndex - 1 + this.ebookData.length) %
-            this.ebookData.length;
-    }
-  }
-
-  closeModal(): void {
-    this.carouselEbooksService.closeModal();
+  updateCurrentEbookIndexOnSlide(newIndex: number): void {
+    this.currentEbookIndex = newIndex;
+    this.cdr.detectChanges();
   }
 
   ngOnDestroy(): void {
