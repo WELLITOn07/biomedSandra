@@ -5,11 +5,14 @@ import {
   ChangeDetectionStrategy,
   ChangeDetectorRef,
   Component,
+  ElementRef,
   OnDestroy,
   OnInit,
+  ViewChild,
 } from '@angular/core';
 import { EbookDataServiceService } from '../../services/ebookData.service';
 import { Ebook } from '../../models/ebook.model';
+import { EbookPurchaseRedirectService } from '../../services/ebookPurchaseRedirect.service';
 
 @Component({
   selector: 'app-navbar',
@@ -27,6 +30,7 @@ export class NavbarComponent implements OnInit, OnDestroy {
   constructor(
     private redirectionService: RedirectionService,
     private ebookDataServiceService: EbookDataServiceService,
+    private ebookPurchaseRedirectService: EbookPurchaseRedirectService,
     private cdr: ChangeDetectorRef
   ) {}
 
@@ -47,6 +51,15 @@ export class NavbarComponent implements OnInit, OnDestroy {
   toBrowse(social: string) {
     this.redirectionService.goTo(social);
   }
+
+  openEbook(idEbook: string | null) {
+    if (!idEbook) {
+      return;
+    }
+
+    this.ebookPurchaseRedirectService.selectEbook(idEbook);
+  }
+
 
   ngOnDestroy(): void {
     this.destroySubject.next();

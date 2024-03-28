@@ -3,11 +3,12 @@ import { Observable, Subject, takeUntil } from 'rxjs';
 import { Ebook } from '../../models/ebook.model';
 import { CommonModule } from '@angular/common';
 import { EbookPurchaseRedirectService } from '../../services/ebookPurchaseRedirect.service';
+import { NavbarComponent } from '../navbar/navbar.component';
 
 @Component({
   selector: 'app-ebook-details-modal',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, NavbarComponent],
   templateUrl: './ebook-details-modal.component.html',
   styleUrls: ['./ebook-details-modal.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,
