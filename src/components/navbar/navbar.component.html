@@ -47,11 +47,10 @@
           </a>
           <ul class="dropdown-menu">
             <li *ngFor="let ebook of ebookData">
-              <a class="dropdown-item" href="#">{{ebook.title}}</a>
+              <button class="dropdown-item" type="button" data-bs-dismiss="offcanvas" (click)="openEbook(ebook.id)">{{ebook.title}}</button>
             </li>
           </ul>
         </li>
-
       </ul>
     </div>
   </div>
