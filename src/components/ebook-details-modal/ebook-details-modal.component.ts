@@ -1,34 +1,42 @@
-import { Component, Input, OnDestroy, OnInit } from '@angular/core';
-import { EbookDataServiceService } from '../../services/ebookData.service';
+import { ChangeDetectionStrategy, ChangeDetectorRef, Component, OnDestroy, OnInit } from '@angular/core';
 import { Observable, Subject, takeUntil } from 'rxjs';
 import { Ebook } from '../../models/ebook.model';
 import { CommonModule } from '@angular/common';
+import { EbookPurchaseRedirectService } from '../../services/ebookPurchaseRedirect.service';
 
 @Component({
   selector: 'app-ebook-details-modal',
   standalone: true,
   imports: [CommonModule],
   templateUrl: './ebook-details-modal.component.html',
-  styleUrl: './ebook-details-modal.component.scss',
+  styleUrls: ['./ebook-details-modal.component.scss'],
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class EbookDetailsModalComponent implements OnInit, OnDestroy {
-  @Input() selectedEbook: Ebook | null = null;
-  ebookData: Ebook[] | null = null;
-  showEbookDetailsModal: boolean = true;
+  showModal: boolean = false;
+  ebook: Ebook | null = null;
+  ebookSelected$: Observable<Ebook> =
+    this.ebookPurchaseRedirectService.ebookSelected$;
 
-  destroySubject: Subject<void> = new Subject<void>();
-  ebookData$: Observable<Ebook[]> = this.ebookDataServiceService.getAll();
+  private destroySubject = new Subject<void>();
 
-  constructor(private ebookDataServiceService: EbookDataServiceService) {}
+  constructor(
+    private ebookPurchaseRedirectService: EbookPurchaseRedirectService,
+    private cdr: ChangeDetectorRef
+  ) {}
 
   ngOnInit(): void {
-    this.ebookData$
+    this.ebookSelected$
       .pipe(takeUntil(this.destroySubject))
-      .subscribe((ebookData) => {
-        if (ebookData) {
-          this.ebookData = [...ebookData];
-        }
+      .subscribe((ebook: Ebook) => {
+        this.ebook = ebook;
+        this.showModal = true;
+        this.cdr.detectChanges();
       });
+  }
+
+  closeModal() {
+    this.showModal = false;
   }
 
   ngOnDestroy(): void {

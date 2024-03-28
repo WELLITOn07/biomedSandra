@@ -1,4 +1,5 @@
 export interface Ebook {
+  id: string,
   title: string;
   description: string;
   subjects: {
@@ -12,9 +13,9 @@ export interface Ebook {
 }
 
 export enum EbookHotmartUrls {
-  Biomedic = 'https://hotmart.com/product/manual-do-biomedico',
-  Hematologia = 'https://hotmart.com/product/hematologia',
-  Bioquimica = 'https://hotmart.com/product/bioquimica',
-  Urinalise = 'https://hotmart.com/product/urinalise',
-  LiquidoCefalorraquidiano = 'https://hotmart.com/product/liquido-cefalorraquidiano',
+  biomedic = 'https://hotmart.com/product/manual-do-biomedico',
+  hematologia = 'https://hotmart.com/product/hematologia',
+  bioquimica = 'https://hotmart.com/product/bioquimica',
+  urinalise = 'https://hotmart.com/product/urinalise',
+  liquidoCefalorraquidiano = 'https://hotmart.com/product/liquido-cefalorraquidiano',
 }

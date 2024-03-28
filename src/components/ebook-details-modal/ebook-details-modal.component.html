@@ -1,8 +1,16 @@
-<div *ngIf="showEbookDetailsModal" class="modal show d-block" id="ebookDetailsModal" role="dialog" tabindex="-1">
-  <div class="modal-dialog modal-dialog-centered">
-    <div class="modal-content">
+<div *ngIf="showModal" class="modal show d-block" id="ebookDetailsModal" tabindex="-1"
+  aria-labelledby="ebookDetailsModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-fullscreen modal-dialog-scrollable">
+    <div class="modal-content bg-dark text-white">
+      <div class="modal-header">
+        <h5 class="modal-title" id="ebookDetailsModalLabel">{{ ebook?.title }}</h5>
+        <button type="button" class="btn-close btn-close-white" (click)="closeModal()" aria-label="Close"></button>
+      </div>
       <div class="modal-body">
-
+        <p>{{ ebook?.description }}</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" (click)="closeModal()">Fechar</button>
       </div>
     </div>
   </div>
