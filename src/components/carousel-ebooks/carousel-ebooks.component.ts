@@ -14,6 +14,7 @@ import { Observable, Subject, takeUntil } from 'rxjs';
 import { Ebook } from '../../models/ebook.model';
 import { EbookDataServiceService } from '../../services/ebookData.service';
 import { CarouselEbooksService } from '../../services/carouselEbooks.service';
+import { EbookPurchaseRedirectService } from '../../services/ebookPurchaseRedirect.service';
 
 @Component({
   selector: 'app-carousel-ebooks',
@@ -31,12 +32,13 @@ export class CarouselEbooksComponent
   destroySubject: Subject<void> = new Subject<void>();
   currentEbookIndex: number = 0;
   ebookData$: Observable<Ebook[]> = this.ebookDataService.getAll();
-  ebookData: Ebook[] | null = null;
+  ebookData!: Ebook[];
 
   constructor(
     private cdr: ChangeDetectorRef,
     private ebookDataService: EbookDataServiceService,
     private carouselEbooksService: CarouselEbooksService,
+    private ebookPurchaseRedirectService: EbookPurchaseRedirectService,
     private renderer: Renderer2
   ) {}
 
@@ -81,6 +83,21 @@ export class CarouselEbooksComponent
   updateCurrentEbookIndexOnSlide(newIndex: number): void {
     this.currentEbookIndex = newIndex;
     this.cdr.detectChanges();
+  }
+
+  openEbook(idEbook: string | null): void {
+    if (!idEbook) {
+      return;
+    }
+
+    const modalElement: HTMLElement = this.modalElementRef.nativeElement;
+    const closeButton: HTMLElement | null =
+      modalElement.querySelector('.btn-close');
+    if (closeButton) {
+      closeButton.click();
+    }
+
+    this.ebookPurchaseRedirectService.selectEbook(idEbook);
   }
 
   ngOnDestroy(): void {

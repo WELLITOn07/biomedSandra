@@ -50,7 +50,9 @@
       "original": "R$ 147,00",
       "discounted": "R$ 87,90"
     },
-    "cover": "manual_do_biomedico"
+    "cover": "manual_do_biomedico",
+    "id": "biomedic",
+    "url": "https://hotmart.com/product/manual-do-biomedico"
   },
   {
     "title": "HEMATOLOGIA",
@@ -73,7 +75,9 @@
       "original": "R$ 59,90",
       "discounted": "R$ 34,99"
     },
-    "cover": "hematologia"
+    "cover": "hematologia",
+    "id": "hematologia",
+    "url": "https://hotmart.com/product/hematologia"
   },
   {
     "title": "BIOQUÍMICA",
@@ -94,7 +98,9 @@
       "original": "R$ 59,90",
       "discounted": "R$ 27,90"
     },
-    "cover": "bioquimica"
+    "cover": "bioquimica",
+    "id": "bioquimica",
+    "url": "https://hotmart.com/product/bioquimica"
   },
   {
     "title": "URINÁLISE",
@@ -110,7 +116,9 @@
       "original": "R$ 49,90",
       "discounted": "R$ 24,90"
     },
-    "cover": "urinalise"
+    "cover": "urinalise",
+    "id": "urinalise",
+    "url": "https://hotmart.com/product/urinalise"
   },
   {
     "title": "LÍQUIDO CEFALORRAQUIDIANO",
@@ -129,6 +137,8 @@
       "original": "R$ 59,90",
       "discounted": "R$ 34,99"
     },
-    "cover": "liquido_cefalorraquidiano"
+    "cover": "liquido_cefalorraquidiano",
+    "id": "liquidoCefalorraquidiano",
+    "url": "https://hotmart.com/product/liquido-cefalorraquidiano"
   }
 ]
