@@ -1,15 +1,19 @@
 export interface Ebook {
-  id: string,
   title: string;
   description: string;
-  subjects: {
-    [subject: string]: string[];
-  };
+  subjects: EbookSubject[];
   price: {
     original: string;
     discounted: string;
   };
   cover: string;
+  id: string;
+  url: string;
+}
+
+export interface EbookSubject {
+  category: string;
+  topics: string[];
 }
 
 export enum EbookHotmartUrls {

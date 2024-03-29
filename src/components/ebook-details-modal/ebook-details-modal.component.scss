@@ -1,0 +1,63 @@
+@use "colors" as *;
+@use "typography" as *;
+
+.modal {
+  &-header {
+    &__title {
+      font-family: $font-montserrat;
+      font-weight: bold;
+    }
+    &__subtitle {
+      color: $color-accent;
+    }
+  }
+
+  &-body {
+    &::-webkit-scrollbar {
+      width: 8px;
+      height: 50px;
+    }
+
+    &::-webkit-scrollbar-track {
+      background: #f1f1f1;
+      border-radius: 10px;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background: #888;
+      border-radius: 10px;
+    }
+
+    &::-webkit-scrollbar-thumb:hover {
+      background: #555;
+    }
+
+    &::-webkit-scrollbar-button {
+      width: 50px;
+      height: 50px;
+    }
+
+    &__title {
+      font-family: $font-montserrat;
+      font-weight: bold;
+      margin-bottom: 30px;
+    }
+
+    &__topics {
+      &__category {
+        margin-bottom: 10px;
+        gap: 6px;
+
+        &__item {
+          max-width: 600px;
+          font-family: $font-inter;
+          line-height: 25px;
+        }
+
+        li {
+          list-style: disc;
+        }
+      }
+    }
+  }
+}

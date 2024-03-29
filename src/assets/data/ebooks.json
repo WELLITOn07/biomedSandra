@@ -2,50 +2,77 @@
   {
     "title": "MANUAL DO BIOMÉDICO",
     "description": "Explore o universo biomédico! De hematologia a bioquímica, adquira conhecimento prático e dicas valiosas para excelência profissional.",
-    "subjects": {
-      "Hematologia": [
-        "Leitura de Lâminas",
-        "Identificação de Células",
-        "Alterações Morfológicas e Estruturais",
-        "Desvio à esquerda",
-        "Índices Hematimétricos",
-        "Valores de Referência em Adultos e crianças",
-        "Contagem manual de Plaquetas",
-        "Contagem de Reticulócitos",
-        "Interpretação de Gráficos",
-        "Doenças Hematológicas (Anemias e Leucemias)",
-        "Exame VHS"
-      ],
-      "Coagulação": ["TAP", "TTPA", "Dímero-D"],
-      "Bioquímica": [
-        "Principais exames do Perfil Renal, Hepático",
-        "Glicose",
-        "Colesterol",
-        "Proteínas",
-        "Enzimas",
-        "Eletrólitos",
-        "Vitaminas",
-        "Enzimas Cardíacas e Perfil Hormonal"
-      ],
-      "Coleta de amostras": ["Ordem dos Tubos e Função dos Aditivos"],
-      "Gasometria Arterial": ["Interpretação e Valores de Referência"],
-      "Urinálise": [
-        "Parcial de Urina",
-        "Atlas de Urinálise",
-        "Bacterioscopia",
-        "Urocultura",
-        "Antibiograma"
-      ],
-      "IST´s": [
-        "Execução do VDRL e Testes Rápidos (HBSAg, Anti-HBS, Anti-HCV)"
-      ],
-      "Valores Críticos": [
-        "Saiba quais parâmetros precisam ser comunicados ao médico, e quais os intervalos de referência para cada um deles"
-      ],
-      "Dicas Bônus": [
-        "Compartilho Dicas Reais, baseadas em minha experiência profissional, para facilitar seu dia a dia, liberar exames com segurança, e tornar-se ser um profissional reconhecido pelo seu Sucesso"
-      ]
-    },
+    "subjects": [
+      {
+        "category": "Hematologia",
+        "topics": [
+          "Leitura de Lâminas",
+          "Identificação de Células",
+          "Alterações Morfológicas e Estruturais",
+          "Desvio à esquerda",
+          "Índices Hematimétricos",
+          "Valores de Referência em Adultos e crianças",
+          "Contagem manual de Plaquetas",
+          "Contagem de Reticulócitos",
+          "Interpretação de Gráficos",
+          "Doenças Hematológicas (Anemias e Leucemias)",
+          "Exame VHS"
+        ]
+      },
+      {
+        "category": "Coagulação",
+        "topics": ["TAP", "TTPA", "Dímero-D"]
+      },
+      {
+        "category": "Bioquímica",
+        "topics": [
+          "Principais exames do Perfil Renal, Hepático",
+          "Glicose",
+          "Colesterol",
+          "Proteínas",
+          "Enzimas",
+          "Eletrólitos",
+          "Vitaminas",
+          "Enzimas Cardíacas e Perfil Hormonal"
+        ]
+      },
+      {
+        "category": "Coleta de amostras",
+        "topics": ["Ordem dos Tubos e Função dos Aditivos"]
+      },
+      {
+        "category": "Gasometria Arterial",
+        "topics": ["Interpretação e Valores de Referência"]
+      },
+      {
+        "category": "Urinálise",
+        "topics": [
+          "Parcial de Urina",
+          "Atlas de Urinálise",
+          "Bacterioscopia",
+          "Urocultura",
+          "Antibiograma"
+        ]
+      },
+      {
+        "category": "IST´s",
+        "topics": [
+          "Execução do VDRL e Testes Rápidos (HBSAg, Anti-HBS, Anti-HCV)"
+        ]
+      },
+      {
+        "category": "Valores Críticos",
+        "topics": [
+          "Saiba quais parâmetros precisam ser comunicados ao médico, e quais os intervalos de referência para cada um deles"
+        ]
+      },
+      {
+        "category": "Dicas Bônus",
+        "topics": [
+          "Compartilho Dicas Reais, baseadas em minha experiência profissional, para facilitar seu dia a dia, liberar exames com segurança, e tornar-se ser um profissional reconhecido pelo seu Sucesso"
+        ]
+      }
+    ],
     "price": {
       "original": "R$ 147,00",
       "discounted": "R$ 87,90"
@@ -58,18 +85,29 @@
     "title": "HEMATOLOGIA",
     "description": "Aprofunde-se em hematologia com este guia completo. Da leitura de lâminas às doenças hematológicas, torne-se um especialista na área.",
     "subjects": [
-      "Confecção e Leitura de Lâminas",
-      "Identificação de Células",
-      "Alterações Morfológicas e Estruturais",
-      "Desvio à esquerda",
-      "Índices Hematimétricos",
-      "Valores de Referência em Adultos e crianças",
-      "Contagem manual de Plaquetas",
-      "Contagem de Reticulócitos",
-      "Interpretação de Gráficos em Hematologia",
-      "Doenças Hematológicas (Anemias e Leucemias)",
-      "Exame VHS",
-      "Coagulograma: TAP, TTPA E Dímero-D"
+      {
+        "category": "Hematologia",
+        "topics": [
+          "Confecção e Leitura de Lâminas",
+          "Identificação de Células",
+          "Alterações Morfológicas e Estruturais",
+          "Desvio à esquerda",
+          "Índices Hematimétricos",
+          "Valores de Referência em Adultos e crianças",
+          "Contagem manual de Plaquetas",
+          "Contagem de Reticulócitos",
+          "Interpretação de Gráficos em Hematologia",
+          "Doenças Hematológicas (Anemias e Leucemias)",
+          "Exame VHS",
+          "Coagulograma: TAP, TTPA E Dímero-D"
+        ]
+      },
+      {
+        "category": "Dicas Bônus",
+        "topics": [
+          "Compartilho Dicas Reais, baseadas em minha experiência profissional, para facilitar seu dia a dia, liberar exames com segurança, e tornar-se ser um profissional reconhecido pelo seu Sucesso"
+        ]
+      }
     ],
     "price": {
       "original": "R$ 59,90",
@@ -83,16 +121,27 @@
     "title": "BIOQUÍMICA",
     "description": "Domine a bioquímica clínica. Entenda tudo sobre perfis renal e hepático, enzimas, eletrólitos e mais para diagnósticos precisos.",
     "subjects": [
-      "Perfil Renal",
-      "Perfil Hepático",
-      "Glicose e Hemoglobina Glicada",
-      "Tipos de Colesterol",
-      "Dosagem de Proteínas",
-      "Dosagem de Enzimas",
-      "Eletrólitos (Sódio, Potássio e Cálcio)",
-      "Vitaminas",
-      "Enzimas Cardíacas",
-      "Perfil Hormonal"
+      {
+        "category": "Bioquímica",
+        "topics": [
+          "Perfil Renal",
+          "Perfil Hepático",
+          "Glicose e Hemoglobina Glicada",
+          "Tipos de Colesterol",
+          "Dosagem de Proteínas",
+          "Dosagem de Enzimas",
+          "Eletrólitos (Sódio, Potássio e Cálcio)",
+          "Vitaminas",
+          "Enzimas Cardíacas",
+          "Perfil Hormonal"
+        ]
+      },
+      {
+        "category": "Dicas Bônus",
+        "topics": [
+          "Compartilho Dicas Reais, baseadas em minha experiência profissional, para facilitar seu dia a dia, liberar exames com segurança, e tornar-se ser um profissional reconhecido pelo seu Sucesso"
+        ]
+      }
     ],
     "price": {
       "original": "R$ 59,90",
@@ -106,11 +155,22 @@
     "title": "URINÁLISE",
     "description": "Seja expert em urinálise. Do exame físico à microbiologia, este manual é essencial para análises detalhadas e diagnósticos acurados.",
     "subjects": [
-      "Parcial de Urina – Exame Físico, Químico e Análise de Sedimento",
-      "Atlas de Urinálise - Reúne os Principais Tipos de Cristais, Cilindros, e demais elementos que podem estar presentes na amostra de urina",
-      "Bacterioscopia – Identificando bactérias presentes no Sedimento Corado – cocos, bacilos/ Gram Positivo e Gram Negativo – Coloração de Gram passo a passo",
-      "Urocultura- Como semear e realizar a leitura",
-      "Antibiograma- Como realizar e interpretar o resultado"
+      {
+        "category": "Urinálise",
+        "topics": [
+          "Parcial de Urina – Exame Físico, Químico e Análise de Sedimento",
+          "Atlas de Urinálise - Reúne os Principais Tipos de Cristais, Cilindros, e demais elementos que podem estar presentes na amostra de urina",
+          "Bacterioscopia – Identificando bactérias presentes no Sedimento Corado – cocos, bacilos/ Gram Positivo e Gram Negativo – Coloração de Gram passo a passo",
+          "Urocultura- Como semear e realizar a leitura",
+          "Antibiograma- Como realizar e interpretar o resultado"
+        ]
+      },
+      {
+        "category": "Dicas Bônus",
+        "topics": [
+          "Compartilho Dicas Reais, baseadas em minha experiência profissional, para facilitar seu dia a dia, liberar exames com segurança, e tornar-se ser um profissional reconhecido pelo seu Sucesso"
+        ]
+      }
     ],
     "price": {
       "original": "R$ 49,90",
@@ -121,17 +181,28 @@
     "url": "https://hotmart.com/product/urinalise"
   },
   {
-    "title": "LÍQUIDO CEFALORRAQUIDIANO",
+    "title": "LCR",
     "description": "Descubra os segredos do LCR. Da coleta à citologia, este guia é indispensável para análises precisas e entendimento profundo do LCR.",
     "subjects": [
-      "A importância e as funções do LCR",
-      "Como é realizada a coleta",
-      "Aspecto visual",
-      "Bioquímica- Principais exames e valores de referência",
-      "Citometria - Como fazer a contagem",
-      "Citologia- Como fazer a contagem e valores de referência",
-      "Microbiologia do LCR",
-      "Estabilidade da amostra"
+      {
+        "category": "LCR",
+        "topics": [
+          "A importância e as funções do LCR",
+          "Como é realizada a coleta",
+          "Aspecto visual",
+          "Bioquímica- Principais exames e valores de referência",
+          "Citometria - Como fazer a contagem",
+          "Citologia- Como fazer a contagem e valores de referência",
+          "Microbiologia do LCR",
+          "Estabilidade da amostra"
+        ]
+      },
+      {
+        "category": "Dicas Bônus",
+        "topics": [
+          "Compartilho Dicas Reais, baseadas em minha experiência profissional, para facilitar seu dia a dia, liberar exames com segurança, e tornar-se ser um profissional reconhecido pelo seu Sucesso"
+        ]
+      }
     ],
     "price": {
       "original": "R$ 59,90",

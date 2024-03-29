@@ -15,10 +15,7 @@ html {
 body {
   overflow-y: hidden;
 }
-ol,
-ul {
-  list-style: none;
-}
+
 blockquote,
 q {
   quotes: none;
@@ -35,6 +32,17 @@ table {
   border-spacing: 0;
 }
 
-.row, .col {
+.row,
+.col {
   padding: 0 !important;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  padding: 0;
 }
