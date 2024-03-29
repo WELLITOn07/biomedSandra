@@ -60,7 +60,6 @@ export class NavbarComponent implements OnInit, OnDestroy {
     this.ebookPurchaseRedirectService.selectEbook(idEbook);
   }
 
-
   ngOnDestroy(): void {
     this.destroySubject.next();
     this.destroySubject.complete();
