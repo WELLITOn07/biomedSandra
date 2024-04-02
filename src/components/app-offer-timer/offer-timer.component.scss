@@ -1,0 +1,38 @@
+@use "colors" as *;
+@use "typography" as *;
+
+.offer-timer {
+  margin-top: 30px;
+  color: $color-light;
+  font-family: $font-inter;
+
+  &__container {
+    gap: 10px;
+  }
+
+  &__text {
+    font-size: 1.5rem;
+    font-family: $font-inter;
+  }
+
+  &__timer {
+    font-size: 1.5rem;
+    color: $color-accent;
+  }
+
+  &__catchphrase {
+    background-color: $color-alert;
+    margin-top: 10px;
+
+    &__text {
+      font-family: $font-montserrat;
+      font-size: 2.5rem;
+      font-weight: bold;
+    }
+
+    &__border {
+      height: 10px;
+      background-color: $color-light;
+    }
+  }
+}
