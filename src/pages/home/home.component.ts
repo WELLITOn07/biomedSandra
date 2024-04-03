@@ -1,6 +1,7 @@
 import { CommonModule, isPlatformBrowser } from '@angular/common';
 import { RedirectionService } from './../../services/redirection.service';
 import {
+  AfterViewInit,
   ChangeDetectionStrategy,
   ChangeDetectorRef,
   Component,
@@ -22,8 +23,8 @@ import { CarouselEbooksService } from '../../services/carouselEbooks.service';
   styleUrl: './home.component.scss',
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class HomeComponent implements OnInit, OnDestroy {
-  consentAcquired$: Observable<boolean> = this.cookieConsent.getConsentStatus();
+export class HomeComponent implements OnInit, OnDestroy, AfterViewInit {
+  consentAcquired$: Observable<boolean> | null = null;
   destroySubject: Subject<void> = new Subject<void>();
   consentAcquired: boolean = false;
   modalCarouselEbooksIsClose$: Observable<boolean> =
@@ -44,14 +45,6 @@ export class HomeComponent implements OnInit, OnDestroy {
 
   ngOnInit(): void {
     this.checkIsSafari();
-
-    this.consentAcquired$
-      .pipe(takeUntil(this.destroySubject))
-      .subscribe((consentAcquired: boolean) => {
-        this.consentAcquired = consentAcquired;
-        this.cdr.detectChanges();
-      });
-
     this.modalCarouselEbooksIsClose$.subscribe(
       (modalCarouselEbooksIsClose: boolean) => {
         if (modalCarouselEbooksIsClose) {
@@ -63,6 +56,16 @@ export class HomeComponent implements OnInit, OnDestroy {
         this.cdr.detectChanges();
       }
     );
+  }
+
+  ngAfterViewInit(): void {
+    this.cookieConsent
+      .getConsentStatus()
+      .pipe(takeUntil(this.destroySubject))
+      .subscribe((consentAcquired: boolean) => {
+        this.consentAcquired = consentAcquired;
+        this.cdr.detectChanges();
+      });
   }
 
   private checkIsSafari(): void {

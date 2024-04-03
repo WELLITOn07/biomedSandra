@@ -1,6 +1,6 @@
 [
   {
-    "title": "MANUAL DO BIOMÉDICO",
+    "title": "GUIA DO BIOMÉDICO",
     "description": "Explore o universo biomédico! De hematologia a bioquímica, adquira conhecimento prático e dicas valiosas para excelência profissional.",
     "subjects": [
       {
@@ -79,7 +79,7 @@
     },
     "cover": "manual_do_biomedico",
     "id": "biomedic",
-    "url": "https://hotmart.com/product/manual-do-biomedico"
+    "link": "https://pay.hotmart.com/E90191279A"
   },
   {
     "title": "HEMATOLOGIA",
@@ -115,7 +115,7 @@
     },
     "cover": "hematologia",
     "id": "hematologia",
-    "url": "https://hotmart.com/product/hematologia"
+    "link": "https://pay.hotmart.com/U85205934J"
   },
   {
     "title": "BIOQUÍMICA",
@@ -149,7 +149,7 @@
     },
     "cover": "bioquimica",
     "id": "bioquimica",
-    "url": "https://hotmart.com/product/bioquimica"
+    "link": "https://pay.hotmart.com/A88463369T"
   },
   {
     "title": "URINÁLISE",
@@ -178,7 +178,7 @@
     },
     "cover": "urinalise",
     "id": "urinalise",
-    "url": "https://hotmart.com/product/urinalise"
+    "link": "https://pay.hotmart.com/W88463556U"
   },
   {
     "title": "LCR",
@@ -210,6 +210,6 @@
     },
     "cover": "liquido_cefalorraquidiano",
     "id": "liquidoCefalorraquidiano",
-    "url": "https://hotmart.com/product/liquido-cefalorraquidiano"
+    "link": "https://pay.hotmart.com/Q85449498P"
   }
 ]
