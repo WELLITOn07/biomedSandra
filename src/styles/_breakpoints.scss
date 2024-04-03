@@ -1,13 +1,33 @@
 @use "colors" as *;
 @use "background-image" as *;
 
-@media (max-width: 398px) {
+@media (max-width: 375px) {
   .section {
     &__apresentation {
       &__text {
-        font-size: 0.9rem;
+        font-size: 1rem;
       }
     }
+  }
+
+  .offer-timer {
+    &__text {
+      font-size: 0.6rem !important;
+    }
+
+    &__timer {
+      font-size: 0.7rem !important;
+    }
+
+    &__catchphrase {
+      &__text {
+        font-size: 1.1rem !important;
+      }
+    }
+  }
+
+  .carousel-item > img {
+    max-height: 250px !important;
   }
 }
 
@@ -34,6 +54,10 @@
         font-size: 1.2rem !important;
       }
     }
+  }
+
+  .carousel-item > img {
+    max-height: 280px !important;
   }
 }
 
@@ -81,6 +105,10 @@
       }
     }
   }
+
+  .carousel-item > img {
+    max-height: 335px !important;
+  }
 }
 
 @media (min-width: 768px) {
@@ -102,7 +130,6 @@
       }
     }
   }
-
 
   .header {
     &__actions {
