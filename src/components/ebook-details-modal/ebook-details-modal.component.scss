@@ -60,4 +60,20 @@
       }
     }
   }
+
+  &-body__works {
+    gap: 10px;
+    margin-top: 30px;
+
+    &__container {
+      gap: 10px;
+    }
+  }
+
+  &__works {
+    &__item {
+      color: $color-light;
+      text-decoration: none;
+    }
+  }
 }
