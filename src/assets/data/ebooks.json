@@ -79,7 +79,17 @@
     },
     "cover": "manual_do_biomedico",
     "id": "biomedic",
-    "link": "https://pay.hotmart.com/E90191279A"
+    "link": "https://pay.hotmart.com/E90191279A",
+    "works": [
+      {
+        "title": "Dímero-D / Coagulação ",
+        "url": "https://editorapasteur.com.br/publicacoes/capitulo/?codigo=3152"
+      },
+      {
+        "title": "Gestão em Saúde",
+        "url": "https://www.editoracientifica.com.br/articles/code/240115471"
+      }
+    ]
   },
   {
     "title": "HEMATOLOGIA",
@@ -115,7 +125,17 @@
     },
     "cover": "hematologia",
     "id": "hematologia",
-    "link": "https://pay.hotmart.com/U85205934J"
+    "link": "https://pay.hotmart.com/U85205934J",
+    "works": [
+      {
+        "title": "Dímero-D / Coagulação ",
+        "url": "https://editorapasteur.com.br/publicacoes/capitulo/?codigo=3152"
+      },
+      {
+        "title": "Gestão em Saúde",
+        "url": "https://www.editoracientifica.com.br/articles/code/240115471"
+      }
+    ]
   },
   {
     "title": "BIOQUÍMICA",
@@ -149,7 +169,17 @@
     },
     "cover": "bioquimica",
     "id": "bioquimica",
-    "link": "https://pay.hotmart.com/A88463369T"
+    "link": "https://pay.hotmart.com/A88463369T",
+    "works": [
+      {
+        "title": "Dímero-D / Coagulação ",
+        "url": "https://editorapasteur.com.br/publicacoes/capitulo/?codigo=3152"
+      },
+      {
+        "title": "Gestão em Saúde",
+        "url": "https://www.editoracientifica.com.br/articles/code/240115471"
+      }
+    ]
   },
   {
     "title": "URINÁLISE",
@@ -178,7 +208,17 @@
     },
     "cover": "urinalise",
     "id": "urinalise",
-    "link": "https://pay.hotmart.com/W88463556U"
+    "link": "https://pay.hotmart.com/W88463556U",
+    "works": [
+      {
+        "title": "Dímero-D / Coagulação ",
+        "url": "https://editorapasteur.com.br/publicacoes/capitulo/?codigo=3152"
+      },
+      {
+        "title": "Gestão em Saúde",
+        "url": "https://www.editoracientifica.com.br/articles/code/240115471"
+      }
+    ]
   },
   {
     "title": "LCR",
@@ -210,6 +250,16 @@
     },
     "cover": "liquido_cefalorraquidiano",
     "id": "liquidoCefalorraquidiano",
-    "link": "https://pay.hotmart.com/Q85449498P"
+    "link": "https://pay.hotmart.com/Q85449498P",
+    "works": [
+      {
+        "title": "Dímero-D / Coagulação ",
+        "url": "https://editorapasteur.com.br/publicacoes/capitulo/?codigo=3152"
+      },
+      {
+        "title": "Gestão em Saúde",
+        "url": "https://www.editoracientifica.com.br/articles/code/240115471"
+      }
+    ]
   }
 ]
