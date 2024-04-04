@@ -47,7 +47,21 @@
           </a>
           <ul class="dropdown-menu">
             <li *ngFor="let ebook of ebookData">
-              <button class="dropdown-item" type="button" data-bs-dismiss="offcanvas" (click)="openEbook(ebook.id)">{{ebook.title}}</button>
+              <button class="dropdown-item" type="button" data-bs-dismiss="offcanvas"
+                (click)="openEbook(ebook.id)">{{ebook.title}}</button>
+            </li>
+          </ul>
+        </li>
+
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Trabalhos Publicados
+          </a>
+          <ul class="dropdown-menu">
+            <li *ngFor="let work of ebookData![0].works">
+              <button class="dropdown-item" type="button"><a href="{{ work.url }}" class="dropdown-item__link"
+                  target="_blank" rel="noopener noreferrer">{{
+                  work.title }}</a></button>
             </li>
           </ul>
         </li>
