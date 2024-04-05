@@ -29,7 +29,7 @@ export class HomeComponent implements OnInit, OnDestroy, AfterViewInit {
   consentAcquired: boolean = false;
   modalCarouselEbooksIsClose$: Observable<boolean> =
     this.carouselEbooksService.getModalStatus();
-  modalCarouselEbooksIsClose: boolean = false;
+  modalCarouselEbooksIsClose: boolean = true;
 
   isSafari: boolean = false;
   apresentationText: string =
@@ -44,15 +44,9 @@ export class HomeComponent implements OnInit, OnDestroy, AfterViewInit {
   ) {}
 
   ngOnInit(): void {
-    this.checkIsSafari();
     this.modalCarouselEbooksIsClose$.subscribe(
       (modalCarouselEbooksIsClose: boolean) => {
-        if (modalCarouselEbooksIsClose) {
-          this.modalCarouselEbooksIsClose = false;
-        } else {
-          this.modalCarouselEbooksIsClose = true;
-        }
-
+        this.modalCarouselEbooksIsClose = modalCarouselEbooksIsClose;
         this.cdr.detectChanges();
       }
     );
@@ -68,19 +62,13 @@ export class HomeComponent implements OnInit, OnDestroy, AfterViewInit {
       });
   }
 
-  private checkIsSafari(): void {
-    if (isPlatformBrowser(this.platformId)) {
-      const userAgent = navigator.userAgent;
-      const isSafari = /^((?!chrome|android).)*safari/i.test(userAgent);
-      if (isSafari) {
-        this.isSafari = true;
-        this.cdr.detectChanges();
-      }
-    }
-  }
-
   toBrowse(social: string) {
     this.redirectionService.goTo(social);
+  }
+
+  openCarouselEbooks() {
+    this.carouselEbooksService.openModal();
+    this.cdr.detectChanges();
   }
 
   ngOnDestroy(): void {

@@ -1,22 +1,22 @@
 import { Injectable } from '@angular/core';
-import { BehaviorSubject, Subject } from 'rxjs';
+import { BehaviorSubject } from 'rxjs';
 
 @Injectable({
   providedIn: 'root',
 })
 export class CarouselEbooksService {
   constructor() {}
-  private openModalSubject = new BehaviorSubject<boolean>(false);
+  private closeModalSubject = new BehaviorSubject<boolean>(true);
 
   openModal() {
-    this.openModalSubject.next(true);
+    this.closeModalSubject.next(false);
   }
 
   closeModal() {
-    this.openModalSubject.next(false);
+    this.closeModalSubject.next(true);
   }
 
   getModalStatus() {
-    return this.openModalSubject.asObservable();
+    return this.closeModalSubject.asObservable();
   }
 }

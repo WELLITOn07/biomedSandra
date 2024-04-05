@@ -20,7 +20,7 @@
 
               <button *ngIf="modalCarouselEbooksIsClose" type="button"
                 class="btn btn-danger btn-lg p-2 section__cta__button" data-bs-toggle="modal"
-                data-bs-target="#carouselEbooksInner">CLIQUE AQUI E SAIBA MAIS</button>
+                data-bs-target="#carouselEbooksInner" (click)="openCarouselEbooks()">CLIQUE AQUI E SAIBA MAIS</button>
 
 
               <div class="section__actions__container d-flex    justify-content-between align-items-center">
