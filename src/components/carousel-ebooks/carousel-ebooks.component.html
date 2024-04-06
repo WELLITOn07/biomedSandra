@@ -11,7 +11,8 @@
         </svg>
         <h1 class="modal-title fs-5" id="carouselEbooksLabel">{{ ebookData && ebookData.length > 0 ?
           ebookData[currentEbookIndex].title : '' }}</h1>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" (click)="closeModal()"></button>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"
+          (click)="closeModal()"></button>
       </div>
       <div class="modal-body">
         <div id="carouselEbooks" class="carousel slide">
@@ -33,7 +34,7 @@
       <div class="modal-footer w-100 d-flex justify-content-center align-items-center">
         <p class="carousel-inner__description">{{ ebookData && ebookData.length > 0 ?
           ebookData[currentEbookIndex].description : '' }}</p>
-        <button type="button" class="btn btn-primary w-100 p-2" (click)="openEbook(ebookData[currentEbookIndex].id)">CLIQUE AQUI E VEJA
+        <button type="button" class="btn btn-primary w-100 p-2" (click)="openEbook(ebookData![currentEbookIndex]!.id)">VER
           MAIS</button>
       </div>
     </div>
