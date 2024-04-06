@@ -4,8 +4,10 @@ import {
   Component,
   OnDestroy,
   OnInit,
+  Renderer2,
   ViewChild,
   ElementRef,
+  AfterViewInit,
 } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { Observable, Subject, takeUntil } from 'rxjs';
@@ -22,20 +24,22 @@ import { EbookPurchaseRedirectService } from '../../services/ebookPurchaseRedire
   styleUrls: ['../../styles/_custombootstrap.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class CarouselEbooksComponent implements OnInit, OnDestroy {
+export class CarouselEbooksComponent
+  implements OnInit, OnDestroy, AfterViewInit
+{
   @ViewChild('carouselEbooksInner') modalElementRef!: ElementRef;
 
   destroySubject: Subject<void> = new Subject<void>();
   currentEbookIndex: number = 0;
   ebookData$: Observable<Ebook[]> = this.ebookDataService.getAll();
-  ebookData!: Ebook[];
-  private listeners: Function[] = [];
+  ebookData: Ebook[] | null = null;
 
   constructor(
     private cdr: ChangeDetectorRef,
     private ebookDataService: EbookDataServiceService,
     private carouselEbooksService: CarouselEbooksService,
-    private ebookPurchaseRedirectService: EbookPurchaseRedirectService,
+    private renderer: Renderer2,
+    private ebookredirectService: EbookPurchaseRedirectService
   ) {}
 
   ngOnInit(): void {
@@ -48,13 +52,41 @@ export class CarouselEbooksComponent implements OnInit, OnDestroy {
     });
   }
 
+  ngAfterViewInit(): void {
+    if (this.modalElementRef && this.modalElementRef.nativeElement) {
+      this.renderer.listen(
+        this.modalElementRef.nativeElement,
+        'hidden.bs.modal',
+        () => {
+          this.carouselEbooksService.closeModal();
+        }
+      );
+
+      this.renderer.listen(
+        this.modalElementRef.nativeElement,
+        'shown.bs.modal',
+        () => {
+          this.carouselEbooksService.openModal();
+        }
+      );
+
+      this.renderer.listen(
+        this.modalElementRef.nativeElement.querySelector('#carouselEbooks'),
+        'slide.bs.carousel',
+        (event: any) => {
+          this.updateCurrentEbookIndexOnSlide(event.to);
+        }
+      );
+    }
+  }
+
   updateCurrentEbookIndexOnSlide(newIndex: number): void {
     this.currentEbookIndex = newIndex;
     this.cdr.detectChanges();
   }
 
-  openEbook(idEbook: string | null): void {
-    if (!idEbook) {
+  openEbook(idEbook: string | undefined): void {
+    if (idEbook === undefined) {
       return;
     }
 
@@ -65,7 +97,7 @@ export class CarouselEbooksComponent implements OnInit, OnDestroy {
       closeButton.click();
     }
 
-    this.ebookPurchaseRedirectService.selectEbook(idEbook);
+    this.ebookredirectService.selectEbook(idEbook);
   }
 
   closeModal() {
@@ -73,7 +105,6 @@ export class CarouselEbooksComponent implements OnInit, OnDestroy {
   }
 
   ngOnDestroy(): void {
-    this.listeners.forEach((removeListener) => removeListener());
     this.destroySubject.next();
     this.destroySubject.complete();
   }
