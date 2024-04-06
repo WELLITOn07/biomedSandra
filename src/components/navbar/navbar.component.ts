@@ -5,10 +5,8 @@ import {
   ChangeDetectionStrategy,
   ChangeDetectorRef,
   Component,
-  ElementRef,
   OnDestroy,
   OnInit,
-  ViewChild,
 } from '@angular/core';
 import { EbookDataServiceService } from '../../services/ebookData.service';
 import { Ebook } from '../../models/ebook.model';
