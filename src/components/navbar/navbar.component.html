@@ -1,4 +1,4 @@
-<nav class="navbar navbar__mobile" data-bs-theme="dark">
+<nav class="navbar navbar__mobile" data-bs-theme="dark" *ngIf="ebookData">
   <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#navbarContact"
     aria-controls="navbarContact" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
@@ -58,10 +58,12 @@
             Trabalhos Publicados
           </a>
           <ul class="dropdown-menu">
-            <li *ngFor="let work of ebookData![0].works">
-              <button class="dropdown-item" type="button"><a href="{{ work.url }}" class="dropdown-item__link"
-                  target="_blank" rel="noopener noreferrer">{{
-                  work.title }}</a></button>
+            <li *ngFor="let work of ebookData?.[0]?.works">
+              <button class="dropdown-item" type="button">
+                <a href="{{ work.url }}" class="dropdown-item__link" target="_blank" rel="noopener noreferrer">
+                  {{ work.title }}
+                </a>
+              </button>
             </li>
           </ul>
         </li>
