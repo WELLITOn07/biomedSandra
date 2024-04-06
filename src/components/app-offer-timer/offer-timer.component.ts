@@ -15,7 +15,7 @@ import {
 })
 export class AppOfferTimerComponent implements OnInit, OnDestroy {
   timeUntilOfferEnds: string | null = null;
-  private intervalId: number = 0;
+  intervalId: number = 0;
   private offerEndTime!: Date;
 
   constructor(private cdr: ChangeDetectorRef) {
