@@ -9,6 +9,7 @@ export interface Ebook {
   cover: string;
   id: string;
   url: string;
+  link: string;
   works: PublishedWork[];
 }
 

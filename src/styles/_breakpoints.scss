@@ -109,6 +109,16 @@
   .carousel-item > img {
     max-height: 335px !important;
   }
+
+  .modal__works__prices {
+    &__original {
+      font-size: 15px !important;
+    }
+
+    &__discounted {
+      font-size: 35px !important;
+    }
+  }
 }
 
 @media (min-width: 768px) {
@@ -141,6 +151,10 @@
         display: block;
       }
     }
+  }
+
+  .modal__works__prices__cta__button {
+    width: 50% !important;
   }
 }
 

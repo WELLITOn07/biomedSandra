@@ -1,18 +1,17 @@
 import { Injectable } from '@angular/core';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class RedirectionService {
-
-  constructor() { }
+  constructor() {}
 
   goTo(social: string) {
     const socialUrls: Record<string, string> = {
       instagram: 'https://www.instagram.com/biomedsandra/',
       facebook: 'https://www.facebook.com/profile.php?id=100063966036549',
       linkedin: 'https://www.linkedin.com/in/sandra-kotovicz-591a3b218/',
-      github: 'https://github.com/WELLITOn07'
+      github: 'https://github.com/WELLITOn07',
     };
 
     const url = socialUrls[social.toLowerCase()];
@@ -24,4 +23,7 @@ export class RedirectionService {
     }
   }
 
+  goToExternal(url: string) {
+    window.open(url, '_blank');
+  }
 }
