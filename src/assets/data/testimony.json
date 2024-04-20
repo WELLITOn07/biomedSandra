@@ -1,0 +1,40 @@
+{
+  "testimonies": [
+    {
+      "id": 1,
+      "author": "Matheus Augusto",
+      "rating": 5,
+      "text": "A parte de Hematologia foi o que mais gostei, está bem completa e detalhada, tenho dificuldade na identificação de células, e as dicas vão ajudar muito."
+    },
+    {
+      "id": 2,
+      "author": "Mari Wojcik",
+      "rating": 4,
+      "text": "Estou no sétimo período e estava procurando um material para usar no estágio, gostei pq é sobre vários assuntos e vou poder usar nos relatórios."
+    },
+    {
+      "id": 3,
+      "author": "Leticia Gonçalves",
+      "rating": 5,
+      "text": "Me formo esse semestre e meu maior medo é esquecer de tudo quando me chamarem pra trabalhar... Vai ser ótimo para revisar sobre os exames."
+    },
+    {
+      "id": 4,
+      "author": "Patrick Santos do Nascimento",
+      "rating": 5,
+      "text": "Amei, voltei de férias e já estou usando."
+    },
+    {
+      "id": 5,
+      "author": "Ana Clara Lima",
+      "rating": 5,
+      "text": "Conteúdo bom e as imagens ajudam muito, perfeito!"
+    },
+    {
+      "id": 6,
+      "author": "Debora Fialla",
+      "rating": 4,
+      "text": "Estou no quarto período e procurando um estágio, achei ótimo para me preparar até conseguir uma oportunidade."
+    }
+  ]
+}
