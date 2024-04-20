@@ -4,6 +4,8 @@
 
 O projeto **BiomedSandra** é uma página de vendas dedicada a promover e comercializar e-books especializados na área de Biomedicina. Estes e-books são autorados por Sandra, uma profissional experiente e apaixonada pelo campo, oferecendo insights valiosos, informações atualizadas e dicas práticas tanto para estudantes quanto para profissionais e entusiastas da Biomedicina.
 
+Visite o site: [biomedsandra.com.br](https://biomedsandra.com.br)
+
 ### Características Principais:
 
 - **Design Responsivo:** O site é otimizado para uma visualização agradável em uma variedade de dispositivos, incluindo smartphones e desktops.
@@ -16,7 +18,7 @@ O projeto **BiomedSandra** é uma página de vendas dedicada a promover e comerc
 
 ## Testes Unitários
 
-- **Descrição:** Todos os componentes do site passam por testes unitários rigorosos para assegurar sua funcionalidade e robustez. Utilizamos frameworks de teste modernos para validar cada função e interação no site, garantindo uma operação livre de erros e a melhor experiência do usuário possível.
+- **Jest:** Para garantir a qualidade do código, utilizamos o Jest, um framework de testes unitários amplamente conhecido e robusto. Isso nos permite validar cada componente da aplicação de forma isolada, garantindo que as funcionalidades atendam a todas as expectativas e requisitos sem falhas.
 
 ## Como Contribuir
 
