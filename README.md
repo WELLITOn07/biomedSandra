@@ -2,9 +2,11 @@
 
 ## Sobre o Projeto
 
-O projeto **BiomedSandra** é uma página de vendas dedicada a promover e comercializar e-books especializados na área de Biomedicina. Estes e-books são autorados por Sandra, uma profissional experiente e apaixonada pelo campo, oferecendo insights valiosos, informações atualizadas e dicas práticas tanto para estudantes quanto para profissionais e entusiastas da Biomedicina.
+O projeto **BiomedSandra** é uma página de vendas dedicada a promover e comercializar e-books e cursos em vídeo especializados na área de Biomedicina. Estes materiais são autorados por Sandra, uma profissional experiente e apaixonada pelo campo, oferecendo insights valiosos, informações atualizadas e dicas práticas tanto para estudantes quanto para profissionais e entusiastas da Biomedicina.
 
 Visite o site: [biomedsandra.com.br](https://biomedsandra.com.br)
+
+Além dos e-books, também disponibilizamos cursos em vídeo sobre os mesmos temas na plataforma da Udemy, permitindo um aprendizado mais dinâmico e interativo.
 
 ### Características Principais:
 
@@ -23,7 +25,7 @@ Visite o site: [biomedsandra.com.br](https://biomedsandra.com.br)
 
 ## Como Contribuir
 
-Contribuições são bem-vindas! Se você tem sugestões de melhorias, correções de bugs ou quer ajudar a expandir nosso conteúdo, siga estes passos:
+Contribuições são bem-vindas! Se você tem sugestões de melhorias, correções de bugs ou quer ajudar a expandir nosso conteúdo e cursos, siga estes passos:
 1. **Fork** o repositório.
 2. Crie uma **nova branch** (`git checkout -b feature-novaFeature`).
 3. **Commit** suas mudanças (`git commit -am 'Adiciona alguma novaFeature'`).
