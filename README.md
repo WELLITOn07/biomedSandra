@@ -2,36 +2,41 @@
 
 ## Sobre o Projeto
 
-O projeto **BiomedSandra** é uma página de vendas dedicada a promover e comercializar e-books e cursos em vídeo especializados na área de Biomedicina. Estes materiais são autorados por Sandra, uma profissional experiente e apaixonada pelo campo, oferecendo insights valiosos, informações atualizadas e dicas práticas tanto para estudantes quanto para profissionais e entusiastas da Biomedicina.
+O projeto **BiomedSandra** é uma plataforma de vendas especializada que promove e comercializa e-books e cursos em vídeo na área de Biomedicina. Criados por Sandra, uma profissional com vasta experiência e paixão pela Biomedicina, nossos materiais oferecem insights valiosos e dicas práticas para estudantes, profissionais e entusiastas.
 
-Visite o site: [biomedsandra.com.br](https://biomedsandra.com.br)
+Acesse agora: [biomedsandra.com.br](https://biomedsandra.com.br)
 
-Além dos e-books, também disponibilizamos cursos em vídeo sobre os mesmos temas na plataforma da Udemy, permitindo um aprendizado mais dinâmico e interativo.
+Além dos e-books, disponibilizamos cursos em vídeo sobre os temas abordados, disponíveis na plataforma da Udemy, proporcionando um aprendizado dinâmico e aprofundado.
 
 ### Características Principais:
 
-- **Design Responsivo:** O site é otimizado para uma visualização agradável em uma variedade de dispositivos, incluindo smartphones e desktops.
-- **Temas Personalizáveis:** Os usuários podem escolher e alternar entre temas visuais, melhorando a experiência de navegação conforme a preferência pessoal.
+- **Design Responsivo:** Otimização para diferentes dispositivos, assegurando uma experiência de usuário consistente em smartphones e desktops.
+- **Temas Personalizáveis:** Opções de temas visuais que permitem aos usuários uma personalização conforme suas preferências.
+
+## Compromisso com SEO e Acessibilidade
+
+- **SEO:** Adotamos as melhores práticas de SEO para garantir que nosso conteúdo seja facilmente descoberto e indexado pelos mecanismos de busca, com foco em palavras-chave relevantes, meta tags otimizadas e uma estrutura de site SEO-friendly.
+- **Acessibilidade:** Comprometemo-nos com a acessibilidade, usando o [Contrast Checker Online](https://contrastchecker.online/) para garantir que as combinações de cores atendam aos padrões de acessibilidade WCAG. Além disso, utilizamos o Lighthouse para monitorar e melhorar continuamente a acessibilidade, performance, e outras práticas de web vitais.
 
 ## Tecnologias Utilizadas
 
-- **Angular 17:** Este projeto é desenvolvido com Angular 17, seguindo os princípios dos componentes independentes (standalone components). Isso permite uma abordagem modular e facilita o reuso, além de simplificar a estrutura de aplicativos grandes ao eliminar a necessidade de módulos NgModules.
-- **Bootstrap 5:** Utilizamos Bootstrap 5 para garantir um design responsivo e moderno. O framework facilita a criação de um layout atrativo e funcional, adaptável a qualquer tamanho de tela.
-- **Service Worker:** Implementado para melhorar a performance do site, o Service Worker permite uma experiência mais rápida e confiável, especialmente em condições de rede instável. Isso é alcançado por meio do cache de conteúdo essencial, garantindo que a página seja carregada sem a necessidade de uma conexão constante à internet.
+- **Angular 17:** Desenvolvimento com Angular 17, adotando componentes independentes para uma abordagem modular, facilitando o reuso e simplificando a arquitetura.
+- **Bootstrap 5:** Utilização do Bootstrap 5 para um design responsivo e moderno.
+- **Service Worker:** Aplicação de Service Worker para otimizar a performance e a confiabilidade do site.
 
 ## Testes Unitários
 
-- **Jest:** Para garantir a qualidade do código, utilizamos o Jest, um framework de testes unitários amplamente conhecido e robusto. Isso nos permite validar cada componente da aplicação de forma isolada, garantindo que as funcionalidades atendam a todas as expectativas e requisitos sem falhas.
+- **Jest:** Implementação do Jest para testes unitários, assegurando a qualidade e a confiabilidade de cada componente de nossa aplicação.
 
-## Como Contribuir
+## Contribua com o Projeto
 
-Contribuições são bem-vindas! Se você tem sugestões de melhorias, correções de bugs ou quer ajudar a expandir nosso conteúdo e cursos, siga estes passos:
+Sua contribuição é valiosa! Se tiver sugestões ou melhorias, siga estes passos para contribuir:
 1. **Fork** o repositório.
 2. Crie uma **nova branch** (`git checkout -b feature-novaFeature`).
-3. **Commit** suas mudanças (`git commit -am 'Adiciona alguma novaFeature'`).
+3. **Commit** as mudanças (`git commit -am 'Adiciona alguma novaFeature'`).
 4. **Push** para a branch (`git push origin feature-novaFeature`).
 5. Abra um **Pull Request**.
 
 ## Licença
 
-Este projeto é licenciado sob a Licença MIT - veja o arquivo [LICENSE.md](LICENSE.md) para detalhes.
+Este projeto é distribuído sob a Licença MIT. Consulte o arquivo [LICENSE.md](LICENSE.md) para mais detalhes.
