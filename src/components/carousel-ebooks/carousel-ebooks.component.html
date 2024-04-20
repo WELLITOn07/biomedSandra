@@ -15,7 +15,7 @@
           (click)="closeModal()"></button>
       </div>
       <div class="modal-body">
-        <div id="carouselEbooks" class="carousel slide" data-bs-ride="carousel" data-bs-interval="5000">
+        <div id="carouselEbooks" class="carousel slide" data-bs-ride="carousel" data-bs-interval="8000">
           <div class="carousel-indicators">
             <button type="button" *ngFor="let ebook of ebookData; let i = index" data-bs-target="#carouselEbooks"
               [attr.data-bs-slide-to]="i" [class.active]="i === currentEbookIndex"
@@ -29,11 +29,11 @@
               <img [src]="'assets/' + ebook.cover + '.webp'" class="d-block w-100" [alt]="ebook.title">
             </div>
           </div>
-          <button class="carousel-control-prev" type="button" data-bs-target="#carouselEbooks" data-bs-slide="prev">
+          <button class="carousel-control-prev animate__animated animate__backInLeft" type="button" data-bs-target="#carouselEbooks" data-bs-slide="prev">
             <span class="carousel-control-prev-icon" aria-hidden="true"></span>
             <span class="visually-hidden">Previous</span>
           </button>
-          <button class="carousel-control-next" type="button" data-bs-target="#carouselEbooks" data-bs-slide="next">
+          <button class="carousel-control-next animate__animated animate__backInRight" type="button" data-bs-target="#carouselEbooks" data-bs-slide="next">
             <span class="carousel-control-next-icon" aria-hidden="true"></span>
             <span class="visually-hidden">Next</span>
           </button>
