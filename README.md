@@ -18,6 +18,15 @@ O projeto **BiomedSandra** é uma página de vendas dedicada a promover e comerc
 
 - **Descrição:** Todos os componentes do site passam por testes unitários rigorosos para assegurar sua funcionalidade e robustez. Utilizamos frameworks de teste modernos para validar cada função e interação no site, garantindo uma operação livre de erros e a melhor experiência do usuário possível.
 
+## Como Contribuir
+
+Contribuições são bem-vindas! Se você tem sugestões de melhorias, correções de bugs ou quer ajudar a expandir nosso conteúdo, siga estes passos:
+1. **Fork** o repositório.
+2. Crie uma **nova branch** (`git checkout -b feature-novaFeature`).
+3. **Commit** suas mudanças (`git commit -am 'Adiciona alguma novaFeature'`).
+4. **Push** para a branch (`git push origin feature-novaFeature`).
+5. Abra um **Pull Request**.
+
 ## Licença
 
 Este projeto é licenciado sob a Licença MIT - veja o arquivo [LICENSE.md](LICENSE.md) para detalhes.
