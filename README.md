@@ -13,6 +13,7 @@ Visite o site: [biomedsandra.com.br](https://biomedsandra.com.br)
 
 ## Tecnologias Utilizadas
 
+- **Angular 17:** Este projeto é desenvolvido com Angular 17, seguindo os princípios dos componentes independentes (standalone components). Isso permite uma abordagem modular e facilita o reuso, além de simplificar a estrutura de aplicativos grandes ao eliminar a necessidade de módulos NgModules.
 - **Bootstrap 5:** Utilizamos Bootstrap 5 para garantir um design responsivo e moderno. O framework facilita a criação de um layout atrativo e funcional, adaptável a qualquer tamanho de tela.
 - **Service Worker:** Implementado para melhorar a performance do site, o Service Worker permite uma experiência mais rápida e confiável, especialmente em condições de rede instável. Isso é alcançado por meio do cache de conteúdo essencial, garantindo que a página seja carregada sem a necessidade de uma conexão constante à internet.
 
