@@ -12,11 +12,12 @@ import { CommonModule } from '@angular/common';
 import { EbookPurchaseRedirectService } from '../../services/ebookPurchaseRedirect.service';
 import { NavbarComponent } from '../navbar/navbar.component';
 import { AppOfferTimerComponent } from '../app-offer-timer/offer-timer.component';
+import { TestimonysComponent } from '../testimonys/testimonys.component';
 
 @Component({
   selector: 'app-ebook-details-modal',
   standalone: true,
-  imports: [CommonModule, NavbarComponent, AppOfferTimerComponent],
+  imports: [CommonModule, NavbarComponent, AppOfferTimerComponent, TestimonysComponent],
   templateUrl: './ebook-details-modal.component.html',
   styleUrls: ['./ebook-details-modal.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,
