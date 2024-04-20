@@ -21,11 +21,11 @@
               <img src="assets/{{ ebook.cover }}.webp" class="d-block w-100" alt="{{ ebook.title + ' image' }}">
             </div>
           </div>
-          <button class="carousel-control-prev" type="button" data-bs-target="#carouselEbooks" data-bs-slide="prev">
+          <button class="carousel-control-prev animate__animated animate__heartBeat animate__infinite animate__slower" type="button" data-bs-target="#carouselEbooks" data-bs-slide="prev">
             <span class="carousel-control-prev-icon" aria-hidden="true"></span>
             <span class="visually-hidden">Previous</span>
           </button>
-          <button class="carousel-control-next" type="button" data-bs-target="#carouselEbooks" data-bs-slide="next">
+          <button class="carousel-control-next animate__animated animate__heartBeat animate__infinite animate__slower" type="button" data-bs-target="#carouselEbooks" data-bs-slide="next">
             <span class="carousel-control-next-icon" aria-hidden="true"></span>
             <span class="visually-hidden">Next</span>
           </button>
@@ -34,7 +34,7 @@
       <div class="modal-footer w-100 d-flex justify-content-center align-items-center">
         <p class="carousel-inner__description">{{ ebookData && ebookData.length > 0 ?
           ebookData[currentEbookIndex].description : '' }}</p>
-        <button type="button" class="btn btn-primary w-100 p-2" (click)="openEbook(ebookData![currentEbookIndex]!.id)">VER
+        <button type="button" class="btn btn-primary w-100 p-2 " (click)="openEbook(ebookData![currentEbookIndex]!.id)">VER
           MAIS</button>
       </div>
     </div>
