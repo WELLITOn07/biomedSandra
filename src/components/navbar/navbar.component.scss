@@ -38,3 +38,8 @@
     font-family: $font-inter;
   }
 }
+
+.row,
+.col {
+  padding: 0 !important;
+}
