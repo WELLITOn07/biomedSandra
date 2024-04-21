@@ -43,6 +43,7 @@ export class CarouselEbooksComponent
   ) {}
 
   ngOnInit(): void {
+    console.log("🚀 ~ ngOnInit ~ ngOnInit:")
     this.ebookData$.pipe(takeUntil(this.destroySubject)).subscribe({
       next: (ebookData: Ebook[]) => {
         this.ebookData = [...ebookData];
@@ -102,6 +103,7 @@ export class CarouselEbooksComponent
 
   closeModal() {
     this.carouselEbooksService.closeModal();
+    this.ngOnDestroy();
   }
 
   ngOnDestroy(): void {
