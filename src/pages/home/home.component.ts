@@ -13,12 +13,11 @@ import {
 import { HeaderComponent } from '../../components/header/header.component';
 import { CookieConsentService } from '../../services/cookieConsent.service';
 import { Observable, Subject, takeUntil } from 'rxjs';
-import { CarouselEbooksComponent } from '../../components/carousel-ebooks/carousel-ebooks.component';
 import { CarouselEbooksService } from '../../services/carouselEbooks.service';
 
 @Component({
   standalone: true,
-  imports: [CommonModule, HeaderComponent, CarouselEbooksComponent],
+  imports: [CommonModule, HeaderComponent],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss',
   changeDetection: ChangeDetectionStrategy.OnPush,
