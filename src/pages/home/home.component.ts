@@ -1,14 +1,13 @@
-import { CommonModule, isPlatformBrowser } from '@angular/common';
+import { CarouselEbooksComponent } from './../../components/carousel-ebooks/carousel-ebooks.component';
+import { CommonModule } from '@angular/common';
 import { RedirectionService } from './../../services/redirection.service';
 import {
   AfterViewInit,
   ChangeDetectionStrategy,
   ChangeDetectorRef,
   Component,
-  Inject,
   OnDestroy,
   OnInit,
-  PLATFORM_ID,
 } from '@angular/core';
 import { HeaderComponent } from '../../components/header/header.component';
 import { CookieConsentService } from '../../services/cookieConsent.service';
@@ -17,7 +16,7 @@ import { CarouselEbooksService } from '../../services/carouselEbooks.service';
 
 @Component({
   standalone: true,
-  imports: [CommonModule, HeaderComponent],
+  imports: [CommonModule, HeaderComponent, CarouselEbooksComponent],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss',
   changeDetection: ChangeDetectionStrategy.OnPush,
@@ -30,14 +29,12 @@ export class HomeComponent implements OnInit, OnDestroy, AfterViewInit {
     this.carouselEbooksService.getModalStatus();
   modalCarouselEbooksIsClose: boolean = true;
 
-  isSafari: boolean = false;
   apresentationText: string =
     'Explore o mundo biomédico comigo, Sandra Kotovicz. Descubra e-books que oferecem conhecimentos práticos e experiências reais. Clique abaixo para embarcar nessa jornada.';
 
   constructor(
     private cdr: ChangeDetectorRef,
     public cookieConsent: CookieConsentService,
-    @Inject(PLATFORM_ID) private platformId: Object,
     private redirectionService: RedirectionService,
     private carouselEbooksService: CarouselEbooksService
   ) {}
