@@ -7,10 +7,11 @@ import { Ebook } from '../models/ebook.model';
   providedIn: 'root',
 })
 export class EbookDataServiceService {
+  private urlEboosks = 'assets/data/ebooks.json';
   constructor(private http: HttpClient) {}
 
   getAll(): Observable<Ebook[]> {
-    return this.http.get<Ebook[]>('assets/data/ebooks.json');
+    return this.http.get<Ebook[]>(this.urlEboosks);
   }
 
   getOne(idEbook: string): Observable<Ebook> {

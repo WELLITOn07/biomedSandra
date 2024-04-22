@@ -1,4 +1,6 @@
 @use "colors" as *;
+@use "typography" as *;
+@use "background-image" as *;
 
 .feather {
   margin-right: 10px;
@@ -12,4 +14,32 @@
 .dropdown-item__link {
   color: $color-light;
   text-decoration: none;
+}
+
+.w7 {
+  &__logo {
+    @include image("w7.webp");
+    padding-right: 30px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    width: 2.5rem;
+    height: 2.5rem;
+    margin-right: 20px;
+    opacity: 0.8;
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
+  &__title {
+    color: $color-light;
+    font-family: $font-inter;
+  }
+}
+
+.row,
+.col {
+  padding: 0 !important;
 }

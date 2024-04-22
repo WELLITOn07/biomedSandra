@@ -72,7 +72,7 @@ export class CarouselEbooksComponent
 
       this.renderer.listen(
         this.modalElementRef.nativeElement.querySelector('#carouselEbooks'),
-        'slide.bs.carousel',
+        'slid.bs.carousel',
         (event: any) => {
           this.updateCurrentEbookIndexOnSlide(event.to);
         }

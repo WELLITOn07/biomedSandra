@@ -22,7 +22,6 @@
 
 .modal-footer {
   font-family: $font-montserrat;
-  border-radius: 15px 15px 0 0;
   background-color: $color-semiDark;
   color: $color-light;
   font-size: 1.2rem;
@@ -43,4 +42,18 @@
 .custom-tooltip {
   --bs-tooltip-bg: var(--bd-violet-bg);
   --bs-tooltip-color: var(--bs-white);
+}
+
+.carousel-indicators {
+  position: relative;
+  border-radius: 16px;
+  border-radius: 16px !important;
+
+  [data-bs-target] {
+    background-color: $color-secondary;
+  }
+}
+
+.modal-content {
+  border-radius: 8px !important;
 }

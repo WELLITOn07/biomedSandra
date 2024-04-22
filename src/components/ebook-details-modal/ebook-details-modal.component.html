@@ -47,6 +47,18 @@
           </div>
         </div>
         <app-offer-timer></app-offer-timer>
+        <div class="modal__works__prices d-flex flex-column justify-content-center align-items-center">
+          <div class="modal__works__prices__container">
+            <p class="modal__works__prices__original">{{ ebook?.price?.original }}</p>
+            <p class="modal__works__prices__discounted">{{ ebook?.price?.discounted }}</p>
+          </div>
+          <div class="modal__works__prices__cta__container d-flex align-items-center justify-content-center w-100">
+            <button type="button" class="btn btn-success modal__works__prices__cta__button"
+              (click)="toBrowseExternal(ebook?.link)">APROVEITAR AGORA</button>
+          </div>
+        </div>
+
+       <app-testimonys></app-testimonys>
       </div>
       <div class="modal-footer d-flex justify-content-center align-items-center">
         <app-navbar></app-navbar>

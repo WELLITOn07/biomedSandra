@@ -93,7 +93,7 @@
   },
   {
     "title": "HEMATOLOGIA",
-    "description": "Aprofunde-se em hematologia com este guia completo. Da leitura de lâminas às doenças hematológicas, torne-se um especialista na área.",
+    "description": "Aprofunde-se em hematologia com este guia completo. Da leitura de lâminas às doenças hematológicas.",
     "subjects": [
       {
         "category": "Hematologia",
@@ -183,7 +183,7 @@
   },
   {
     "title": "URINÁLISE",
-    "description": "Seja expert em urinálise. Do exame físico à microbiologia, este manual é essencial para análises detalhadas e diagnósticos acurados.",
+    "description": "Seja expert em urinálise. Do exame físico à microbiologia, este manual é essencial para análises detalhadas.",
     "subjects": [
       {
         "category": "Urinálise",
@@ -222,7 +222,7 @@
   },
   {
     "title": "LCR",
-    "description": "Descubra os segredos do LCR. Da coleta à citologia, este guia é indispensável para análises precisas e entendimento profundo do LCR.",
+    "description": "Da análise física à citologia e bioquímica, este guia é indispensável para análises precisas do líquor.",
     "subjects": [
       {
         "category": "LCR",
