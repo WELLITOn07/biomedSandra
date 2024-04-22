@@ -1,4 +1,4 @@
-import { RedirectionService } from './../../services/redirection.service';
+
 import {
   ChangeDetectionStrategy,
   ChangeDetectorRef,
@@ -7,6 +7,7 @@ import {
   OnInit,
 } from '@angular/core';
 import { Observable, Subject, takeUntil } from 'rxjs';
+import { RedirectionService } from './../../services/redirection.service';
 import { Ebook } from '../../models/ebook.model';
 import { CommonModule } from '@angular/common';
 import { EbookPurchaseRedirectService } from '../../services/ebookPurchaseRedirect.service';
@@ -33,7 +34,7 @@ export class EbookDetailsModalComponent implements OnInit, OnDestroy {
   constructor(
     private ebookPurchaseRedirectService: EbookPurchaseRedirectService,
     private cdr: ChangeDetectorRef,
-    private redirectionService: RedirectionService
+    private redirectionService: RedirectionService,
   ) {}
 
   ngOnInit(): void {

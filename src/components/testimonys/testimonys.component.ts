@@ -31,7 +31,6 @@ export class TestimonysComponent implements OnInit, OnDestroy {
   ngOnInit(): void {
     this.testimonies$.pipe(takeUntil(this.destroySubject)).subscribe({
       next: (testimonies) => {
-        console.log('Received testimonies:', testimonies);
         if (Array.isArray(testimonies)) {
           this.testimonies = testimonies;
         } else {

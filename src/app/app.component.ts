@@ -3,7 +3,6 @@ import { RouterOutlet } from '@angular/router';
 import { ConsentComponent } from '../components/consent/consent.component';
 import { EbookDetailsModalComponent } from '../components/ebook-details-modal/ebook-details-modal.component';
 import { CarouselEbooksComponent } from '../components/carousel-ebooks/carousel-ebooks.component';
-import { CarouselEbooksService } from '../services/carouselEbooks.service';
 
 @Component({
   selector: 'app-root',
@@ -14,8 +13,7 @@ import { CarouselEbooksService } from '../services/carouselEbooks.service';
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class AppComponent {
-  isCloseCarrouselEbooks: boolean = false;
 
-  constructor(private CarousselEbooksService: CarouselEbooksService) {}
+  constructor() {}
   title = 'biomedSandra';
 }
