@@ -45,11 +45,15 @@
 }
 
 .carousel-indicators {
+  position: relative;
   border-radius: 16px;
-  margin-bottom: 0 !important;
   border-radius: 16px !important;
+
+  [data-bs-target] {
+    background-color: $color-secondary;
+  }
 }
 
 .modal-content {
-  border-radius: 16px !important;
+  border-radius: 8px !important;
 }

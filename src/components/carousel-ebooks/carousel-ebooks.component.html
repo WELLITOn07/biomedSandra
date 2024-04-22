@@ -1,5 +1,5 @@
 <div class="modal fade" id="carouselEbooksInner" tabindex="-1" aria-labelledby="carouselEbooksLabel" aria-hidden="true"
-data-bs-ride="true" #carouselEbooksInner *ngIf="ebookData && ebookData.length > 0">
+  #carouselEbooksInner data-bs-ride="true">
   <div class="modal-dialog modal-dialog-centered">
     <div class="modal-content">
       <div class="modal-header d-flex align-items-center">
@@ -15,18 +15,17 @@ data-bs-ride="true" #carouselEbooksInner *ngIf="ebookData && ebookData.length > 
           (click)="closeModal()"></button>
       </div>
       <div class="modal-body">
-        <div id="carouselEbooks" class="carousel" data-bs-ride="carousel" data-bs-interval="6000">
+        <div id="carouselEbooks" class="carousel" data-bs-ride="carousel">
           <div class="carousel-indicators">
             <button type="button" *ngFor="let ebook of ebookData; let i = index" data-bs-target="#carouselEbooks"
               [attr.data-bs-slide-to]="i" [class.active]="i === currentEbookIndex"
-              (click)="updateCurrentEbookIndexOnSlide(i)" aria-current="true" [attr.aria-label]="'Slide ' + (i + 1)">
+              (click)="updateCurrentEbookIndexOnSlide(i)" aria-current="true">
             </button>
           </div>
-
           <div class="carousel-inner">
             <div *ngFor="let ebook of ebookData; let i = index" class="carousel-item"
               [class.active]="i === currentEbookIndex">
-              <img [src]="'assets/' + ebook.cover + '.webp'" class="d-block w-100" [alt]="ebook.title">
+              <img src="assets/{{ ebook.cover }}.webp" class="d-block w-100" alt="{{ ebook.title }}">
             </div>
           </div>
           <button class="carousel-control-prev animate__animated animate__backInLeft" type="button" data-bs-target="#carouselEbooks" data-bs-slide="prev">
