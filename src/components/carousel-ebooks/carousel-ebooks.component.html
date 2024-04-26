@@ -15,7 +15,7 @@
           (click)="closeModal()"></button>
       </div>
       <div class="modal-body">
-        <div id="carouselEbooks" class="carousel" data-bs-ride="carousel">
+        <div id="carouselEbooks" class="carousel">
           <div class="carousel-indicators">
             <button type="button" *ngFor="let ebook of ebookData; let i = index" data-bs-target="#carouselEbooks"
               [attr.data-bs-slide-to]="i" [class.active]="i === currentEbookIndex"
