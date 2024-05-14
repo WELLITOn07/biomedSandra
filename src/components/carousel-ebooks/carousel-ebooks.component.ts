@@ -21,7 +21,10 @@ import { EbookPurchaseRedirectService } from '../../services/ebookPurchaseRedire
   standalone: true,
   imports: [CommonModule],
   templateUrl: './carousel-ebooks.component.html',
-  styleUrls: ['../../styles/_custombootstrap.scss'],
+  styleUrls: [
+    '../../styles/_custombootstrap.scss',
+    './carousel-ebooks.component.scss',
+  ],
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class CarouselEbooksComponent

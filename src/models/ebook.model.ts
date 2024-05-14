@@ -11,6 +11,7 @@ export interface Ebook {
   url: string;
   link: string;
   works: PublishedWork[];
+  type: string;
 }
 
 export interface EbookSubject {
