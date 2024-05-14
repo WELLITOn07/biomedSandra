@@ -27,7 +27,9 @@
   }
 
   .carousel-item > img {
-    max-height: 250px !important;
+    max-height: 250px;
+    margin: 0 auto;
+    max-width: 250px;
   }
 }
 
@@ -57,7 +59,9 @@
   }
 
   .carousel-item > img {
-    max-height: 280px !important;
+    max-height: 280px;
+    margin: 0 auto;
+    max-width: 280px;
   }
 }
 
@@ -107,7 +111,9 @@
   }
 
   .carousel-item > img {
-    max-height: 335px !important;
+    max-height: 400px;
+    margin: 0 auto;
+    max-width: 400px;
   }
 
   .modal__works__prices {

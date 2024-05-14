@@ -83,7 +83,8 @@
         "title": "Gestão em Saúde",
         "url": "https://www.editoracientifica.com.br/articles/code/240115471"
       }
-    ]
+    ],
+    "type": "ebook"
   },
   {
     "title": "HEMATOLOGIA",
@@ -129,7 +130,8 @@
         "title": "Gestão em Saúde",
         "url": "https://www.editoracientifica.com.br/articles/code/240115471"
       }
-    ]
+    ],
+    "type": "ebook"
   },
   {
     "title": "BIOQUÍMICA",
@@ -173,7 +175,8 @@
         "title": "Gestão em Saúde",
         "url": "https://www.editoracientifica.com.br/articles/code/240115471"
       }
-    ]
+    ],
+    "type": "ebook"
   },
   {
     "title": "URINÁLISE",
@@ -212,7 +215,8 @@
         "title": "Gestão em Saúde",
         "url": "https://www.editoracientifica.com.br/articles/code/240115471"
       }
-    ]
+    ],
+    "type": "ebook"
   },
   {
     "title": "LCR",
@@ -254,6 +258,51 @@
         "title": "Gestão em Saúde",
         "url": "https://www.editoracientifica.com.br/articles/code/240115471"
       }
-    ]
+    ],
+    "type": "ebook"
+  },
+  {
+    "title": "Hematologia e Interpretação do Hemograma",
+    "description": "Realize e interprete Hemogramas com Segurança e precisão. Curso com aulas dinâmicas, de rápido acesso, e certificado para sua carreira.",
+    "subjects": [
+      {
+        "category": "Introdução à Hematologia",
+        "topics": [
+          "Série Vermelha",
+          "Série Branca",
+          "Série Plaquetária",
+          "Interpretando Gráficos",
+          "Anemias e Leucemias",
+          "Casos Clínicos I - Interpretação",
+          "Casos Clínicos II - Interpretação",
+          "Casos Clínicos III- Interpretação",
+          "Avaliação e Certificado"
+        ]
+      },
+      {
+        "category": "Dicas Bônus",
+        "topics": [
+          "Compartilho Dicas Reais, baseadas em minha experiência profissional, para facilitar seu dia a dia, liberar exames com segurança, e tornar-se ser um profissional reconhecido pelo seu Sucesso"
+        ]
+      }
+    ],
+    "price": {
+      "original": "R$ 119,00",
+      "discounted": "R$ 57,90"
+    },
+    "cover": "hematologia_interpretacao_hemograma",
+    "id": "hemograma_curso",
+    "link": "https://cursohematologia.com.br",
+    "works": [
+      {
+        "title": "Material de Apoio em pdf",
+        "url": "https://cursohematologia.com.br/material"
+      },
+      {
+        "title": "Atlas Ilustrado",
+        "url": "https://cursohematologia.com.br/atlas"
+      }
+    ],
+    "type": "video"
   }
 ]

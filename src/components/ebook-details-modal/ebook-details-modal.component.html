@@ -5,7 +5,16 @@
       <div class="modal-header d-flex flex-column">
         <button type="button" class="btn-close btn-close-white" (click)="closeModal()" aria-label="Close"></button>
         <div class="d-flex flex-column  justify-content-center align-items-center">
-          <span class="modal-header__subtitle">E-book</span>
+          <div *ngIf="ebook?.type === 'ebook'; else otherTitle">
+            <span class="modal-header__subtitle">
+              E-book
+            </span>
+          </div>
+          <ng-template #otherTitle>
+            <span class="modal-header__subtitle">
+              Curso em Vídeo
+            </span>
+          </ng-template>
           <h2 class="modal-title modal-header__title" id="ebookDetailsModalLabel">{{ ebook?.title }}</h2>
         </div>
       </div>
@@ -35,7 +44,10 @@
               <polyline points="15 3 21 3 21 9"></polyline>
               <line x1="10" y1="14" x2="21" y2="3"></line>
             </svg>
-            <h4>Trabalhos Publicados</h4>
+            <h4 *ngIf="ebook?.type === 'ebook'; else otherContent">Trabalhos Publicados</h4>
+            <ng-template #otherContent>
+              <h4>Conteúdo Complementar</h4>
+            </ng-template>
           </div>
 
           <div *ngFor="let work of ebook?.works" class="modal__works d-flex align-items-center">
@@ -58,7 +70,7 @@
           </div>
         </div>
 
-       <app-testimonys></app-testimonys>
+        <app-testimonys></app-testimonys>
       </div>
       <div class="modal-footer d-flex justify-content-center align-items-center">
         <app-navbar></app-navbar>
