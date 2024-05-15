@@ -21,8 +21,9 @@
 }
 
 .carousel-item > img {
-  max-height: 430px;
-  object-fit: cover;
+  max-height: 350px;
+  margin: 0 auto;
+  object-fit: contain;
 }
 
 .modal-footer {

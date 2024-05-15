@@ -25,12 +25,6 @@
       }
     }
   }
-
-  .carousel-item > img {
-    max-height: 250px;
-    margin: 0 auto;
-    max-width: 250px;
-  }
 }
 
 @media (max-width: 399px) {
@@ -56,12 +50,6 @@
         font-size: 1.2rem !important;
       }
     }
-  }
-
-  .carousel-item > img {
-    max-height: 280px;
-    margin: 0 auto;
-    max-width: 280px;
   }
 }
 
@@ -108,12 +96,6 @@
         font-size: 1.5rem !important;
       }
     }
-  }
-
-  .carousel-item > img {
-    max-height: 350px !important;
-    margin: 0 auto;
-    max-width: 350px;
   }
 
   .modal__works__prices {
