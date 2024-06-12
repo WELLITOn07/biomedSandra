@@ -110,6 +110,10 @@
 }
 
 @media (min-width: 768px) {
+  .main {
+    height: 100vh !important;
+  }
+
   .section {
     &__cta__button {
       margin-top: 20px;
