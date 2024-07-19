@@ -59,3 +59,12 @@
 .modal-content {
   border-radius: 8px !important;
 }
+
+.offcanvas,
+.offcanvas-lg,
+.offcanvas-md,
+.offcanvas-sm,
+.offcanvas-xl,
+.offcanvas-xxl {
+  --bs-offcanvas-width: 100% !important;
+}

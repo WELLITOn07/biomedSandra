@@ -17,7 +17,7 @@ import { EbookPurchaseRedirectService } from '../../services/ebookPurchaseRedire
   standalone: true,
   imports: [CommonModule],
   templateUrl: './navbar.component.html',
-  styleUrl: './navbar.component.scss',
+  styleUrls: ['../../styles/_custombootstrap.scss', './navbar.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class NavbarComponent implements OnInit, OnDestroy {
