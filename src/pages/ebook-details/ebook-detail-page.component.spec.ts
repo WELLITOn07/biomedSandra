@@ -1,5 +1,5 @@
 import { TestBed } from '@angular/core/testing';
-import { EbookDetailsModalComponent } from './ebook-details-page.component';
+import { EbookDetailsPageComponent } from './ebook-details-page.component';
 import { EbookPurchaseRedirectService } from '../../services/ebookPurchaseRedirect.service';
 import { of } from 'rxjs';
 import { CommonModule } from '@angular/common';
@@ -22,7 +22,7 @@ describe('EbookDetailsModalComponent', () => {
     await TestBed.configureTestingModule({
       imports: [
         CommonModule,
-        EbookDetailsModalComponent,
+        EbookDetailsPageComponent,
         NavbarComponent,
         AppOfferTimerComponent,
       ],
@@ -36,24 +36,8 @@ describe('EbookDetailsModalComponent', () => {
   });
 
   it('should create', () => {
-    const fixture = TestBed.createComponent(EbookDetailsModalComponent);
+    const fixture = TestBed.createComponent(EbookDetailsPageComponent);
     const component = fixture.componentInstance;
     expect(component).toBeTruthy();
-  });
-
-  it('should show modal with ebook details on init', () => {
-    const fixture = TestBed.createComponent(EbookDetailsModalComponent);
-    const component = fixture.componentInstance;
-    fixture.detectChanges();
-    expect(component.showModal).toBe(true);
-    expect(component.ebook).toEqual(mockEbook);
-  });
-
-  it('should hide modal when closeModal is called', () => {
-    const fixture = TestBed.createComponent(EbookDetailsModalComponent);
-    const component = fixture.componentInstance;
-    fixture.detectChanges();
-    component.closeModal();
-    expect(component.showModal).toBe(false);
   });
 });

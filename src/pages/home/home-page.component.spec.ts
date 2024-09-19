@@ -1,5 +1,5 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-import { HomeComponent } from './home.component';
+import { HomeComponent } from './home-page.component';
 import { HttpClientTestingModule } from '@angular/common/http/testing';
 import { CookieConsentService } from '../../services/cookieConsent.service';
 import { of } from 'rxjs';
