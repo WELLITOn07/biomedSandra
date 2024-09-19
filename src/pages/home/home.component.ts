@@ -1,4 +1,3 @@
-import { CarouselEbooksComponent } from './../../components/carousel-ebooks/carousel-ebooks.component';
 import { CommonModule } from '@angular/common';
 import { RedirectionService } from './../../services/redirection.service';
 import {
@@ -6,28 +5,21 @@ import {
   ChangeDetectionStrategy,
   ChangeDetectorRef,
   Component,
-  OnDestroy,
-  OnInit,
 } from '@angular/core';
 import { HeaderComponent } from '../../components/header/header.component';
 import { CookieConsentService } from '../../services/cookieConsent.service';
-import { Observable, Subject, takeUntil } from 'rxjs';
-import { CarouselEbooksService } from '../../services/carouselEbooks.service';
+import { Observable, take } from 'rxjs';
 
 @Component({
   standalone: true,
-  imports: [CommonModule, HeaderComponent, CarouselEbooksComponent],
+  imports: [CommonModule, HeaderComponent],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss',
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class HomeComponent implements OnInit, OnDestroy, AfterViewInit {
+export class HomeComponent implements AfterViewInit {
   consentAcquired$: Observable<boolean> | null = null;
-  destroySubject: Subject<void> = new Subject<void>();
   consentAcquired: boolean = false;
-  modalCarouselEbooksIsClose$: Observable<boolean> =
-    this.carouselEbooksService.getModalStatus();
-  modalCarouselEbooksIsClose: boolean = true;
 
   apresentationText: string =
     'Explore o mundo biomédico comigo, Sandra Kotovicz. Descubra e-books que oferecem conhecimentos práticos e experiências reais. Clique abaixo para embarcar nessa jornada.';
@@ -36,22 +28,12 @@ export class HomeComponent implements OnInit, OnDestroy, AfterViewInit {
     private cdr: ChangeDetectorRef,
     public cookieConsent: CookieConsentService,
     private redirectionService: RedirectionService,
-    private carouselEbooksService: CarouselEbooksService
   ) {}
-
-  ngOnInit(): void {
-    this.modalCarouselEbooksIsClose$.subscribe(
-      (modalCarouselEbooksIsClose: boolean) => {
-        this.modalCarouselEbooksIsClose = modalCarouselEbooksIsClose;
-        this.cdr.detectChanges();
-      }
-    );
-  }
 
   ngAfterViewInit(): void {
     this.cookieConsent
       .getConsentStatus()
-      .pipe(takeUntil(this.destroySubject))
+      .pipe(take(1))
       .subscribe((consentAcquired: boolean) => {
         this.consentAcquired = consentAcquired;
         this.cdr.detectChanges();
@@ -62,13 +44,7 @@ export class HomeComponent implements OnInit, OnDestroy, AfterViewInit {
     this.redirectionService.goTo(social);
   }
 
-  openCarouselEbooks() {
-    this.carouselEbooksService.openModal();
+  openListEbooks() {
     this.cdr.detectChanges();
-  }
-
-  ngOnDestroy(): void {
-    this.destroySubject.next();
-    this.destroySubject.complete();
   }
 }
