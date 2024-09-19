@@ -1,10 +1,10 @@
 import { TestBed } from '@angular/core/testing';
-import { EbookDetailsModalComponent } from './ebook-details-modal.component';
+import { EbookDetailsModalComponent } from './ebook-details-page.component';
 import { EbookPurchaseRedirectService } from '../../services/ebookPurchaseRedirect.service';
 import { of } from 'rxjs';
 import { CommonModule } from '@angular/common';
-import { NavbarComponent } from '../navbar/navbar.component';
-import { AppOfferTimerComponent } from '../app-offer-timer/offer-timer.component';
+import { NavbarComponent } from '../../components/navbar/navbar.component';
+import { AppOfferTimerComponent } from '../../components/app-offer-timer/offer-timer.component';
 
 const mockEbook = {
   id: '1',

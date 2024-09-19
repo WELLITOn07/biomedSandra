@@ -117,7 +117,9 @@
   .section {
     &__cta__button {
       margin-top: 20px;
+      width: 80% !important;
     }
+
     &__apresentation {
       &__text {
         font-size: 2.2rem;

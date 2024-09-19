@@ -5,21 +5,24 @@ import {
   ChangeDetectionStrategy,
   ChangeDetectorRef,
   Component,
+  OnDestroy,
+  OnInit,
 } from '@angular/core';
 import { HeaderComponent } from '../../components/header/header.component';
 import { CookieConsentService } from '../../services/cookieConsent.service';
-import { Observable, take } from 'rxjs';
+import { Observable, Subject, takeUntil } from 'rxjs';
 
 @Component({
   standalone: true,
   imports: [CommonModule, HeaderComponent],
-  templateUrl: './home.component.html',
-  styleUrl: './home.component.scss',
+  templateUrl: './home-page.component.html',
+  styleUrl: './home-page.component.scss',
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class HomeComponent implements AfterViewInit {
+export class HomeComponent implements AfterViewInit, OnDestroy {
   consentAcquired$: Observable<boolean> | null = null;
   consentAcquired: boolean = false;
+  destroySubject = new Subject<void>();
 
   apresentationText: string =
     'Explore o mundo biomédico comigo, Sandra Kotovicz. Descubra e-books que oferecem conhecimentos práticos e experiências reais. Clique abaixo para embarcar nessa jornada.';
@@ -33,7 +36,7 @@ export class HomeComponent implements AfterViewInit {
   ngAfterViewInit(): void {
     this.cookieConsent
       .getConsentStatus()
-      .pipe(take(1))
+      .pipe(takeUntil(this.destroySubject))
       .subscribe((consentAcquired: boolean) => {
         this.consentAcquired = consentAcquired;
         this.cdr.detectChanges();
@@ -47,4 +50,10 @@ export class HomeComponent implements AfterViewInit {
   openListEbooks() {
     this.cdr.detectChanges();
   }
+
+  ngOnDestroy(): void {
+    this.destroySubject.next();
+    this.destroySubject.complete();
+  }
 }
+
