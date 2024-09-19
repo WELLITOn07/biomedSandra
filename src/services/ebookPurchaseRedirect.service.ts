@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Subject } from 'rxjs';
+import { BehaviorSubject } from 'rxjs';
 import { Ebook } from '../models/ebook.model';
 import { EbookDataServiceService } from './ebookData.service';
 
@@ -7,7 +7,7 @@ import { EbookDataServiceService } from './ebookData.service';
   providedIn: 'root',
 })
 export class EbookPurchaseRedirectService {
-  private ebookSelectedSubject = new Subject<Ebook>();
+  private ebookSelectedSubject = new BehaviorSubject<Ebook | null>(null);
   ebookSelected$ = this.ebookSelectedSubject.asObservable();
   ebook: Ebook | null = null;
 
@@ -22,5 +22,9 @@ export class EbookPurchaseRedirectService {
         throw new Error('Ebook not found');
       }
     });
+  }
+
+  hasEbookSelected(): boolean {
+    return this.ebook !== null;
   }
 }

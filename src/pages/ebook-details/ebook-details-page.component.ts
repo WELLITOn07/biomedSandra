@@ -18,7 +18,7 @@ import { TestimonysComponent } from '../../components/testimonys/testimonys.comp
 })
 export class EbookDetailsPageComponent implements OnInit {
   ebook: Ebook | null = null;
-  ebookSelected$: Observable<Ebook> = this.ebookPurchaseRedirectService.ebookSelected$;
+  ebookSelected$: Observable<Ebook | null> = this.ebookPurchaseRedirectService.ebookSelected$;
 
   constructor(
     private ebookPurchaseRedirectService: EbookPurchaseRedirectService,
@@ -27,8 +27,11 @@ export class EbookDetailsPageComponent implements OnInit {
   ) {}
 
   ngOnInit(): void {
-    this.ebookSelected$.subscribe((ebook: Ebook) => {
-      this.ebook = ebook;
+    this.ebookSelected$.subscribe((ebook: Ebook | null) => {
+      if (ebook) {
+        this.ebook = ebook;
+      }
+      
       this.cdr.detectChanges();
     });
   }
