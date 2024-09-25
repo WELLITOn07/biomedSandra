@@ -1,12 +1,14 @@
 import { CommonModule } from '@angular/common';
 import { ChangeDetectionStrategy, ChangeDetectorRef, Component, OnInit } from '@angular/core';
-import { Observable } from 'rxjs';
+import { Router } from '@angular/router';
 import { Ebook } from '../../models/ebook.model';
-import { EbookPurchaseRedirectService } from '../../services/ebookPurchaseRedirect.service';
 import { RedirectionService } from '../../services/redirection.service';
 import { AppOfferTimerComponent } from '../../components/app-offer-timer/offer-timer.component';
 import { NavbarComponent } from '../../components/navbar/navbar.component';
 import { TestimonysComponent } from '../../components/testimonys/testimonys.component';
+import { Subscription } from 'rxjs';
+import { EbookPurchaseRedirectService } from '../../services/ebookPurchaseRedirect.service';
+import { take } from 'rxjs/operators';
 
 @Component({
   selector: 'app-ebook-details-page',
@@ -18,22 +20,26 @@ import { TestimonysComponent } from '../../components/testimonys/testimonys.comp
 })
 export class EbookDetailsPageComponent implements OnInit {
   ebook: Ebook | null = null;
-  ebookSelected$: Observable<Ebook | null> = this.ebookPurchaseRedirectService.ebookSelected$;
+  private subscription: Subscription | null = null;
 
   constructor(
     private ebookPurchaseRedirectService: EbookPurchaseRedirectService,
+    public router: Router,
     private cdr: ChangeDetectorRef,
     private redirectionService: RedirectionService
   ) {}
 
   ngOnInit(): void {
-    this.ebookSelected$.subscribe((ebook: Ebook | null) => {
-      if (ebook) {
+    this.subscription = this.ebookPurchaseRedirectService.ebookSelected$
+      .pipe(take(1))
+      .subscribe((ebook) => {
         this.ebook = ebook;
-      }
-      
-      this.cdr.detectChanges();
-    });
+        this.cdr.detectChanges();
+      });
+  }
+
+  ngOnDestroy(): void {
+    this.subscription?.unsubscribe();
   }
 
   toBrowseExternal(url: string | undefined) {
@@ -42,3 +48,4 @@ export class EbookDetailsPageComponent implements OnInit {
     }
   }
 }
+
