@@ -2,10 +2,10 @@ import { inject } from '@angular/core';
 import { ResolveFn, Router } from '@angular/router';
 import { EbookPurchaseRedirectService } from '../services/ebookPurchaseRedirect.service';
 import { of } from 'rxjs';
-import { catchError, map, switchMap } from 'rxjs/operators';
+import { catchError, map } from 'rxjs/operators';
 import { Ebook } from '../models/ebook.model';
 
-export const ebookSelectedGuard: ResolveFn<Ebook | null> = (route, state) => {
+export const ebookSelectedGuard: ResolveFn<boolean | null> = (route, state) => {
   const router = inject(Router);
   const ebookPurchaseRedirectService = inject(EbookPurchaseRedirectService);
 
@@ -19,7 +19,7 @@ export const ebookSelectedGuard: ResolveFn<Ebook | null> = (route, state) => {
   return ebookPurchaseRedirectService.selectEbook(ebookId).pipe(
     map((ebook) => {
       if (ebook) {
-        return ebook;
+        return true;
       } else {
         router.navigate(['/ebook-not-found']);
         return null;
