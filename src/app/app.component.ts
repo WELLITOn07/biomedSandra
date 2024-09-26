@@ -11,6 +11,7 @@ import { RouterOutlet } from '@angular/router';
 })
 export class AppComponent implements OnInit {
   loading: boolean = true;
+  showUpdateMessage: boolean = false;
 
   ngOnInit(): void {
     this.clearAllCache();
@@ -37,9 +38,11 @@ export class AppComponent implements OnInit {
             Promise.all(cacheNames.map(cache => caches.delete(cache))).then(() => {
               this.loading = false;
               localStorage.setItem('cacheCleared', 'true');
-              window.alert('Atualização detectada! A página será recarregada em 5 segundos.');
+
+              this.showUpdateMessage = true;
 
               setTimeout(() => {
+                this.showUpdateMessage = false;
                 window.location.reload();
               }, 5000);
             });
