@@ -10,11 +10,14 @@
             <div
               class="section__apresentation d-flex flex-column justify-content-sm-center justify-content-between align-items-center animate__animated animate__fadeInDown "
               role="presentation" aria-label="Presentation Area">
-              <p class="section__apresentation__text" role="text">
-                {{ apresentationText }}
-              </p>
-
-
+              <div class="section__apresentation__text__container flex flex-row">
+                <p class="section__apresentation__text__heart" role="text">
+                  <i class="bi bi-heart-fill heart-icon"></i> Olá Biolovers
+                </p>
+                <p class="section__apresentation__text" role="text">
+                  {{ apresentationText }}
+                </p>
+              </div>
               <div class="section__actions__container d-flex justify-content-between align-items-center"
                 role="navigation" aria-label="Social Media Actions">
                 <div class="section__actions d-flex" role="navigation" aria-label="Social Media Links">
