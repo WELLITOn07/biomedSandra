@@ -8,7 +8,7 @@ import {
   OnDestroy,
   OnInit,
 } from '@angular/core';
-import { EbookDataServiceService } from '../../services/ebookData.service';
+import { EbookDataService } from '../../services/ebookData.service';
 import { Ebook } from '../../models/ebook.model';
 import { EbookPurchaseRedirectService } from '../../services/ebookPurchaseRedirect.service';
 
@@ -21,13 +21,13 @@ import { EbookPurchaseRedirectService } from '../../services/ebookPurchaseRedire
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class NavbarComponent implements OnInit, OnDestroy {
-  ebookData$: Observable<Ebook[]> = this.ebookDataServiceService.getAll();
+  ebookData$: Observable<Ebook[]> = this.ebookDataService.getAll();
   ebookData: Ebook[] | null = null;
   destroySubject: Subject<void> = new Subject<void>();
 
   constructor(
     private redirectionService: RedirectionService,
-    private ebookDataServiceService: EbookDataServiceService,
+    private ebookDataService: EbookDataService,
     private ebookPurchaseRedirectService: EbookPurchaseRedirectService,
     private cdr: ChangeDetectorRef
   ) {}

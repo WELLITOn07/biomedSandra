@@ -1,0 +1,49 @@
+@use "colors" as *;
+
+.card-custom {
+  transition: transform 0.3s;
+}
+.card-custom:hover {
+  transform: translateY(-10px);
+}
+
+.ebook-card {
+  background-color: $color-semiDark;
+  color: $color-light;
+}
+
+.video-card {
+  background-color: $color-secondary;
+  color: $color-light;
+}
+
+.icon-type {
+  display: flex;
+  align-items: center;
+  font-size: 1.2rem;
+  margin-top: 10px;
+}
+
+.icon-type i {
+  margin-right: 5px;
+  color: $color-accent;
+}
+
+.card-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+}
+
+.card-text {
+  font-size: 1rem;
+}
+
+.btn-primary {
+  background-color: $color-accent;
+  border: none;
+}
+
+.btn-primary:hover {
+  background-color: darken($color-accent, 10%);
+}
+

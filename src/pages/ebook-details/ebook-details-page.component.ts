@@ -12,10 +12,10 @@ import { take } from 'rxjs/operators';
 
 @Component({
   selector: 'app-ebook-details-page',
+  imports: [CommonModule, AppOfferTimerComponent, NavbarComponent, TestimonysComponent],
+  standalone: true,
   templateUrl: './ebook-details-page.component.html',
   styleUrls: ['./ebook-details-page.component.scss'],
-  standalone: true,
-  imports: [CommonModule, AppOfferTimerComponent, NavbarComponent, TestimonysComponent],
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class EbookDetailsPageComponent implements OnInit {

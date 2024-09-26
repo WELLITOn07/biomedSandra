@@ -11,10 +11,11 @@ import {
 import { HeaderComponent } from '../../components/header/header.component';
 import { CookieConsentService } from '../../services/cookieConsent.service';
 import { Observable, Subject, takeUntil } from 'rxjs';
+import { EbookListComponent } from '../../components/ebook-list/book-list.component';
 
 @Component({
+  imports: [CommonModule, HeaderComponent, EbookListComponent],
   standalone: true,
-  imports: [CommonModule, HeaderComponent],
   templateUrl: './home-page.component.html',
   styleUrl: './home-page.component.scss',
   changeDetection: ChangeDetectionStrategy.OnPush,

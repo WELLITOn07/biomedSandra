@@ -1,0 +1,26 @@
+<div class="container my-5" *ngIf="ebooks">
+  <div class="row justify-content-center">
+    <div
+      class="col-md-4 col-sm-6 mb-4 animate__animated animate__fadeInUp"
+      *ngFor="let ebook of ebooks">
+      <div
+        class="card card-custom"
+        [ngClass]="{'ebook-card': ebook.type === 'ebook', 'video-card': ebook.type === 'video'}">
+        <img [src]="getCoverImage(ebook.cover)" class="card-img-top" [alt]="ebook.title">
+        <div class="card-body">
+          <h5 class="card-title">{{ ebook.title }}</h5>
+          <p class="card-text">{{ ebook.description }}</p>
+          <div class="icon-type">
+            <ng-container *ngIf="ebook.type === 'ebook'; else videoIcon">
+              <i class="fas fa-book"></i> E-book
+            </ng-container>
+            <ng-template #videoIcon>
+              <i class="fas fa-video"></i> Vídeo
+            </ng-template>
+          </div>
+          <a [href]="ebook.link" class="btn btn-primary mt-3 w-100">Acessar {{ ebook.type === 'ebook' ? 'E-book' : 'Vídeo' }}</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

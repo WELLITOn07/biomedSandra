@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { BehaviorSubject, Observable, of } from 'rxjs';
 import { Ebook } from '../models/ebook.model';
-import { EbookDataServiceService } from './ebookData.service';
+import { EbookDataService } from './ebookData.service';
 import { catchError, map } from 'rxjs/operators';
 
 @Injectable({
@@ -12,10 +12,10 @@ export class EbookPurchaseRedirectService {
   ebookSelected$ = this.ebookSelectedSubject.asObservable();
   ebook: Ebook | null = null;
 
-  constructor(private ebookDataServiceService: EbookDataServiceService) {}
+  constructor(private ebookDataService: EbookDataService) {}
 
   selectEbook(idEbook: string): Observable<Ebook | null> {
-    return this.ebookDataServiceService.getOne(idEbook).pipe(
+    return this.ebookDataService.getOne(idEbook).pipe(
       map((ebook: Ebook | null) => {
         if (ebook && ebook.id === idEbook) {
           this.ebook = ebook;
