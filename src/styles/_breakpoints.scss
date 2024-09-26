@@ -65,8 +65,8 @@
 
 @media (max-width: 767px) {
   .section {
-    &__actions__container {
-      display: none !important;
+    &__apresentation__container {
+      height: calc(var(--vh, 1vh) * 100 - 80px) !important;
     }
   }
 
@@ -117,7 +117,9 @@
   .section {
     &__cta__button {
       margin-top: 20px;
+      width: 80% !important;
     }
+
     &__apresentation {
       &__text {
         font-size: 2.2rem;
@@ -150,16 +152,28 @@
   }
 }
 
-@media (max-width: 992px) {
+@media (max-width: 768px) {
   .header {
     &__container {
       border-radius: 0 0 10px 10px;
     }
   }
 
-  .section {
-    height: auto;
+  .section__actions {
+    &__icons {
+      transform: scale(1.4);
+      color: $color-light;
+      background-color: #191923d6;
+      border-radius: 50%;
+      padding: 8px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      transition: transform 0.3s ease-in-out;
+    }
+  }
 
+  .section {
     &__backgound__container {
       display: none;
     }

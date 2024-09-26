@@ -1,0 +1,28 @@
+<div class="container my-5" *ngIf="ebooks">
+  <div class="row justify-content-center">
+    <div class="col-md-4 col-sm-6 mb-4 animate__animated animate__fadeIn" *ngFor="let ebook of ebooks">
+      <div class="card card-custom h-100 d-flex flex-column justify-content-between"
+        [ngClass]="{'ebook-card': ebook.type === 'ebook', 'video-card': ebook.type === 'video'}">
+        <!-- Envolvendo a imagem com a tag <a> para redirecionar ao clicar -->
+        <a [routerLink]="['/ebook-details', ebook.id]">
+          <img src="assets/{{ ebook.cover }}.webp" class="card-img-top" alt="{{ ebook.title + ' image' }}">
+        </a>
+        <div class="card-body flex-grow-1 d-flex flex-column">
+          <h5 class="card-title">{{ ebook.title }}</h5>
+          <p class="card-text flex-grow-1">{{ ebook.description }}</p>
+          <div class="icon-type mb-3">
+            <ng-container *ngIf="ebook.type === 'ebook'; else videoIcon">
+              <i class="bi bi-book" [ngStyle]="{'color': accentColor}"></i> E-book
+            </ng-container>
+            <ng-template #videoIcon>
+              <i class="bi bi-film" [ngStyle]="{'color': accentColor}"></i> Vídeo
+            </ng-template>
+          </div>
+          <!-- Botão de ação -->
+          <a [routerLink]="['/ebook-details', ebook.id]" class="btn btn-primary w-100">Acessar {{ ebook.type === 'ebook'
+            ? 'E-book' : 'o Curso' }}</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,54 @@
+@use "colors" as *;
+
+.card-custom {
+  transition: transform 0.3s;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.card-custom:hover {
+  transform: translateY(-10px);
+}
+
+.ebook-card {
+  background-color: $color-semiDark;
+  color: $color-light;
+}
+
+.video-card {
+  background-color: $color-secondary;
+  color: $color-light;
+}
+
+.icon-type {
+  display: flex;
+  align-items: center;
+  font-size: 1.2rem;
+  margin-top: 10px;
+
+  i {
+    margin-right: 5px;
+  }
+}
+
+.card-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+}
+
+.card-text {
+  font-size: 1rem;
+  flex-grow: 1;
+}
+
+.btn-primary {
+  background-color: $color-accent;
+  color: $color-dark;
+  font-weight: 700;
+  border: none;
+}
+
+.btn-primary:hover {
+  background-color: darken($color-accent, 10%);
+}

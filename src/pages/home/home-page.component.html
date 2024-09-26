@@ -1,0 +1,42 @@
+<div class="main d-flex justify-content-center align-items-center image-theme" role="main">
+  <section class="container section__container row" role="region" aria-label="Main Content">
+    <div class="main col">
+      <section class="container section__container" role="region">
+        <div class="section d-flex flex-column">
+          <app-header class="header" role="banner" aria-label="Header"></app-header>
+
+          <div class="section__apresentation__container d-flex flex-column justify-content-center align-items-center"
+            role="region" aria-label="Presentation Section">
+            <div
+              class="section__apresentation d-flex flex-column justify-content-sm-center justify-content-between align-items-center animate__animated animate__fadeInDown "
+              role="presentation" aria-label="Presentation Area">
+              <p class="section__apresentation__text" role="text">
+                {{ apresentationText }}
+              </p>
+
+
+              <div class="section__actions__container d-flex justify-content-between align-items-center"
+                role="navigation" aria-label="Social Media Actions">
+                <div class="section__actions d-flex" role="navigation" aria-label="Social Media Links">
+                  <i class="bi bi-instagram section__actions__icons" (click)="toBrowse('instagram')" role="link"
+                    tabindex="0" aria-label="Instagram Link"></i>
+                  <i class="bi bi-facebook section__actions__icons" (click)="toBrowse('facebook')" role="link"
+                    tabindex="0" aria-label="Facebook Link"></i>
+                  <i class="bi bi-linkedin section__actions__icons" (click)="toBrowse('linkedin')" role="link"
+                    tabindex="0" aria-label="LinkedIn Link"></i>
+                </div>
+                <div class="section__w7__container" role="link" tabindex="0" aria-label="GitHub Link"
+                  (click)="toBrowse('github')">
+                  <div class="section__w7__logo"></div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+          <app-ebook-list role="complementary" aria-label="Ebook List"></app-ebook-list>
+        </div>
+      </section>
+    </div>
+  </section>
+</div>

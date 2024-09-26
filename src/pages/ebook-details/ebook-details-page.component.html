@@ -1,0 +1,72 @@
+<div class="page show d-block" id="ebookDetailsPage" tabindex="-1" aria-labelledby="ebookDetailsPageLabel"
+  aria-hidden="true">
+  <div class="page-dialog page-fullscreen page-dialog-scrollable">
+    <div class="page-content container bg-dark text-white">
+      <div class="page-header d-flex flex-column">
+        <div class="d-flex flex-column justify-content-center align-items-center">
+          <div *ngIf="ebook?.type === 'ebook'; else otherTitle">
+            <span class="page-header__subtitle">E-book</span>
+          </div>
+          <ng-template #otherTitle>
+            <span class="page-header__subtitle">Curso em Vídeo</span>
+          </ng-template>
+          <h2 class="page-title page-header__title" id="ebookDetailsPageLabel">{{ ebook?.title }}</h2>
+        </div>
+      </div>
+      <div class="page-body">
+        <h3 class="page-body__title">O QUE VAI APRENDER?</h3>
+        <div *ngFor="let subject of ebook?.subjects" class="page-body__topics">
+          <div class="page-body__topics__category d-flex align-items-center justify-content-start">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+              stroke="#FFD700" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+              class="feather feather-star">
+              <polygon fill="#FFD700"
+                points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2">
+              </polygon>
+            </svg>
+            <h4>{{ subject.category }}</h4>
+          </div>
+          <ol>
+            <li *ngFor="let topic of subject.topics" class="page-body__topics__category__item">{{ topic }}</li>
+          </ol>
+        </div>
+        <div class="page-body__works__container d-flex flex-column">
+          <div class="page-body__works d-flex align-items-center">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+              class="feather feather-external-link">
+              <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+              <polyline points="15 3 21 3 21 9"></polyline>
+              <line x1="10" y1="14" x2="21" y2="3"></line>
+            </svg>
+            <h4 *ngIf="ebook?.type === 'ebook'; else otherContent">Trabalhos Publicados</h4>
+            <ng-template #otherContent>
+              <h4>Conteúdo Complementar</h4>
+            </ng-template>
+          </div>
+          <div *ngFor="let work of ebook?.works" class="page__works d-flex align-items-center">
+            <button type="button" class="btn btn-secondary">
+              <a href="{{ work.url }}" class="page__works__item" target="_blank" rel="noopener noreferrer">{{ work.title
+                }}</a>
+            </button>
+          </div>
+        </div>
+        <app-offer-timer></app-offer-timer>
+        <div class="page__works__prices d-flex flex-column justify-content-center align-items-center">
+          <div class="page__works__prices__container">
+            <p class="page__works__prices__original">{{ ebook?.price?.original }}</p>
+            <p class="page__works__prices__discounted">{{ ebook?.price?.discounted }}</p>
+          </div>
+          <div class="page__works__prices__cta__container d-flex align-items-center justify-content-center w-100">
+            <button type="button" class="btn btn-success page__works__prices__cta__button"
+              (click)="toBrowseExternal(ebook?.link)">APROVEITAR AGORA</button>
+          </div>
+        </div>
+        <app-testimonys></app-testimonys>
+      </div>
+      <div class="page-footer d-flex justify-content-center align-items-center">
+        <app-navbar></app-navbar>
+      </div>
+    </div>
+  </div>
+</div>

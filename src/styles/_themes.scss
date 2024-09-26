@@ -1,23 +1,5 @@
 @use "colors" as *;
 
-body.light-theme {
-  .background-theme {
-    background-image: linear-gradient(90deg, rgb(0,92,140) 0%,transparent 59%),repeating-linear-gradient(45deg, rgba(168, 168, 168,0.1) 0px, rgba(168, 168, 168,0.1) 1px,transparent 1px, transparent 13px),repeating-linear-gradient(135deg, rgba(168, 168, 168,0.1) 0px, rgba(168, 168, 168,0.1) 1px,transparent 1px, transparent 13px),linear-gradient(90deg, rgb(0,92,140),rgb(0,92,140));
-  }
-
-  .image-theme {
-    background-color: #014e77;
-  }
-
-  .font-theme {
-    color: $color-dark;
-
-    &--light__active {
-      color: $color-accent;
-    }
-  }
-}
-
 body.dark-theme {
   .background-theme {
     background-image: repeating-linear-gradient(45deg, rgba(255,255,255, 0.050980392156862744) 0px, rgba(255,255,255, 0.050980392156862744) 1px,transparent 1px, transparent 11px,rgba(255,255,255, 0.050980392156862744) 11px, rgba(255,255,255, 0.050980392156862744) 12px,transparent 12px, transparent 32px),repeating-linear-gradient(0deg, rgba(255,255,255, 0.050980392156862744) 0px, rgba(255,255,255, 0.050980392156862744) 1px,transparent 1px, transparent 11px,rgba(255,255,255, 0.050980392156862744) 11px, rgba(255,255,255, 0.050980392156862744) 12px,transparent 12px, transparent 32px),repeating-linear-gradient(135deg, rgba(255,255,255, 0.050980392156862744) 0px, rgba(255,255,255, 0.050980392156862744) 1px,transparent 1px, transparent 11px,rgba(255,255,255, 0.050980392156862744) 11px, rgba(255,255,255, 0.050980392156862744) 12px,transparent 12px, transparent 32px),repeating-linear-gradient(90deg, rgba(255,255,255, 0.050980392156862744) 0px, rgba(255,255,255, 0.050980392156862744) 1px,transparent 1px, transparent 11px,rgba(255,255,255, 0.050980392156862744) 11px, rgba(255,255,255, 0.050980392156862744) 12px,transparent 12px, transparent 32px),linear-gradient(90deg, rgb(13,13,20),rgb(13,13,20));

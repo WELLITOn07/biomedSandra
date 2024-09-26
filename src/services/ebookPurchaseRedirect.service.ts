@@ -1,26 +1,35 @@
 import { Injectable } from '@angular/core';
-import { Subject } from 'rxjs';
+import { BehaviorSubject, Observable, of } from 'rxjs';
 import { Ebook } from '../models/ebook.model';
-import { EbookDataServiceService } from './ebookData.service';
+import { EbookDataService } from './ebookData.service';
+import { catchError, map } from 'rxjs/operators';
 
 @Injectable({
   providedIn: 'root',
 })
 export class EbookPurchaseRedirectService {
-  private ebookSelectedSubject = new Subject<Ebook>();
+  private ebookSelectedSubject = new BehaviorSubject<Ebook | null>(null);
   ebookSelected$ = this.ebookSelectedSubject.asObservable();
   ebook: Ebook | null = null;
 
-  constructor(private ebookDataServiceService: EbookDataServiceService) {}
+  constructor(private ebookDataService: EbookDataService) {}
 
-  selectEbook(idEbook: string): void {
-    this.ebookDataServiceService.getOne(idEbook).subscribe((ebook: Ebook) => {
-      if (ebook) {
-        this.ebook = ebook;
-        this.ebookSelectedSubject.next(ebook);
-      } else {
-        throw new Error('Ebook not found');
-      }
-    });
+  selectEbook(idEbook: string): Observable<Ebook | null> {
+    return this.ebookDataService.getOne(idEbook).pipe(
+      map((ebook: Ebook | null) => {
+        if (ebook && ebook.id === idEbook) {
+          this.ebook = ebook;
+          this.ebookSelectedSubject.next(ebook);
+          return ebook;
+        } else {
+          console.error('Ebook não encontrado ou ID incorreto');
+          return null;
+        }
+      }),
+      catchError((error) => {
+        console.error('Erro ao buscar o ebook no serviço:', error);
+        return of(null);
+      })
+    );
   }
 }

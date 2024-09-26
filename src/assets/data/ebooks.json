@@ -1,5 +1,49 @@
 [
   {
+    "title": "Hemograma",
+    "description": "Realize e interprete Hemogramas com Segurança e precisão. Curso com aulas dinâmicas, de rápido acesso com certificado.",
+    "subjects": [
+      {
+        "category": "Introdução à Hematologia",
+        "topics": [
+          "Série Vermelha",
+          "Série Branca",
+          "Série Plaquetária",
+          "Interpretando Gráficos",
+          "Anemias e Leucemias",
+          "Casos Clínicos I - Interpretação",
+          "Casos Clínicos II - Interpretação",
+          "Casos Clínicos III- Interpretação",
+          "Avaliação e Certificado"
+        ]
+      },
+      {
+        "category": "Dicas Bônus",
+        "topics": [
+          "Compartilho Dicas Reais, baseadas em minha experiência profissional, para facilitar seu dia a dia, liberar exames com segurança, e tornar-se ser um profissional reconhecido pelo seu Sucesso"
+        ]
+      }
+    ],
+    "price": {
+      "original": "R$ 119,00",
+      "discounted": "R$ 57,90"
+    },
+    "cover": "hematologia_interpretacao_hemograma",
+    "id": "hemograma_curso",
+    "link": "https://cursohematologia.com.br",
+    "works": [
+      {
+        "title": "Material de Apoio em pdf",
+        "url": "https://cursohematologia.com.br/material"
+      },
+      {
+        "title": "Atlas Ilustrado",
+        "url": "https://cursohematologia.com.br/atlas"
+      }
+    ],
+    "type": "video"
+  },
+  {
     "title": "GUIA DO BIOMÉDICO",
     "description": "Explore o universo biomédico! De hematologia a bioquímica, adquira conhecimento prático e dicas valiosas para excelência profissional.",
     "subjects": [
@@ -260,49 +304,5 @@
       }
     ],
     "type": "ebook"
-  },
-  {
-    "title": "Hemograma",
-    "description": "Realize e interprete Hemogramas com Segurança e precisão. Curso com aulas dinâmicas, de rápido acesso com certificado.",
-    "subjects": [
-      {
-        "category": "Introdução à Hematologia",
-        "topics": [
-          "Série Vermelha",
-          "Série Branca",
-          "Série Plaquetária",
-          "Interpretando Gráficos",
-          "Anemias e Leucemias",
-          "Casos Clínicos I - Interpretação",
-          "Casos Clínicos II - Interpretação",
-          "Casos Clínicos III- Interpretação",
-          "Avaliação e Certificado"
-        ]
-      },
-      {
-        "category": "Dicas Bônus",
-        "topics": [
-          "Compartilho Dicas Reais, baseadas em minha experiência profissional, para facilitar seu dia a dia, liberar exames com segurança, e tornar-se ser um profissional reconhecido pelo seu Sucesso"
-        ]
-      }
-    ],
-    "price": {
-      "original": "R$ 119,00",
-      "discounted": "R$ 57,90"
-    },
-    "cover": "hematologia_interpretacao_hemograma",
-    "id": "hemograma_curso",
-    "link": "https://cursohematologia.com.br",
-    "works": [
-      {
-        "title": "Material de Apoio em pdf",
-        "url": "https://cursohematologia.com.br/material"
-      },
-      {
-        "title": "Atlas Ilustrado",
-        "url": "https://cursohematologia.com.br/atlas"
-      }
-    ],
-    "type": "video"
   }
 ]
