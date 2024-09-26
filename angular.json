@@ -29,7 +29,7 @@
             "assets": ["src/assets", "src/manifest.webmanifest"],
             "styles": [
               "src/styles.scss",
-              "node_modules/bootstrap-icons/font/bootstrap-icons.css" 
+              "node_modules/bootstrap-icons/font/bootstrap-icons.css"
             ],
             "scripts": []
           },
@@ -38,8 +38,7 @@
               "optimization": true,
               "outputHashing": "all",
               "sourceMap": false,
-              "extractLicenses": true,
-              "serviceWorker": "ngsw-config.json"
+              "extractLicenses": true
             },
             "development": {
               "optimization": false,
