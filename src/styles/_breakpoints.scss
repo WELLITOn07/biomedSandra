@@ -65,8 +65,8 @@
 
 @media (max-width: 767px) {
   .section {
-    &__actions__container {
-      display: none !important;
+    &__apresentation__container {
+      height: calc(var(--vh, 1vh) * 100 - 80px) !important;
     }
   }
 
@@ -152,7 +152,7 @@
   }
 }
 
-@media (max-width: 992px) {
+@media (max-width: 768px) {
   .header {
     &__container {
       border-radius: 0 0 10px 10px;
@@ -160,8 +160,6 @@
   }
 
   .section {
-    height: auto;
-
     &__backgound__container {
       display: none;
     }

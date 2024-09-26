@@ -1,11 +1,11 @@
 <div class="main d-flex justify-content-center align-items-center image-theme" role="main">
-  <section class="container section__container background-theme row" role="region" aria-label="Conteúdo Principal">
-    <div class="main image-theme col">
-      <section class="container section__container background-theme" role="region" aria-label="Conteúdo Principal">
+  <section class="container section__container row" role="region" aria-label="Conteúdo Principal">
+    <div class="main col">
+      <section class="container section__container" role="region">
         <div class="section d-flex flex-column">
           <app-header class="header"></app-header>
 
-          <div class="section__apresentation__container d-flex flex-column  justify-content-center align-items-center"
+          <div class="section__apresentation__container d-flex flex-column justify-content-center align-items-center"
             *ngIf="consentAcquired">
             <div
               class="section__apresentation d-flex flex-column justify-content-sm-center justify-content-between align-items-center animate__animated animate__fadeInDown ">
@@ -13,9 +13,8 @@
                 {{ apresentationText }}
               </p>
 
-              <app-ebook-list></app-ebook-list>
 
-              <div class="section__actions__container d-flex    justify-content-between align-items-center">
+              <div class="section__actions__container d-flex  justify-content-between align-items-center">
                 <div class="section__actions d-flex" role="navigation" aria-label="Redes Sociais">
                   <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
                     stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
@@ -45,6 +44,8 @@
               </div>
             </div>
           </div>
+
+          <app-ebook-list></app-ebook-list>
         </div>
       </section>
     </div>

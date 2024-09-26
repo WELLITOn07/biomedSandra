@@ -9,12 +9,10 @@
 .main {
   height: 100vh;
   height: calc(var(--vh, 1vh) * 100);
-  overflow: hidden;
 }
 
 .section {
   width: 100%;
-  height: 100%;
 
   &__cta__button {
     width: 100%;
@@ -23,11 +21,31 @@
   &__container {
     width: 100%;
     height: 100%;
-  }
+    overflow-y: auto;
 
-  &__backgound__image {
-    @include image("sandra.webp");
-    background-size: auto;
+    &::-webkit-scrollbar {
+      width: 8px;
+      height: 50px;
+    }
+
+    &::-webkit-scrollbar-track {
+      background: #f1f1f1;
+      border-radius: 10px;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background: #888;
+      border-radius: 10px;
+    }
+
+    &::-webkit-scrollbar-thumb:hover {
+      background: #555;
+    }
+
+    &::-webkit-scrollbar-button {
+      width: 50px;
+      height: 50px;
+    }
   }
 
   &__apresentation {
