@@ -159,6 +159,20 @@
     }
   }
 
+  .section__actions {
+    &__icons {
+      transform: scale(1.4);
+      color: $color-light;
+      background-color: $color-dark;
+      border-radius: 50%;
+      padding: 8px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      transition: transform 0.3s ease-in-out;
+    }
+  }
+
   .section {
     &__backgound__container {
       display: none;
