@@ -2,20 +2,33 @@
 @use "typography" as *;
 
 .page {
+  background-image: repeating-linear-gradient(45deg, rgba(255,255,255, 0.050980392156862744) 0px, rgba(255,255,255, 0.050980392156862744) 1px,transparent 1px, transparent 11px,rgba(255,255,255, 0.050980392156862744) 11px, rgba(255,255,255, 0.050980392156862744) 12px,transparent 12px, transparent 32px),repeating-linear-gradient(0deg, rgba(255,255,255, 0.050980392156862744) 0px, rgba(255,255,255, 0.050980392156862744) 1px,transparent 1px, transparent 11px,rgba(255,255,255, 0.050980392156862744) 11px, rgba(255,255,255, 0.050980392156862744) 12px,transparent 12px, transparent 32px),repeating-linear-gradient(135deg, rgba(255,255,255, 0.050980392156862744) 0px, rgba(255,255,255, 0.050980392156862744) 1px,transparent 1px, transparent 11px,rgba(255,255,255, 0.050980392156862744) 11px, rgba(255,255,255, 0.050980392156862744) 12px,transparent 12px, transparent 32px),repeating-linear-gradient(90deg, rgba(255,255,255, 0.050980392156862744) 0px, rgba(255,255,255, 0.050980392156862744) 1px,transparent 1px, transparent 11px,rgba(255,255,255, 0.050980392156862744) 11px, rgba(255,255,255, 0.050980392156862744) 12px,transparent 12px, transparent 32px),linear-gradient(90deg, rgb(13,13,20),rgb(13,13,20));
+
+  &-content {
+    padding: 10px;
+  }
+
   &-header {
     &__title {
       font-family: $font-montserrat;
       font-weight: bold;
+      text-align: center;
+      font-size: 1.3rem;
     }
     &__subtitle {
       color: $color-accent;
+      text-align: center;
     }
   }
 
   &-body {
+    flex-grow: 1;
+    overflow-y: auto;
+    overflow-x: hidden;
+    padding-bottom: 80px;
+
     &::-webkit-scrollbar {
       width: 8px;
-      height: 50px;
     }
 
     &::-webkit-scrollbar-track {
@@ -32,44 +45,36 @@
       background: #555;
     }
 
-    &::-webkit-scrollbar-button {
-      width: 50px;
-      height: 50px;
-    }
-
     &__title {
       font-family: $font-montserrat;
       font-weight: bold;
-      margin-bottom: 30px;
+      margin: 15px 0 15px 0;
     }
 
     &__topics {
       &__category {
         margin-bottom: 10px;
         gap: 6px;
+        display: flex;
+        align-items: center;
+
+        h4 {
+          font-weight: 600;
+        }
 
         &__item {
           max-width: 600px;
           font-weight: 400;
-          font-family: $font-inter;
           margin-bottom: 7px;
           font-size: 1.1rem;
-
-          &::marker {
-            font-weight: 700;
-            color: rgb(173, 216, 230);
-          }
         }
       }
     }
-  }
 
-  &-body__works {
-    gap: 10px;
-    margin-top: 30px;
-
-    &__container {
-      gap: 10px;
+    &__works {
+      &__container {
+        gap: 15px;
+      }
     }
   }
 
@@ -81,36 +86,31 @@
 
     &__prices {
       margin-top: 20px;
-      color: $color-light;
       font-family: $font-montserrat;
 
       &__original {
         text-decoration: line-through;
-        text-decoration-color: $color-alert;
         font-size: 20px;
+        color: $color-alert;
       }
 
       &__discounted {
-        color: $color-light;
         font-size: 45px;
-        position: relative;
-        bottom: 15px;
-        right: 3px;
+        color: $color-light;
       }
 
-      &__cta {
-        &__container {
-          width: 100%;
-        }
-
-        &__button {
-          font-weight: 500;
-          color: $color-light;
-          padding: 10px;
-          width: 100%;
-          font-size: 1.5rem;
-        }
+      &__cta__button {
+        font-size: 1.5rem;
+        font-weight: bold;
       }
     }
+  }
+
+  .bi {
+    margin-right: 8px;
+  }
+
+  .page-footer {
+    padding: 10px;
   }
 }

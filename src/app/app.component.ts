@@ -1,16 +1,51 @@
-import { ChangeDetectionStrategy, Component } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { Component, OnInit } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet],
+  imports: [CommonModule, RouterOutlet],
   templateUrl: './app.component.html',
-  styleUrl: './app.component.scss',
-  changeDetection: ChangeDetectionStrategy.OnPush,
+  styleUrls: ['./app.component.scss']
 })
-export class AppComponent {
+export class AppComponent implements OnInit {
+  loading: boolean = true;
 
-  constructor() {}
-  title = 'biomedSandra';
+  ngOnInit(): void {
+    this.clearAllCache();
+  }
+
+  clearAllCache(): void {
+    if ('caches' in window) {
+      caches.keys().then(cacheNames => {
+        Promise.all(cacheNames.map(cache => caches.delete(cache))).then(() => {
+          console.log('Todos os caches foram limpos');
+          this.checkForCache();
+        });
+      }).catch(err => console.error('Erro ao limpar os caches:', err));
+    }
+  }
+
+  checkForCache(): void {
+    const cacheCleared = localStorage.getItem('cacheCleared');
+
+    if (!cacheCleared) {
+      if ('caches' in window) {
+        caches.keys().then(cacheNames => {
+          if (cacheNames.length > 0) {
+            Promise.all(cacheNames.map(cache => caches.delete(cache))).then(() => {
+              this.loading = false;
+              localStorage.setItem('cacheCleared', 'true');
+              window.alert('Atualização detectada! A página será recarregada em 5 segundos.');
+
+              setTimeout(() => {
+                window.location.reload();
+              }, 5000);
+            });
+          }
+        });
+      }
+    }
+  }
 }

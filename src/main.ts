@@ -17,15 +17,4 @@ bootstrapApplication(AppComponent, {
       HttpClientModule
     ),
   ],
-})
-  .then(() => {
-    if ('serviceWorker' in navigator) {
-      navigator.serviceWorker.getRegistrations().then(function (registrations) {
-        for (let registration of registrations) {
-          registration.unregister();
-          console.log('Service Worker desregistrado:', registration);
-        }
-      });
-    }
-  })
-  .catch((err) => console.error('Erro ao inicializar a aplicação:', err));
+});
