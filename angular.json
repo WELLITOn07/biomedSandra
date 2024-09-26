@@ -27,7 +27,10 @@
             "tsConfig": "tsconfig.app.json",
             "inlineStyleLanguage": "scss",
             "assets": ["src/assets", "src/manifest.webmanifest"],
-            "styles": ["src/styles.scss"],
+            "styles": [
+              "src/styles.scss",
+              "node_modules/bootstrap-icons/font/bootstrap-icons.css" 
+            ],
             "scripts": []
           },
           "configurations": {
@@ -71,7 +74,11 @@
             "tsConfig": "tsconfig.spec.json",
             "inlineStyleLanguage": "scss",
             "assets": ["src/assets", "src/manifest.webmanifest"],
-            "styles": ["src/styles.scss", "src/styles/_custombootstrap.scss"],
+            "styles": [
+              "src/styles.scss",
+              "node_modules/bootstrap-icons/font/bootstrap-icons.css",
+              "src/styles/_custombootstrap.scss"
+            ],
             "scripts": []
           }
         }

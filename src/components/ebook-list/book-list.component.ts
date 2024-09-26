@@ -1,20 +1,22 @@
 import { ChangeDetectionStrategy, ChangeDetectorRef, Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { RouterModule } from '@angular/router';
 import { Ebook } from '../../models/ebook.model';
 import { EbookDataService } from '../../services/ebookData.service';
 
 @Component({
   selector: 'app-ebook-list',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, RouterModule],
   templateUrl: './ebook-list.component.html',
-  styleUrl: './book-list.component.scss',
+  styleUrls: ['./book-list.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class EbookListComponent implements OnInit {
   ebooks: Ebook[] = [];
+  accentColor = '#FFD700';
 
-  constructor(private ebookDataService: EbookDataService, private cdr: ChangeDetectorRef,) {}
+  constructor(private ebookDataService: EbookDataService, private cdr: ChangeDetectorRef) {}
 
   ngOnInit(): void {
     this.ebookDataService.getAll().subscribe({

@@ -2,7 +2,11 @@
 
 .card-custom {
   transition: transform 0.3s;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
 }
+
 .card-custom:hover {
   transform: translateY(-10px);
 }
@@ -22,11 +26,10 @@
   align-items: center;
   font-size: 1.2rem;
   margin-top: 10px;
-}
 
-.icon-type i {
-  margin-right: 5px;
-  color: $color-accent;
+  i {
+    margin-right: 5px;
+  }
 }
 
 .card-title {
@@ -36,14 +39,16 @@
 
 .card-text {
   font-size: 1rem;
+  flex-grow: 1;
 }
 
 .btn-primary {
   background-color: $color-accent;
+  color: $color-dark;
+  font-weight: 700;
   border: none;
 }
 
 .btn-primary:hover {
   background-color: darken($color-accent, 10%);
 }
-
