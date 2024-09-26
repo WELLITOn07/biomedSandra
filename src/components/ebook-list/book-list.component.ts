@@ -29,8 +29,4 @@ export class EbookListComponent implements OnInit {
       }
     });
   }
-
-  getCoverImage(cover: string): string {
-    return `assets/images/covers/${cover}.jpg`;
-  }
 }
