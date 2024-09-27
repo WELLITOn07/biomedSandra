@@ -5,7 +5,7 @@
   .section {
     &__apresentation {
       &__text {
-        font-size: 1rem;
+        font-size: 1.3rem;
       }
     }
   }
@@ -31,7 +31,7 @@
   .section {
     &__apresentation {
       &__text {
-        font-size: 1.1rem;
+        font-size: 1.4rem;
       }
     }
   }
@@ -57,7 +57,7 @@
   .section {
     &__apresentation {
       &__text {
-        font-size: 1.3rem;
+        font-size: 1.5rem;
       }
     }
   }
@@ -122,7 +122,7 @@
 
     &__apresentation {
       &__text {
-        font-size: 2.2rem;
+        font-size: 2.4rem;
       }
     }
   }
@@ -173,7 +173,8 @@
       }
 
       &__container {
-        @include image("cubs.jpg");
+       justify-content: center !important;
+       background-image: repeating-linear-gradient(48deg, rgb(0,0,0) 0px, rgb(0,0,0) 27px,transparent 27px, transparent 30px),repeating-linear-gradient(352deg, rgb(0,0,0) 0px, rgb(0,0,0) 27px,transparent 27px, transparent 30px),repeating-linear-gradient(30deg, rgb(0,0,0) 0px, rgb(0,0,0) 27px,transparent 27px, transparent 30px),linear-gradient(90deg, rgb(14, 172, 245),rgb(129, 60, 165));
       }
     }
   }
