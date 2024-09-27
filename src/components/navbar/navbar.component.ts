@@ -1,65 +1,76 @@
+import { Component, OnInit, OnDestroy, ChangeDetectionStrategy, ChangeDetectorRef } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { Observable, Subject, takeUntil } from 'rxjs';
-import { RedirectionService } from './../../services/redirection.service';
-import {
-  ChangeDetectionStrategy,
-  ChangeDetectorRef,
-  Component,
-  OnDestroy,
-  OnInit,
-} from '@angular/core';
+import { Router } from '@angular/router';
+import { Subject, Observable } from 'rxjs';
+import { takeUntil } from 'rxjs/operators';
 import { EbookDataService } from '../../services/ebookData.service';
 import { Ebook } from '../../models/ebook.model';
-import { EbookPurchaseRedirectService } from '../../services/ebookPurchaseRedirect.service';
 
 @Component({
   selector: 'app-navbar',
   standalone: true,
   imports: [CommonModule],
   templateUrl: './navbar.component.html',
-  styleUrls: ['../../styles/_custombootstrap.scss', './navbar.component.scss'],
+  styleUrls: ['./navbar.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class NavbarComponent implements OnInit, OnDestroy {
   ebookData$: Observable<Ebook[]> = this.ebookDataService.getAll();
   ebookData: Ebook[] | null = null;
-  destroySubject: Subject<void> = new Subject<void>();
+  destroy$ = new Subject<void>();
 
   constructor(
-    private redirectionService: RedirectionService,
+    private router: Router,
     private ebookDataService: EbookDataService,
-    private ebookPurchaseRedirectService: EbookPurchaseRedirectService,
     private cdr: ChangeDetectorRef
   ) {}
 
   ngOnInit(): void {
-    this.ebookData$.pipe(takeUntil(this.destroySubject)).subscribe({
-      next: (ebookData: Ebook[]) => {
-        if (ebookData) {
-          this.ebookData = [...ebookData];
+    this.ebookData$.pipe(takeUntil(this.destroy$)).subscribe({
+      next: (data: Ebook[]) => {
+        if (data) {
+          this.ebookData = [...data];
           this.cdr.detectChanges();
         }
       },
       error: () => {
-        console.error('Erro ao buscar ebooks');
+        console.error('Erro ao carregar dados dos ebooks.');
       },
     });
   }
 
   toBrowse(social: string) {
-    this.redirectionService.goTo(social);
+    const urlMap: Record<string, string> = {
+      instagram: 'https://www.instagram.com',
+      linkedin: 'https://www.linkedin.com',
+      facebook: 'https://www.facebook.com',
+      github: 'https://github.com',
+    };
+    const url = urlMap[social];
+    if (url) {
+      window.open(url, '_blank');
+    }
   }
 
-  openEbook(idEbook: string | null) {
-    if (!idEbook) {
-      return;
-    }
+  openEbook(id: string): void {
+    if (id) {
+      // Simulate clicking the close button before navigating
+      const closeButton = document.querySelector('.btn-close') as HTMLElement;
+      if (closeButton) {
+        closeButton.click();
+      }
 
-    this.ebookPurchaseRedirectService.selectEbook(idEbook);
+      // Wait for the offcanvas to close and then navigate
+      setTimeout(() => {
+        this.router.navigateByUrl('/', { skipLocationChange: true }).then(() => {
+          this.router.navigate(['/ebook-details', id]);
+        });
+      }, 300); // Adjust delay based on animation duration
+    }
   }
 
   ngOnDestroy(): void {
-    this.destroySubject.next();
-    this.destroySubject.complete();
+    this.destroy$.next();
+    this.destroy$.complete();
   }
 }
