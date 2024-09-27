@@ -11,9 +11,21 @@ import { RouterOutlet } from '@angular/router';
 })
 export class AppComponent implements OnInit {
   loading: boolean = true;
+  showUpdateMessage: boolean = false;
 
   ngOnInit(): void {
-    this.checkForCache();
+    this.clearAllCache();
+  }
+
+  clearAllCache(): void {
+    if ('caches' in window) {
+      caches.keys().then(cacheNames => {
+        Promise.all(cacheNames.map(cache => caches.delete(cache))).then(() => {
+          console.log('Todos os caches foram limpos');
+          this.checkForCache();
+        });
+      }).catch(err => console.error('Erro ao limpar os caches:', err));
+    }
   }
 
   checkForCache(): void {
@@ -23,35 +35,20 @@ export class AppComponent implements OnInit {
       if ('caches' in window) {
         caches.keys().then(cacheNames => {
           if (cacheNames.length > 0) {
-            this.promptUserToClearCache();
+            Promise.all(cacheNames.map(cache => caches.delete(cache))).then(() => {
+              this.loading = false;
+              localStorage.setItem('cacheCleared', 'true');
+
+              this.showUpdateMessage = true;
+
+              setTimeout(() => {
+                this.showUpdateMessage = false;
+                window.location.reload();
+              }, 5000);
+            });
           }
         });
       }
-    }
-  }
-
-  promptUserToClearCache(): void {
-    const userResponded = new Promise<void>((resolve) => {
-      const userAction = window.confirm("Há uma atualização disponível. Clique em 'OK' para atualizar a página.");
-      resolve(userAction ? this.clearAllCache() : undefined);
-    });
-
-    setTimeout(() => {
-      userResponded.then(() => {
-        window.location.reload();
-      });
-    }, 5000);
-  }
-
-  clearAllCache(): void {
-    if ('caches' in window) {
-      caches.keys().then(cacheNames => {
-        Promise.all(cacheNames.map(cache => caches.delete(cache))).then(() => {
-          console.log('Todos os caches foram limpos');
-          localStorage.setItem('cacheCleared', 'true');
-          window.location.reload();
-        }).catch(err => console.error('Erro ao limpar os caches:', err));
-      });
     }
   }
 }
