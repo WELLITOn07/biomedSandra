@@ -1,14 +1,29 @@
 @use "colors" as *;
 @use "typography" as *;
-@use "moveInbutton" as *;
 
 :host {
   display: block;
+  margin-bottom: 70px;
+}
+
+.fixed-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 999;
+  background-color: $color-dark;
+  padding: 10px 20px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
 }
 
 .header {
+  &__container {
+    width: 100%;
+  }
+
+
   &__actions {
-    padding-top: 10px;
     gap: 10px;
 
     &__title {
@@ -25,16 +40,32 @@
         color: $color-accent;
         cursor: pointer;
       }
+    }
+  }
 
-      &__animation {
-        @include moveInButton();
+  &__back-home {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+
+    i {
+      font-size: 1.2rem;
+    }
+
+    a {
+      font-family: $font-inter;
+      font-weight: bold;
+      text-decoration: none;
+      color: $color-light;
+
+      &:hover {
+        color: $color-accent;
       }
     }
   }
 
   &__divider {
     height: 1px;
-    margin-top: 10px;
     background-color: $color-light;
   }
 }

@@ -9,10 +9,11 @@ import { TestimonysComponent } from '../../components/testimonys/testimonys.comp
 import { Subscription } from 'rxjs';
 import { EbookPurchaseRedirectService } from '../../services/ebookPurchaseRedirect.service';
 import { take } from 'rxjs/operators';
+import { HeaderComponent } from '../../components/header/header.component';
 
 @Component({
   selector: 'app-ebook-details-page',
-  imports: [CommonModule, AppOfferTimerComponent, NavbarComponent, TestimonysComponent],
+  imports: [CommonModule, AppOfferTimerComponent, NavbarComponent, TestimonysComponent, HeaderComponent],
   standalone: true,
   templateUrl: './ebook-details-page.component.html',
   styleUrls: ['./ebook-details-page.component.scss'],
