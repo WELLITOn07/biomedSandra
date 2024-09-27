@@ -11,7 +11,6 @@ Além dos e-books, disponibilizamos cursos em vídeo sobre os temas abordados, d
 ### Características Principais:
 
 - **Design Responsivo:** Otimização para diferentes dispositivos, assegurando uma experiência de usuário consistente em smartphones e desktops.
-- **Temas Personalizáveis:** Opções de temas visuais que permitem aos usuários uma personalização conforme suas preferências.
 
 ## Compromisso com SEO e Acessibilidade
 
