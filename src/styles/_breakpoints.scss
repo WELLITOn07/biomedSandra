@@ -132,6 +132,10 @@
       &__title {
         font-size: 1.5rem;
       }
+
+      display: flex;
+      justify-content: center !important;
+      gap: 20px;
     }
   }
 
@@ -177,7 +181,6 @@
     &__backgound__container {
       display: none;
     }
-
     &__apresentation {
       &__text {
         text-shadow: 0px 7px 10px rgba(0, 0, 0, 0.599);
@@ -185,7 +188,7 @@
 
       &__container {
         @include image("sandra.webp");
-        background-size: cover;
+        background-size: contain;
       }
     }
   }

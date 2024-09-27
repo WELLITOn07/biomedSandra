@@ -1,6 +1,8 @@
 <div class="page container-fluid show d-block" id="ebookDetailsPage" tabindex="-1" aria-labelledby="ebookDetailsPageLabel" aria-hidden="true">
   <div class="page-dialog container page-fullscreen">
     <div class="page-content bg-dark text-white d-flex flex-column">
+      <app-header class="header" role="banner" aria-label="Header"></app-header>
+
       <div class="page-header d-flex flex-column justify-content-center align-items-center">
         <div>
           <span *ngIf="ebook?.type === 'ebook'; else videoTitle" class="page-header__subtitle">E-book</span>
