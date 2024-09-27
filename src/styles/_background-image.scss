@@ -2,5 +2,15 @@
   background-image: url('../assets/' + '/' + $image);
   background-repeat: no-repeat;
   background-position: center;
-  background-size: auto 100%;
+  background-size: contain;
+  width: 100%;
+  height: auto;
+}
+
+// Optional for mobile optimization
+@media (max-width: 768px) {
+  @mixin image ($image) {
+    background-size: contain;
+    height: 100vh; 
+  }
 }
