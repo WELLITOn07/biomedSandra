@@ -2,6 +2,11 @@
 @use "typography" as *;
 @use "background-image" as *;
 
+.offcanvas-fullscreen {
+  width: 100%;
+  height: 100%;
+}
+
 .feather {
   margin-right: 10px;
 
@@ -39,7 +44,6 @@
   }
 }
 
-.row,
-.col {
-  padding: 0 !important;
+li.nav-item {
+  gap: 10px;
 }
