@@ -9,6 +9,7 @@ import { HeaderComponent } from '../../components/header/header.component';
 import { EbookListComponent } from '../../components/ebook-list/book-list.component';
 
 @Component({
+  selector: 'app-home-page',
   imports: [CommonModule, HeaderComponent, EbookListComponent],
   standalone: true,
   templateUrl: './home-page.component.html',
