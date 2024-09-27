@@ -22,7 +22,6 @@ Além dos e-books, disponibilizamos cursos em vídeo sobre os temas abordados, d
 
 - **Angular 17:** Desenvolvimento com Angular 17, adotando componentes independentes para uma abordagem modular, facilitando o reuso e simplificando a arquitetura.
 - **Bootstrap 5:** Utilização do Bootstrap 5 para um design responsivo e moderno.
-- **Service Worker:** Aplicação de Service Worker para otimizar a performance e a confiabilidade do site.
 
 ## Testes Unitários
 
