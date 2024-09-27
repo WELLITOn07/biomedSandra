@@ -5,6 +5,7 @@ import { Subject, Observable } from 'rxjs';
 import { takeUntil } from 'rxjs/operators';
 import { EbookDataService } from '../../services/ebookData.service';
 import { Ebook } from '../../models/ebook.model';
+import { RedirectionService } from '../../services/redirection.service';
 
 @Component({
   selector: 'app-navbar',
@@ -22,7 +23,8 @@ export class NavbarComponent implements OnInit, OnDestroy {
   constructor(
     private router: Router,
     private ebookDataService: EbookDataService,
-    private cdr: ChangeDetectorRef
+    private cdr: ChangeDetectorRef,
+    private redirectionService: RedirectionService
   ) {}
 
   ngOnInit(): void {
@@ -40,32 +42,21 @@ export class NavbarComponent implements OnInit, OnDestroy {
   }
 
   toBrowse(social: string) {
-    const urlMap: Record<string, string> = {
-      instagram: 'https://www.instagram.com',
-      linkedin: 'https://www.linkedin.com',
-      facebook: 'https://www.facebook.com',
-      github: 'https://github.com',
-    };
-    const url = urlMap[social];
-    if (url) {
-      window.open(url, '_blank');
-    }
+    this.redirectionService.goTo(social);
   }
 
   openEbook(id: string): void {
     if (id) {
-      // Simulate clicking the close button before navigating
       const closeButton = document.querySelector('.btn-close') as HTMLElement;
       if (closeButton) {
         closeButton.click();
       }
 
-      // Wait for the offcanvas to close and then navigate
       setTimeout(() => {
         this.router.navigateByUrl('/', { skipLocationChange: true }).then(() => {
           this.router.navigate(['/ebook-details', id]);
         });
-      }, 300); // Adjust delay based on animation duration
+      }, 300);
     }
   }
 

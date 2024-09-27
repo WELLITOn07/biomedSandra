@@ -7,8 +7,7 @@
 
           <div class="section__apresentation__container d-flex flex-column justify-content-center align-items-center"
             role="region" aria-label="Presentation Section">
-            <div
-              class="section__apresentation d-flex flex-column justify-content-center align-items-center animate__animated animate__fadeInDown "
+            <div class="section__apresentation d-flex flex-column justify-content-center align-items-center animate__animated animate__fadeInDown "
               role="presentation" aria-label="Presentation Area">
               <div class="section__apresentation__text__container flex flex-row">
                 <p class="section__apresentation__text__heart" role="text">
@@ -18,6 +17,12 @@
                   {{ apresentationText }}
                 </p>
               </div>
+
+              <!-- Scroll indicator for mobile -->
+              <div class="scroll-indicator mt-3 d-md-none" (click)="scrollToNextSection()">
+                <i class="bi bi-arrow-down scroll-icon"></i>
+              </div>
+
               <div class="section__actions__container d-flex justify-content-between align-items-center"
                 role="navigation" aria-label="Social Media Actions">
                 <div class="section__actions d-flex" role="navigation" aria-label="Social Media Links">
@@ -33,16 +38,11 @@
                   <div class="section__w7__logo"></div>
                 </div>
               </div>
-
-              <!-- Scroll indicator for mobile -->
-              <div class="scroll-indicator mt-3 d-md-none">
-                <i class="bi bi-arrow-down scroll-icon"></i>
-              </div>
-
             </div>
           </div>
 
-          <app-ebook-list role="complementary" aria-label="Ebook List"></app-ebook-list>
+          <!-- eBook List Section with id -->
+          <app-ebook-list id="ebookList" role="complementary" aria-label="Ebook List"></app-ebook-list>
         </div>
       </section>
     </div>
