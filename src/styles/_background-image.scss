@@ -6,11 +6,3 @@
   width: 100%;
   height: auto;
 }
-
-// Optional for mobile optimization
-@media (max-width: 768px) {
-  @mixin image ($image) {
-    background-size: contain;
-    height: 100vh; 
-  }
-}
