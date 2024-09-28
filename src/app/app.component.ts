@@ -23,33 +23,18 @@ export class AppComponent implements OnInit {
       if ('caches' in window) {
         caches.keys().then(cacheNames => {
           if (cacheNames.length > 0) {
-            this.promptUserToClearCache();
+            this.clearAllCache();
           }
         });
       }
     }
   }
 
-  promptUserToClearCache(): void {
-    const userResponded = new Promise<void>((resolve) => {
-      const userAction = window.confirm("Há uma atualização disponível. Clique em 'OK' para atualizar a página.");
-      resolve(userAction ? this.clearAllCache() : undefined);
-    });
-
-    setTimeout(() => {
-      userResponded.then(() => {
-        window.location.reload();
-      });
-    }, 5000);
-  }
-
   clearAllCache(): void {
     if ('caches' in window) {
       caches.keys().then(cacheNames => {
         Promise.all(cacheNames.map(cache => caches.delete(cache))).then(() => {
-          console.log('Todos os caches foram limpos');
           localStorage.setItem('cacheCleared', 'true');
-          window.location.reload();
         }).catch(err => console.error('Erro ao limpar os caches:', err));
       });
     }
