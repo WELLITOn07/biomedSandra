@@ -18,6 +18,7 @@ export class NavbarComponent implements OnInit, OnDestroy {
   ebookData$: Observable<Ebook[]> = this.ebookDataService.getAll();
   ebookData: Ebook[] | null = null;
   destroy$ = new Subject<void>();
+  isMenuOpen = false;
 
   constructor(
     private router: Router,
@@ -39,6 +40,10 @@ export class NavbarComponent implements OnInit, OnDestroy {
     });
   }
 
+  toggleMenu(): void {
+    this.isMenuOpen = !this.isMenuOpen;
+  }
+
   toBrowse(social: string) {
     const urlMap: Record<string, string> = {
       instagram: 'https://www.instagram.com',
@@ -54,18 +59,16 @@ export class NavbarComponent implements OnInit, OnDestroy {
 
   openEbook(id: string): void {
     if (id) {
-      // Simulate clicking the close button before navigating
       const closeButton = document.querySelector('.btn-close') as HTMLElement;
       if (closeButton) {
         closeButton.click();
       }
 
-      // Wait for the offcanvas to close and then navigate
       setTimeout(() => {
         this.router.navigateByUrl('/', { skipLocationChange: true }).then(() => {
           this.router.navigate(['/ebook-details', id]);
         });
-      }, 300); // Adjust delay based on animation duration
+      }, 300);
     }
   }
 
