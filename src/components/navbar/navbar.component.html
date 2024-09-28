@@ -1,14 +1,18 @@
 <nav class="navbar navbar__mobile" data-bs-theme="dark" *ngIf="ebookData">
-  <button class="navbar-toggler animate__animated animate__backInUp" type="button" data-bs-toggle="offcanvas"
-    data-bs-target="#navbarContact" aria-controls="navbarContact" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
+  <button class="navbar-toggler animate__animated animate__backInUp" type="button" (click)="toggleMenu()">
+    <span *ngIf="!isMenuOpen" class="icon-open"> <!-- Ícone para o menu fechado -->
+      <i class="bi bi-list"></i> <!-- Pode usar um ícone diferente aqui -->
+    </span>
+    <span *ngIf="isMenuOpen" class="icon-close"> <!-- Ícone para o menu aberto -->
+      <i class="bi bi-x-lg"></i> <!-- Outro ícone quando o menu está aberto -->
+    </span>
   </button>
 
   <div class="offcanvas offcanvas-fullscreen offcanvas-end" tabindex="-1" id="navbarContact"
-    aria-labelledby="navbarContactLabel">
+    [class.show]="isMenuOpen" aria-labelledby="navbarContactLabel" *ngIf="isMenuOpen">
     <div class="offcanvas-header">
       <h5 class="offcanvas-title" id="navbarContactLabel">Contatos / Conteúdos</h5>
-      <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+      <button type="button" class="btn-close" aria-label="Close" (click)="toggleMenu()"></button>
     </div>
 
     <div class="offcanvas-body d-flex flex-column">
@@ -30,7 +34,6 @@
 
         <hr class="divider">
 
-        <!-- Dropdown is open by default -->
         <li class="nav-item dropdown show">
           <a class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="true">
             E-books e Cursos
