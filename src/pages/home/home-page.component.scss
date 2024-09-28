@@ -147,6 +147,7 @@
     font-size: 2rem;
     color: $color-light;
     animation: bounce 2s infinite;
+    cursor: pointer;
 
     @keyframes bounce {
       0%, 20%, 50%, 80%, 100% {
