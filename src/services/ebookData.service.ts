@@ -1,25 +1,30 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { Observable, catchError, throwError, map } from 'rxjs';
+import { Observable, catchError, throwError, map, shareReplay } from 'rxjs';
 import { Ebook, EbooksPayload } from '../models/ebook.model';
-import { environment } from '../environments/environments';
+import { environment } from '../environments/environment';
 
 @Injectable({
   providedIn: 'root',
 })
 export class EbookDataService {
   private apiUrl = environment.apiUrl;
+  private ebooksCache$: Observable<Ebook[]> | null = null;
 
-  constructor(private http: HttpClient) {}
-
+  constructor(private http: HttpClient) { }
+  
   getAll(): Observable<Ebook[]> {
-    return this.http.get<EbooksPayload>(this.apiUrl).pipe(
-      map(response => response.data),
-      catchError(error => {
-        console.error('Erro ao carregar eBooks:', error);
-        return throwError(() => new Error('Erro ao carregar eBooks'));
-      })
-    );
+    if (!this.ebooksCache$) {
+      this.ebooksCache$ = this.http.get<EbooksPayload>(this.apiUrl).pipe(
+        map(response => response.data),
+        shareReplay(1),
+        catchError(error => {
+          console.error('Erro ao carregar eBooks:', error);
+          return throwError(() => new Error('Erro ao carregar eBooks'));
+        })
+      );
+    }
+    return this.ebooksCache$;
   }
 
   getOne(idEbook: string): Observable<Ebook> {
