@@ -1,18 +1,20 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { Observable, map, catchError, throwError } from 'rxjs';
-import { Ebook } from '../models/ebook.model';
+import { Observable, catchError, throwError, map } from 'rxjs';
+import { Ebook, EbooksPayload } from '../models/ebook.model';
+import { environment } from '../environments/environments';
 
 @Injectable({
   providedIn: 'root',
 })
 export class EbookDataService {
-  private urlEbooks = 'assets/data/ebooks.json';
+  private apiUrl = environment.apiUrl;
 
   constructor(private http: HttpClient) {}
 
   getAll(): Observable<Ebook[]> {
-    return this.http.get<Ebook[]>(this.urlEbooks).pipe(
+    return this.http.get<EbooksPayload>(this.apiUrl).pipe(
+      map(response => response.data),
       catchError(error => {
         console.error('Erro ao carregar eBooks:', error);
         return throwError(() => new Error('Erro ao carregar eBooks'));
@@ -21,13 +23,12 @@ export class EbookDataService {
   }
 
   getOne(idEbook: string): Observable<Ebook> {
-    return this.getAll().pipe(
-      map((ebooks: Ebook[]) => ebooks.find((ebook) => ebook.id === idEbook)),
-      map((ebook) => {
-        if (!ebook) {
-          throw new Error('Ebook not found');
-        }
-        return ebook;
+    const url = `${this.apiUrl}/${idEbook}`;
+    return this.http.get<{ statusCode: number, message: string, data: Ebook }>(url).pipe(
+      map(response => response.data),
+      catchError(error => {
+        console.error(`Erro ao carregar o eBook com ID ${idEbook}:`, error);
+        return throwError(() => new Error(`Erro ao carregar o eBook com ID ${idEbook}`));
       })
     );
   }

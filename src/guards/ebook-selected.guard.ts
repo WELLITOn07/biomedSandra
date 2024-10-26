@@ -3,7 +3,6 @@ import { ResolveFn, Router } from '@angular/router';
 import { EbookPurchaseRedirectService } from '../services/ebookPurchaseRedirect.service';
 import { of } from 'rxjs';
 import { catchError, map } from 'rxjs/operators';
-import { Ebook } from '../models/ebook.model';
 
 export const ebookSelectedGuard: ResolveFn<boolean | null> = (route, state) => {
   const router = inject(Router);
@@ -31,4 +30,3 @@ export const ebookSelectedGuard: ResolveFn<boolean | null> = (route, state) => {
     })
   );
 };
-

@@ -1,27 +1,34 @@
-export interface Ebook {
-  title: string;
-  description: string;
-  subjects: EbookSubject[];
-  price: {
-    original: string;
-    discounted: string;
-  };
-  cover: string;
-  id: string;
-  url: string;
-  link: string;
-  works: PublishedWork[];
-  type: string;
+export interface Price {
+  original: string;
+  discounted: string;
 }
 
-export interface EbookSubject {
+export interface Subject {
+  id: number;
   category: string;
   topics: string[];
 }
 
-export interface PublishedWork {
+export interface Work {
+  id: number;
   title: string;
   url: string;
 }
 
+export interface Ebook {
+  id: string;
+  title: string;
+  description: string;
+  cover: string;
+  link: string;
+  type: string;
+  price: Price;
+  subjects: Subject[];
+  works: Work[];
+}
 
+export interface EbooksPayload {
+  statusCode: number;
+  message: string;
+  data: Ebook[]; 
+}

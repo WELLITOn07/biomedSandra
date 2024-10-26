@@ -20,9 +20,9 @@ export class EbookListComponent implements OnInit {
 
   ngOnInit(): void {
     this.ebookDataService.getAll().subscribe({
-      next: (data) => {
-        if (data) {
-          this.ebooks = data;
+      next: (ebooks: Ebook[]) => { 
+        if (ebooks) {
+          this.ebooks = ebooks;
           this.cdr.detectChanges();
         }
       },
