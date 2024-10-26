@@ -2,16 +2,16 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable, catchError, throwError, map } from 'rxjs';
 import { Ebook, EbooksPayload } from '../models/ebook.model';
+import { environment } from '../environments/environments';
 
 @Injectable({
   providedIn: 'root',
 })
 export class EbookDataService {
-  private apiUrl = 'http://localhost:3000/courses';
+  private apiUrl = environment.apiUrl;
 
   constructor(private http: HttpClient) {}
 
-  // Ajustar para retornar apenas o array de ebooks
   getAll(): Observable<Ebook[]> {
     return this.http.get<EbooksPayload>(this.apiUrl).pipe(
       map(response => response.data),
@@ -22,7 +22,6 @@ export class EbookDataService {
     );
   }
 
-  // Para obter um eBook específico
   getOne(idEbook: string): Observable<Ebook> {
     const url = `${this.apiUrl}/${idEbook}`;
     return this.http.get<{ statusCode: number, message: string, data: Ebook }>(url).pipe(

@@ -1,3 +1,4 @@
 export const environment = {
-  production: true
-}
+  production: true,
+  apiUrl: 'https://devtechw7-backend-api.fly.dev/courses'
+};
