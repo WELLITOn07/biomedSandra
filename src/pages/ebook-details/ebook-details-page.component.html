@@ -1,12 +1,16 @@
-<div class="page container-fluid show d-block" id="ebookDetailsPage" tabindex="-1" aria-labelledby="ebookDetailsPageLabel" aria-hidden="true">
+<div class="page container-fluid show d-block" id="ebookDetailsPage" tabindex="-1"
+  aria-labelledby="ebookDetailsPageLabel" aria-hidden="true">
   <div class="page-dialog container page-fullscreen">
     <div class="page-content bg-dark text-white d-flex flex-column">
       <app-header class="header" role="banner" aria-label="Header"></app-header>
 
       <div class="page-header d-flex flex-column justify-content-center align-items-center">
         <div>
-          <span *ngIf="ebook?.type === 'ebook'; else videoTitle" class="page-header__subtitle">E-book</span>
-          <ng-template #videoTitle><span class="page-header__subtitle">Curso em Vídeo</span></ng-template>
+          @if (ebook?.type === 'ebook') {
+          <span class="page-header__subtitle">E-book</span>
+          } @else {
+          <span class="page-header__subtitle">Curso em Vídeo</span>
+          }
         </div>
         <h2 class="page-title page-header__title">{{ ebook?.title }}</h2>
       </div>
@@ -26,35 +30,46 @@
         <div class="page-body__works__container d-flex flex-column">
           <div class="page-body__works d-flex align-items-center">
             <i class="bi bi-link-45deg"></i>
-            <h4 *ngIf="ebook?.type === 'ebook'; else otherContent">Trabalhos Publicados</h4>
-            <ng-template #otherContent><h4>Conteúdo Complementar</h4></ng-template>
+            @if (ebook?.type === 'ebook') {
+            <h4>Trabalhos Publicados</h4>
+            } @else {
+            <h4>Conteúdo Complementar</h4>
+            }
           </div>
-          <div *ngFor="let work of ebook?.works" class="page__works d-flex align-items-center">
+          <div *ngFor="let work of ebook?.works; let i = index" class="page__works d-flex align-items-center">
+            @if (ebook?.type === 'ebook') {
             <button type="button" class="btn btn-secondary">
-              <a href="{{ work.url }}" class="page__works__item" target="_blank" rel="noopener noreferrer">{{ work.title }}</a>
+              <a href="{{ work.url }}" class="page__works__item" target="_blank" rel="noopener noreferrer">
+                {{ work.title }}
+              </a>
             </button>
+            } @else {
+            <div class="benefit-item">
+              <i class="bi bi-check-circle" style="color: #FFD700; margin-right: 10px;"></i>
+              <span>{{ work.title }}</span>
+            </div>
+            }
           </div>
         </div>
 
-        <ng-container *ngIf="ebook?.type === 'ebook'; else courseCertification">
-          <app-offer-timer></app-offer-timer>
-          <div class="page__works__prices d-flex flex-column justify-content-center align-items-center">
-            <div class="page__works__prices__container">
-              <p class="page__works__prices__original">{{ ebook?.price?.original }}</p>
-              <p class="page__works__prices__discounted">{{ ebook?.price?.discounted }}</p>
-            </div>
+        @if (ebook?.type === 'ebook') {
+        <app-offer-timer></app-offer-timer>
+        <div class="page__works__prices d-flex flex-column justify-content-center align-items-center">
+          <div class="page__works__prices__container">
+            <p class="page__works__prices__original">{{ ebook?.price?.original }}</p>
+            <p class="page__works__prices__discounted">{{ ebook?.price?.discounted }}</p>
           </div>
-        </ng-container>
-
-        <ng-template #courseCertification>
-          <div class="d-flex flex-column align-items-center mt-5">
-            <i class="bi bi-award" style="font-size: 2rem; color: #FFD700;"></i>
-            <h4 class="mt-2">Este curso oferece certificação</h4>
-          </div>
-        </ng-template>
+        </div>
+        } @else {
+        <div class="d-flex flex-column align-items-center mt-5">
+          <i class="bi bi-award" style="font-size: 2rem; color: #FFD700;"></i>
+          <h4 class="mt-2">Este curso oferece certificação</h4>
+        </div>
+        }
 
         <div class="page-footer d-flex justify-content-center align-items-center">
-          <button type="button" class="btn btn-success page__works__prices__cta__button" (click)="toBrowseExternal(ebook?.link)">
+          <button type="button" class="btn btn-success page__works__prices__cta__button"
+            (click)="toBrowseExternal(ebook?.link)">
             APROVEITAR AGORA
           </button>
         </div>

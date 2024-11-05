@@ -43,7 +43,7 @@ export class EbookDetailsPageComponent implements OnInit {
     this.subscription?.unsubscribe();
   }
 
-  toBrowseExternal(url: string | undefined) {
+  toBrowseExternal(url: string | undefined): void {
     if (url) {
       this.redirectionService.goToExternal(url);
     }
