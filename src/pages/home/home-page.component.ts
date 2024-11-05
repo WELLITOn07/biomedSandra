@@ -25,15 +25,15 @@ export class HomeComponent {
     private redirectionService: RedirectionService,
   ) {}
 
-  toBrowse(social: string) {
+  toBrowse(social: string): void {
     this.redirectionService.goTo(social);
   }
 
-  openListEbooks() {
+  openListEbooks(): void {
     this.cdr.detectChanges();
   }
 
-  scrollTo(elementId: string) {
+  scrollTo(elementId: string): void {
     const element = document.getElementById(elementId);
     if (!element) {
       return;

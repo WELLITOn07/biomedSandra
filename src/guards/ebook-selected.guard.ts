@@ -4,7 +4,7 @@ import { EbookPurchaseRedirectService } from '../services/ebookPurchaseRedirect.
 import { of } from 'rxjs';
 import { catchError, map } from 'rxjs/operators';
 
-export const ebookSelectedGuard: ResolveFn<boolean | null> = (route, state) => {
+export const ebookSelectedGuard: ResolveFn<boolean | null> = (route, __) => {
   const router = inject(Router);
   const ebookPurchaseRedirectService = inject(EbookPurchaseRedirectService);
 
