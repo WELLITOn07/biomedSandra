@@ -18,7 +18,7 @@ import { EbookListComponent } from '../../components/ebook-list/book-list.compon
 })
 export class HomeComponent {
   apresentationText: string =
-    'Explore o mundo biomédico comigo, Sandra Kotovicz. Descubra e-books que oferecem conhecimentos práticos e experiências reais.';
+    'Explore o mundo biomédico comigo, Sandra Kotovicz. Descubra e-books e cursos que oferecem conhecimentos práticos e experiências reais.';
 
   constructor(
     private cdr: ChangeDetectorRef,
