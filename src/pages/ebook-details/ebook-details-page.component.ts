@@ -4,16 +4,17 @@ import { Router } from '@angular/router';
 import { Ebook } from '../../models/ebook.model';
 import { RedirectionService } from '../../services/redirection.service';
 import { AppOfferTimerComponent } from '../../components/app-offer-timer/offer-timer.component';
-import { NavbarComponent } from '../../components/navbar/navbar.component';
 import { TestimonysComponent } from '../../components/testimonys/testimonys.component';
 import { Subscription } from 'rxjs';
 import { EbookPurchaseRedirectService } from '../../services/ebookPurchaseRedirect.service';
 import { take } from 'rxjs/operators';
 import { HeaderComponent } from '../../components/header/header.component';
 
+import { AnalyticsService } from '../../services/analytics.service';
+
 @Component({
   selector: 'app-ebook-details-page',
-  imports: [CommonModule, AppOfferTimerComponent, NavbarComponent, TestimonysComponent, HeaderComponent],
+  imports: [CommonModule, AppOfferTimerComponent, TestimonysComponent, HeaderComponent],
   standalone: true,
   templateUrl: './ebook-details-page.component.html',
   styleUrls: ['./ebook-details-page.component.scss'],
@@ -27,7 +28,8 @@ export class EbookDetailsPageComponent implements OnInit {
     private ebookPurchaseRedirectService: EbookPurchaseRedirectService,
     public router: Router,
     private cdr: ChangeDetectorRef,
-    private redirectionService: RedirectionService
+    private redirectionService: RedirectionService,
+    private analyticsService: AnalyticsService
   ) {}
 
   ngOnInit(): void {
@@ -47,6 +49,11 @@ export class EbookDetailsPageComponent implements OnInit {
     if (url) {
       this.redirectionService.goToExternal(url);
     }
+  }
+
+  trackGoogleAnalytics(ebook: Ebook | null): void {
+    if (!ebook) return;
+    this.analyticsService.trackBuyCourse(ebook);
   }
 }
 
