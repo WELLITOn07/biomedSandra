@@ -29,7 +29,7 @@
 
         <div class="page-body__works__container d-flex flex-column">
           <div class="page-body__works d-flex align-items-center">
-            <i class="bi bi-gift"></i>
+            <i [class]="ebook?.type === 'ebook' ? 'bi bi-link-45deg' : 'bi bi-gift'"></i>
             @if (ebook?.type === 'ebook') {
             <h4>Trabalhos Publicados</h4>
             } @else {
