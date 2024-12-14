@@ -4,9 +4,13 @@ import {
   ChangeDetectionStrategy,
   ChangeDetectorRef,
   Component,
+  OnInit,
 } from '@angular/core';
 import { HeaderComponent } from '../../components/header/header.component';
 import { EbookListComponent } from '../../components/ebook-list/book-list.component';
+import { HomePresentation } from '../../models/homePresentation.model';
+import { GlobalInformationsService } from '../../services/global-informations.service';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-home-page',
@@ -16,14 +20,17 @@ import { EbookListComponent } from '../../components/ebook-list/book-list.compon
   styleUrl: './home-page.component.scss',
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class HomeComponent {
-  apresentationText: string =
-    'Explore o mundo biomédico comigo, Sandra Kotovicz. Descubra e-books e cursos que oferecem conhecimentos práticos e experiências reais.';
+export class HomeComponent implements OnInit {
+  homePresentation!: Observable<HomePresentation>;
 
   constructor(
     private cdr: ChangeDetectorRef,
     private redirectionService: RedirectionService,
+    private globalInformationsService: GlobalInformationsService
   ) {}
+  ngOnInit(): void {
+    this.homePresentation = this.globalInformationsService.getHomePresentation();
+  }
 
   toBrowse(social: string): void {
     this.redirectionService.goTo(social);
