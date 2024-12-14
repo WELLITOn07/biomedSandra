@@ -29,11 +29,11 @@
 
         <div class="page-body__works__container d-flex flex-column">
           <div class="page-body__works d-flex align-items-center">
-            <i class="bi bi-link-45deg"></i>
+            <i class="bi bi-gift"></i>
             @if (ebook?.type === 'ebook') {
             <h4>Trabalhos Publicados</h4>
             } @else {
-            <h4>Conteúdo Complementar</h4>
+            <h4>Conteúdo Bônus</h4>
             }
           </div>
           <div *ngFor="let work of ebook?.works; let i = index" class="page__works d-flex align-items-center">

@@ -12,10 +12,10 @@
               role="presentation" aria-label="Presentation Area">
               <div class="section__apresentation__text__container flex flex-row">
                 <p class="section__apresentation__text__heart" role="text">
-                  <i class="bi bi-heart-fill heart-icon"></i> Olá Biolovers
+                  <i class="bi bi-heart-fill heart-icon"></i> {{ (homePresentation | async)?.greetingText }}
                 </p>
                 <p class="section__apresentation__text" role="text">
-                  {{ apresentationText }}
+                  {{ (homePresentation | async)?.apresentationText }}
                 </p>
               </div>
               <div class="section__actions__container d-flex justify-content-between align-items-center"
@@ -34,6 +34,15 @@
                 </div>
               </div>
 
+              <div class="section__sandra-kotovicz">
+                <i class="bi bi-file-medical section__sandra-kotovicz__icon" role="img"
+                  aria-label="Medico Icon"></i>
+                <h3 class="section__sandra-kotovicz__title">{{ (homePresentation | async)?.author + " " + (homePresentation | async)?.crbm }}</h3>
+                <p class="section__sandra-kotovicz__description">
+                  {{ (homePresentation | async)?.qualifications }}
+                </p>
+              </div>
+
               <!-- Scroll indicator for mobile -->
               <div class="scroll-indicator mt-3 d-md-none">
                 <i class="bi bi-arrow-down scroll-icon" (click)="scrollTo('ebookListScroll')"></i>
@@ -48,3 +57,4 @@
     </div>
   </section>
 </div>
+
