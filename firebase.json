@@ -6,12 +6,11 @@
         "headers": [
           {
             "key": "Content-Security-Policy",
-            "value": "script-src 'self' https://www.googletagmanager.com; connect-src 'self' https://www.google-analytics.com;"
+            "value": "script-src 'self' https://www.googletagmanager.com; connect-src 'self' https://www.google-analytics.com"
           }
         ]
       }
-    ]
-  },
+    ],
     "public": "dist/biomed-sandra/browser",
     "ignore": [
       "firebase.json",
@@ -25,3 +24,4 @@
       }
     ]
   }
+}
