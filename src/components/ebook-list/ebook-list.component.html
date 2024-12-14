@@ -33,7 +33,7 @@
     <div class="col-md-4 col-sm-6 mb-4 animate__animated animate__fadeIn" *ngFor="let ebook of ebooks">
       <div class="card card-custom h-100 d-flex flex-column justify-content-between" id="ebookListScroll"
         [ngClass]="{'ebook-card': ebook.type === 'ebook', 'video-card': ebook.type === 'video'}">
-        <a [routerLink]="['/ebook-details', ebook.id]">
+        <a [routerLink]="['/ebook-details', ebook.id]" (click)="trackGoogleAnalytics(ebook)">
           <img src="assets/{{ ebook.cover }}.webp" class="card-img-top" alt="{{ ebook.title + ' image' }}">
         </a>
         <div class="card-body flex-grow-1 d-flex flex-column">
@@ -46,7 +46,7 @@
             <i class="bi bi-film" [ngStyle]="{'color': accentColor}"></i> Vídeo
             }
           </div>
-          <a [routerLink]="['/ebook-details', ebook.id]" class="btn btn-primary w-100">
+          <a [routerLink]="['/ebook-details', ebook.id]" class="btn btn-primary w-100" (click)="trackGoogleAnalytics(ebook)">
             Acessar {{ ebook.type === 'ebook' ? 'E-book' : 'o Curso' }}
           </a>
         </div>

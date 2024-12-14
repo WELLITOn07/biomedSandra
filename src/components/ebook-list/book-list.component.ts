@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 import { Ebook } from '../../models/ebook.model';
 import { EbookDataService } from '../../services/ebookData.service';
+import { AnalyticsService } from '../../services/analytics.service';
 
 @Component({
   selector: 'app-ebook-list',
@@ -17,13 +18,13 @@ export class EbookListComponent implements OnInit {
   isLoading = true;
   accentColor = '#FFD700';
 
-  constructor(private ebookDataService: EbookDataService, private cdr: ChangeDetectorRef) {}
+  constructor(private ebookDataService: EbookDataService, private cdr: ChangeDetectorRef, private analyticsService: AnalyticsService) {}
 
   ngOnInit(): void {
     this.ebookDataService.getAll().subscribe({
       next: (ebooks: Ebook[]) => {
         this.ebooks = ebooks;
-        this.isLoading = false; 
+        this.isLoading = false;
         this.cdr.detectChanges();
       },
       error: (err) => {
@@ -31,5 +32,9 @@ export class EbookListComponent implements OnInit {
         this.isLoading = false;
       }
     });
+  }
+
+  trackGoogleAnalytics(ebook: Ebook): void {
+    this.analyticsService.trackViewCourse(ebook);
   }
 }
