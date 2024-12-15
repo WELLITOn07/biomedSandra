@@ -1,42 +1,36 @@
-import { Injectable } from '@angular/core';
-import { GoogleAnalyticsService } from 'ngx-google-analytics';
+import { Injectable, Optional, Self } from '@angular/core';
+import { Analytics } from '@angular/fire/analytics';
+import { logEvent } from 'firebase/analytics';
 import { Ebook } from '../models/ebook.model';
-
 
 @Injectable({
   providedIn: 'root',
 })
 export class AnalyticsService {
-  constructor(private gaService: GoogleAnalyticsService) {}
+  constructor(
+    @Optional() @Self() private analytics: Analytics | null
+  ) {}
+
   trackBuyCourse(ebook: Ebook): void {
-    this.gaService.event(
-      'buy_course',
-      'purchase',
-      ebook.type + '_' + ebook.title,
-    );
+    if (this.analytics) {
+      logEvent(this.analytics, 'buy_course', {
+        type: ebook.type,
+        title: ebook.title,
+      });
+    } else {
+      console.warn('Analytics não está disponível para rastrear a compra.');
+    }
   }
 
   trackViewCourse(ebook: Ebook): void {
-    this.gaService.event(
-      'view_course',
-      'view',
-      ebook.type + '_' + ebook.title,
-    );
-  }
-
-  /**
-   * Rastreia eventos customizados relacionados aos ebooks ou cursos.
-   * @param action Nome do evento.
-   * @param category Categoria do evento.
-   * @param label Rótulo adicional (opcional).
-   * @param value Valor numérico associado (opcional).
-   */
-  trackCustomEvent(
-    action: string,
-    category: string,
-    label?: string,
-    value?: number
-  ): void {
-    this.gaService.event(action, category, label, value);
+    if (this.analytics) {
+      logEvent(this.analytics, 'view_course', {
+        type: ebook.type,
+        title: ebook.title,
+      });
+    } else {
+      console.warn('Analytics não está disponível para rastrear a visualização.');
+    }
   }
 }
+
