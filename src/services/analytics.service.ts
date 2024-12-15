@@ -1,34 +1,36 @@
-import { Injectable } from '@angular/core';
-import { Analytics, logEvent } from '@angular/fire/analytics';
+import { Injectable, Optional, Self } from '@angular/core';
+import { Analytics } from '@angular/fire/analytics';
+import { logEvent } from 'firebase/analytics';
 import { Ebook } from '../models/ebook.model';
 
 @Injectable({
   providedIn: 'root',
 })
 export class AnalyticsService {
-  constructor(private analytics: Analytics) {}
+  constructor(
+    @Optional() @Self() private analytics: Analytics | null
+  ) {}
 
   trackBuyCourse(ebook: Ebook): void {
-    logEvent(this.analytics, 'buy_course', {
-      category: 'purchase',
-      type: ebook.type,
-      title: ebook.title,
-    });
+    if (this.analytics) {
+      logEvent(this.analytics, 'buy_course', {
+        type: ebook.type,
+        title: ebook.title,
+      });
+    } else {
+      console.warn('Analytics não está disponível para rastrear a compra.');
+    }
   }
 
   trackViewCourse(ebook: Ebook): void {
-    logEvent(this.analytics, 'view_course', {
-      category: 'view',
-      type: ebook.type,
-      title: ebook.title,
-    });
-  }
-
-  trackCustomEvent(action: string, category: string, label?: string, value?: number): void {
-    logEvent(this.analytics, action, {
-      category,
-      label,
-      value,
-    });
+    if (this.analytics) {
+      logEvent(this.analytics, 'view_course', {
+        type: ebook.type,
+        title: ebook.title,
+      });
+    } else {
+      console.warn('Analytics não está disponível para rastrear a visualização.');
+    }
   }
 }
+

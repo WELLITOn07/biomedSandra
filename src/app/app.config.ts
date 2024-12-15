@@ -13,6 +13,12 @@ export const appConfig: ApplicationConfig = {
     provideClientHydration(),
     provideHttpClient(withFetch()),
     provideFirebaseApp(() => initializeApp(firebaseConfig)),
-    provideAnalytics(() => getAnalytics()),
+    provideAnalytics(() => {
+      const analyticsInstance = getAnalytics();
+      if (!analyticsInstance) {
+        throw new Error('Failed to initialize Analytics.');
+      }
+      return analyticsInstance;
+    }),
   ],
 };
