@@ -36,6 +36,16 @@
     integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
     crossorigin="anonymous"></script>
 
+  <!-- Script para aplicar o tema escolhido pelo usuário -->
+  <script>
+    (function setTheme() {
+      const themeKey = 'user-theme';
+      const defaultTheme = 'dark-theme';
+      const storedTheme = localStorage.getItem(themeKey) || defaultTheme;
+      document.body.classList.add(storedTheme);
+    })();
+  </script>
+
   <!-- Mensagem caso JavaScript esteja desabilitado -->
   <noscript>
     <style>
