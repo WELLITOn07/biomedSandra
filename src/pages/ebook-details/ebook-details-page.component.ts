@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { ChangeDetectionStrategy, ChangeDetectorRef, Component, inject, OnInit, Optional, Self } from '@angular/core';
+import { ChangeDetectionStrategy, ChangeDetectorRef, Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { Ebook } from '../../models/ebook.model';
 import { RedirectionService } from '../../services/redirection.service';
@@ -9,7 +9,6 @@ import { Subscription } from 'rxjs';
 import { EbookPurchaseRedirectService } from '../../services/ebookPurchaseRedirect.service';
 import { take } from 'rxjs/operators';
 import { HeaderComponent } from '../../components/header/header.component';
-import { Analytics, logEvent } from '@angular/fire/analytics';
 
 @Component({
   selector: 'app-ebook-details-page',
@@ -27,8 +26,7 @@ export class EbookDetailsPageComponent implements OnInit {
     private ebookPurchaseRedirectService: EbookPurchaseRedirectService,
     public router: Router,
     private cdr: ChangeDetectorRef,
-    private redirectionService: RedirectionService,
-     @Self() @Optional() private analytics: Analytics
+    private redirectionService: RedirectionService
   ) {}
 
   ngOnInit(): void {
@@ -51,11 +49,7 @@ export class EbookDetailsPageComponent implements OnInit {
   }
 
   trackBuyEbook(ebook: Ebook | null): void {
-    if (!this.analytics) {
-      console.warn('O analytics nao esta disponivel, portanto nao foi possivel trackear o clique no bot o "Comprar" do ebook ' + ebook?.title);
-      return;
-    }
-    logEvent(this.analytics, 'button_click', { label: 'ebook_buy ' + '_' + ebook?.title });
+    console.log('Comprando o eBook:', ebook?.title);
   }
 }
 
