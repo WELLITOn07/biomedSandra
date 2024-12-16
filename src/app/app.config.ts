@@ -1,24 +1,20 @@
 import { ApplicationConfig } from '@angular/core';
 import { provideRouter } from '@angular/router';
+
+import { provideFirebaseApp, initializeApp } from '@angular/fire/app';
+import { provideFirestore, getFirestore } from '@angular/fire/firestore';
+import { provideAnalytics, getAnalytics } from '@angular/fire/analytics';
+
 import { routes } from './app.routes';
-import { provideClientHydration } from '@angular/platform-browser';
-import { provideHttpClient, withFetch } from '@angular/common/http';
-import { initializeApp, provideFirebaseApp } from '@angular/fire/app';
-import { getAnalytics, provideAnalytics } from '@angular/fire/analytics';
-import { firebaseConfig } from '../../firebase.config';
+import { provideAnimations } from '@angular/platform-browser/animations';
+import { environment } from '../environments/environment.production';
 
 export const appConfig: ApplicationConfig = {
   providers: [
     provideRouter(routes),
-    provideClientHydration(),
-    provideHttpClient(withFetch()),
-    provideFirebaseApp(() => initializeApp(firebaseConfig)),
-    provideAnalytics(() => {
-      const analyticsInstance = getAnalytics();
-      if (!analyticsInstance) {
-        throw new Error('Failed to initialize Analytics.');
-      }
-      return analyticsInstance;
-    }),
-  ],
+    provideAnimations(),
+    provideFirebaseApp(() => initializeApp(environment.firebase)),
+    provideFirestore(() => getFirestore()),
+    provideAnalytics(() => getAnalytics()),
+  ]
 };
