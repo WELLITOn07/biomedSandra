@@ -36,8 +36,8 @@ export class EbookListComponent implements OnInit {
   trackViewEbook(ebook: Ebook): void {
     this.analyticsEventService.upsertEvent({
       application: 'biomedSandra',
-      eventType: 'VIEW',
-      eventName: `view_${ebook.title}`,
+      eventType: 'CLICK',
+      eventName: `view: ${ebook.title}`,
       quantity: 1,
     }).subscribe({
       next: () => console.log(`Evento de visualização registrado para ${ebook.title}`),
