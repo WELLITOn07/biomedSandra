@@ -9,6 +9,7 @@ import { Subscription } from 'rxjs';
 import { EbookPurchaseRedirectService } from '../../services/ebookPurchaseRedirect.service';
 import { take } from 'rxjs/operators';
 import { HeaderComponent } from '../../components/header/header.component';
+import { AnalyticsEventService } from '../../services/analytics-event.service';
 
 @Component({
   selector: 'app-ebook-details-page',
@@ -26,7 +27,8 @@ export class EbookDetailsPageComponent implements OnInit {
     private ebookPurchaseRedirectService: EbookPurchaseRedirectService,
     public router: Router,
     private cdr: ChangeDetectorRef,
-    private redirectionService: RedirectionService
+    private redirectionService: RedirectionService,
+    private analyticsEventService: AnalyticsEventService
   ) {}
 
   ngOnInit(): void {
@@ -49,7 +51,17 @@ export class EbookDetailsPageComponent implements OnInit {
   }
 
   trackBuyEbook(ebook: Ebook | null): void {
-    console.log('Comprando o eBook:', ebook?.title);
+    if (ebook) {
+      this.analyticsEventService.upsertEvent({
+        application: 'biomedSandra',
+        eventType: 'CLICK',
+        eventName: `buy_${ebook.title}`,
+        quantity: 1,
+      }).subscribe({
+        next: () => console.log(`Evento de compra registrado para ${ebook.title}`),
+        error: (err) => console.error('Erro ao registrar evento:', err),
+      });
+    }
   }
 }
 

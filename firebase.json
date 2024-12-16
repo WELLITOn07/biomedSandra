@@ -1,16 +1,5 @@
 {
   "hosting": {
-    "headers": [
-      {
-        "source": "**",
-        "headers": [
-          {
-            "key": "Content-Security-Policy",
-            "value": "default-src 'self'; script-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; connect-src 'self' https://devtechw7-backend-api.fly.dev; img-src 'self' data:; frame-src 'self';"
-          }
-        ]
-      }
-    ],
     "public": "dist/biomed-sandra/browser",
     "ignore": [
       "firebase.json",
