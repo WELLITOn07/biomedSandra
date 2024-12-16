@@ -8,11 +8,11 @@ import { environment } from '../environments/environment';
   providedIn: 'root',
 })
 export class EbookDataService {
-  private apiUrl = environment.apiUrl;
+  private apiUrl = `${environment.apiUrl}/courses`;
   private ebooksCache$: Observable<Ebook[]> | null = null;
 
   constructor(private http: HttpClient) { }
-  
+
   getAll(): Observable<Ebook[]> {
     if (!this.ebooksCache$) {
       this.ebooksCache$ = this.http.get<EbooksPayload>(this.apiUrl).pipe(
