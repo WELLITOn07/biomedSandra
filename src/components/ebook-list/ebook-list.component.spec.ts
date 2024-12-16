@@ -5,11 +5,13 @@ import { RouterTestingModule } from '@angular/router/testing';
 import { By } from '@angular/platform-browser';
 import { EbookListComponent } from './book-list.component';
 import { Ebook } from '../../models/ebook.model';
+import { AnalyticsEventService } from '../../services/analytics-event.service';
 
 describe('EbookListComponent', () => {
   let component: EbookListComponent;
   let fixture: ComponentFixture<EbookListComponent>;
   let ebookDataServiceMock: any;
+  let analyticsEventServiceMock: any;
 
   const mockEbooks: Ebook[] = [
     {
@@ -71,9 +73,16 @@ describe('EbookListComponent', () => {
       getAll: jest.fn().mockReturnValue(of(mockEbooks)),
     };
 
+    analyticsEventServiceMock = {
+      upsertEvent: jest.fn().mockReturnValue(of(null)),
+    };
+
     await TestBed.configureTestingModule({
       imports: [EbookListComponent, RouterTestingModule],
-      providers: [{ provide: EbookDataService, useValue: ebookDataServiceMock }],
+      providers: [
+        { provide: EbookDataService, useValue: ebookDataServiceMock },
+        { provide: AnalyticsEventService, useValue: analyticsEventServiceMock },
+      ],
     }).compileComponents();
 
     fixture = TestBed.createComponent(EbookListComponent);
@@ -106,3 +115,4 @@ describe('EbookListComponent', () => {
     expect(component.isLoading).toBe(false);
   });
 });
+
