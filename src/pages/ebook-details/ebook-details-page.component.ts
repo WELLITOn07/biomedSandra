@@ -55,7 +55,7 @@ export class EbookDetailsPageComponent implements OnInit {
       this.analyticsEventService.upsertEvent({
         application: 'biomedSandra',
         eventType: 'CLICK',
-        eventName: `buy_${ebook.title}`,
+        eventName: `buy: ${ebook.title}`,
         quantity: 1,
       }).subscribe({
         next: () => console.log(`Evento de compra registrado para ${ebook.title}`),
