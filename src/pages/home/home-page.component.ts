@@ -11,10 +11,11 @@ import { EbookListComponent } from '../../components/ebook-list/book-list.compon
 import { HomePresentation } from '../../models/homePresentation.model';
 import { GlobalInformationsService } from '../../services/global-informations.service';
 import { Observable } from 'rxjs';
+import { SubscriptionModalComponent } from '../../components/subscription-modal/subscription-modal';
 
 @Component({
   selector: 'app-home-page',
-  imports: [CommonModule, HeaderComponent, EbookListComponent],
+  imports: [CommonModule, HeaderComponent, EbookListComponent, SubscriptionModalComponent],
   standalone: true,
   templateUrl: './home-page.component.html',
   styleUrl: './home-page.component.scss',
