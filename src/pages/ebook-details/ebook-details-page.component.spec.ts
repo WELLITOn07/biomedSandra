@@ -11,6 +11,7 @@ import { TestimonysComponent } from '../../components/testimonys/testimonys.comp
 import { HeaderComponent } from '../../components/header/header.component';
 import { CommonModule } from '@angular/common';
 import { HttpClientModule } from '@angular/common/http';
+import { provideLottieOptions } from 'ngx-lottie';
 
 describe('EbookDetailsPageComponent', () => {
   let component: EbookDetailsPageComponent;
@@ -62,7 +63,7 @@ describe('EbookDetailsPageComponent', () => {
     await TestBed.configureTestingModule({
       imports: [
         CommonModule,
-        HttpClientModule, 
+        HttpClientModule,
         AppOfferTimerComponent,
         NavbarComponent,
         TestimonysComponent,
@@ -70,6 +71,9 @@ describe('EbookDetailsPageComponent', () => {
         EbookDetailsPageComponent,
       ],
       providers: [
+        provideLottieOptions({
+          player: () => import('lottie-web'),
+        }),
         { provide: EbookPurchaseRedirectService, useValue: ebookPurchaseRedirectServiceMock },
         { provide: RedirectionService, useValue: redirectionServiceMock },
         { provide: Router, useValue: routerMock },
