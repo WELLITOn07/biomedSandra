@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component, Input, OnInit, OnDestroy } from '@angular/core';
+import { Component, Input, OnDestroy } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { catchError, finalize, switchMap, timeout, of, Subject } from 'rxjs';
 import { takeUntil } from 'rxjs/operators';
@@ -15,7 +15,6 @@ import { AnalyticsEventService } from '../../services/analytics-event.service';
       tabindex="-1"
       aria-labelledby="modalLabel"
       aria-hidden="true"
-      *ngIf="!userHasSubscribed"
     >
       <div class="modal-dialog modal-dialog-centered">
         <div class="modal-content">
@@ -78,12 +77,11 @@ import { AnalyticsEventService } from '../../services/analytics-event.service';
     `,
   ],
 })
-export class SubscriptionModalComponent implements OnInit, OnDestroy {
+export class SubscriptionModalComponent implements OnDestroy {
   @Input() modalTitle = 'Inscreva-se para receber atualizações!';
   @Input() modalMessage = 'Fique por dentro das últimas atualizações e promoções.';
 
   email: string = '';
-  userHasSubscribed: boolean = false;
   isLoading: boolean = false;
   private destroy$ = new Subject<void>();
 
@@ -91,10 +89,6 @@ export class SubscriptionModalComponent implements OnInit, OnDestroy {
     private emailSubscriptionService: EmailSubscriptionService,
     private analyticsEventService: AnalyticsEventService
   ) {}
-
-  ngOnInit(): void {
-    this.userHasSubscribed = this.emailSubscriptionService.hasUserSubscribed();
-  }
 
   ngOnDestroy(): void {
     this.destroy$.next();
@@ -106,6 +100,7 @@ export class SubscriptionModalComponent implements OnInit, OnDestroy {
     if (modalElement) {
       modalElement.classList.remove('show');
       modalElement.style.display = 'none';
+      modalElement.remove();
     }
   }
 
@@ -145,7 +140,6 @@ export class SubscriptionModalComponent implements OnInit, OnDestroy {
         finalize(() => {
           clearTimeout(closeModalTimer);
           this.isLoading = false;
-          this.userHasSubscribed = true;
           this.emailSubscriptionService.markUserAsSubscribed();
           this.closeModal();
         }),

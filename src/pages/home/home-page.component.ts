@@ -5,32 +5,56 @@ import {
   ChangeDetectorRef,
   Component,
   OnInit,
+  OnDestroy,
 } from '@angular/core';
 import { HeaderComponent } from '../../components/header/header.component';
 import { EbookListComponent } from '../../components/ebook-list/book-list.component';
 import { HomePresentation } from '../../models/homePresentation.model';
 import { GlobalInformationsService } from '../../services/global-informations.service';
-import { Observable } from 'rxjs';
+import { Observable, Subscription } from 'rxjs';
 import { SubscriptionModalComponent } from '../../components/subscription-modal/subscription-modal';
+import { EmailSubscriptionService } from '../../services/email-subscription.service';
+
 
 @Component({
   selector: 'app-home-page',
-  imports: [CommonModule, HeaderComponent, EbookListComponent, SubscriptionModalComponent],
+  imports: [
+    CommonModule,
+    HeaderComponent,
+    EbookListComponent,
+    SubscriptionModalComponent,
+  ],
   standalone: true,
   templateUrl: './home-page.component.html',
-  styleUrl: './home-page.component.scss',
+  styleUrls: ['./home-page.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class HomeComponent implements OnInit {
+export class HomeComponent implements OnInit, OnDestroy {
   homePresentation!: Observable<HomePresentation>;
+  userHasSubscribed$!: Observable<boolean>;
+  hasSubscribed: boolean = false;
+  private subscription = new Subscription();
 
   constructor(
     private cdr: ChangeDetectorRef,
     private redirectionService: RedirectionService,
-    private globalInformationsService: GlobalInformationsService
+    private globalInformationsService: GlobalInformationsService,
+    private emailSubscriptionService: EmailSubscriptionService
   ) {}
+
   ngOnInit(): void {
     this.homePresentation = this.globalInformationsService.getHomePresentation();
+    this.userHasSubscribed$ = this.emailSubscriptionService.hasUserSubscribed();
+    this.subscription.add(
+      this.userHasSubscribed$.subscribe((hasSubscribed) => {
+        this.hasSubscribed = hasSubscribed;
+        this.cdr.detectChanges();
+      })
+    );
+  }
+
+  ngOnDestroy(): void {
+    this.subscription.unsubscribe();
   }
 
   toBrowse(social: string): void {
@@ -46,8 +70,8 @@ export class HomeComponent implements OnInit {
     if (!element) {
       return;
     }
-
     element.scrollIntoView({ behavior: 'smooth' });
   }
 }
+
 
