@@ -95,7 +95,11 @@ export class SubscriptionModalComponent implements OnDestroy {
     this.destroy$.complete();
   }
 
+
   closeModal(): void {
+    this.emailSubscriptionService.markModalAsShown();
+    this.isLoading = false;
+    
     const modalElement = document.getElementById('subscriptionModal');
     if (modalElement) {
       modalElement.classList.remove('show');

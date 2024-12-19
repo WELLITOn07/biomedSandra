@@ -34,6 +34,7 @@ export class HomeComponent implements OnInit, OnDestroy {
   userHasSubscribed$!: Observable<boolean>;
   hasSubscribed: boolean = false;
   private subscription = new Subscription();
+  showModal: boolean = false;
 
   constructor(
     private cdr: ChangeDetectorRef,
@@ -42,9 +43,17 @@ export class HomeComponent implements OnInit, OnDestroy {
     private emailSubscriptionService: EmailSubscriptionService
   ) {}
 
-  ngOnInit(): void {
+ ngOnInit(): void {
     this.homePresentation = this.globalInformationsService.getHomePresentation();
     this.userHasSubscribed$ = this.emailSubscriptionService.hasUserSubscribed();
+
+    this.subscription.add(
+      this.emailSubscriptionService.hasModalBeenShown().subscribe((modalShown) => {
+        this.showModal = !modalShown && !this.hasSubscribed;
+        this.cdr.detectChanges();
+      })
+    );
+
     this.subscription.add(
       this.userHasSubscribed$.subscribe((hasSubscribed) => {
         this.hasSubscribed = hasSubscribed;
