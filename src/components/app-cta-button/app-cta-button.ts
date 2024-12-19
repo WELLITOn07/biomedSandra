@@ -15,10 +15,10 @@ import { LottieComponent, AnimationOptions } from 'ngx-lottie';
   styles: [`
     .cta-button {
       position: relative;
-      background-color: #28a745; /* Fundo verde */
-      color: #fff; /* Texto branco */
+      background-color: #28a745;
+      color: #fff;
       border: none;
-      border-radius: 8px; /* Arredondamento */
+      border-radius: 8px;
       cursor: pointer;
       display: inline-flex;
       align-items: center;
