@@ -13,12 +13,15 @@ import { LottieComponent, AnimationOptions } from 'ngx-lottie';
   standalone: true,
   imports: [LottieComponent],
   styles: [`
+    :host {
+      animation: heartbeat 1.5s ease-in-out infinite;
+    }
+
     .cta-button {
       position: relative;
-      background-color: #28a745; /* Fundo verde */
-      color: #fff; /* Texto branco */
+      color: #fff;
       border: none;
-      border-radius: 8px; /* Arredondamento */
+      border-radius: 8px;
       cursor: pointer;
       display: inline-flex;
       align-items: center;
@@ -26,6 +29,7 @@ import { LottieComponent, AnimationOptions } from 'ngx-lottie';
       overflow: hidden;
       padding: 15px 30px;
       font-size: 1.2rem;
+      background-color: transparent;
       font-weight: bold;
       text-transform: uppercase;
       transition: background-color 0.3s ease;
@@ -48,6 +52,19 @@ import { LottieComponent, AnimationOptions } from 'ngx-lottie';
       position: relative;
       z-index: 1;
     }
+
+    @keyframes heartbeat {
+
+    0%,
+    100% {
+      transform: scale(1);
+    }
+
+    30%,
+    70% {
+      transform: scale(1.05);
+    }
+  }
   `]
 })
 export class CtaButtonComponent {
