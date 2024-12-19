@@ -45,20 +45,20 @@ export class EbookDetailsPageComponent implements OnInit {
       this.cdr.detectChanges();
     });
 
-  this.userHasSubscribed$ = this.emailSubscriptionService.hasUserSubscribed();
-  this.subscription.add(
-    this.userHasSubscribed$.subscribe((hasSubscribed) => {
-      this.hasSubscribed = hasSubscribed;
-      this.cdr.detectChanges();
-    })
-  );
+    this.userHasSubscribed$ = this.emailSubscriptionService.hasUserSubscribed();
+    this.subscription.add(
+      this.userHasSubscribed$.subscribe((hasSubscribed) => {
+        this.hasSubscribed = hasSubscribed;
+        this.cdr.detectChanges();
+      })
+    );
 
-  this.subscription.add(
-    this.emailSubscriptionService.hasModalBeenShown().subscribe((modalShown) => {
-      this.showModal = !modalShown && !this.hasSubscribed;
-      this.cdr.detectChanges();
-    })
-  );
+    this.subscription.add(
+      this.emailSubscriptionService.hasModalBeenShown().subscribe((modalShown) => {
+        this.showModal = !modalShown && !this.hasSubscribed;
+        this.cdr.detectChanges();
+      })
+    );
 }
 
   ngOnDestroy(): void {
