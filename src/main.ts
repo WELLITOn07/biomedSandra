@@ -6,6 +6,8 @@ import { routes } from './app/app.routes';
 import { importProvidersFrom } from '@angular/core';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HttpClientModule } from '@angular/common/http';
+import { provideLottieOptions } from 'ngx-lottie';
+import player from 'lottie-web';
 
 bootstrapApplication(AppComponent, {
   providers: [
@@ -16,5 +18,8 @@ bootstrapApplication(AppComponent, {
       BrowserAnimationsModule,
       HttpClientModule
     ),
+    provideLottieOptions({
+      player: () => player,
+    }),
   ],
 });
