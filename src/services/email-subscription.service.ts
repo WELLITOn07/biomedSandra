@@ -10,10 +10,12 @@ import { environment } from '../environments/environment';
 export class EmailSubscriptionService {
   private apiUrl = `${environment.apiUrl}/subscriptions`;
   private welcomeEmailUrl = `${environment.apiUrl}/advertisements/welcome`;
+
   private userHasSubscribedSubject = new BehaviorSubject<boolean>(false);
 
-  constructor(private http: HttpClient) {}
+  private modalShownOnceSubject = new BehaviorSubject<boolean>(false);
 
+  constructor(private http: HttpClient) {}
   hasUserSubscribed(): Observable<boolean> {
     const userHasSubscribed = localStorage.getItem('userHasSubscribed') === 'true';
     this.userHasSubscribedSubject.next(userHasSubscribed);
@@ -23,6 +25,14 @@ export class EmailSubscriptionService {
   markUserAsSubscribed(): void {
     localStorage.setItem('userHasSubscribed', 'true');
     this.userHasSubscribedSubject.next(true);
+  }
+
+  hasModalBeenShown(): Observable<boolean> {
+    return this.modalShownOnceSubject.asObservable();
+  }
+
+  markModalAsShown(): void {
+    this.modalShownOnceSubject.next(true);
   }
 
   sendWelcomeEmail(email: string): Observable<void> {
@@ -38,12 +48,12 @@ export class EmailSubscriptionService {
   }
 
   subscribeEmail(payload: { email: string; applicationIds: number[] }): Observable<any> {
-  return this.http.post(`${this.apiUrl}`, payload).pipe(
-    catchError((error) => {
-      console.error('Failed to subscribe email:', error);
-      return throwError(() => new Error('Failed to subscribe email'));
-    })
-  );
-}
+    return this.http.post(`${this.apiUrl}`, payload).pipe(
+      catchError((error) => {
+        console.error('Failed to subscribe email:', error);
+        return throwError(() => new Error('Failed to subscribe email'));
+      })
+    );
+  }
 }
 
