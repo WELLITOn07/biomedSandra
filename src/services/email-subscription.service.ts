@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { Observable, throwError } from 'rxjs';
+import { BehaviorSubject, Observable, throwError } from 'rxjs';
 import { catchError, map } from 'rxjs/operators';
 import { environment } from '../environments/environment';
 
@@ -10,15 +10,19 @@ import { environment } from '../environments/environment';
 export class EmailSubscriptionService {
   private apiUrl = `${environment.apiUrl}/subscriptions`;
   private welcomeEmailUrl = `${environment.apiUrl}/advertisements/welcome`;
+  private userHasSubscribedSubject = new BehaviorSubject<boolean>(false);
 
   constructor(private http: HttpClient) {}
 
-  hasUserSubscribed(): boolean {
-    return localStorage.getItem('userHasSubscribed') === 'true';
+  hasUserSubscribed(): Observable<boolean> {
+    const userHasSubscribed = localStorage.getItem('userHasSubscribed') === 'true';
+    this.userHasSubscribedSubject.next(userHasSubscribed);
+    return this.userHasSubscribedSubject.asObservable();
   }
 
   markUserAsSubscribed(): void {
     localStorage.setItem('userHasSubscribed', 'true');
+    this.userHasSubscribedSubject.next(true);
   }
 
   sendWelcomeEmail(email: string): Observable<void> {
