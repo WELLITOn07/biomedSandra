@@ -41,22 +41,23 @@ export class HomeComponent implements OnInit, OnDestroy {
     private redirectionService: RedirectionService,
     private globalInformationsService: GlobalInformationsService,
     private emailSubscriptionService: EmailSubscriptionService
-  ) {}
+  ) { }
 
- ngOnInit(): void {
+  ngOnInit(): void {
     this.homePresentation = this.globalInformationsService.getHomePresentation();
     this.userHasSubscribed$ = this.emailSubscriptionService.hasUserSubscribed();
 
+    this.userHasSubscribed$ = this.emailSubscriptionService.hasUserSubscribed();
     this.subscription.add(
-      this.emailSubscriptionService.hasModalBeenShown().subscribe((modalShown) => {
-        this.showModal = !modalShown && !this.hasSubscribed;
+      this.userHasSubscribed$.subscribe((hasSubscribed) => {
+        this.hasSubscribed = hasSubscribed;
         this.cdr.detectChanges();
       })
     );
 
     this.subscription.add(
-      this.userHasSubscribed$.subscribe((hasSubscribed) => {
-        this.hasSubscribed = hasSubscribed;
+      this.emailSubscriptionService.hasModalBeenShown().subscribe((modalShown) => {
+        this.showModal = !modalShown && !this.hasSubscribed;
         this.cdr.detectChanges();
       })
     );
