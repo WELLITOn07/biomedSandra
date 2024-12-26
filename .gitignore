@@ -38,7 +38,7 @@ testem.log
 /typings
 
 # Environments
-/environments
+src/environments
 
 # System files
 .DS_Store
