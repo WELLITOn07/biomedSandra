@@ -1,10 +1,12 @@
 import { CommonModule } from '@angular/common';
-import { Component, Input, OnDestroy } from '@angular/core';
+import { Component, CUSTOM_ELEMENTS_SCHEMA, Input, OnDestroy } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { catchError, finalize, switchMap, timeout, of, Subject } from 'rxjs';
 import { takeUntil } from 'rxjs/operators';
 import { EmailSubscriptionService } from '../../services/email-subscription.service';
 import { AnalyticsEventService } from '../../services/analytics-event.service';
+import { LottieComponent, AnimationOptions } from 'ngx-lottie';
+import { AnimationItem } from 'lottie-web';
 
 @Component({
   selector: 'app-subscription-modal',
@@ -18,14 +20,15 @@ import { AnalyticsEventService } from '../../services/analytics-event.service';
     >
       <div class="modal-dialog modal-dialog-centered">
         <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title" id="modalLabel">{{ modalTitle }}</h5>
-            <button
+           <button
               type="button"
               class="btn-close"
               aria-label="Close"
               (click)="closeModal()"
             ></button>
+          <ng-lottie [options]="options" (animationCreated)="animationCreated($event)"></ng-lottie>
+          <div class="modal-header">
+            <h5 class="modal-title" id="modalLabel">{{ modalTitle }}</h5>
           </div>
           <div class="modal-body">
             <p>{{ modalMessage }}</p>
@@ -57,7 +60,8 @@ import { AnalyticsEventService } from '../../services/analytics-event.service';
     </div>
   `,
   standalone: true,
-  imports: [CommonModule, FormsModule],
+  imports: [CommonModule, FormsModule, LottieComponent],
+  schemas: [CUSTOM_ELEMENTS_SCHEMA],
   styles: [
     `
       .modal.fade.show {
@@ -74,16 +78,32 @@ import { AnalyticsEventService } from '../../services/analytics-event.service';
         max-width: 500px;
         width: 90%;
       }
+
+      .btn-close {
+        margin: 10px;
+      }
     `,
   ],
 })
 export class SubscriptionModalComponent implements OnDestroy {
-  @Input() modalTitle = 'Inscreva-se para receber atualizações!';
-  @Input() modalMessage = 'Fique por dentro das últimas atualizações e promoções.';
+  modalTitle: string = 'Seja um Biolover! Fique por dentro!';
+  modalMessage: string =
+    'Assine para receber conteúdos exclusivos sobre Biomedicina.';
+  modalButtonText: string = 'Assinar';
 
   email: string = '';
   isLoading: boolean = false;
   private destroy$ = new Subject<void>();
+
+  options: AnimationOptions = {
+    path: '/assets/modal-background-animation.json',
+    loop: true,
+    autoplay: true,
+  };
+
+  animationCreated(animationItem: AnimationItem): void {
+    console.log('Animation created:', animationItem);
+  }
 
   constructor(
     private emailSubscriptionService: EmailSubscriptionService,
@@ -95,11 +115,10 @@ export class SubscriptionModalComponent implements OnDestroy {
     this.destroy$.complete();
   }
 
-
   closeModal(): void {
     this.emailSubscriptionService.markModalAsShown();
     this.isLoading = false;
-    
+
     const modalElement = document.getElementById('subscriptionModal');
     if (modalElement) {
       modalElement.classList.remove('show');
@@ -157,4 +176,3 @@ export class SubscriptionModalComponent implements OnDestroy {
       .subscribe();
   }
 }
-
