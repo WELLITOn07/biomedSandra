@@ -56,7 +56,11 @@
           </div>
         </div>
 
-        @if (ebook?.type === 'ebook') {
+        <div *ngIf="ebook?.type === 'video'" class="d-flex flex-column align-items-center mt-5">
+          <i class="bi bi-award" style="font-size: 2rem; color: #FFD700;"></i>
+          <h4 class="mt-2">Este curso oferece certificação</h4>
+        </div>
+
         <app-offer-timer></app-offer-timer>
         <div class="page__works__prices d-flex flex-column justify-content-center align-items-center">
           <div class="page__works__prices__container">
@@ -64,12 +68,6 @@
             <p class="page__works__prices__discounted">{{ ebook?.price?.discounted }}</p>
           </div>
         </div>
-        } @else {
-        <div class="d-flex flex-column align-items-center mt-5">
-          <i class="bi bi-award" style="font-size: 2rem; color: #FFD700;"></i>
-          <h4 class="mt-2">Este curso oferece certificação</h4>
-        </div>
-        }
 
         <div class="page-footer d-flex justify-content-center align-items-center">
           <app-cta-button (click)="toBrowseExternal(ebook?.link)" (click)="trackBuyEbook(ebook)"></app-cta-button>
