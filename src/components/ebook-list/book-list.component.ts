@@ -5,11 +5,12 @@ import { RouterModule } from '@angular/router';
 import { Ebook } from '../../models/ebook.model';
 import { EbookDataService } from '../../services/ebookData.service';
 import { map } from 'rxjs';
+import { SupportFooterComponent } from '../support-footer/support-footer.component';
 
 @Component({
   selector: 'app-ebook-list',
   standalone: true,
-  imports: [CommonModule, RouterModule],
+  imports: [CommonModule, RouterModule, SupportFooterComponent],
   templateUrl: './ebook-list.component.html',
   styleUrls: ['./book-list.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,

@@ -13,10 +13,11 @@ import { AnalyticsEventService } from '../../services/analytics-event.service';
 import { SubscriptionModalComponent } from '../../components/subscription-modal/subscription-modal';
 import { EmailSubscriptionService } from '../../services/email-subscription.service';
 import { CtaButtonComponent } from '../../components/app-cta-button/app-cta-button';
+import { SupportFooterComponent } from '../../components/support-footer/support-footer.component';
 
 @Component({
   selector: 'app-ebook-details-page',
-  imports: [CommonModule, AppOfferTimerComponent, TestimonysComponent, HeaderComponent, SubscriptionModalComponent,CtaButtonComponent],
+  imports: [CommonModule, AppOfferTimerComponent, TestimonysComponent, HeaderComponent, SubscriptionModalComponent,CtaButtonComponent, SupportFooterComponent],
   standalone: true,
   templateUrl: './ebook-details-page.component.html',
   styleUrls: ['./ebook-details-page.component.scss'],
