@@ -59,6 +59,18 @@
         <div *ngIf="ebook?.type === 'video'" class="d-flex flex-column align-items-center mt-5">
           <i class="bi bi-award" style="font-size: 2rem; color: #FFD700;"></i>
           <h4 class="mt-2">Este curso oferece certificação</h4>
+          <div class="text-center mb-4">
+            <h2 class="display-6 fw-bold mb-4">Resumo do curso</h2>
+            <div class="d-flex justify-content-center mb-4">
+              <i class="bi bi-play-btn" style="font-size: 4rem;"></i>
+            </div>
+          </div>
+          <div *ngIf="ebook?.id === 'hemograma_curso'" class="ratio ratio-16x9 mb-4">
+            <video class="img-fluid" controls>
+              <source src="assets/curso_hemograma.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+          </div>
         </div>
 
         <app-offer-timer></app-offer-timer>
@@ -75,6 +87,7 @@
 
         <app-testimonys></app-testimonys>
       </div>
+      <app-support-footer></app-support-footer>
     </div>
   </div>
 </div>
