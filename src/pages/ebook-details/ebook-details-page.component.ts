@@ -14,6 +14,7 @@ import { SubscriptionModalComponent } from '../../components/subscription-modal/
 import { EmailSubscriptionService } from '../../services/email-subscription.service';
 import { CtaButtonComponent } from '../../components/app-cta-button/app-cta-button';
 import { SupportFooterComponent } from '../../components/support-footer/support-footer.component';
+import { TestimonyData } from '../../models/testimony.model';
 
 @Component({
   selector: 'app-ebook-details-page',
@@ -29,6 +30,7 @@ export class EbookDetailsPageComponent implements OnInit {
   userHasSubscribed$!: Observable<boolean>;
   hasSubscribed: boolean = false;
   showModal: boolean = false;
+  selectedTestimonySubject: keyof TestimonyData | null = null;
 
   constructor(
     private ebookPurchaseRedirectService: EbookPurchaseRedirectService,
@@ -43,7 +45,13 @@ export class EbookDetailsPageComponent implements OnInit {
   this.subscription = this.ebookPurchaseRedirectService.ebookSelected$
     .pipe(take(1))
     .subscribe((ebook) => {
+      if (!ebook) {
+        this.router.navigate(['/ebook-not-found']);
+        return;
+      }
+
       this.ebook = ebook;
+      this.selectedTestimonySubject = this.getTestimonyKeyFromEbookId(ebook.id);
       this.cdr.detectChanges();
     });
 
@@ -70,6 +78,26 @@ export class EbookDetailsPageComponent implements OnInit {
   toBrowseExternal(url: string | undefined): void {
     if (url) {
       this.redirectionService.goToExternal(url);
+    }
+  }
+
+  private getTestimonyKeyFromEbookId(id: string): keyof TestimonyData | null {
+    switch (id) {
+      case 'hemograma_curso':
+        return 'hemograma_curso';
+      case 'biomedic':
+        return 'biomedic';
+      case 'bioquimica':
+        return 'bioquimica';
+      case 'urinalise':
+        return 'urinalise';
+      case 'hematologia':
+        return 'hematologia';
+      case 'liquidoCefalorraquidiano':
+        return 'liquidoCefalorraquidiano';
+      default:
+        console.error(`ebook.id "${id}" does not correspond to any key in TestimonyData.`);
+        return null;
     }
   }
 

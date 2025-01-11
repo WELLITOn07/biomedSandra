@@ -85,7 +85,7 @@
           <app-cta-button (click)="toBrowseExternal(ebook?.link)" (click)="trackBuyEbook(ebook)"></app-cta-button>
         </div>
 
-        <app-testimonys></app-testimonys>
+        <app-testimonys [subject]="selectedTestimonySubject"></app-testimonys>
       </div>
       <app-support-footer></app-support-footer>
     </div>
