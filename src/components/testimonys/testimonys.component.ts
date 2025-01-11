@@ -2,6 +2,7 @@ import {
   ChangeDetectionStrategy,
   ChangeDetectorRef,
   Component,
+  Input,
   OnDestroy,
   OnInit,
 } from '@angular/core';
@@ -9,6 +10,7 @@ import { Testimony } from '../../models/testimony.model';
 import { TestimonyService } from '../../services/testimony.service';
 import { Observable, Subject, takeUntil } from 'rxjs';
 import { CommonModule } from '@angular/common';
+import { TestimonyData } from '../../models/testimony.model';
 
 @Component({
   selector: 'app-testimonys',
@@ -19,8 +21,10 @@ import { CommonModule } from '@angular/common';
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class TestimonysComponent implements OnInit, OnDestroy {
+  @Input({ required: true }) subject: keyof TestimonyData | null = null;
+
   testimonies: Testimony[] = [];
-  testimonies$: Observable<Testimony[]> = this.testimonyService.getAll();
+  testimonies$!: Observable<Testimony[]>;
   destroySubject: Subject<void> = new Subject<any>();
 
   constructor(
@@ -29,17 +33,25 @@ export class TestimonysComponent implements OnInit, OnDestroy {
   ) {}
 
   ngOnInit(): void {
-    this.testimonies$.pipe(takeUntil(this.destroySubject)).subscribe({
-      next: (testimonies) => {
-        if (Array.isArray(testimonies)) {
-          this.testimonies = testimonies;
-        } else {
-          console.error('Expected an array, but received:', testimonies);
-        }
-        this.cdr.detectChanges();
-      },
-      error: (err) => console.error('Error fetching testimonies:', err),
-    });
+    if (!this.subject) {
+      console.error('Subject is required and cannot be null.');
+      return;
+    }
+
+    this.testimonies$ = this.testimonyService.getBySubject(this.subject);
+    this.testimonies$
+      .pipe(takeUntil(this.destroySubject))
+      .subscribe({
+        next: (testimonies) => {
+          if (Array.isArray(testimonies)) {
+            this.testimonies = testimonies;
+          } else {
+            console.error('Expected an array, but received:', testimonies);
+          }
+          this.cdr.detectChanges();
+        },
+        error: (err) => console.error('Error fetching testimonies:', err),
+      });
   }
 
   arrayOf(length: number): number[] {
