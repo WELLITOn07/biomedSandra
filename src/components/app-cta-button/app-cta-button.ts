@@ -6,7 +6,7 @@ import { LottieComponent, AnimationOptions } from 'ngx-lottie';
   selector: 'app-cta-button',
   template: `
     <button class="cta-button">
-      <ng-lottie [options]="options" (animationCreated)="animationCreated($event)"></ng-lottie>
+      <ng-lottie [options]="options"></ng-lottie>
       <span class="cta-text">APROVEITAR AGORA</span>
     </button>
   `,
@@ -73,8 +73,4 @@ export class CtaButtonComponent {
     loop: true,
     autoplay: true,
   };
-
-  animationCreated(animationItem: AnimationItem): void {
-    console.log('Animação criada:', animationItem);
-  }
 }
