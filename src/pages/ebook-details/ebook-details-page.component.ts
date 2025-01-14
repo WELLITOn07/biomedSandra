@@ -18,7 +18,7 @@ import { TestimonyData } from '../../models/testimony.model';
 
 @Component({
   selector: 'app-ebook-details-page',
-  imports: [CommonModule, AppOfferTimerComponent, TestimonysComponent, HeaderComponent, SubscriptionModalComponent,CtaButtonComponent, SupportFooterComponent],
+  imports: [CommonModule, AppOfferTimerComponent, TestimonysComponent, HeaderComponent, SubscriptionModalComponent, CtaButtonComponent, SupportFooterComponent],
   standalone: true,
   templateUrl: './ebook-details-page.component.html',
   styleUrls: ['./ebook-details-page.component.scss'],
@@ -39,21 +39,22 @@ export class EbookDetailsPageComponent implements OnInit {
     private redirectionService: RedirectionService,
     private analyticsEventService: AnalyticsEventService,
     private emailSubscriptionService: EmailSubscriptionService
-  ) {}
+  ) { }
 
   ngOnInit(): void {
-  this.subscription = this.ebookPurchaseRedirectService.ebookSelected$
-    .pipe(take(1))
-    .subscribe((ebook) => {
-      if (!ebook) {
-        this.router.navigate(['/ebook-not-found']);
-        return;
-      }
+    this.subscription = this.ebookPurchaseRedirectService.ebookSelected$
+      .pipe(take(1))
+      .subscribe((ebook) => {
+        if (!ebook) {
+          this.router.navigate(['/ebook-not-found']);
+          return;
+        }
 
-      this.ebook = ebook;
-      this.selectedTestimonySubject = this.getTestimonyKeyFromEbookId(ebook.id);
-      this.cdr.detectChanges();
-    });
+        this.ebook = ebook;
+        this.selectedTestimonySubject = this.getTestimonyKeyFromEbookId(ebook.id);
+        this.trackViewEbook(ebook);
+        this.cdr.detectChanges();
+      });
 
     this.userHasSubscribed$ = this.emailSubscriptionService.hasUserSubscribed();
     this.subscription.add(
@@ -69,7 +70,7 @@ export class EbookDetailsPageComponent implements OnInit {
         this.cdr.detectChanges();
       })
     );
-}
+  }
 
   ngOnDestroy(): void {
     this.subscription?.unsubscribe();
@@ -99,6 +100,18 @@ export class EbookDetailsPageComponent implements OnInit {
         console.error(`ebook.id "${id}" does not correspond to any key in TestimonyData.`);
         return null;
     }
+  }
+
+  trackViewEbook(ebook: Ebook): void {
+    this.analyticsEventService.upsertEvent({
+      application: 'biomedSandra',
+      eventType: 'ACCESS',
+      eventName: `view: ${ebook.title}`,
+      quantity: 1,
+    }).subscribe({
+      next: () => console.log(`Evento de visualização registrado para ${ebook.title}`),
+      error: (err) => console.error('Erro ao registrar evento:', err),
+    });
   }
 
   trackBuyEbook(ebook: Ebook | null): void {

@@ -1,4 +1,3 @@
-import { AnalyticsEventService } from './../../services/analytics-event.service';
 import { ChangeDetectionStrategy, ChangeDetectorRef, Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
@@ -19,7 +18,7 @@ export class EbookListComponent implements OnInit {
   isLoading = true;
   accentColor = '#FFD700';
 
-  constructor(private ebookDataService: EbookDataService, private cdr: ChangeDetectorRef, private analyticsEventService: AnalyticsEventService) {}
+  constructor(private ebookDataService: EbookDataService, private cdr: ChangeDetectorRef) {}
   ngOnInit(): void {
     this.ebookDataService.getAll()
       .pipe(
@@ -36,17 +35,5 @@ export class EbookListComponent implements OnInit {
           this.isLoading = false;
         }
       } as any);
-  }
-
-  trackViewEbook(ebook: Ebook): void {
-    this.analyticsEventService.upsertEvent({
-      application: 'biomedSandra',
-      eventType: 'CLICK',
-      eventName: `view: ${ebook.title}`,
-      quantity: 1,
-    }).subscribe({
-      next: () => console.log(`Evento de visualização registrado para ${ebook.title}`),
-      error: (err) => console.error('Erro ao registrar evento:', err),
-    });
   }
 }
