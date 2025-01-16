@@ -25,7 +25,7 @@ import { TestimonyData } from '../../models/testimony.model';
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class EbookDetailsPageComponent implements OnInit {
-  ebook: Ebook | null = null;
+  ebook!: Ebook;
   private subscription: Subscription | null = null;
   userHasSubscribed$!: Observable<boolean>;
   hasSubscribed: boolean = false;

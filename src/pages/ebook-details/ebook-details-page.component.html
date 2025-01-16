@@ -1,7 +1,6 @@
 <app-subscription-modal role="dialog" aria-label="Subscription Modal" *ngIf="showModal"></app-subscription-modal>
 
 
-
 <div class="page container-fluid show d-block" id="ebookDetailsPage" tabindex="-1"
   aria-labelledby="ebookDetailsPageLabel" aria-hidden="true">
   <div class="page-dialog container page-fullscreen">
@@ -10,18 +9,18 @@
 
       <div class="page-header d-flex flex-column justify-content-center align-items-center">
         <div>
-          @if (ebook?.type === 'ebook') {
+          @if (ebook.type === 'ebook') {
           <span class="page-header__subtitle">E-book</span>
           } @else {
           <span class="page-header__subtitle">Curso em Vídeo</span>
           }
         </div>
-        <h2 class="page-title page-header__title">{{ ebook?.title }}</h2>
+        <h2 class="page-title page-header__title">{{ ebook.title }}</h2>
       </div>
 
       <div class="page-body flex-grow-1 overflow-auto">
         <h3 class="page-body__title text-start">O QUE VAI APRENDER?</h3>
-        <div *ngFor="let subject of ebook?.subjects" class="page-body__topics">
+        <div *ngFor="let subject of ebook.subjects" class="page-body__topics">
           <div class="page-body__topics__category d-flex align-items-center">
             <i class="bi bi-star-fill" style="color:#FFD700;"></i>
             <h4>{{ subject.category }}</h4>
@@ -33,15 +32,15 @@
 
         <div class="page-body__works__container d-flex flex-column">
           <div class="page-body__works d-flex align-items-center">
-            <i [class]="ebook?.type === 'ebook' ? 'bi bi-link-45deg' : 'bi bi-gift'"></i>
-            @if (ebook?.type === 'ebook') {
+            <i [class]="ebook.type === 'ebook' ? 'bi bi-link-45deg' : 'bi bi-gift'"></i>
+            @if (ebook.type === 'ebook') {
             <h4>Trabalhos Publicados</h4>
             } @else {
             <h4>Conteúdo Bônus</h4>
             }
           </div>
-          <div *ngFor="let work of ebook?.works; let i = index" class="page__works d-flex align-items-center">
-            @if (ebook?.type === 'ebook') {
+          <div *ngFor="let work of ebook.works; let i = index" class="page__works d-flex align-items-center">
+            @if (ebook.type === 'ebook') {
             <button type="button" class="btn btn-secondary">
               <a href="{{ work.url }}" class="page__works__item" target="_blank" rel="noopener noreferrer">
                 {{ work.title }}
@@ -75,19 +74,28 @@
 
         <app-offer-timer></app-offer-timer>
         <div class="page__works__prices d-flex flex-column justify-content-center align-items-center">
-          <div class="page__works__prices__container">
-            <p class="page__works__prices__original">{{ ebook?.price?.original }}</p>
-            <p class="page__works__prices__discounted">{{ ebook?.price?.discounted }}</p>
+          <div class="page__works__prices__container" *ngIf="ebook.installmentsCount > 0; else elseBlockWithPrice">
+            <p class="page__works__prices__original">de {{ ebook.price.original }}</p>
+            <p class="page__works__prices__installments__count">
+              apenas {{ ebook.installmentsCount }}x de {{ ebook.installmentsValue }}
+            </p>
+            <p class="page__works__prices__installments__discounted">
+              ou à vista por {{ ebook.price.discounted }}
+            </p>
           </div>
+
+          <ng-template #elseBlockWithPrice>
+            <p class="page__works__prices__original">de {{ ebook.price.original }}</p>
+            <p class="page__works__prices__discounted">apenas {{ ebook.price.discounted }}</p>
+          </ng-template>
         </div>
 
         <div class="page-footer d-flex justify-content-center align-items-center">
-          <app-cta-button (click)="toBrowseExternal(ebook?.link)" (click)="trackBuyEbook(ebook)"></app-cta-button>
+          <app-cta-button (click)="toBrowseExternal(ebook.link)" (click)="trackBuyEbook(ebook)"></app-cta-button>
         </div>
 
         <app-testimonys [subject]="selectedTestimonySubject"></app-testimonys>
+        <app-support-footer></app-support-footer>
       </div>
-      <app-support-footer></app-support-footer>
     </div>
   </div>
-</div>

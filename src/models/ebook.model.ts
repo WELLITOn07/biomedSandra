@@ -23,6 +23,8 @@ export interface Ebook {
   link: string;
   type: string;
   price: Price;
+  installmentsCount: number;
+  installmentsValue: string;
   subjects: Subject[];
   works: Work[];
 }
@@ -30,5 +32,5 @@ export interface Ebook {
 export interface EbooksPayload {
   statusCode: number;
   message: string;
-  data: Ebook[]; 
+  data: Ebook[];
 }
