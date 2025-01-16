@@ -27,6 +27,8 @@ describe('EbookDetailsPageComponent', () => {
     cover: 'cover1',
     link: 'https://example.com/ebook-1',
     type: 'ebook',
+    installmentsCount: 3,
+    installmentsValue: '10.00',
     price: {
       original: '$20',
       discounted: '$15',

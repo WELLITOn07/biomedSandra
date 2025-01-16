@@ -21,6 +21,8 @@ describe('EbookListComponent', () => {
       cover: 'cover1',
       link: '/ebook-1',
       type: 'ebook',
+      installmentsCount: 3,
+      installmentsValue: '10.00',
       price: {
         original: '$20',
         discounted: '$15',
@@ -47,6 +49,8 @@ describe('EbookListComponent', () => {
       cover: 'cover2',
       link: '/video-course-1',
       type: 'video',
+      installmentsCount: 0,
+      installmentsValue: '',
       price: {
         original: '$50',
         discounted: '$40',
