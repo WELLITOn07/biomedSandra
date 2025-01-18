@@ -11,12 +11,12 @@ import {
   standalone: true,
   template: ` <div class="offer-timer d-flex flex-column justify-content-center align-items-center w-100">
   <div class="offer-timer__container d-flex justify-content-center align-items-center w-100">
-    <p class="offer-timer__text">A OFERTA ACABA EM :</p>
+    <p class="offer-timer__text">Restam poucas horas!</p>
     <span class="offer-timer__timer">{{ timeUntilOfferEnds }}</span>
   </div>
 
   <div class="offer-timer__catchphrase d-flex justify-content-center align-items-center w-100">
-    <h3 class="offer-timer__catchphrase__text animate__animated animate__flash animate__infinite animate__slower">SUPER DESCONTO</h3>
+    <h3 class="offer-timer__catchphrase__text animate__animated animate__flash animate__infinite animate__slower">APROVEITE ESTA OFERTA!</h3>
   </div>
 
   <div class="offer-timer__catchphrase__border w-50"></div>

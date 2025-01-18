@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { AnimationItem } from 'lottie-web';
 import { LottieComponent, AnimationOptions } from 'ngx-lottie';
 
@@ -7,7 +7,7 @@ import { LottieComponent, AnimationOptions } from 'ngx-lottie';
   template: `
     <button class="cta-button">
       <ng-lottie [options]="options"></ng-lottie>
-      <span class="cta-text">APROVEITAR AGORA</span>
+      <span class="cta-text">{{ buttonText }}</span>
     </button>
   `,
   standalone: true,
@@ -68,6 +68,8 @@ import { LottieComponent, AnimationOptions } from 'ngx-lottie';
   `]
 })
 export class CtaButtonComponent {
+  @Input() buttonText: string = 'APROVEITAR AGORA'; // Texto padrão
+  @Input() buttonLabel: string = 'Texto do botão'; // Novo input
   options: AnimationOptions = {
     path: '/assets/animation.json',
     loop: true,

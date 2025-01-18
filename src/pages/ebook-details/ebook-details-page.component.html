@@ -58,9 +58,9 @@
         <div *ngIf="ebook?.type === 'video'" class="d-flex flex-column align-items-center mt-5">
           <i class="bi bi-award" style="font-size: 2rem; color: #FFD700;"></i>
           <h4 class="mt-2">Este curso oferece certificação</h4>
-          <div class="text-center mb-4">
-            <h2 class="display-6 fw-bold mb-4">Resumo do curso</h2>
-            <div class="d-flex justify-content-center mb-4">
+          <div class="text-center">
+            <h2 class="display-6 fw-bold">Resumo do curso</h2>
+            <div class="d-flex justify-content-center">
               <i class="bi bi-play-btn" style="font-size: 4rem;"></i>
             </div>
           </div>
@@ -72,13 +72,21 @@
           </div>
         </div>
 
+        <div class="page-body__offer mb-4">
+          <h2 class="display-6 fw-bold mb-4">
+            Apenas {{ ebook.price.discounted }} para transformar sua carreira
+          </h2>
+        </div>
+
         <app-offer-timer></app-offer-timer>
+
         <div class="page__works__prices d-flex flex-column justify-content-center align-items-center">
           <div class="page__works__prices__container" *ngIf="ebook.installmentsCount > 0; else elseBlockWithPrice">
-            <p class="page__works__prices__original">de {{ ebook.price.original }}</p>
-            <p class="page__works__prices__installments__count">
-              apenas {{ ebook.installmentsCount }}x de {{ ebook.installmentsValue }}
-            </p>
+            <p class="page__works__prices__original">{{ ebook.price.original }}</p>
+            <div class="page__works__prices__installments d-flex justify-content-center align-items-center">
+              <span class="me-2 page__works__prices__installments__count">{{ ebook.installmentsCount }}x de</span>
+              <span class="page__works__prices__installments__value">{{ ebook.installmentsValue }}</span>
+            </div>
             <p class="page__works__prices__installments__discounted">
               ou à vista por {{ ebook.price.discounted }}
             </p>
@@ -90,8 +98,12 @@
           </ng-template>
         </div>
 
-        <div class="page-footer d-flex justify-content-center align-items-center">
-          <app-cta-button (click)="toBrowseExternal(ebook.link)" (click)="trackBuyEbook(ebook)"></app-cta-button>
+        <div class="page-footer d-flex justify-content-center align-items-center mt-4">
+          <app-cta-button
+            (click)="toBrowseExternal(ebook.link)"
+            (click)="trackBuyEbook(ebook)"
+            [buttonText]="ebook && ebook.type ? (ebook.type === 'ebook' ? 'Oferta Exclusiva! Clique Aqui' : 'Garanta seu Certificado Agora! Clique Aqui') : ''">
+          </app-cta-button>
         </div>
 
         <app-testimonys [subject]="selectedTestimonySubject"></app-testimonys>

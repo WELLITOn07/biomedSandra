@@ -85,13 +85,13 @@
     }
 
     &__prices {
-      margin-top: 20px;
+      margin-top: 10px;
       font-family: $font-montserrat;
 
       &__original {
         text-decoration: line-through;
-        font-size: 20px;
-        color: $color-alert;
+        font-size: 16px;
+        color: $color-light;
       }
 
       &__discounted {
@@ -101,11 +101,11 @@
 
       &__installments {
         &__count {
-          font-size: 35px;
+          font-size: 16px;
         }
 
-        &__discounted {
-          font-size: 16px;
+        &__value {
+          font-size: 30px;
         }
       }
 
