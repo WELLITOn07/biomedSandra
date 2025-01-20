@@ -96,6 +96,10 @@ export class EbookDetailsPageComponent implements OnInit {
         return 'hematologia';
       case 'liquidoCefalorraquidiano':
         return 'liquidoCefalorraquidiano';
+      case 'apostila_coleta_sanguinea':
+        return 'apostila_coleta_sanguinea';
+      case 'atlas_ilustrado_hematologia':
+        return 'atlas_ilustrado_hematologia';
       default:
         console.error(`ebook.id "${id}" does not correspond to any key in TestimonyData.`);
         return null;
