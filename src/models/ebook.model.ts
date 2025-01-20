@@ -1,3 +1,14 @@
+export enum EbookOrder {
+  hemograma_curso = 1,
+  biomedic = 2,
+  atlas_ilustrado_hematologia = 3,
+  hematologia = 4,
+  apostila_coleta_sanguinea = 5,
+  urinalise = 6,
+  bioquimica = 7,
+  liquidoCefalorraquidiano = 8,
+}
+
 export interface Price {
   original: string;
   discounted: string;
