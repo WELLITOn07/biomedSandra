@@ -12,4 +12,6 @@ export interface TestimonyData {
   urinalise: Testimony[];
   hematologia: Testimony[];
   liquidoCefalorraquidiano: Testimony[];
+  apostila_coleta_sanguinea: Testimony[];
+  atlas_ilustrado_hematologia: Testimony[];
 }
