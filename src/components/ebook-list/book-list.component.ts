@@ -1,7 +1,7 @@
 import { ChangeDetectionStrategy, ChangeDetectorRef, Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
-import { Ebook } from '../../models/ebook.model';
+import { Ebook, EbookOrder } from '../../models/ebook.model';
 import { EbookDataService } from '../../services/ebookData.service';
 import { map } from 'rxjs';
 
@@ -26,7 +26,7 @@ export class EbookListComponent implements OnInit {
       )
       .subscribe({
         next: (ebooks: Ebook[]) => {
-          this.ebooks = ebooks;
+          this.ebooks = this.sortEbooks(ebooks);
           this.isLoading = false;
           this.cdr.detectChanges();
         },
@@ -35,5 +35,14 @@ export class EbookListComponent implements OnInit {
           this.isLoading = false;
         }
       } as any);
+  }
+
+    sortEbooks(ebooks: Ebook[]): Ebook[] {
+    const orderedEbooks = ebooks.sort((a, b) => {
+        const orderA = EbookOrder[a.id as keyof typeof EbookOrder] || Number.MAX_VALUE;
+        const orderB = EbookOrder[b.id as keyof typeof EbookOrder] || Number.MAX_VALUE;
+        return orderA - orderB;
+    });
+    return orderedEbooks;
   }
 }
