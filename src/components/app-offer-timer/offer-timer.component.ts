@@ -16,7 +16,7 @@ import {
   </div>
 
   <div class="offer-timer__catchphrase d-flex justify-content-center align-items-center w-100">
-    <h3 class="offer-timer__catchphrase__text animate__animated animate__flash animate__infinite animate__slower">APROVEITE ESTA OFERTA!</h3>
+    <h3 class="offer-timer__catchphrase__text animate__animated animate__flash animate__infinite animate__slower">APROVEITE A OFERTA!</h3>
   </div>
 
   <div class="offer-timer__catchphrase__border w-50"></div>
