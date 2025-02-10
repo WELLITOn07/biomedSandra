@@ -15,6 +15,7 @@ import { EmailSubscriptionService } from '../../services/email-subscription.serv
 import { CtaButtonComponent } from '../../components/app-cta-button/app-cta-button';
 import { SupportFooterComponent } from '../../components/support-footer/support-footer.component';
 import { TestimonyData } from '../../models/testimony.model';
+import { OriginService } from '../../services/origin.service';
 
 @Component({
   selector: 'app-ebook-details-page',
@@ -38,7 +39,8 @@ export class EbookDetailsPageComponent implements OnInit {
     private cdr: ChangeDetectorRef,
     private redirectionService: RedirectionService,
     private analyticsEventService: AnalyticsEventService,
-    private emailSubscriptionService: EmailSubscriptionService
+    private emailSubscriptionService: EmailSubscriptionService,
+    private originService: OriginService
   ) { }
 
   ngOnInit(): void {
@@ -107,9 +109,12 @@ export class EbookDetailsPageComponent implements OnInit {
   }
 
   trackViewEbook(ebook: Ebook): void {
+    const origin = this.originService.getOriginFromUrl();
+    const eventType = `ACCESS / ${origin}`;
+
     this.analyticsEventService.upsertEvent({
       application: 'biomedSandra',
-      eventType: 'ACCESS',
+      eventType: eventType,
       eventName: `view: ${ebook.title}`,
       quantity: 1,
     }).subscribe({
