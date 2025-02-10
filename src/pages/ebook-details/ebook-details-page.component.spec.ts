@@ -12,6 +12,7 @@ import { HeaderComponent } from '../../components/header/header.component';
 import { CommonModule } from '@angular/common';
 import { HttpClientModule } from '@angular/common/http';
 import { provideLottieOptions } from 'ngx-lottie';
+import { OriginService } from '../../services/origin.service';
 
 describe('EbookDetailsPageComponent', () => {
   let component: EbookDetailsPageComponent;
@@ -19,6 +20,7 @@ describe('EbookDetailsPageComponent', () => {
   let ebookPurchaseRedirectServiceMock: any;
   let redirectionServiceMock: any;
   let routerMock: any;
+  let originServiceMock: any;
 
   const mockEbook: Ebook = {
     id: '1',
@@ -62,6 +64,10 @@ describe('EbookDetailsPageComponent', () => {
       navigate: jest.fn(),
     };
 
+    originServiceMock = {
+      getOrigin: jest.fn().mockReturnValue('https://example.com'),
+    };
+
     await TestBed.configureTestingModule({
       imports: [
         CommonModule,
@@ -79,6 +85,7 @@ describe('EbookDetailsPageComponent', () => {
         { provide: EbookPurchaseRedirectService, useValue: ebookPurchaseRedirectServiceMock },
         { provide: RedirectionService, useValue: redirectionServiceMock },
         { provide: Router, useValue: routerMock },
+        { provide: OriginService, useValue: originServiceMock },
       ],
     }).compileComponents();
 
