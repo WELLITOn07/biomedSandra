@@ -8,26 +8,22 @@ import { environment } from '../environments/environment';
   providedIn: 'root',
 })
 export class TestimonyService {
-  private baseUrl = `${environment.apiUrl}/testimonies`;
+  private baseUrl = `${environment.apiUrl}/testimonies.json`;
 
   constructor(private http: HttpClient) {}
 
   getBySubject(subject: string): Observable<Testimony[]> {
     return this.http
-      .get<{
-        statusCode: number;
-        message: string;
-        data: Testimony[];
-      }>(`${this.baseUrl}/by-subject/${subject}`)
+      .get<Testimony[]>(this.baseUrl)
       .pipe(
-        map((response) => {
-          const testimoniesArray = response.data || [];
-          const shuffled = testimoniesArray.sort(() => 0.5 - Math.random());
+        map((testimonies) => {
+          const filtered = testimonies.filter((testimony) => testimony.subject === subject);
+          const shuffled = filtered.sort(() => 0.5 - Math.random());
           return shuffled.slice(0, 6);
         }),
         catchError((error) => {
-          console.error('Error fetching testimonies by subject:', error);
-          return throwError(() => new Error('Error fetching testimonies by subject'));
+          console.error('Error fetching testimonies:', error);
+          return throwError(() => new Error('Error fetching testimonies'));
         })
       );
   }
