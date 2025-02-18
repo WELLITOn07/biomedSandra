@@ -1,0 +1,455 @@
+[
+  {
+    "id": "apostila_coleta_sanguinea",
+    "title": "APOSTILA DE COLETA SANGUÍNIA",
+    "description": "Está procurando um estágio, ou já trabalha na área, mas ainda tem dúvidas em relação à coleta? Nesta apostila você irá aprender informações importantes e dicas valiosas!",
+    "cover": "apostila_coleta_sanguinea",
+    "link": "https://pay.hotmart.com/C70628385B",
+    "type": "ebook",
+    "priceId": 15,
+    "installmentsCount": 2,
+    "installmentsValue": "7,77 ",
+    "price": {
+      "id": 15,
+      "original": "R$ 29,90",
+      "discounted": "R$ 14,90"
+    },
+    "subjects": [
+      {
+        "category": "Coleta Sanguínea",
+        "topics": [
+          "Regiões para punção venosa",
+          "Sistemas abertos e fechados (e quando usar cada um deles)",
+          "Tipos e ordem dos tubos",
+          "Finalidade dos amplificadores",
+          "Coleta pediátrica",
+          "Coleta em pacientes hospitalizados e oncológicos",
+          "Como superar receitas(tanto profissional, como de pacientes)",
+          "Regiões para punção venosa de sistemas abertos e fechados ( e quando usar cada um deles)",
+          "Tipos e ordem dos tubos",
+          "Finalidade dos aditivos",
+          "Coleta pediátrica",
+          "Coleta em pacientes hospitalizados e oncológicos"
+        ],
+        "courseId": "apostila_coleta_sanguinea",
+        "id": 35
+      },
+      {
+        "category": "Dicas Bônus",
+        "topics": [
+          "Compartilho Dicas Reais, baseado em minha experiência profissional, para facilitar seu dia a dia e realizar coletas com segurança e facilidade"
+        ],
+        "courseId": "apostila_coleta_sanguinea",
+        "id": 36
+      }
+    ],
+    "works": [
+      {
+        "title": "Dímero-D / Coagulação ",
+        "url": "https://editorapasteur.com.br/publicacoes/capitulo/?codigo=3152",
+        "courseId": "apostila_coleta_sanguinea",
+        "id": 23
+      }
+    ]
+  },
+  {
+    "id": "atlas_ilustrado_hematologia",
+    "title": "ATLAS ILUSTRADO DE HEMATOLOGIA",
+    "description": "Guia ilustrado de 47 páginas, para identificar células e ler lâminas com facilidade!",
+    "cover": "atlas_ilustrado_hematologia",
+    "link": "https://pay.hotmart.com/H93237360W",
+    "type": "ebook",
+    "priceId": 13,
+    "installmentsCount": 2,
+    "installmentsValue": " 15,60",
+    "price": {
+      "id": 13,
+      "original": "R$ 49,90",
+      "discounted": "R$ 29,90"
+    },
+    "subjects": [
+      {
+        "category": "Hematologia",
+        "topics": [
+          "Imagens de células e alterações",
+          "Lâminas de Leucemia",
+          "Série Branca, Série Vermelha e Série Plaquetária",
+          "Alterações Hematológicas"
+        ],
+        "courseId": "atlas_ilustrado_hematologia",
+        "id": 29
+      },
+      {
+        "category": "Dicas Bônus",
+        "topics": [
+          "Compartilho Dicas Reais, baseadas em minha experiência profissional, para facilitar seu dia a dia, liberar exames com segurança, e tornar-se ser um profissional reconhecido pelo seu Sucesso"
+        ],
+        "courseId": "atlas_ilustrado_hematologia",
+        "id": 30
+      }
+    ],
+    "works": [
+      {
+        "title": "Gestão em Saúde",
+        "url": "https://www.editoracientifica.com.br/books/chapter/240115471",
+        "courseId": "atlas_ilustrado_hematologia",
+        "id": 19
+      },
+      {
+        "title": "Dímero-D / Coagulação ",
+        "url": "https://editorapasteur.com.br/publicacoes/capitulo/?codigo=3152",
+        "courseId": "atlas_ilustrado_hematologia",
+        "id": 20
+      }
+    ]
+  },
+  {
+    "id": "hemograma_curso",
+    "title": "HEMOGRAMA PARA BIOMÉDICOS",
+    "description": "Realize e interprete hemogramas com segurança e precisão. Curso em vídeo,  com aulas dinâmicas, de rápido acesso e com certificado.",
+    "cover": "hematologia_interpretacao_hemograma",
+    "link": "https://pay.hotmart.com/O97418859B",
+    "type": "video",
+    "priceId": 7,
+    "installmentsCount": 3,
+    "installmentsValue": "21,13",
+    "price": {
+      "id": 7,
+      "original": "R$ 79,90",
+      "discounted": "R$ 59,90"
+    },
+    "subjects": [
+      {
+        "category": "Análise e Interpretação",
+        "topics": [
+          "Série Vermelha",
+          "Série Branca",
+          "Série Plaquetária",
+          "Interpretando Gráficos",
+          "Anemias e Leucemias",
+          "Casos Clínicos I - Interpretação",
+          "Casos Clínicos II - Interpretação",
+          "Casos Clínicos III- Interpretação",
+          "Avaliação e Certificado",
+          "Ao todo, 15 casos clínicos + aula bônus com leitura de 15 lâminas!"
+        ],
+        "courseId": "hemograma_curso",
+        "id": 15
+      },
+      {
+        "category": "Dicas Bônus",
+        "topics": [
+          "Compartilho Dicas Reais, baseadas em minha experiência profissional, para facilitar seu dia a dia, liberar exames com segurança, e tornar-se ser um profissional reconhecido pelo seu Sucesso"
+        ],
+        "courseId": "hemograma_curso",
+        "id": 16
+      }
+    ],
+    "works": [
+      {
+        "title": "Material de Apoio em pdf",
+        "url": "https://cursohematologia.com.br/material",
+        "courseId": "hemograma_curso",
+        "id": 9
+      },
+      {
+        "title": "Atlas Ilustrado de Hematologia",
+        "url": "https://cursohematologia.com.br/atlas",
+        "courseId": "hemograma_curso",
+        "id": 10
+      },
+      {
+        "title": "Apostila de Hematologia",
+        "url": "https://cursohematologia.com.br/atlas",
+        "courseId": "hemograma_curso",
+        "id": 17
+      }
+    ]
+  },
+  {
+    "id": "biomedic",
+    "title": "GUIA DO BIOMÉDICO",
+    "description": "130 páginas de conteúdo, abordando Bioquímica, Hematologia, Urinálise e Parasitologia, desde os valores de referência até a interpretação dos exames.\n",
+    "cover": "manual_do_biomedico",
+    "link": "https://pay.hotmart.com/E90191279A",
+    "type": "ebook",
+    "priceId": 8,
+    "installmentsCount": 3,
+    "installmentsValue": "19,37",
+    "price": {
+      "id": 8,
+      "original": "R$ 87,90",
+      "discounted": "R$ 54,90"
+    },
+    "subjects": [
+      {
+        "category": "Valores Críticos",
+        "topics": [
+          "Saiba quais parâmetros precisam ser comunicados ao médico, e quais os intervalos de referência para cada um deles"
+        ],
+        "courseId": "biomedic",
+        "id": 23
+      },
+      {
+        "category": "Dicas Bônus",
+        "topics": [
+          "Compartilho Dicas Reais, baseadas em minha experiência profissional, para facilitar seu dia a dia, liberar exames com segurança, e tornar-se ser um profissional reconhecido pelo seu Sucesso"
+        ],
+        "courseId": "biomedic",
+        "id": 24
+      },
+      {
+        "category": "Hematologia",
+        "topics": [
+          "Leitura de Lâminas",
+          "Identificação de Células",
+          "Alterações Morfológicas e Estruturais",
+          "Desvio à esquerda",
+          "Índices Hematimétricos",
+          "Valores de Referência em Adultos e crianças",
+          "Contagem manual de Plaquetas",
+          "Contagem de Reticulócitos",
+          "Interpretação de Gráficos",
+          "Doenças Hematológicas (Anemias e Leucemias)",
+          "Exame VHS"
+        ],
+        "courseId": "biomedic",
+        "id": 17
+      },
+      {
+        "category": "Coagulação",
+        "topics": [
+          "TAP",
+          "TTPA",
+          "Dímero-D"
+        ],
+        "courseId": "biomedic",
+        "id": 18
+      },
+      {
+        "category": "Bioquímica",
+        "topics": [
+          "Principais exames do Perfil Renal, Hepático",
+          "Glicose",
+          "Colesterol",
+          "Proteínas",
+          "Enzimas",
+          "Eletrólitos",
+          "Vitaminas",
+          "Enzimas Cardíacas e Perfil Hormonal"
+        ],
+        "courseId": "biomedic",
+        "id": 19
+      },
+      {
+        "category": "Coleta de amostras",
+        "topics": [
+          "Ordem dos Tubos e Função dos Aditivos"
+        ],
+        "courseId": "biomedic",
+        "id": 20
+      },
+      {
+        "category": "Gasometria Arterial",
+        "topics": [
+          "Interpretação e Valores de Referência"
+        ],
+        "courseId": "biomedic",
+        "id": 21
+      },
+      {
+        "category": "Urinálise",
+        "topics": [
+          "Parcial de Urina",
+          "Atlas de Urinálise",
+          "Bacterioscopia",
+          "Urocultura",
+          "Antibiograma"
+        ],
+        "courseId": "biomedic",
+        "id": 22
+      }
+    ],
+    "works": [
+      {
+        "title": "Dímero-D / Coagulação ",
+        "url": "https://editorapasteur.com.br/publicacoes/capitulo/?codigo=3152",
+        "courseId": "biomedic",
+        "id": 11
+      },
+      {
+        "title": "Gestão em Saúde",
+        "url": "https://www.editoracientifica.com.br/articles/code/240115471",
+        "courseId": "biomedic",
+        "id": 12
+      }
+    ]
+  },
+  {
+    "id": "liquidoCefalorraquidiano",
+    "title": "LCR",
+    "description": "Da análise física à citologia e bioquímica, um guia indispensável para análises precisas do líquor.",
+    "cover": "liquido_cefalorraquidiano",
+    "link": "https://pay.hotmart.com/Q85449498P",
+    "type": "ebook",
+    "priceId": 12,
+    "installmentsCount": 2,
+    "installmentsValue": "12,99",
+    "price": {
+      "id": 12,
+      "original": "R$ 59,90",
+      "discounted": "R$ 24,90"
+    },
+    "subjects": [
+      {
+        "category": "LCR",
+        "topics": [
+          "A importância e as funções do LCR",
+          "Como é realizada a coleta",
+          "Aspecto visual",
+          "Bioquímica- Principais exames e valores de referência",
+          "Citometria - Como fazer a contagem",
+          "Citologia- Como fazer a contagem e valores de referência",
+          "Microbiologia do LCR",
+          "Estabilidade da amostra"
+        ],
+        "courseId": "liquidoCefalorraquidiano",
+        "id": 28
+      }
+    ],
+    "works": [
+      {
+        "title": "Dímero-D / Coagulação ",
+        "url": "https://editorapasteur.com.br/publicacoes/capitulo/?codigo=3152",
+        "courseId": "liquidoCefalorraquidiano",
+        "id": 16
+      }
+    ]
+  },
+  {
+    "id": "bioquimica",
+    "title": "BIOQUÍMICA",
+    "description": "Guia de bioquímica clínica, abordando perfis renal e hepático, enzimas, eletrólitos e mais para diagnósticos precisos.",
+    "cover": "bioquimica",
+    "link": "https://pay.hotmart.com/A88463369T",
+    "type": "ebook",
+    "priceId": 10,
+    "installmentsCount": 2,
+    "installmentsValue": "7,77",
+    "price": {
+      "id": 10,
+      "original": "R$ 34,99",
+      "discounted": "R$ 14,90"
+    },
+    "subjects": [
+      {
+        "category": "Bioquímica",
+        "topics": [
+          "Perfil Renal",
+          "Perfil Hepático",
+          "Glicose e Hemoglobina Glicada",
+          "Tipos de Colesterol",
+          "Dosagem de Proteínas",
+          "Dosagem de Enzimas",
+          "Eletrólitos (Sódio, Potássio e Cálcio)",
+          "Vitaminas",
+          "Enzimas Cardíacas",
+          "Perfil Hormonal"
+        ],
+        "courseId": "bioquimica",
+        "id": 26
+      }
+    ],
+    "works": [
+      {
+        "title": "Dímero-D / Coagulação ",
+        "url": "https://editorapasteur.com.br/publicacoes/capitulo/?codigo=3152",
+        "courseId": "bioquimica",
+        "id": 14
+      }
+    ]
+  },
+  {
+    "id": "urinalise",
+    "title": "URINÁLISE",
+    "description": " Do exame físico à microbiologia, este guia é essencial para análises de urinálise.",
+    "cover": "urinalise",
+    "link": "https://pay.hotmart.com/W88463556U",
+    "type": "ebook",
+    "priceId": 11,
+    "installmentsCount": 2,
+    "installmentsValue": "7,77",
+    "price": {
+      "id": 11,
+      "original": "R$ 39,90",
+      "discounted": "R$ 14,90"
+    },
+    "subjects": [
+      {
+        "category": "Urinálise",
+        "topics": [
+          "Parcial de Urina – Exame Físico, Químico e Análise de Sedimento",
+          "Atlas de Urinálise - Reúne os Principais Tipos de Cristais, Cilindros, e demais elementos que podem estar presentes na amostra de urina",
+          "Bacterioscopia – Identificando bactérias presentes no Sedimento Corado – cocos, bacilos/ Gram Positivo e Gram Negativo – Coloração de Gram passo a passo",
+          "Urocultura- Como semear e realizar a leitura",
+          "Antibiograma- Como realizar e interpretar o resultado"
+        ],
+        "courseId": "urinalise",
+        "id": 27
+      }
+    ],
+    "works": [
+      {
+        "title": "Dímero-D / Coagulação ",
+        "url": "https://editorapasteur.com.br/publicacoes/capitulo/?codigo=3152",
+        "courseId": "urinalise",
+        "id": 15
+      }
+    ]
+  },
+  {
+    "id": "hematologia",
+    "title": "HEMATOLOGIA",
+    "description": "Dos conceitos básicos às doenças hematológicas e leitura de lâminas, um guia para rotina de hematologia.",
+    "cover": "hematologia",
+    "link": "https://pay.hotmart.com/U85205934J",
+    "type": "ebook",
+    "priceId": 9,
+    "installmentsCount": 2,
+    "installmentsValue": "7,77",
+    "price": {
+      "id": 9,
+      "original": "R$ 49,90",
+      "discounted": "R$ 14,90"
+    },
+    "subjects": [
+      {
+        "category": "Hematologia",
+        "topics": [
+          "Confecção e Leitura de Lâminas",
+          "Identificação de Células",
+          "Alterações Morfológicas e Estruturais",
+          "Desvio à esquerda",
+          "Índices Hematimétricos",
+          "Valores de Referência em Adultos e crianças",
+          "Contagem manual de Plaquetas",
+          "Contagem de Reticulócitos",
+          "Interpretação de Gráficos em Hematologia",
+          "Doenças Hematológicas (Anemias e Leucemias)",
+          "Exame VHS",
+          "Coagulograma: TAP, TTPA E Dímero-D"
+        ],
+        "courseId": "hematologia",
+        "id": 25
+      }
+    ],
+    "works": [
+      {
+        "title": "Dímero-D / Coagulação ",
+        "url": "https://editorapasteur.com.br/publicacoes/capitulo/?codigo=3152",
+        "courseId": "hematologia",
+        "id": 13
+      }
+    ]
+  }
+]

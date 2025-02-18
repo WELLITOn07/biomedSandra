@@ -3,6 +3,7 @@ export interface Testimony {
   author: string;
   rating: number;
   text: string;
+  subject: string;
 }
 
 export interface TestimonyData {

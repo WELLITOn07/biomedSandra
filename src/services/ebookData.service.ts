@@ -8,15 +8,14 @@ import { environment } from '../environments/environment';
   providedIn: 'root',
 })
 export class EbookDataService {
-  private apiUrl = `${environment.apiUrl}/courses`;
+  private apiUrl = `${environment.apiUrl}/courses.json`;
   private ebooksCache$: Observable<Ebook[]> | null = null;
 
   constructor(private http: HttpClient) { }
 
   getAll(): Observable<Ebook[]> {
     if (!this.ebooksCache$) {
-      this.ebooksCache$ = this.http.get<EbooksPayload>(this.apiUrl).pipe(
-        map(response => response.data),
+      this.ebooksCache$ = this.http.get<Ebook[]>(this.apiUrl).pipe(
         shareReplay(1),
         catchError(error => {
           console.error('Erro ao carregar eBooks:', error);
@@ -28,12 +27,13 @@ export class EbookDataService {
   }
 
   getOne(idEbook: string): Observable<Ebook> {
-    const url = `${this.apiUrl}/${idEbook}`;
-    return this.http.get<{ statusCode: number, message: string, data: Ebook }>(url).pipe(
-      map(response => response.data),
-      catchError(error => {
-        console.error(`Erro ao carregar o eBook com ID ${idEbook}:`, error);
-        return throwError(() => new Error(`Erro ao carregar o eBook com ID ${idEbook}`));
+    return this.getAll().pipe(
+      map(ebooks => {
+        const ebook = ebooks.find(e => e.id === idEbook);
+        if (!ebook) {
+          throw new Error(`eBook with ID ${idEbook} not found`);
+        }
+        return ebook;
       })
     );
   }

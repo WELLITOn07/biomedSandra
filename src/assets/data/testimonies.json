@@ -1,0 +1,1082 @@
+[
+  {
+    "id": 11,
+    "subject": "hemograma_curso",
+    "author": "Helena Moraes",
+    "rating": 5,
+    "text": "A aula bônus com leitura de 15 lâminas é maravilhosa",
+    "createdAt": "2025-01-11T18:09:14.077Z",
+    "updatedAt": "2025-01-11T18:09:14.077Z"
+  },
+  {
+    "id": 4,
+    "subject": "hemograma_curso",
+    "author": "Pedro Alencar",
+    "rating": 5,
+    "text": "Muito bom, recomendo para quem quer aprofundar em hemograma.",
+    "createdAt": "2025-01-11T18:08:26.042Z",
+    "updatedAt": "2025-01-11T18:08:26.042Z"
+  },
+  {
+    "id": 33,
+    "subject": "bioquimica",
+    "author": "Fábio Martins",
+    "rating": 4,
+    "text": "Recomendo aos meus colegas, conteúdo nota 10",
+    "createdAt": "2025-01-11T18:30:02.110Z",
+    "updatedAt": "2025-01-11T18:30:02.110Z"
+  },
+  {
+    "id": 32,
+    "subject": "bioquimica",
+    "author": "Larissa Alves",
+    "rating": 5,
+    "text": "Excelente!",
+    "createdAt": "2025-01-11T18:29:58.388Z",
+    "updatedAt": "2025-01-11T18:29:58.388Z"
+  },
+  {
+    "id": 34,
+    "subject": "bioquimica",
+    "author": "Gabriela Andrade",
+    "rating": 5,
+    "text": "gostei, muito bom esse material",
+    "createdAt": "2025-01-11T18:30:06.247Z",
+    "updatedAt": "2025-01-11T18:30:06.247Z"
+  },
+  {
+    "id": 39,
+    "subject": "bioquimica",
+    "author": "Camila Rebouças",
+    "rating": 3,
+    "text": "Poderia ter mais exercícios para fixação.",
+    "createdAt": "2025-01-11T18:30:28.298Z",
+    "updatedAt": "2025-01-11T18:30:28.298Z"
+  },
+  {
+    "id": 30,
+    "subject": "biomedic",
+    "author": "Igor Fernandes",
+    "rating": 5,
+    "text": "As dicas são muito boas, vai ajudar bastante",
+    "createdAt": "2025-01-11T18:29:48.594Z",
+    "updatedAt": "2025-01-11T18:29:48.594Z"
+  },
+  {
+    "id": 27,
+    "subject": "biomedic",
+    "author": "Eliana Pires",
+    "rating": 4,
+    "text": "Bem explicado, vai ajudar muito",
+    "createdAt": "2025-01-11T18:29:34.270Z",
+    "updatedAt": "2025-01-11T18:29:34.270Z"
+  },
+  {
+    "id": 36,
+    "subject": "bioquimica",
+    "author": "Patrícia Lins",
+    "rating": 5,
+    "text": "Gostei das informações sobre cada perfil separado",
+    "createdAt": "2025-01-11T18:30:14.132Z",
+    "updatedAt": "2025-01-11T18:30:14.132Z"
+  },
+  {
+    "id": 20,
+    "subject": "biomedic",
+    "author": "Eduarda Silveira",
+    "rating": 3,
+    "text": "Eu gostei bastante, valeu a pena",
+    "createdAt": "2025-01-11T18:28:51.810Z",
+    "updatedAt": "2025-01-11T18:28:51.810Z"
+  },
+  {
+    "id": 13,
+    "subject": "hemograma_curso",
+    "author": "Eduardo Costa",
+    "rating": 5,
+    "text": "A parte de leucemias  achei nota 10",
+    "createdAt": "2025-01-11T18:09:25.704Z",
+    "updatedAt": "2025-01-11T18:09:25.704Z"
+  },
+  {
+    "id": 44,
+    "subject": "bioquimica",
+    "author": "Douglas Lima",
+    "rating": 5,
+    "text": "Vou recomendar, gostei muito",
+    "createdAt": "2025-01-11T18:30:49.910Z",
+    "updatedAt": "2025-01-11T18:30:49.910Z"
+  },
+  {
+    "id": 29,
+    "subject": "biomedic",
+    "author": "Mariana Rocha",
+    "rating": 5,
+    "text": "Maravilha, gostei do material",
+    "createdAt": "2025-01-11T18:29:44.710Z",
+    "updatedAt": "2025-01-11T18:29:44.710Z"
+  },
+  {
+    "id": 22,
+    "subject": "biomedic",
+    "author": "Renata Sousa",
+    "rating": 4,
+    "text": "Aprendi muito, nota 10",
+    "createdAt": "2025-01-11T18:29:04.894Z",
+    "updatedAt": "2025-01-11T18:29:04.894Z"
+  },
+  {
+    "id": 18,
+    "subject": "biomedic",
+    "author": "Priscila Gomes",
+    "rating": 4,
+    "text": "A explicação sobre desvios à esquerda gostei e aprendi muito",
+    "createdAt": "2025-01-11T18:28:37.428Z",
+    "updatedAt": "2025-01-11T18:28:37.428Z"
+  },
+  {
+    "id": 15,
+    "subject": "hemograma_curso",
+    "author": "Roberta Lima",
+    "rating": 4,
+    "text": "Gostei, vale a pena para quem busca segurança na liberação de exames.",
+    "createdAt": "2025-01-11T18:09:36.700Z",
+    "updatedAt": "2025-01-11T18:09:36.700Z"
+  },
+  {
+    "id": 8,
+    "subject": "hemograma_curso",
+    "author": "Thiago Ribeiro",
+    "rating": 4,
+    "text": "Gostei das dicas para interpretação de anemias principalmente",
+    "createdAt": "2025-01-11T18:08:52.816Z",
+    "updatedAt": "2025-01-11T18:08:52.816Z"
+  },
+  {
+    "id": 38,
+    "subject": "bioquimica",
+    "author": "Rodrigo Lima",
+    "rating": 5,
+    "text": "Explicações claras, aprendi muito",
+    "createdAt": "2025-01-11T18:30:21.319Z",
+    "updatedAt": "2025-01-11T18:30:21.319Z"
+  },
+  {
+    "id": 17,
+    "subject": "biomedic",
+    "author": "Marcelo Batista",
+    "rating": 5,
+    "text": "Muito bom!",
+    "createdAt": "2025-01-11T18:28:30.093Z",
+    "updatedAt": "2025-01-11T18:28:30.093Z"
+  },
+  {
+    "id": 42,
+    "subject": "bioquimica",
+    "author": "Rogério Mendes",
+    "rating": 4,
+    "text": "Interessante e bem completo, valeu a pena mesmo, agredeço a recomendação",
+    "createdAt": "2025-01-11T18:30:41.740Z",
+    "updatedAt": "2025-01-11T18:30:41.740Z"
+  },
+  {
+    "id": 25,
+    "subject": "biomedic",
+    "author": "Victor Santos",
+    "rating": 4,
+    "text": "Achei prático para o dia a dia no laboratório.",
+    "createdAt": "2025-01-11T18:29:23.230Z",
+    "updatedAt": "2025-01-11T18:29:23.230Z"
+  },
+  {
+    "id": 14,
+    "subject": "hemograma_curso",
+    "author": "Fernanda Guimarães",
+    "rating": 5,
+    "text": "Excelente, ajudou na minha prática na hemato",
+    "createdAt": "2025-01-11T18:09:31.052Z",
+    "updatedAt": "2025-01-11T18:09:31.052Z"
+  },
+  {
+    "id": 10,
+    "subject": "hemograma_curso",
+    "author": "Leonardo Tavares",
+    "rating": 4,
+    "text": "Achei o passo a passo da leitura de gráficos muito boa",
+    "createdAt": "2025-01-11T18:09:05.846Z",
+    "updatedAt": "2025-01-11T18:09:05.846Z"
+  },
+  {
+    "id": 9,
+    "subject": "hemograma_curso",
+    "author": "Marina Gomes",
+    "rating": 5,
+    "text": "Casos clínicos bem detalhados, gostei!",
+    "createdAt": "2025-01-11T18:08:58.645Z",
+    "updatedAt": "2025-01-11T18:08:58.645Z"
+  },
+  {
+    "id": 5,
+    "subject": "hemograma_curso",
+    "author": "Amanda Lira",
+    "rating": 3,
+    "text": "Poderia ter mais exemplos de lâminas, mas o conteúdo é excelente.",
+    "createdAt": "2025-01-11T18:08:33.597Z",
+    "updatedAt": "2025-01-11T18:08:33.597Z"
+  },
+  {
+    "id": 26,
+    "subject": "biomedic",
+    "author": "João Resende",
+    "rating": 5,
+    "text": "Gostei da explicação sobre a contagem manual de plaquetas.",
+    "createdAt": "2025-01-11T18:29:28.458Z",
+    "updatedAt": "2025-01-11T18:29:28.458Z"
+  },
+  {
+    "id": 21,
+    "subject": "biomedic",
+    "author": "André Queiroz",
+    "rating": 5,
+    "text": "A parte de bioquímica foi bem clara, adorei.",
+    "createdAt": "2025-01-11T18:28:59.663Z",
+    "updatedAt": "2025-01-11T18:28:59.663Z"
+  },
+  {
+    "id": 23,
+    "subject": "biomedic",
+    "author": "Hugo Nunes",
+    "rating": 5,
+    "text": "As explicações foram diretas e fáceis de entender.",
+    "createdAt": "2025-01-11T18:29:12.257Z",
+    "updatedAt": "2025-01-11T18:29:12.257Z"
+  },
+  {
+    "id": 19,
+    "subject": "biomedic",
+    "author": "Gisele Melo",
+    "rating": 5,
+    "text": "Ótimo conteúdo de hematologia, fiquei impressionada.",
+    "createdAt": "2025-01-11T18:28:43.848Z",
+    "updatedAt": "2025-01-11T18:28:43.848Z"
+  },
+  {
+    "id": 24,
+    "subject": "biomedic",
+    "author": "Paula Duarte",
+    "rating": 5,
+    "text": "Bom que ela aborda vários temas",
+    "createdAt": "2025-01-11T18:29:17.232Z",
+    "updatedAt": "2025-01-11T18:29:17.232Z"
+  },
+  {
+    "id": 41,
+    "subject": "bioquimica",
+    "author": "Sueli Matos",
+    "rating": 4,
+    "text": "Material de apoio é bem objetivo e útil.",
+    "createdAt": "2025-01-11T18:30:37.804Z",
+    "updatedAt": "2025-01-11T18:30:37.804Z"
+  },
+  {
+    "id": 43,
+    "subject": "bioquimica",
+    "author": "Ana Beatriz",
+    "rating": 5,
+    "text": "Achei o conteúdo bem detalhado",
+    "createdAt": "2025-01-11T18:30:46.016Z",
+    "updatedAt": "2025-01-11T18:30:46.016Z"
+  },
+  {
+    "id": 37,
+    "subject": "bioquimica",
+    "author": "Isadora Campos",
+    "rating": 4,
+    "text": "Excelente guia prático ",
+    "createdAt": "2025-01-11T18:30:17.651Z",
+    "updatedAt": "2025-01-11T18:30:17.651Z"
+  },
+  {
+    "id": 35,
+    "subject": "bioquimica",
+    "author": "Carlos Pontes",
+    "rating": 5,
+    "text": "Aprendi a diferenciar os exames com mais segurança.",
+    "createdAt": "2025-01-11T18:30:10.464Z",
+    "updatedAt": "2025-01-11T18:30:10.464Z"
+  },
+  {
+    "id": 31,
+    "subject": "biomedic",
+    "author": "Verônica Alves",
+    "rating": 4,
+    "text": "Muito bom",
+    "createdAt": "2025-01-11T18:29:54.008Z",
+    "updatedAt": "2025-01-11T18:29:54.008Z"
+  },
+  {
+    "id": 40,
+    "subject": "bioquimica",
+    "author": "Paulo Xavier",
+    "rating": 5,
+    "text": "Me ajudou a entender melhor as enzimas do perfil hepático.",
+    "createdAt": "2025-01-11T18:30:34.180Z",
+    "updatedAt": "2025-01-11T18:30:34.180Z"
+  },
+  {
+    "id": 3,
+    "subject": "hemograma_curso",
+    "author": "Juliana Ferreira",
+    "rating": 4,
+    "text": "A parte dos casos clínicos me surpreendeu pela praticidade.",
+    "createdAt": "2025-01-11T18:08:15.387Z",
+    "updatedAt": "2025-01-11T18:08:15.387Z"
+  },
+  {
+    "id": 6,
+    "subject": "hemograma_curso",
+    "author": "Rafael Farias",
+    "rating": 5,
+    "text": "Curso completo, aborda  de forma bem didática.",
+    "createdAt": "2025-01-11T18:08:39.350Z",
+    "updatedAt": "2025-01-11T18:08:39.350Z"
+  },
+  {
+    "id": 2,
+    "subject": "hemograma_curso",
+    "author": "Danilo Martins",
+    "rating": 5,
+    "text": "Explicações claras sobre as análises ",
+    "createdAt": "2025-01-11T18:08:03.459Z",
+    "updatedAt": "2025-01-11T18:08:03.459Z"
+  },
+  {
+    "id": 7,
+    "subject": "hemograma_curso",
+    "author": "Bruna Cardoso",
+    "rating": 5,
+    "text": "Excelente material de apoio, me auxiliou muito nos estudos.",
+    "createdAt": "2025-01-11T18:08:46.032Z",
+    "updatedAt": "2025-01-11T18:08:46.032Z"
+  },
+  {
+    "id": 28,
+    "subject": "biomedic",
+    "author": "Felipe Silva",
+    "rating": 5,
+    "text": "Bem completo, principalmente sobre valores de referência.",
+    "createdAt": "2025-01-11T18:29:38.615Z",
+    "updatedAt": "2025-01-11T18:29:38.615Z"
+  },
+  {
+    "id": 45,
+    "subject": "bioquimica",
+    "author": "Raquel Lima",
+    "rating": 4,
+    "text": "Didática boa, mas senti falta de mais imagens ",
+    "createdAt": "2025-01-11T18:30:55.900Z",
+    "updatedAt": "2025-01-11T18:30:55.900Z"
+  },
+  {
+    "id": 12,
+    "subject": "hemograma_curso",
+    "author": "Camila Diniz",
+    "rating": 4,
+    "text": "Bem completo, principalmente as dicas de rotina de laboratório.",
+    "createdAt": "2025-01-11T18:09:20.057Z",
+    "updatedAt": "2025-01-11T18:09:20.057Z"
+  },
+  {
+    "id": 76,
+    "subject": "hematologia",
+    "author": "Felipe Araújo",
+    "rating": 4,
+    "text": "Gostei das ilustrações e exemplos, nota 10",
+    "createdAt": "2025-01-11T18:33:15.703Z",
+    "updatedAt": "2025-01-11T18:33:15.703Z"
+  },
+  {
+    "id": 66,
+    "subject": "hematologia",
+    "author": "Beatriz Araújo",
+    "rating": 5,
+    "text": "Aprendi bastante, recomendo",
+    "createdAt": "2025-01-11T18:32:27.758Z",
+    "updatedAt": "2025-01-11T18:32:27.758Z"
+  },
+  {
+    "id": 81,
+    "subject": "liquidoCefalorraquidiano",
+    "author": "Bianca Lima",
+    "rating": 5,
+    "text": "Adorei a parte de microbiologia do LCR, tooop!",
+    "createdAt": "2025-01-11T18:33:35.715Z",
+    "updatedAt": "2025-01-11T18:33:35.715Z"
+  },
+  {
+    "id": 72,
+    "subject": "hematologia",
+    "author": "Daniel Ribeiro",
+    "rating": 4,
+    "text": "Curso prático, mas gostaria de mais detalhes em coagulograma.",
+    "createdAt": "2025-01-11T18:32:59.102Z",
+    "updatedAt": "2025-01-11T18:32:59.102Z"
+  },
+  {
+    "id": 91,
+    "subject": "liquidoCefalorraquidiano",
+    "author": "Bruno Rezende",
+    "rating": 5,
+    "text": "Gostei muito, consegui entender todas as minhas dúvidas sobre LCR.",
+    "createdAt": "2025-01-11T18:34:20.877Z",
+    "updatedAt": "2025-01-11T18:34:20.877Z"
+  },
+  {
+    "id": 79,
+    "subject": "liquidoCefalorraquidiano",
+    "author": "Sônia Borges",
+    "rating": 5,
+    "text": "Ótimo para quem tem dificuldade nesse exame ( meu caso rsrs)",
+    "createdAt": "2025-01-11T18:33:27.844Z",
+    "updatedAt": "2025-01-11T18:33:27.844Z"
+  },
+  {
+    "id": 80,
+    "subject": "liquidoCefalorraquidiano",
+    "author": "Maurício Paiva",
+    "rating": 5,
+    "text": "Explica bem a citometria e citologia com valores de referência. Diferencial que gostei",
+    "createdAt": "2025-01-11T18:33:31.735Z",
+    "updatedAt": "2025-01-11T18:33:31.735Z"
+  },
+  {
+    "id": 88,
+    "subject": "liquidoCefalorraquidiano",
+    "author": "Julio Cesar",
+    "rating": 5,
+    "text": "A apresentação dos valores de referência é ótima",
+    "createdAt": "2025-01-11T18:34:09.941Z",
+    "updatedAt": "2025-01-11T18:34:09.941Z"
+  },
+  {
+    "id": 89,
+    "subject": "liquidoCefalorraquidiano",
+    "author": "Heloísa Farias",
+    "rating": 5,
+    "text": "Excelente para quem atua em análises de líquor no laboratório!!",
+    "createdAt": "2025-01-11T18:34:13.577Z",
+    "updatedAt": "2025-01-11T18:34:13.577Z"
+  },
+  {
+    "id": 90,
+    "subject": "liquidoCefalorraquidiano",
+    "author": "Marcela Pinto",
+    "rating": 5,
+    "text": "Muito bem explicado, principalmente a parte de citologia.",
+    "createdAt": "2025-01-11T18:34:17.073Z",
+    "updatedAt": "2025-01-11T18:34:17.073Z"
+  },
+  {
+    "id": 75,
+    "subject": "hematologia",
+    "author": "Joana Batista",
+    "rating": 5,
+    "text": "Bem didático para quem está começando na área.",
+    "createdAt": "2025-01-11T18:33:11.878Z",
+    "updatedAt": "2025-01-11T18:33:11.878Z"
+  },
+  {
+    "id": 87,
+    "subject": "liquidoCefalorraquidiano",
+    "author": "Sandra Amaral",
+    "rating": 4,
+    "text": "Bem completo",
+    "createdAt": "2025-01-11T18:34:05.458Z",
+    "updatedAt": "2025-01-11T18:34:05.458Z"
+  },
+  {
+    "id": 86,
+    "subject": "liquidoCefalorraquidiano",
+    "author": "André Silva",
+    "rating": 5,
+    "text": "Explicações didáticas, me ajudou a rever conceitos.",
+    "createdAt": "2025-01-11T18:34:00.979Z",
+    "updatedAt": "2025-01-11T18:34:00.979Z"
+  },
+  {
+    "id": 77,
+    "subject": "liquidoCefalorraquidiano",
+    "author": "Mércia Oliveira",
+    "rating": 5,
+    "text": "Excelente, bem específico",
+    "createdAt": "2025-01-11T18:33:20.066Z",
+    "updatedAt": "2025-01-11T18:33:20.066Z"
+  },
+  {
+    "id": 83,
+    "subject": "liquidoCefalorraquidiano",
+    "author": "Olívia Castro",
+    "rating": 5,
+    "text": "Conteúdo interessante sobre estabilidade da amostra, algumas informações eu nao fazia ideia",
+    "createdAt": "2025-01-11T18:33:44.453Z",
+    "updatedAt": "2025-01-11T18:33:44.453Z"
+  },
+  {
+    "id": 82,
+    "subject": "liquidoCefalorraquidiano",
+    "author": "Luís Figueiredo",
+    "rating": 4,
+    "text": "Recomendo muito, achei muito bom o material",
+    "createdAt": "2025-01-11T18:33:39.915Z",
+    "updatedAt": "2025-01-11T18:33:39.915Z"
+  },
+  {
+    "id": 55,
+    "subject": "urinalise",
+    "author": "Fabiana Torres",
+    "rating": 5,
+    "text": "A parte de bacterioscopia é bem ilustrada.",
+    "createdAt": "2025-01-11T18:31:38.260Z",
+    "updatedAt": "2025-01-11T18:31:38.260Z"
+  },
+  {
+    "id": 52,
+    "subject": "urinalise",
+    "author": "Tatiana Ramos",
+    "rating": 5,
+    "text": "ajudou muito gostei",
+    "createdAt": "2025-01-11T18:31:25.596Z",
+    "updatedAt": "2025-01-11T18:31:25.596Z"
+  },
+  {
+    "id": 50,
+    "subject": "urinalise",
+    "author": "Orlando Siqueira",
+    "rating": 5,
+    "text": "Excelente, eu que trabalho muito com o parcial de urina amei",
+    "createdAt": "2025-01-11T18:31:17.179Z",
+    "updatedAt": "2025-01-11T18:31:17.179Z"
+  },
+  {
+    "id": 85,
+    "subject": "liquidoCefalorraquidiano",
+    "author": "Tatiana Prado",
+    "rating": 4,
+    "text": "Gostei, poderia ter um vídeo mostrando a coleta.",
+    "createdAt": "2025-01-11T18:33:52.440Z",
+    "updatedAt": "2025-01-11T18:33:52.440Z"
+  },
+  {
+    "id": 59,
+    "subject": "urinalise",
+    "author": "Paulo Nascimento",
+    "rating": 5,
+    "text": "Excelente, sou analista clínico e gostei bastante",
+    "createdAt": "2025-01-11T18:31:59.196Z",
+    "updatedAt": "2025-01-11T18:31:59.196Z"
+  },
+  {
+    "id": 46,
+    "subject": "bioquimica",
+    "author": "Vinícius Veras",
+    "rating": 5,
+    "text": "5 estrelas na minha opinião",
+    "createdAt": "2025-01-11T18:30:59.415Z",
+    "updatedAt": "2025-01-11T18:30:59.415Z"
+  },
+  {
+    "id": 63,
+    "subject": "hematologia",
+    "author": "Sabrina Luz",
+    "rating": 5,
+    "text": "Muito claro na confecção e leitura de lâminas.",
+    "createdAt": "2025-01-11T18:32:16.044Z",
+    "updatedAt": "2025-01-11T18:32:16.044Z"
+  },
+  {
+    "id": 60,
+    "subject": "urinalise",
+    "author": "Daniela Azevedo",
+    "rating": 4,
+    "text": "Gostei do atlas de urinálise, bem completo.",
+    "createdAt": "2025-01-11T18:32:03.581Z",
+    "updatedAt": "2025-01-11T18:32:03.581Z"
+  },
+  {
+    "id": 53,
+    "subject": "urinalise",
+    "author": "Augusto Lima",
+    "rating": 5,
+    "text": "Muito bom para quem está iniciando em análises clínicas.",
+    "createdAt": "2025-01-11T18:31:29.460Z",
+    "updatedAt": "2025-01-11T18:31:29.460Z"
+  },
+  {
+    "id": 73,
+    "subject": "hematologia",
+    "author": "Flávia Cruz",
+    "rating": 5,
+    "text": "Perfeito para quem quer dominar hematologia ",
+    "createdAt": "2025-01-11T18:33:03.430Z",
+    "updatedAt": "2025-01-11T18:33:03.430Z"
+  },
+  {
+    "id": 1,
+    "subject": "hemograma_curso",
+    "author": "Carla Nogueira",
+    "rating": 5,
+    "text": "Gostei muito!",
+    "createdAt": "2025-01-11T18:07:20.812Z",
+    "updatedAt": "2025-01-11T18:07:20.812Z"
+  },
+  {
+    "id": 49,
+    "subject": "urinalise",
+    "author": "Karina Lopes",
+    "rating": 4,
+    "text": "Bom curso, aprendi bastante ",
+    "createdAt": "2025-01-11T18:31:13.199Z",
+    "updatedAt": "2025-01-11T18:31:13.199Z"
+  },
+  {
+    "id": 58,
+    "subject": "urinalise",
+    "author": "Valéria Mendes",
+    "rating": 5,
+    "text": "Faço Biomedicina e gostei do conteúdo, estou usando no estágio",
+    "createdAt": "2025-01-11T18:31:54.863Z",
+    "updatedAt": "2025-01-11T18:31:54.863Z"
+  },
+  {
+    "id": 64,
+    "subject": "hematologia",
+    "author": "Roberto Guedes",
+    "rating": 4,
+    "text": "Bom para revisar todos esses conteúdos",
+    "createdAt": "2025-01-11T18:32:19.920Z",
+    "updatedAt": "2025-01-11T18:32:19.920Z"
+  },
+  {
+    "id": 48,
+    "subject": "urinalise",
+    "author": "Jorge Dantas",
+    "rating": 5,
+    "text": "Muito detalhado, achei ótimo",
+    "createdAt": "2025-01-11T18:31:09.536Z",
+    "updatedAt": "2025-01-11T18:31:09.536Z"
+  },
+  {
+    "id": 47,
+    "subject": "urinalise",
+    "author": "Marta Rezende",
+    "rating": 5,
+    "text": "Ótimo!",
+    "createdAt": "2025-01-11T18:31:06.009Z",
+    "updatedAt": "2025-01-11T18:31:06.009Z"
+  },
+  {
+    "id": 70,
+    "subject": "hematologia",
+    "author": "Ricardo Pinto",
+    "rating": 3,
+    "text": "Achei bom, entendi bem o conteúdo",
+    "createdAt": "2025-01-11T18:32:50.037Z",
+    "updatedAt": "2025-01-11T18:32:50.037Z"
+  },
+  {
+    "id": 56,
+    "subject": "urinalise",
+    "author": "Nayara Oliveira",
+    "rating": 5,
+    "text": "Conteúdo completo e didático.",
+    "createdAt": "2025-01-11T18:31:45.668Z",
+    "updatedAt": "2025-01-11T18:31:45.668Z"
+  },
+  {
+    "id": 74,
+    "subject": "hematologia",
+    "author": "Nathália Campos",
+    "rating": 5,
+    "text": "Recomendo, conteúdo bem completo.",
+    "createdAt": "2025-01-11T18:33:07.645Z",
+    "updatedAt": "2025-01-11T18:33:07.645Z"
+  },
+  {
+    "id": 65,
+    "subject": "hematologia",
+    "author": "Gustavo Mendes",
+    "rating": 5,
+    "text": "Conteúdo rico para identificação de células.",
+    "createdAt": "2025-01-11T18:32:23.858Z",
+    "updatedAt": "2025-01-11T18:32:23.858Z"
+  },
+  {
+    "id": 51,
+    "subject": "urinalise",
+    "author": "Simone Araújo",
+    "rating": 4,
+    "text": "Faço Biomedicina e gostei do conteúdo, estou usando no estágio",
+    "createdAt": "2025-01-11T18:31:21.187Z",
+    "updatedAt": "2025-01-11T18:31:21.187Z"
+  },
+  {
+    "id": 84,
+    "subject": "liquidoCefalorraquidiano",
+    "author": "Ricardo Fernandes",
+    "rating": 5,
+    "text": "Material de apoio tem bastante detalhes importantes sobre bioquímica do LCR, boa!",
+    "createdAt": "2025-01-11T18:33:48.700Z",
+    "updatedAt": "2025-01-11T18:33:48.700Z"
+  },
+  {
+    "id": 62,
+    "subject": "hematologia",
+    "author": "Matheus Augusto",
+    "rating": 5,
+    "text": "Gostei!",
+    "createdAt": "2025-01-11T18:32:12.122Z",
+    "updatedAt": "2025-01-11T18:32:12.122Z"
+  },
+  {
+    "id": 61,
+    "subject": "urinalise",
+    "author": "Renan Moreira",
+    "rating": 5,
+    "text": "Didática excelente",
+    "createdAt": "2025-01-11T18:32:07.679Z",
+    "updatedAt": "2025-01-11T18:32:07.679Z"
+  },
+  {
+    "id": 69,
+    "subject": "hematologia",
+    "author": "Simone Garcia",
+    "rating": 5,
+    "text": "As descrições de leucemias foram muito boas.",
+    "createdAt": "2025-01-11T18:32:45.563Z",
+    "updatedAt": "2025-01-11T18:32:45.563Z"
+  },
+  {
+    "id": 78,
+    "subject": "liquidoCefalorraquidiano",
+    "author": "Renato Lins",
+    "rating": 4,
+    "text": "Didícil achar um material tao bom quanto esse sobre o líquor",
+    "createdAt": "2025-01-11T18:33:23.887Z",
+    "updatedAt": "2025-01-11T18:33:23.887Z"
+  },
+  {
+    "id": 67,
+    "subject": "hematologia",
+    "author": "Lorena Alvez",
+    "rating": 4,
+    "text": "Ajudou a entender melhor a interpretação de gráficos.",
+    "createdAt": "2025-01-11T18:32:31.289Z",
+    "updatedAt": "2025-01-11T18:32:31.289Z"
+  },
+  {
+    "id": 54,
+    "subject": "urinalise",
+    "author": "Henrique Vasconcelos",
+    "rating": 4,
+    "text": "Gostei das explicações, recomendo aos meus colegas",
+    "createdAt": "2025-01-11T18:31:34.101Z",
+    "updatedAt": "2025-01-11T18:31:34.101Z"
+  },
+  {
+    "id": 92,
+    "subject": "apostila_coleta_sanguinea",
+    "author": "Carol Marques",
+    "rating": 5,
+    "text": "Amei! Foi super tranquilo de entender. Valeu!",
+    "createdAt": "2025-01-20T04:53:59.754Z",
+    "updatedAt": "2025-01-20T04:53:59.754Z"
+  },
+  {
+    "id": 68,
+    "subject": "hematologia",
+    "author": "Alex Moura",
+    "rating": 5,
+    "text": "Ótimo para quem tem dificuldade em anemias e leucemias",
+    "createdAt": "2025-01-11T18:32:40.437Z",
+    "updatedAt": "2025-01-11T18:32:40.437Z"
+  },
+  {
+    "id": 71,
+    "subject": "hematologia",
+    "author": "Mônica Santos",
+    "rating": 5,
+    "text": "Exames bem explicados,adorei!",
+    "createdAt": "2025-01-11T18:32:54.860Z",
+    "updatedAt": "2025-01-11T18:32:54.860Z"
+  },
+  {
+    "id": 93,
+    "subject": "apostila_coleta_sanguinea",
+    "author": "Pablo Santana",
+    "rating": 4,
+    "text": "Gostei! Achei direto ao ponto, mas queria mais exemplos práticos.",
+    "createdAt": "2025-01-20T04:54:04.242Z",
+    "updatedAt": "2025-01-20T04:54:04.242Z"
+  },
+  {
+    "id": 94,
+    "subject": "apostila_coleta_sanguinea",
+    "author": "Felipe Silva",
+    "rating": 5,
+    "text": "Top demais, me ajudou no estágio. Bem explicado!",
+    "createdAt": "2025-01-20T04:54:09.474Z",
+    "updatedAt": "2025-01-20T04:54:09.474Z"
+  },
+  {
+    "id": 95,
+    "subject": "apostila_coleta_sanguinea",
+    "author": "Milena Cardoso",
+    "rating": 5,
+    "text": "Conteúdo incrível, agora ficou bem mais fácil entender cada tubo.",
+    "createdAt": "2025-01-20T04:54:13.615Z",
+    "updatedAt": "2025-01-20T04:54:13.615Z"
+  },
+  {
+    "id": 57,
+    "subject": "urinalise",
+    "author": "Leandro Falcão",
+    "rating": 4,
+    "text": "Aprendi a interpretar com mais segurança.",
+    "createdAt": "2025-01-11T18:31:50.584Z",
+    "updatedAt": "2025-01-11T18:31:50.584Z"
+  },
+  {
+    "id": 96,
+    "subject": "apostila_coleta_sanguinea",
+    "author": "Marina Queiroz",
+    "rating": 3,
+    "text": "É bom, mas acho que podia ter mais ilustrações. Mesmo assim, vale a pena!",
+    "createdAt": "2025-01-20T04:54:17.914Z",
+    "updatedAt": "2025-01-20T04:54:17.914Z"
+  },
+  {
+    "id": 97,
+    "subject": "apostila_coleta_sanguinea",
+    "author": "Daniela Sales",
+    "rating": 4,
+    "text": "Gostei bastante das dicas rápidas, ajudou muito no dia a dia.",
+    "createdAt": "2025-01-20T04:54:21.440Z",
+    "updatedAt": "2025-01-20T04:54:21.440Z"
+  },
+  {
+    "id": 98,
+    "subject": "apostila_coleta_sanguinea",
+    "author": "Leonardo Cunha",
+    "rating": 5,
+    "text": "Muito bom! Explica bem os sistemas fechados e como usar cada um.",
+    "createdAt": "2025-01-20T04:54:24.982Z",
+    "updatedAt": "2025-01-20T04:54:24.982Z"
+  },
+  {
+    "id": 99,
+    "subject": "apostila_coleta_sanguinea",
+    "author": "Renata Martins",
+    "rating": 5,
+    "text": "Valeu demais! As dicas de coleta pediátrica salvaram meu plantão.",
+    "createdAt": "2025-01-20T04:54:35.943Z",
+    "updatedAt": "2025-01-20T04:54:35.943Z"
+  },
+  {
+    "id": 100,
+    "subject": "apostila_coleta_sanguinea",
+    "author": "Vitor Santos",
+    "rating": 4,
+    "text": "Achei tudo bem organizado. Só faltou comentar um pouco sobre erros comuns.",
+    "createdAt": "2025-01-20T04:54:44.036Z",
+    "updatedAt": "2025-01-20T04:54:44.036Z"
+  },
+  {
+    "id": 101,
+    "subject": "apostila_coleta_sanguinea",
+    "author": "Gabriela Lima",
+    "rating": 5,
+    "text": "Simplesmente amei! Acabou com minhas dúvidas sobre a ordem dos tubos.",
+    "createdAt": "2025-01-20T04:54:47.846Z",
+    "updatedAt": "2025-01-20T04:54:47.846Z"
+  },
+  {
+    "id": 102,
+    "subject": "apostila_coleta_sanguinea",
+    "author": "Rafael Andrade",
+    "rating": 3,
+    "text": "Tem bastante informação, mas senti falta de exemplos de coleta em pacientes oncológicos.",
+    "createdAt": "2025-01-20T04:54:53.207Z",
+    "updatedAt": "2025-01-20T04:54:53.207Z"
+  },
+  {
+    "id": 103,
+    "subject": "apostila_coleta_sanguinea",
+    "author": "Bianca Rocha",
+    "rating": 5,
+    "text": "Gostei! Leitura leve e bem ilustrada. Recomendo.",
+    "createdAt": "2025-01-20T04:54:58.004Z",
+    "updatedAt": "2025-01-20T04:54:58.004Z"
+  },
+  {
+    "id": 104,
+    "subject": "apostila_coleta_sanguinea",
+    "author": "Pedro Almeida",
+    "rating": 5,
+    "text": "Excelente, bem claro e sem enrolação. Vale muito a pena!",
+    "createdAt": "2025-01-20T04:55:01.949Z",
+    "updatedAt": "2025-01-20T04:55:01.949Z"
+  },
+  {
+    "id": 105,
+    "subject": "apostila_coleta_sanguinea",
+    "author": "Marcela Moura",
+    "rating": 4,
+    "text": "Deu pra entender bem os macetes de punção, mas podia ter mais exercícios.",
+    "createdAt": "2025-01-20T04:55:05.721Z",
+    "updatedAt": "2025-01-20T04:55:05.721Z"
+  },
+  {
+    "id": 106,
+    "subject": "apostila_coleta_sanguinea",
+    "author": "Renan Tavares",
+    "rating": 5,
+    "text": "Material muito bem feito, facilitou demais minha rotina!",
+    "createdAt": "2025-01-20T04:55:09.678Z",
+    "updatedAt": "2025-01-20T04:55:09.678Z"
+  },
+  {
+    "id": 107,
+    "subject": "atlas_ilustrado_hematologia",
+    "author": "Carla Ribeiro",
+    "rating": 5,
+    "text": "Incrível! As imagens de células ajudaram demais a identificar cada tipo.",
+    "createdAt": "2025-01-20T05:08:41.303Z",
+    "updatedAt": "2025-01-20T05:08:41.303Z"
+  },
+  {
+    "id": 108,
+    "subject": "atlas_ilustrado_hematologia",
+    "author": "Marcos Teixeira",
+    "rating": 4,
+    "text": "Curti bastante. As lâminas de leucemia me deram mais confiança na leitura dos exames.",
+    "createdAt": "2025-01-20T05:08:45.652Z",
+    "updatedAt": "2025-01-20T05:08:45.652Z"
+  },
+  {
+    "id": 109,
+    "subject": "atlas_ilustrado_hematologia",
+    "author": "Fernanda Alves",
+    "rating": 5,
+    "text": "Top! As fotos são bem claras, facilitam muito pra quem tá começando.",
+    "createdAt": "2025-01-20T05:08:51.263Z",
+    "updatedAt": "2025-01-20T05:08:51.263Z"
+  },
+  {
+    "id": 110,
+    "subject": "atlas_ilustrado_hematologia",
+    "author": "Paulo Henrique",
+    "rating": 5,
+    "text": "Gostei muito das explicações sobre série branca e série vermelha. Bem didático!",
+    "createdAt": "2025-01-20T05:08:55.367Z",
+    "updatedAt": "2025-01-20T05:08:55.367Z"
+  },
+  {
+    "id": 111,
+    "subject": "atlas_ilustrado_hematologia",
+    "author": "Viviane Castro",
+    "rating": 4,
+    "text": "Bem completo. Só senti falta de um pouco mais de exercícios práticos.",
+    "createdAt": "2025-01-20T05:08:59.322Z",
+    "updatedAt": "2025-01-20T05:08:59.322Z"
+  },
+  {
+    "id": 112,
+    "subject": "atlas_ilustrado_hematologia",
+    "author": "Guilherme Lopes",
+    "rating": 5,
+    "text": "Material bem ilustrado, as alterações hematológicas ficaram super fáceis de identificar.",
+    "createdAt": "2025-01-20T05:09:05.259Z",
+    "updatedAt": "2025-01-20T05:09:05.259Z"
+  },
+  {
+    "id": 113,
+    "subject": "atlas_ilustrado_hematologia",
+    "author": "Rafaela Moura",
+    "rating": 5,
+    "text": "Era o que eu precisava para diferenciar as células. Vale muito a pena!",
+    "createdAt": "2025-01-20T05:09:11.308Z",
+    "updatedAt": "2025-01-20T05:09:11.308Z"
+  },
+  {
+    "id": 114,
+    "subject": "atlas_ilustrado_hematologia",
+    "author": "Leandro Ramos",
+    "rating": 3,
+    "text": "Bom conteúdo, mas queria mais exemplos de patologias de plaquetas.",
+    "createdAt": "2025-01-20T05:09:15.014Z",
+    "updatedAt": "2025-01-20T05:09:15.014Z"
+  },
+  {
+    "id": 115,
+    "subject": "atlas_ilustrado_hematologia",
+    "author": "Marília Santos",
+    "rating": 5,
+    "text": "Ajudou a fixar o que é normal e o que é alteração. Bem prático!",
+    "createdAt": "2025-01-20T05:09:18.764Z",
+    "updatedAt": "2025-01-20T05:09:18.764Z"
+  },
+  {
+    "id": 116,
+    "subject": "atlas_ilustrado_hematologia",
+    "author": "Felipe Rocha",
+    "rating": 4,
+    "text": "Visual bacana, gostei das lâminas de leucemia, ficaram bem nítidas.",
+    "createdAt": "2025-01-20T05:09:23.091Z",
+    "updatedAt": "2025-01-20T05:09:23.091Z"
+  },
+  {
+    "id": 117,
+    "subject": "atlas_ilustrado_hematologia",
+    "author": "Ana Júlia Nunes",
+    "rating": 5,
+    "text": "Melhor atlas que vi até agora! Me ajudou a entender cada série no hemograma.",
+    "createdAt": "2025-01-20T05:09:29.214Z",
+    "updatedAt": "2025-01-20T05:09:29.214Z"
+  },
+  {
+    "id": 118,
+    "subject": "atlas_ilustrado_hematologia",
+    "author": "Ricardo Bernardes",
+    "rating": 5,
+    "text": "Fácil de ler, adorei como explicaram cada alteração hematológica.",
+    "createdAt": "2025-01-20T05:09:34.841Z",
+    "updatedAt": "2025-01-20T05:09:34.841Z"
+  },
+  {
+    "id": 119,
+    "subject": "atlas_ilustrado_hematologia",
+    "author": "Sofia Paiva",
+    "rating": 4,
+    "text": "Muito bom, mas poderia ter mais exemplos de anemias específicas.",
+    "createdAt": "2025-01-20T05:09:39.069Z",
+    "updatedAt": "2025-01-20T05:09:39.069Z"
+  },
+  {
+    "id": 120,
+    "subject": "atlas_ilustrado_hematologia",
+    "author": "Diego Figueiredo",
+    "rating": 5,
+    "text": "Bastante completo, principalmente pra quem está iniciando na área.",
+    "createdAt": "2025-01-20T05:09:43.760Z",
+    "updatedAt": "2025-01-20T05:09:43.760Z"
+  },
+  {
+    "id": 121,
+    "subject": "atlas_ilustrado_hematologia",
+    "author": "André Carneiro",
+    "rating": 5,
+    "text": "Vale cada centavo! Layout bonito e explicações detalhadas das lâminas.",
+    "createdAt": "2025-01-20T05:09:47.383Z",
+    "updatedAt": "2025-01-20T05:09:47.383Z"
+  }
+]
